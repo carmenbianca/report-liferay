@@ -1,0 +1,15 @@
+name: Pandoc
+
+on: push
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - run: make
+      - uses: docker://pandoc/latex:latest
+      - uses: actions/upload-artifact@master
+        with:
+          name: plan.pdf
+          path: plan.pdf
+
