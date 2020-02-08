@@ -1,0 +1,19 @@
+---
+title: Plan de campagne TODO catchy title
+author: Carmen Bianca Bakker
+date: February 2020
+
+documentclass: report
+
+toc: true
+numbersections: true
+
+filters:
+    - pandoc-citeproc
+bibliography: plan.bib
+csl: apa.csl
+link-citations: true
+
+fontfamily: noto-serif
+...
+
