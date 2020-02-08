@@ -6,8 +6,10 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      - run: make
+      - uses: actions/checkout@v2
       - uses: docker://pandoc/latex:latest
+        with:
+          args: --filter pandoc-citeproc meta.yaml plan.md -o plan.pdf
       - uses: actions/upload-artifact@master
         with:
           name: plan.pdf
