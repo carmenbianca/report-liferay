@@ -14,6 +14,6 @@ bibliography: plan.bib
 csl: apa.csl
 link-citations: true
 
-fontfamily: noto-serif
+fontfamily: libertine
 ...
 
