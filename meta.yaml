@@ -13,7 +13,5 @@ filters:
 bibliography: plan.bib
 csl: apa.csl
 link-citations: true
-
-fontfamily: libertine
 ...
 
