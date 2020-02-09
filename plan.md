@@ -1,3 +1,22 @@
+---
+title: Plan de campagne TODO catchy title
+author: Carmen Bianca Bakker, NHL Stenden Hogeschool
+date: February 2020
+
+documentclass: report
+papersize: a4
+lang: en-GB
+
+toc: true
+numbersections: true
+
+filters:
+    - pandoc-citeproc
+bibliography: plan.bib
+csl: apa.csl
+link-citations: true
+---
+
 # Introduction
 
 This is the *plan de campagne* (plan of action, Dutch: plan van aanpak)
