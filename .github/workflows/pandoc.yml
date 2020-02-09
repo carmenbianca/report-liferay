@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://pandoc/latex:latest
         with:
-          args: make
+          args: --entrypoint make
       - uses: actions/upload-artifact@master
         with:
           name: plan.pdf
