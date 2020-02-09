@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: docker://pandoc/latex:latest
         with:
-          args: --filter pandoc-citeproc meta.yaml plan.md -o plan.pdf
+          args: make
       - uses: actions/upload-artifact@master
         with:
           name: plan.pdf
