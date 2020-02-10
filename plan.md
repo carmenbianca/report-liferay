@@ -11,7 +11,6 @@ toc: true
 numbersections: true
 
 filters:
-    - pandoc-crossref
     - pandoc-citeproc
 bibliography: plan.bib
 csl: apa.csl
