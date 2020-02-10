@@ -74,5 +74,8 @@ TODO: Segue about Open Source and FOSS licensing?
 
 # Planning
 
-# Bibliography {#refs}
+# References {-}
 
+<div id="refs"></div>
+
+# Appendix {-}
