@@ -8,6 +8,7 @@ papersize: a4
 lang: en-GB
 
 toc: true
+toc-depth: 1
 numbersections: true
 
 filters:
@@ -116,9 +117,9 @@ The work on licensing compliance is important for several reasons:
 
 The manual work is a problem because:
 
-- Manual verification of licensing takes up a lot of (expensive) time by legal
-  experts.
-- When a problem is identified, the feedback loop between Legal and Engineering
+- manual verification of licensing takes up a lot of (expensive) time by legal
+  experts;
+- when a problem is identified, the feedback loop between Legal and Engineering
   is inefficient, and creates a bottleneck.
 
 ### Where
@@ -150,7 +151,30 @@ Legal, but they are not automated.
 
 The project of this internship is---in the simplest of terms---to make the
 problem as described above go away. Chapter \ref{ch:project-definition}
-describes the project in full. This section TODO
+describes the project in full. This section details the context of the project.
+
+Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
+Matija Šuklje is the stakeholder personified. The ordering party:
+
+- describes the problem;
+- provides resources to investigate the problem;
+- describes further requirements and limitations;
+- provides continuous feedback on the direction of the project;
+- provides a working environment;
+- provides assistance where needed.
+
+I (Carmen Bianca Bakker) am the *delivering party* (contractor, Dutch:
+opdrachtnemer) of the project. The delivering party:
+
+- investigates the problem;
+- performs research to form the basis of a requirements analysis;
+- creates a requirements analysis;
+- acts as project lead on the project to tackle the problem;
+- creates a product to solve the problem;
+- tests the product;
+- writes a report on the process;
+- performs evaluation at the end of the process to provide recommendations going
+  forward.
 
 # Project definition {#ch:project-definition}
 
