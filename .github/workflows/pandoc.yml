@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - uses: docker://pandoc/latex:latest
+      - uses: docker://carmenbianca/pandoc:latest
         with:
-          args: --filter pandoc-citeproc plan.md -o plan.pdf
+          args: make
       - uses: actions/upload-artifact@master
         with:
           name: plan.pdf
