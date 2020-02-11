@@ -282,6 +282,9 @@ it provides the user with four essential freedoms:
   3). By doing this you can give the whole community a chance to benefit from
   your changes. Access to the source code is a precondition for this.
 
+Licenses that do not provide the user with these freedoms, then, are proprietary
+or non-free licenses.
+
 @osi-osd has a similar requirement for a license to be identified as a FOSS
 license. It says that a license must abide by the Open Source Definition.
 
