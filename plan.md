@@ -1,5 +1,5 @@
 ---
-title: Plan de campagne TODO catchy title
+title: "Plan de campagne: Automated Copyright And Licensing Compliance (ACALC)"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
 date: February 2020
 
@@ -81,7 +81,7 @@ internship. The Dublin office hosts approximately twenty employees working on
 Human Resources, Legal, finances, sales, consulting, and other. Remote workers
 are also registered as working for the Dublin office.
 
-## The problem
+## The problem {#the-problem}
 
 ### What
 
@@ -147,6 +147,25 @@ Formatter is run as a linter in Liferay's Continuous Integration (CI) system.
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
 
+## Detailed problem context
+
+Section \ref{the-problem} gave the bare minimal problem description. This
+section aims to detail everything that would have muddied the essence of the
+problem.
+
+### Liferay Portal Community Edition
+
+Liferay Portal Community Edition is the main product of Liferay. It is the
+community version of Liferay DXP. It is licensed under the terms of the GNU
+Lesser General Public License as published by the Free Software Foundation,
+either version 2.1 of the license, or any later version. It consists of
+approximately 80,000[^liferay-source-files] files, out of which
+±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
+
+[^liferay-source-files]: `find . type -f | wc -l`
+
+[^liferay-java-files]: `find . type -f -name "*.java" | wc -l`
+
 ## The project
 
 The project of this internship is---in the simplest of terms---to make the
@@ -192,4 +211,6 @@ opdrachtnemer) of the project. The delivering party:
 
 <div id="refs"></div>
 
-# Appendix {-}
+\appendix
+
+# Crash course in copyright and licensing
