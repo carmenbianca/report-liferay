@@ -280,14 +280,14 @@ A Free and Open Source Software (FOSS) license grants certain rights to the
 recipient of the license. @fsf-free-sw says that a license is a FOSS license if
 it provides the user with four essential freedoms:
 
-- The freedom to run the program as you wish, for any purpose (freedom 0).
+- “The freedom to run the program as you wish, for any purpose (freedom 0).
 - The freedom to study how the program works, and change it so it does your
   computing as you wish (freedom 1). Access to the source code is a precondition
   for this.
 - The freedom to redistribute copies so you can help others (freedom 2).
 - The freedom to distribute copies of your modified versions to others (freedom
   3). By doing this you can give the whole community a chance to benefit from
-  your changes. Access to the source code is a precondition for this.
+  your changes. Access to the source code is a precondition for this.”
 
 Licenses that do not provide the user with these freedoms, then, are
 "proprietary" or "non-free" licenses.
