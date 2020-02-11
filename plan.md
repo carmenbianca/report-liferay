@@ -173,7 +173,7 @@ problem as described above go away. Chapter \ref{ch:project-definition}
 describes the project in full. This section details the context of the project.
 
 Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
-Matija Šuklje is the stakeholder personified. The ordering party:
+Matija Šuklje is the ordering party personified. The ordering party:
 
 - describes the problem;
 - provides resources to investigate the problem;
