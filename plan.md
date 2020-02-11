@@ -214,3 +214,90 @@ opdrachtnemer) of the project. The delivering party:
 \appendix
 
 # Crash course in copyright and licensing
+
+This appendix aims to provide a crash course in copyright and licensing. It is
+designed to be comprehensive-but-concise.
+
+## What is copyright?
+
+According to @cc-faq: "Copyright law grants exclusive rights to creators of
+original works of authorship, [...] prohibiting the making of copies without the
+rights holder’s permission, among other things. [...] Copyright in most
+jurisdictions attaches automatically without need for any formality once a
+creative work is fixed in tangible form. [...] In some jurisdictions, creators
+may be required to register with a national agency in order to enforce copyright
+in court."
+
+The Berne Convention [-@berne-1886] is an international agreement between
+nations that forms the basis of much of copyright law. It grants foreign works
+the same protections as native works, and sets some minimum standards of
+protection that all signatories must meet. The Berlin Act [-@berlin-1908]
+introduces the concept that copyright is enjoyed without being "subject to any
+formality". In effect, this means that copyright is granted as soon as one's
+metaphorical pen is put to paper.
+
+In order for a work to be eligible for copyright, it must be original. In this
+context, "'[o]riginal' means a work created through the 'fruits of intellectual
+labor.' 'Originality' therefore requires not only that the author has not
+copied the work from another, but also that there is 'at least some minimal
+degree of creativity.'" [@uslegal-originality]
+
+There is no international threshold for originality. Countries create their own
+thresholds for copyright eligibility. In the Netherlands, in order for a work to
+be copyrightable, the work must be perceivable by human senses; it must have its
+own, original character and carry the mark of its maker; and the work may not be
+solely necessary for the obtaining of a technical effect. Software is an
+exception to this last item. [@auteursrecht-waarop]
+
+The duration of copyright differs across jurisdictions. In the European Union,
+the Copyright Term Directive standardises copyright duration to the life of the
+author and 70 years after their death, or 70 years after the first lawful
+publication in case the author is anonymous/pseudoymous.
+[@copyright-term-directive]
+
+## What are licenses?
+
+@reuse-faq says that "a license defines the terms under which the copyright
+holder allows the recipient of the license to use the software".
+
+@choosealicense-no-license reasons that: "When you make a creative work (which
+includes code), the work is under exclusive copyright by default. Unless you
+include a license that specifies otherwise, nobody else can copy, distribute, or
+modify your work without being at risk of take-downs, shake-downs, or
+litigation. Once the work has other contributors (each a copyright holder),
+'nobody' starts including you", and adds that "[d]isallowing use of your code
+might not be what you intend by 'no license.' An open source license allows
+reuse of your code while retaining copyright."
+
+A Free and Open Source Software (FOSS) license grants certain rights to the
+recipient of the license. @fsf-free-sw says that a license is a FOSS license if
+it provides the user with four essential freedoms:
+
+- The freedom to run the program as you wish, for any purpose (freedom 0).
+- The freedom to study how the program works, and change it so it does your
+  computing as you wish (freedom 1). Access to the source code is a precondition
+  for this.
+- The freedom to redistribute copies so you can help others (freedom 2).
+- The freedom to distribute copies of your modified versions to others (freedom
+  3). By doing this you can give the whole community a chance to benefit from
+  your changes. Access to the source code is a precondition for this.
+
+@osi-osd has a similar requirement for a license to be identified as a FOSS
+license. It says that a license must abide by the Open Source Definition.
+
+These two definitions often---but not always---result in the same licenses being
+identified as FOSS licenses. [@spdx-license-list]
+
+@choosealicense-no-license, @osi-faq, and @stallman-license-compatibility
+identify two types of licenses: Permissive and copyleft. @osi-faq says that a
+permissive license is "simply a non-copyleft open source license --- one that
+guarantees the freedoms to use, modify, and redistribute, but that permits
+proprietary derivative works." @fsf-copyleft says that copyleft "is a general
+method for making a program (or other work) free (in the sense of freedom, not
+'zero price'), and requiring all modified and extended versions of the program
+to be free as well." This last requirement is the defining feature of copyleft
+licenses.
+
+The GNU General Public License family of licenses and the Creative Commons
+Attribution-ShareAlike family of licenses are most some of the most widely used
+copyleft licenses. [@fsf-copyleft;@cc-licenses]
