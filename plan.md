@@ -255,6 +255,13 @@ author and 70 years after their death, or 70 years after the first lawful
 publication in case the author is anonymous/pseudoymous.
 [@copyright-term-directive]
 
+The Berne Convention [-@berne-1886] and many other sources use the word "author"
+to refer to the person or organisation that holds the rights over a certain
+work. In this document, "copyright holder" is consistently used instead. The
+reason for this is that the author is not always the copyright holder---an
+author may transfer their copyright to another party, such as when in
+the course of employment. [@uk-ownership-copyright]
+
 ## What are licenses?
 
 @reuse-faq says that "a license defines the terms under which the copyright
