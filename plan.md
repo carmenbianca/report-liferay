@@ -311,3 +311,12 @@ licenses.
 The GNU General Public License family of licenses and the Creative Commons
 Attribution-ShareAlike family of licenses are most some of the most widely used
 copyleft licenses. [@fsf-copyleft;@cc-licenses]
+
+TODO: SPDX license list here.
+
+# Definitions
+
+TODO definitions of specialist terms go here.
+
+Copyright, license, copyleft, permissive, individual licenses, proprietary,
+non-free, author, copyright holder, FOSS, Free Software, Open Source, SPDX
