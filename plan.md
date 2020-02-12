@@ -159,6 +159,9 @@ Formatter is run as a linter in Liferay's Continuous Integration (CI) system.
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
 
+<!-- 
+TODO: Is this section necessary???
+
 ## Detailed problem context
 
 Section \ref{the-problem} gave the bare minimal problem description. This
@@ -201,6 +204,7 @@ shown in Listing \ref{lst:java-header}.
  * License for more details.
  */
 ```
+-->
 
 ## The project
 
