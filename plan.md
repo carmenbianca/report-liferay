@@ -16,6 +16,11 @@ filters:
 bibliography: plan.bib
 csl: apa.csl
 link-citations: true
+
+header-includes:
+    - \usepackage[section=chapter,numberedsection=autolabel]{glossaries}
+    - \makenoidxglossaries
+    - \input{glossary}
 ---
 
 # Introduction
@@ -54,13 +59,13 @@ potential to serve others." Its slogan is "Enterprise. Open Source. For Life."
 
 ## Legal
 
-The "Open Source" aspect of Liferay involves Free and Open Source Software
-(FOSS) licensing. Licensing involves Legal. This internship takes place within
-the context of Liferay's Legal department. I will be working under Matija
-Šuklje, Senior Counsel at Liferay. Matija is chiefly responsible for Liferay's
-Intellectual Property (IP), specifically anything that involves the "©" symbol
-and software copyright and licensing. The "™" symbol is managed by Kirstin
-Huniar, and is not relevant to this internship. [@suklje-2019]
+The "\gls{open-source}" aspect of Liferay involves \gls{foss} licensing.
+Licensing involves Legal. This internship takes place within the context of
+Liferay's Legal department. I will be working under Matija Šuklje, Senior
+Counsel at Liferay. Matija is chiefly responsible for Liferay's Intellectual
+Property (IP), specifically anything that involves the "©" symbol and software
+\gls{copyright} and licensing. The "™" symbol is managed by Kirstin Huniar, and
+is not relevant to this internship. [@suklje-2019]
 
 Beside FOSS licensing, Legal is also responsible for all other matters of law.
 Like trademarks, these are not relevant to the internship, but mentioned for
@@ -81,11 +86,14 @@ internship. The Dublin office hosts approximately twenty employees working on
 Human Resources, Legal, finances, sales, consulting, and other. Remote workers
 are also registered as working for the Dublin office.
 
+(For posterity's sake---although the manual says otherwise---the office is
+described *after* the departments because departments span offices.)
+
 ## The problem {#the-problem}
 
 ### What
 
-Liferay has a lot of software under various licenses. Liferay gives legal
+Liferay has a lot of software under various \glspl{license}. Liferay gives legal
 assurances to its customers about its Intellectual Property, and therefore needs
 to make sure that all code is correctly licensed. However, the current methods
 of assuring the correctness of its licensing are manual. This does not scale in
@@ -109,11 +117,11 @@ reasonable scale.
 
 The work on licensing compliance is important for several reasons:
 
-- Potential copyright violations provide legal and reputational risks, and
+- Potential \gls{copyright} violations provide legal and reputational risks, and
   potential loss of revenue and business.
-- Copyright violations would also affect customers, who would be in breach of
-  copyright law.
-- Crudely put, breaking copyright law is illegal. [@berne-1886]
+- \Gls{copyright} violations would also affect customers, who would be in breach
+  of \gls{copyright} law.
+- Crudely put, breaking \gls{copyright} law is illegal. [@berne-1886]
 
 The manual work is a problem because:
 
@@ -158,7 +166,7 @@ problem.
 Liferay Portal Community Edition is the main product of Liferay. It is the
 community version of Liferay DXP. It is licensed under the terms of the GNU
 Lesser General Public License as published by the Free Software Foundation,
-either version 2.1 of the license, or any later version. It consists of
+either version 2.1 of the \gls{license}, or any later version. It consists of
 approximately 80,000[^liferay-source-files] files, out of which
 ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
 
@@ -215,70 +223,73 @@ opdrachtnemer) of the project. The delivering party:
 
 # Crash course in copyright and licensing
 
-This appendix aims to provide a crash course in copyright and licensing. It is
-designed to be comprehensive-but-concise.
+This appendix aims to provide a crash course in \gls{copyright} and licensing.
+It is designed to be comprehensive-but-concise.
 
 ## What is copyright?
 
-According to @cc-faq: "Copyright law grants exclusive rights to creators of
-original works of authorship, [...] prohibiting the making of copies without the
-rights holder’s permission, among other things. [...] Copyright in most
-jurisdictions attaches automatically without need for any formality once a
+According to @cc-faq: "\Gls{copyright} law grants exclusive rights to creators
+of original works of authorship, [...] prohibiting the making of copies without
+the rights holder’s permission, among other things. [...] \Gls{copyright} in
+most jurisdictions attaches automatically without need for any formality once a
 creative work is fixed in tangible form. [...] In some jurisdictions, creators
-may be required to register with a national agency in order to enforce copyright
-in court."
+may be required to register with a national agency in order to enforce
+\gls{copyright} in court."
 
 The Berne Convention [-@berne-1886] is an international agreement between
-nations that forms the basis of much of copyright law. It grants foreign works
-the same protections as native works, and sets some minimum standards of
+nations that forms the basis of much of \gls{copyright} law. It grants foreign
+works the same protections as native works, and sets some minimum standards of
 protection that all signatories must meet. The Berlin Act [-@berlin-1908]
-introduces the concept that copyright is enjoyed without being "subject to any
-formality". In effect, this means that copyright is granted as soon as one's
-metaphorical pen is put to paper.
+introduces the concept that \gls{copyright} is enjoyed without being "subject to
+any formality". In effect, this means that \gls{copyright} is granted as soon as
+one's metaphorical pen is put to paper.
 
-In order for a work to be eligible for copyright, it must be original. In this
-context, "'[o]riginal' means a work created through the 'fruits of intellectual
-labor.' 'Originality' therefore requires not only that the author has not
-copied the work from another, but also that there is 'at least some minimal
-degree of creativity.'" [@uslegal-originality]
+In order for a work to be eligible for \gls{copyright}, it must be original. In
+this context, "'[o]riginal' means a work created through the 'fruits of
+intellectual labor.' 'Originality' therefore requires not only that the
+\gls{author} has not copied the work from another, but also that there is 'at
+least some minimal degree of creativity.'" [@uslegal-originality]
 
 There is no international threshold for originality. Countries create their own
-thresholds for copyright eligibility. In the Netherlands, in order for a work to
-be copyrightable, the work must be perceivable by human senses; it must have its
-own, original character and carry the mark of its maker; and the work may not be
-solely necessary for the obtaining of a technical effect. Software is an
-exception to this last item. [@auteursrecht-waarop]
+thresholds for \gls{copyright} eligibility. In the Netherlands, in order for a
+work to be copyrightable, the work must be perceivable by human senses; it must
+have its own, original character and carry the mark of its maker; and the work
+may not be solely necessary for the obtaining of a technical effect. Software is
+an exception to this last item. [@auteursrecht-waarop]
 
-The duration of copyright differs across jurisdictions. In the European Union,
-the Copyright Term Directive standardises copyright duration to the life of the
-author and 70 years after their death, or 70 years after the first lawful
-publication in case the author is anonymous/pseudoymous.
+The duration of \gls{copyright} differs across jurisdictions. In the European
+Union, the Copyright Term Directive standardises \gls{copyright} duration to the
+life of the \gls{author} and 70 years after their death, or 70 years after the
+first lawful publication in case the \gls{author} is anonymous/pseudoymous.
 [@copyright-term-directive]
 
-The Berne Convention [-@berne-1886] and many other sources use the word "author"
-to refer to the person or organisation that holds the rights over a certain
-work. In this document, "copyright holder" is consistently used instead. The
-reason for this is that the author is not always the copyright holder---an
-author may transfer their copyright to another party, such as when in
-the course of employment. [@uk-ownership-copyright]
+The Berne Convention [-@berne-1886] and many other sources use the word
+"\gls{author}" to refer to the person or organisation that holds the rights over
+a certain work. In this document, "\gls{copyright-holder}" is consistently used
+instead. The reason for this is that the \gls{author} is not always the
+\gls{copyright-holder}---an \gls{author} may transfer their \gls{copyright} to
+another party, such as when in the course of employment.
+[@uk-ownership-copyright]
 
 ## What are licenses?
 
-@reuse-faq says that "a license defines the terms under which the copyright
-holder allows the recipient of the license to use the software".
+@reuse-faq says that "a \gls{license} defines the terms under which the
+\gls{copyright-holder}allows the recipient of the \gls{license} to use the
+software".
 
 @choosealicense-no-license reasons that: "When you make a creative work (which
-includes code), the work is under exclusive copyright by default. Unless you
-include a license that specifies otherwise, nobody else can copy, distribute, or
-modify your work without being at risk of take-downs, shake-downs, or
-litigation. Once the work has other contributors (each a copyright holder),
-'nobody' starts including you", and adds that "[d]isallowing use of your code
-might not be what you intend by 'no license.' An open source license allows
-reuse of your code while retaining copyright."
+includes code), the work is under exclusive \gls{copyright} by default. Unless
+you include a \gls{license} that specifies otherwise, nobody else can copy,
+distribute, or modify your work without being at risk of take-downs,
+shake-downs, or litigation. Once the work has other contributors (each a
+\gls{copyright-holder}), 'nobody' starts including you", and adds that
+"[d]isallowing use of your code might not be what you intend by 'no
+\gls{license}.' An \gls{open-source} \gls{license} allows reuse of your code
+while retaining \gls{copyright}."
 
-A Free and Open Source Software (FOSS) license grants certain rights to the
-recipient of the license. @fsf-free-sw says that a license is a FOSS license if
-it provides the user with four essential freedoms:
+A \gls{foss} \gls{license} grants certain rights to the recipient of the
+\gls{license}. @fsf-free-sw says that a \gls{license} is a \gls{foss}
+\gls{license} if it provides the user with four essential freedoms:
 
 - “The freedom to run the program as you wish, for any purpose (freedom 0).
 - The freedom to study how the program works, and change it so it does your
@@ -289,34 +300,36 @@ it provides the user with four essential freedoms:
   3). By doing this you can give the whole community a chance to benefit from
   your changes. Access to the source code is a precondition for this.”
 
-Licenses that do not provide the user with these freedoms, then, are
-"proprietary" or "non-free" licenses.
+\Glspl{license} that do not provide the user with these freedoms, then, are
+"\gls{proprietary}" or "\gls{non-free}" \glspl{license}.
 
-@osi-osd has a similar requirement for a license to be identified as a FOSS
-license. It says that a license must abide by the Open Source Definition.
+@osi-osd has a similar requirement for a license to be identified as a
+\gls{foss} \gls{license}. It says that a \gls{license} must abide by the Open
+Source Definition.
 
-These two definitions often---but not always---result in the same licenses being
-identified as FOSS licenses. [@spdx-license-list]
+These two definitions often---but not always---result in the same
+\glspl{license} being identified as \gls{foss} \glspl{license}.
+[@spdx-license-list]
 
 @choosealicense-no-license, @osi-faq, and @stallman-license-compatibility
-identify two types of licenses: Permissive and copyleft. @osi-faq says that a
-permissive license is "simply a non-copyleft open source license --- one that
-guarantees the freedoms to use, modify, and redistribute, but that permits
-proprietary derivative works." @fsf-copyleft says that copyleft "is a general
-method for making a program (or other work) free (in the sense of freedom, not
-'zero price'), and requiring all modified and extended versions of the program
-to be free as well." This last requirement is the defining feature of copyleft
-licenses.
+identify two types of \glspl{license}: \Gls{permissive} and \gls{copyleft}.
+@osi-faq says that a \gls{permissive} \gls{license} is "simply a
+non-\gls{copyleft} \gls{open-source} \gls{license} --- one that guarantees the
+freedoms to use, modify, and redistribute, but that permits \gls{proprietary}
+derivative works." @fsf-copyleft says that \gls{copyleft} "is a general method
+for making a program (or other work) free (in the sense of freedom, not 'zero
+price'), and requiring all modified and extended versions of the program to be
+free as well." This last requirement is the defining feature of \gls{copyleft}
+\glspl{license}.
 
-The GNU General Public License family of licenses and the Creative Commons
-Attribution-ShareAlike family of licenses are most some of the most widely used
-copyleft licenses. [@fsf-copyleft;@cc-licenses]
+The GNU General Public License family of \glspl{license} and the Creative
+Commons Attribution-ShareAlike family of \glspl{license} are most some of the
+most widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
 
 TODO: SPDX license list here.
 
-# Definitions
+<!-- This document contains a number of terms---mostly legal terms---that software
+engineers may not be familiar with. This appendix aims to be a small reference
+for those terms. -->
 
-TODO definitions of specialist terms go here.
-
-Copyright, license, copyleft, permissive, individual licenses, proprietary,
-non-free, author, copyright holder, FOSS, Free Software, Open Source, SPDX
+\printnoidxglossary[sort=word]
