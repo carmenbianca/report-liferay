@@ -322,7 +322,7 @@ another party, such as when in the course of employment.
 ## What are licenses?
 
 @reuse-faq says that "a \gls{license} defines the terms under which the
-\gls{copyright-holder}allows the recipient of the \gls{license} to use the
+\gls{copyright-holder} allows the recipient of the \gls{license} to use the
 software".
 
 @choosealicense-no-license reasons that: "When you make a creative work (which
@@ -371,5 +371,5 @@ free as well." This last requirement is the defining feature of \gls{copyleft}
 \glspl{license}.
 
 The GNU General Public License family of \glspl{license} and the Creative
-Commons Attribution-ShareAlike family of \glspl{license} are most some of the
-most widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
+Commons Attribution-ShareAlike family of \glspl{license} are some of the most
+widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
