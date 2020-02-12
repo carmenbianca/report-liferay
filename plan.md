@@ -373,9 +373,3 @@ free as well." This last requirement is the defining feature of \gls{copyleft}
 The GNU General Public License family of \glspl{license} and the Creative
 Commons Attribution-ShareAlike family of \glspl{license} are most some of the
 most widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
-
-TODO: SPDX license list here.
-
-<!-- This document contains a number of terms---mostly legal terms---that software
-engineers may not be familiar with. This appendix aims to be a small reference
-for those terms. -->
