@@ -92,7 +92,8 @@ described *after* the departments because departments span offices.)
 ## The problem {#the-problem}
 
 This section describes the problem curtly using the 6W method. [@verhoeven-2018,
-chap. 3, sec. 3.2]
+chap. 3, sec. 3.2] The questions were posed to Matija Šuklje, and paraphrased
+here.
 
 ### What
 
