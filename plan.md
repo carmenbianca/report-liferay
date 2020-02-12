@@ -18,7 +18,7 @@ csl: apa.csl
 link-citations: true
 
 header-includes:
-    - \usepackage[section=chapter,numberedsection=autolabel]{glossaries}
+    - \usepackage[section=chapter,toc]{glossaries}
     - \makenoidxglossaries
     - \input{glossary}
 ---
@@ -62,12 +62,12 @@ potential to serve others." Its slogan is "Enterprise. Open Source. For Life."
 The "\gls{open-source}" aspect of Liferay involves \gls{foss} licensing.
 Licensing involves Legal. This internship takes place within the context of
 Liferay's Legal department. I will be working under Matija Šuklje, Senior
-Counsel at Liferay. Matija is chiefly responsible for Liferay's Intellectual
-Property (IP), specifically anything that involves the "©" symbol and software
-\gls{copyright} and licensing. The "™" symbol is managed by Kirstin Huniar, and
-is not relevant to this internship. [@suklje-2019]
+Counsel at Liferay. Matija is chiefly responsible for Liferay's \gls{ip},
+specifically anything that involves the "©" symbol and software \gls{copyright}
+and licensing. The "™" symbol is managed by Kirstin Huniar, and is not relevant
+to this internship. [@suklje-2019]
 
-Beside FOSS licensing, Legal is also responsible for all other matters of law.
+Beside \gls{foss} licensing, Legal is also responsible for all other matters of law.
 Like trademarks, these are not relevant to the internship, but mentioned for
 completeness' sake.
 
@@ -76,7 +76,7 @@ completeness' sake.
 Though this internship does not take place within the context of Liferay's
 Engineering department, it is nevertheless important. Engineering is responsible
 for creating Liferay's products. As part of creating Liferay's products, they
-almost always interact with FOSS---either Liferay's, or a dependency's.
+almost always interact with \gls{foss}---either Liferay's, or a dependency's.
 
 ## Dublin office
 
@@ -91,10 +91,13 @@ described *after* the departments because departments span offices.)
 
 ## The problem {#the-problem}
 
+This section describes the problem curtly using the 6W method. [@verhoeven-2018,
+chap. 3, sec. 3.2]
+
 ### What
 
 Liferay has a lot of software under various \glspl{license}. Liferay gives legal
-assurances to its customers about its Intellectual Property, and therefore needs
+assurances to its customers about its \gls{ip}, and therefore needs
 to make sure that all code is correctly licensed. However, the current methods
 of assuring the correctness of its licensing are manual. This does not scale in
 an economically viable way.
@@ -163,16 +166,40 @@ problem.
 
 ### Liferay Portal Community Edition
 
-Liferay Portal Community Edition is the main product of Liferay. It is the
-community version of Liferay DXP. It is licensed under the terms of the GNU
-Lesser General Public License as published by the Free Software Foundation,
-either version 2.1 of the \gls{license}, or any later version. It consists of
-approximately 80,000[^liferay-source-files] files, out of which
-±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
+Liferay Portal Community Edition (henceforth: Liferay Portal) is the main
+product of Liferay. It is the community version of Liferay DXP. It is licensed
+under the terms of the GNU Lesser General Public License as published by the
+Free Software Foundation, either version 2.1 of the \gls{license}, or any later
+version. It consists of approximately 80,000[^liferay-source-files] files, out
+of which ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
 
 [^liferay-source-files]: `find . type -f | wc -l`
 
 [^liferay-java-files]: `find . type -f -name "*.java" | wc -l`
+
+### License headers
+
+By and large, the \gls{copyright} and licensing of a file is defined in its
+comment header. In Liferay Portal, the Java files have a standardised header as
+shown in Listing \ref{lst:java-header}.
+
+```{#lst:java-header caption="Comment header that contains Liferay's licensing blurb. The wrapping has been changed to fit on this page."}
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it
+ * and/or modify it under the terms of the GNU Lesser
+ * General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License,
+ * or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will
+ * be useful, but WITHOUT ANY WARRANTY; without even the
+ * implied warranty of MERCHANTABILITY or FITNESS FOR A
+ * PARTICULAR PURPOSE. See the GNU Lesser General Public
+ * License for more details.
+ */
+```
 
 ## The project
 
@@ -218,6 +245,8 @@ opdrachtnemer) of the project. The delivering party:
 # References {-}
 
 <div id="refs"></div>
+
+\printnoidxglossary[sort=word]
 
 \appendix
 
@@ -331,5 +360,3 @@ TODO: SPDX license list here.
 <!-- This document contains a number of terms---mostly legal terms---that software
 engineers may not be familiar with. This appendix aims to be a small reference
 for those terms. -->
-
-\printnoidxglossary[sort=word]
