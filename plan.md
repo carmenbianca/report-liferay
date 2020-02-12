@@ -237,6 +237,20 @@ opdrachtnemer) of the project. The delivering party:
 
 # Project definition {#ch:project-definition}
 
+In this chapter, we define the parameters of the project. Specifically, this
+chapter defines the end result of the project.
+
+## Goals
+
+In coming up with a goal, it was quickly evident that it would be difficult to
+formulate the main goal into a SMART goal. So instead of doing that, a broader
+goal was chosen, with the implicit understanding that the goal would be met if
+all SMART sub-goals are completed.
+
+The main goal of the project is:
+
+> Improve and automate \gls{inbound} and \gls{outbound} licensing compliance.
+
 # Research
 
 # Project activities
