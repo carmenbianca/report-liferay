@@ -95,6 +95,8 @@ This section describes the problem curtly using the 6W method. [@verhoeven-2018,
 chap. 3, sec. 3.2] The questions were posed to Matija Šuklje, and paraphrased
 here.
 
+The sections *What* and *Why* provide the best concise context for the reader.
+
 #### What {-}
 
 Liferay has a lot of software under various \glspl{license}. Liferay gives legal
