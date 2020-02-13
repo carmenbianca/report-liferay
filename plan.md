@@ -159,14 +159,43 @@ Formatter is run as a linter in Liferay's Continuous Integration (CI) system.
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
 
-<!-- 
-TODO: Is this section necessary???
+## The project
+
+The project of this internship is---in the simplest of terms---to make the
+problem as described above go away. Chapter \ref{ch:project-definition}
+describes the project in full. This section details the context of the project.
+
+Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
+Matija Šuklje is the ordering party personified. The ordering party:
+
+- describes the problem;
+- provides resources to investigate the problem;
+- describes further requirements and limitations;
+- provides continuous feedback on the direction of the project;
+- provides a working environment;
+- provides assistance where needed.
+
+I (Carmen Bianca Bakker) am the *delivering party* (contractor, Dutch:
+opdrachtnemer) of the project. The delivering party:
+
+- investigates the problem;
+- performs research to form the basis of a requirements analysis;
+- creates a requirements analysis;
+- acts as project lead on the project to tackle the problem;
+- creates a product to solve the problem;
+- tests the product;
+- writes a report on the process;
+- performs evaluation at the end of the process to provide recommendations going
+  forward.
 
 ## Detailed problem context
 
-Section \ref{the-problem} gave the bare minimal problem description. This
-section aims to detail everything that would have muddied the essence of the
-problem.
+Section \ref{the-problem} gave the bare minimal problem description. Anything
+more would have muddied the essence of the problem. However, more context is
+needed to understand some things in chapter \ref{ch:project-definition}.
+
+Notice to the reader: Feel free to skip this section or briefly skim over it. It
+exists solely as reference material for chapter \ref{ch:project-definition}.
 
 ### Liferay Portal Community Edition
 
@@ -206,34 +235,6 @@ shown in Listing \ref{lst:java-header}.
 ```
 -->
 
-## The project
-
-The project of this internship is---in the simplest of terms---to make the
-problem as described above go away. Chapter \ref{ch:project-definition}
-describes the project in full. This section details the context of the project.
-
-Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
-Matija Šuklje is the ordering party personified. The ordering party:
-
-- describes the problem;
-- provides resources to investigate the problem;
-- describes further requirements and limitations;
-- provides continuous feedback on the direction of the project;
-- provides a working environment;
-- provides assistance where needed.
-
-I (Carmen Bianca Bakker) am the *delivering party* (contractor, Dutch:
-opdrachtnemer) of the project. The delivering party:
-
-- investigates the problem;
-- performs research to form the basis of a requirements analysis;
-- creates a requirements analysis;
-- acts as project lead on the project to tackle the problem;
-- creates a product to solve the problem;
-- tests the product;
-- writes a report on the process;
-- performs evaluation at the end of the process to provide recommendations going
-  forward.
 
 # Project definition {#ch:project-definition}
 
