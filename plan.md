@@ -1,5 +1,5 @@
 ---
-title: "Plan de campagne: Automated Copyright And Licensing Compliance (ACALC)"
+title: "Plan de campagne: Automated Copyright And Licensing Compliance"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
 date: February 2020
 
