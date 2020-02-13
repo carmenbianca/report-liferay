@@ -95,8 +95,6 @@ This section describes the problem curtly using the 6W method. [@verhoeven-2018,
 chap. 3, sec. 3.2] The questions were posed to Matija Šuklje, and paraphrased
 here.
 
-The sections *What* and *Why* provide the best concise context for the reader.
-
 #### What {-}
 
 Liferay has a lot of software under various \glspl{license}. Liferay gives legal
@@ -147,6 +145,18 @@ for compliance. A small amount of files can be verified by hand, but thousands
 cannot. Alternatively, there would be no need to verify compliance if all
 engineers were completely diligent in introducing copyrighted code. However,
 human error is unavoidable, so verification is mandatory.
+
+## Gap analysis of the problem
+
+This section aims to simplify the fractured description in section
+\ref{the-problem} with a gap analysis. The gap analysis is explicitly
+as-short-as-possible to capture the essence of the problem.
+
+> The current process of licensing compliance is manual. This takes a lot of
+> time.
+>
+> The desired process of licensing compliance is automated. This saves a lot of
+> time, and improves accuracy.
 
 ## History
 
