@@ -95,7 +95,7 @@ This section describes the problem curtly using the 6W method. [@verhoeven-2018,
 chap. 3, sec. 3.2] The questions were posed to Matija Šuklje, and paraphrased
 here.
 
-### What
+#### What {-}
 
 Liferay has a lot of software under various \glspl{license}. Liferay gives legal
 assurances to its customers about its \gls{ip}, and therefore needs
@@ -103,7 +103,7 @@ to make sure that all code is correctly licensed. However, the current methods
 of assuring the correctness of its licensing are manual. This does not scale in
 an economically viable way.
 
-### Who
+#### Who {-}
 
 Legal is responsible for verifying the licensing of Liferay's products.
 Engineering interacts with licensed products, and may be affected by steps taken
@@ -111,13 +111,13 @@ to address the problem.
 
 Matija Šuklje is the instigator of the project to tackle this problem.
 
-### When
+#### When {-}
 
 "When" is not strictly applicable, although the issue started being more
 apparent as the product became too big to audit manually on a commercially
 reasonable scale.
 
-### Why
+#### Why {-}
 
 The work on licensing compliance is important for several reasons:
 
@@ -134,11 +134,11 @@ The manual work is a problem because:
 - when a problem is identified, the feedback loop between Legal and Engineering
   is inefficient, and creates a bottleneck.
 
-### Where
+#### Where {-}
 
 "Where" is not strictly applicable. The problem is in the codebase.
 
-### The cause
+#### The cause {-}
 
 The main cause of the problem is the quantity of files that need to be checked
 for compliance. A small amount of files can be verified by hand, but thousands
@@ -384,3 +384,10 @@ free as well." This last requirement is the defining feature of \gls{copyleft}
 The GNU General Public License family of \glspl{license} and the Creative
 Commons Attribution-ShareAlike family of \glspl{license} are some of the most
 widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
+
+## A word on FOSS
+
+This document uses \acrshort{foss} (\acrlong{foss}) as a catch-all name for both
+\gls{open-source} and \gls{free-software}. This is in the understanding that
+they are incredibly similar. @schiessle-2012 argues that they are effectively
+synonyms.
