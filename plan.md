@@ -233,7 +233,6 @@ shown in Listing \ref{lst:java-header}.
  * License for more details.
  */
 ```
--->
 
 
 # Project definition {#ch:project-definition}
