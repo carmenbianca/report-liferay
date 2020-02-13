@@ -234,6 +234,17 @@ shown in Listing \ref{lst:java-header}.
  */
 ```
 
+### Copyright assignment
+
+Liferay uses a policy of \gls{copyright} assignment. This means that all
+third-party contributors to Liferay must sign an agreement wherein they transfer
+("assign") their \gls{copyright} to Liferay. If the agreement is not signed,
+then the contributions are not accepted. [@liferay-cla]
+
+Employee contributions always assign their copyright to the employer (Liferay).
+
+The logical consequence of this policy is that all code inside of Liferay's
+repositories is exclusively copyrighted by Liferay.
 
 # Project definition {#ch:project-definition}
 
