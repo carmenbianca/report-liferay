@@ -200,6 +200,9 @@ opdrachtnemer) of the project. The delivering party:
 - performs evaluation at the end of the process to provide recommendations going
   forward.
 
+These items are performed to the best of my abilities considering the
+educational context within which the internship takes place.
+
 ## Detailed problem context
 
 Section \ref{the-problem} gave the bare minimal problem description. Anything
