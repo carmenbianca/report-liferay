@@ -23,7 +23,7 @@ header-includes:
     - \input{glossary}
 ---
 
-# Introduction
+# Introduction {-}
 
 This is the *plan de campagne* (plan of action, Dutch: plan van aanpak) for my
 end-of-study internship. I am Carmen Bianca Bakker, and follow a bachelor in
@@ -272,12 +272,6 @@ The main goal of the project is:
 
 # Planning
 
-# References {-}
-
-<div id="refs"></div>
-
-\printnoidxglossary[sort=word]
-
 \appendix
 
 # Crash course in copyright and licensing
@@ -391,3 +385,9 @@ This document uses \acrshort{foss} (\acrlong{foss}) as a catch-all name for both
 \gls{open-source} and \gls{free-software}. This is in the understanding that
 they are incredibly similar. @schiessle-2012 argues that they are effectively
 synonyms.
+
+\printnoidxglossary[sort=word]
+
+# References {-}
+
+<div id="refs"></div>
