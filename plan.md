@@ -3,6 +3,8 @@ title: "Plan de campagne: Automated Copyright And Licensing Compliance"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
 date: February 2020
 
+pdf-engine: xelatex
+
 documentclass: report
 papersize: a4
 lang: en-GB
@@ -21,6 +23,7 @@ header-includes:
     - \usepackage[section=chapter,toc]{glossaries}
     - \makenoidxglossaries
     - \input{glossary}
+    - \lstset{breaklines=true,breakatwhitespace=true,frame=single,numbers=left}
 ---
 
 # Introduction {-}
@@ -225,29 +228,35 @@ of which ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
 
 [^liferay-java-files]: `find . type -f -name "*.java" | wc -l`
 
-### License headers
+### License headers {#license-headers}
 
 By and large, the \gls{copyright} and licensing of a file is defined in its
 comment header. In Liferay Portal, the Java files have a standardised header as
-shown in Listing \ref{lst:java-header}.
+shown in listing \ref{lst:java-header}.
 
-```{#lst:java-header caption="Comment header that contains Liferay's licensing blurb. The wrapping has been changed to fit on this page."}
+```{#lst:java-header caption="Comment header that contains Liferay's licensing blurb."}
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
  *
- * This library is free software; you can redistribute it
- * and/or modify it under the terms of the GNU Lesser
- * General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License,
- * or (at your option) any later version.
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
  *
- * This library is distributed in the hope that it will
- * be useful, but WITHOUT ANY WARRANTY; without even the
- * implied warranty of MERCHANTABILITY or FITNESS FOR A
- * PARTICULAR PURPOSE. See the GNU Lesser General Public
- * License for more details.
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
  */
+
 ```
+
+@liferay-policy-marking-code identifies several problem with the current comment
+headers: "[N]o coherent policy applied to all projects; years not updated; the
+use of 'present' in the year span, which is useless at best and misleading at
+worst; use of obsolete 'All rights reserved', which is neither needed nor true,
+as the very next line gives rights through a FOSS license; does not include a
+contact point to the copyright holder."
 
 ### Copyright assignment
 
@@ -279,10 +288,21 @@ The main goal of the project is:
 
 The sub-goals of the project are informed by the desires of Liferay.
 
-#### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files
+### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files
 
-This is informed by the REUSE project of the Free Software Foundation Europe
-(TODO: Fix citing).
+This resolves the problem mentioned in \ref{license-headers}. @liferay-outbound
+now mandates the use of a different header, but it has not been implemented yet.
+The new header can be seen in Listing \ref{lst:reuse-header}
+
+```{#lst:reuse-header caption="TODO"}
+/**
+ * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: {spdx_license_short_identifier}
+ */
+```
+
+TODO: This is informed by the REUSE project of the Free Software Foundation
+Europe (TODO: Fix citing).
 
 # Research
 
