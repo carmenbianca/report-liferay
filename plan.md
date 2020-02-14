@@ -277,6 +277,13 @@ The main goal of the project is:
 
 > Improve and automate \gls{inbound} and \gls{outbound} licensing compliance.
 
+The sub-goals of the project are informed by the desires of Liferay.
+
+#### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files
+
+This is informed by the REUSE project of the Free Software Foundation Europe
+(TODO: Fix citing).
+
 # Research
 
 # Project activities
@@ -397,9 +404,28 @@ widely used \gls{copyleft} \glspl{license}. [@fsf-copyleft;@cc-licenses]
 ## A word on FOSS
 
 This document uses \acrshort{foss} (\acrlong{foss}) as a catch-all name for both
-\gls{open-source} and \gls{free-software}. This is in the understanding that
-they are incredibly similar. @schiessle-2012 argues that they are effectively
-synonyms.
+\gls{open-source} and \gls{free-software}. Furthermore, this document regards
+\gls{open-source} and \gls{free-software} to be synonyms for simplicity's sake.
+This is in the understanding that they are incredibly similar. [@schiessle-2012]
+
+## Outbound licenses
+
+An \gls{outbound} \gls{license} is effectively the \gls{license} under which a
+first party distributes their code. The word "\gls{outbound}" is only added to
+contrast against \gls{inbound} \glspl{license}.
+
+## Inbound licenses
+
+According to @liferay-internal-faq, "an \gls{inbound} \gls{license} is one that
+is coming into the project or product, [of which there are generally] two types:
+[1] code you copied from an \gls{upstream} project --- which is the same as that
+upstream project's \gls{outbound} \gls{license}; and [2] code that was
+contributed to one of our projects/products from an external party --- typically
+by signing Liferay's CLA."
+
+To paraphrase, all code and works that *enter* a project are covered by an
+*\gls{inbound}* \gls{license}. The \gls{inbound} \gls{license} that a first
+party receives is the \gls{outbound} \gls{license} of a third party.
 
 \printnoidxglossary[sort=word]
 
