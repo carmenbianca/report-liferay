@@ -335,7 +335,7 @@ an exception to this last item. [@auteursrecht-waarop]
 The duration of \gls{copyright} differs across jurisdictions. In the European
 Union, the Copyright Term Directive standardises \gls{copyright} duration to the
 life of the \gls{author} and 70 years after their death, or 70 years after the
-first lawful publication in case the \gls{author} is anonymous/pseudoymous.
+first lawful publication in case the \gls{author} is anonymous/pseudonymous.
 [@copyright-term-directive]
 
 The Berne Convention [-@berne-1886] and many other sources use the word
