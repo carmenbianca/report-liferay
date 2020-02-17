@@ -305,7 +305,7 @@ been implemented yet. The new header can be seen in listing
 TODO: This is informed by the REUSE project of the Free Software Foundation
 Europe (TODO: Fix citing).
 
-Optional goal: Same header for open source and corporate thingamajig.
+Optional goal TODO: Same header for open source and corporate thingamajig.
 
 ### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
 
@@ -323,27 +323,21 @@ as the licensing policy that informs it.
 
 Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
 
-#### Automatically check whether inbound code is first-party or third-party
+- Automatically check whether inbound code is first-party or third-party
 
-TODO
+- Automatically check the licensing of inbound third-party code
 
-#### Automatically check the licensing of inbound third-party code
+- Verify whether the licensing of inbound third-party code is compatible
 
-TODO
-
-#### Verify whether the licensing of inbound third-party code is compatible
-
-TODO
-
-#### Flag Legal if a problem is detected
-
-TODO
+- Flag Legal if a problem is detected
 
 ### Produce a bill of materials that covers all outbound licensing
 
 TODO: Are we doing this?
 
 # Research
+
+
 
 # Project activities
 
