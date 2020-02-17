@@ -292,7 +292,7 @@ The sub-goals of the project are informed by the desires of Liferay.
 
 This resolves the problem mentioned in \ref{license-headers}. @liferay-outbound
 now mandates the use of a different header, but it has not been implemented yet.
-The new header can be seen in Listing \ref{lst:reuse-header}
+The new header can be seen in listing \ref{lst:reuse-header}.
 
 ```{#lst:reuse-header caption="TODO"}
 /**
