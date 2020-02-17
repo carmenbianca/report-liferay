@@ -304,6 +304,44 @@ The new header can be seen in listing \ref{lst:reuse-header}.
 TODO: This is informed by the REUSE project of the Free Software Foundation
 Europe (TODO: Fix citing).
 
+Optional goal: Same header for open source and corporate thingamajig.
+
+### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
+
+All code that enters the project must have its licensing checked. More often
+than not, it will be a contribution authored by an employee, which means that
+the \gls{inbound} licensing is not a concern. If the employee commits code that
+was authored by somebody else, however, the licensing must be double-checked.
+
+The method of implementation is not yet certain, and will require research.
+Preliminary research suggests that the code could be verified against a
+"plagiarism checker" and a decision tree. The complexity of such a plagiarism
+checker is much greater, however, because not only must one check for duplicity,
+but also for the licensing of the original code. The decision tree is as complex
+as the licensing policy that informs it.
+
+Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
+
+#### Automatically check whether inbound code is first-party or third-party
+
+TODO
+
+#### Automatically check the licensing of inbound third-party code
+
+TODO
+
+#### Verify whether the licensing of inbound third-party code is compatible
+
+TODO
+
+#### Flag Legal if a problem is detected
+
+TODO
+
+### Produce a bill of materials that covers all outbound licensing
+
+TODO: Are we doing this?
+
 # Research
 
 # Project activities
