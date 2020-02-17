@@ -275,7 +275,22 @@ repositories is exclusively copyrighted by Liferay.
 In this chapter, we define the parameters of the project. Specifically, this
 chapter defines the end result of the project.
 
-## Goals
+## Ideal situation
+
+In order to give some context for the goals in section \ref{goals}, these are
+some qualities of the ideal situation:
+
+- Licensing problems get addressed much earlier during the development cycle.
+- The feedback loop between Legal and Engineering is shortened.
+- Total time spent working on this by Legal and Engineering is reduced to a
+  minimum.
+- Quality of licensing compliance improves.
+
+Licensing problems get addressed much earlier during the development cycle.
+Feedback loop gets shortened. Total time spent working on this by Legal and
+Engineering is reduced to a minimum. Quality of licensing compliance improves
+
+## Goals {#goals}
 
 In coming up with a goal, it was quickly evident that it would be difficult to
 formulate the main goal into a SMART goal. So instead of doing that, a broader
