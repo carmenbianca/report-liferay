@@ -310,7 +310,7 @@ This resolves the problem mentioned in section \ref{license-headers}.
 been implemented yet. The new header can be seen in listing
 \ref{lst:reuse-header}.
 
-```{#lst:reuse-header caption="TODO"}
+```{#lst:reuse-header caption="New copyright and licensing header template for Liferay."}
 /**
  * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: {spdx_license_short_identifier}
