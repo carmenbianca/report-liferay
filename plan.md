@@ -275,7 +275,22 @@ repositories is exclusively copyrighted by Liferay.
 In this chapter, we define the parameters of the project. Specifically, this
 chapter defines the end result of the project.
 
-## Goals
+## Ideal situation
+
+In order to give some context for the goals in section \ref{goals}, these are
+some qualities of the ideal situation:
+
+- Licensing problems get addressed much earlier during the development cycle.
+- The feedback loop between Legal and Engineering is shortened.
+- Total time spent working on this by Legal and Engineering is reduced to a
+  minimum.
+- Quality of licensing compliance improves.
+
+Licensing problems get addressed much earlier during the development cycle.
+Feedback loop gets shortened. Total time spent working on this by Legal and
+Engineering is reduced to a minimum. Quality of licensing compliance improves
+
+## Goals {#goals}
 
 In coming up with a goal, it was quickly evident that it would be difficult to
 formulate the main goal into a SMART goal. So instead of doing that, a broader
@@ -290,11 +305,12 @@ The sub-goals of the project are informed by the desires of Liferay.
 
 ### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files
 
-This resolves the problem mentioned in \ref{license-headers}. @liferay-outbound
-now mandates the use of a different header, but it has not been implemented yet.
-The new header can be seen in Listing \ref{lst:reuse-header}
+This resolves the problem mentioned in section \ref{license-headers}.
+@liferay-outbound now mandates the use of a different header, but it has not
+been implemented yet. The new header can be seen in listing
+\ref{lst:reuse-header}.
 
-```{#lst:reuse-header caption="TODO"}
+```{#lst:reuse-header caption="New copyright and licensing header template for Liferay."}
 /**
  * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: {spdx_license_short_identifier}
@@ -303,6 +319,36 @@ The new header can be seen in Listing \ref{lst:reuse-header}
 
 TODO: This is informed by the REUSE project of the Free Software Foundation
 Europe (TODO: Fix citing).
+
+Optional goal TODO: Same header for open source and corporate thingamajig.
+
+### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
+
+All code that enters the project must have its licensing checked. More often
+than not, it will be a contribution authored by an employee, which means that
+the \gls{inbound} licensing is not a concern. If the employee commits code that
+was authored by somebody else, however, the licensing must be double-checked.
+
+The method of implementation is not yet certain, and will require research.
+Preliminary research suggests that the code could be verified against a
+"plagiarism checker" and a decision tree. The complexity of such a plagiarism
+checker is much greater, however, because not only must one check for duplicity,
+but also for the licensing of the original code. The decision tree is as complex
+as the licensing policy that informs it.
+
+Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
+
+- Automatically check whether inbound code is first-party or third-party
+
+- Automatically check the licensing of inbound third-party code
+
+- Verify whether the licensing of inbound third-party code is compatible
+
+- Flag Legal if a problem is detected
+
+### Produce a bill of materials that covers all outbound licensing
+
+TODO: Are we doing this?
 
 # Research
 
