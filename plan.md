@@ -306,6 +306,24 @@ Europe (TODO: Fix citing).
 
 # Research
 
+TODO
+
+## Main question
+
+TODO: this is a prescribing question.
+
+> Given Liferay’s needs, demands, requirements and limitations, what is the best
+> solution for automating Liferay's inbound and outbound licensing policies?
+
+## Sub-questions
+
+- What are the needs, demands, requirements and limitations of Liferay?
+
+- What are the available technical solutions in the field of licensing
+  compliance? What are their qualities?
+
+- TODO???
+
 # Project activities
 
 # Project boundaries
