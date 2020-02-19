@@ -379,22 +379,43 @@ verify this number) of them.
 The first two sub-questions directly elaborate on the main question in ways that
 are hopefully obvious:
 
-(@needs) What are the needs, demands, requirements and limitations of Liferay?
+@needs. What are the needs, demands, requirements and limitations of Liferay?
 
-(@solutions) What are the available technical solutions in the field of
+@solutions. What are the available technical solutions in the field of
 licensing compliance? What are their qualities?
 
 Question @needs seeks to define some important terms in the main question.
 Question @solutions seeks to acquire information about existing technical
 approaches to adjacent problems, if any.
 
-(@methods) What are the possible methods of detecting the \gls{inbound}
+The next two questions explore aspects that are directly tangential to the main
+question. They explore aspects which the main question does not specifically
+mention, but which will be important to research regardless.
+
+@methods. What are the possible methods of detecting the \gls{inbound}
 licensing of code? What are their qualities?
 
-(@measure) Is it possible to measure the quality of licensing?
-
-(@manual) What are the scenarios that should require manual intervention by
+@manual. What are the scenarios that should require manual intervention by
 Legal or Engineering?
+
+Question @methods looks similar to question @solutions, but they are in truth
+extremely different. Where question @solutions is focused on the technical
+aspect and available technical solutions, question @methods is purely
+non-technical and should not involve a single line of code. It is concerned with
+extracting information from data.
+
+Question @manual puts a boundary on the automatisation. Lawyers cannot yet be
+totally automated, and it helps to know the scenarios where we can certainly say
+that automation is unwanted.
+
+Which leaves the last question:
+
+@measure. Is it possible to measure the quality of licensing? If so, how?
+
+This question is slightly out-of-scope for main question, but completely
+in-scope for the requirements analysis and project goals, which is why it is
+left in. One of the goals of the project is to improve the licensing. The answer
+to question @measure allows us to test the quality of the delivered work.
 
 # Project activities
 
