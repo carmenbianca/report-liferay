@@ -214,6 +214,7 @@ needed to understand some things in chapter \ref{ch:project-definition}.
 
 Notice to the reader: Feel free to skip this section or briefly skim over it. It
 exists solely as reference material for chapter \ref{ch:project-definition}.
+TODO: Reword this.
 
 ### Liferay Portal Community Edition
 
@@ -320,6 +321,8 @@ been implemented yet. The new header can be seen in listing
 TODO: This is informed by the REUSE project of the Free Software Foundation
 Europe (TODO: Fix citing).
 
+TODO: sub-goal, linting this stuff.
+
 Optional goal TODO: Same header for open source and corporate thingamajig.
 
 ### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
@@ -352,23 +355,46 @@ TODO: Are we doing this?
 
 # Research
 
-TODO
+The research component of this internship has one very clear purpose: To form
+the foundation of the requirements analysis at the start of the software
+development cycle. For that reason, the research will be focused on discovering
+all factors adjacent to the requirements analysis.
 
 ## Main question
 
-TODO: this is a prescribing question.
+The main question spawns forth from two requirements of Liferay: Liferay wishes
+to know the licensing of \gls{inbound} code, and wishes to verify its
+\gls{outbound} licensing. They wish to do these things in an automated fashion.
+Reorder the words, and this becomes the main question of research:
 
 > Given Liferay’s needs, demands, requirements and limitations, what is the best
-> solution for automating Liferay's inbound and outbound licensing policies?
+> solution for automating Liferay's \gls{inbound} and \gls{outbound} licensing
+> policies?
 
 ## Sub-questions
 
-- What are the needs, demands, requirements and limitations of Liferay?
+Because main questions need sub-questions, this section details five (TODO:
+verify this number) of them.
 
-- What are the available technical solutions in the field of licensing
-  compliance? What are their qualities?
+The first two sub-questions directly elaborate on the main question in ways that
+are hopefully obvious:
 
-- TODO???
+(@needs) What are the needs, demands, requirements and limitations of Liferay?
+
+(@solutions) What are the available technical solutions in the field of
+licensing compliance? What are their qualities?
+
+Question @needs seeks to define some important terms in the main question.
+Question @solutions seeks to acquire information about existing technical
+approaches to adjacent problems, if any.
+
+(@methods) What are the possible methods of detecting the \gls{inbound}
+licensing of code? What are their qualities?
+
+(@measure) Is it possible to measure the quality of licensing?
+
+(@manual) What are the scenarios that should require manual intervention by
+Legal or Engineering?
 
 # Project activities
 
