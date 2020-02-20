@@ -367,11 +367,11 @@ to know the licensing of \gls{inbound} code, and wishes to verify its
 \gls{outbound} licensing. They wish to do these things in an automated fashion.
 Reorder the words, and this becomes the main question of research:
 
-> Given Liferay’s needs, demands, requirements and limitations, what is the best
+> Given Liferay’s demands, requirements and limitations, what is the best
 > solution for automating Liferay's \gls{inbound} and \gls{outbound} licensing
 > policies?
 
-## Sub-questions
+## Sub-questions {#sub-questions}
 
 Because main questions need sub-questions, this section details five (TODO:
 verify this number) of them.
@@ -379,7 +379,7 @@ verify this number) of them.
 The first two sub-questions directly elaborate on the main question in ways that
 are hopefully obvious:
 
-@needs. What are the needs, demands, requirements and limitations of Liferay?
+@needs. What are the demands, requirements and limitations of Liferay?
 
 @solutions. What are the available technical solutions in the field of
 licensing compliance? What are their qualities?
@@ -416,6 +416,31 @@ This question is slightly out-of-scope for main question, but completely
 in-scope for the requirements analysis and project goals, which is why it is
 left in. One of the goals of the project is to improve the licensing. The answer
 to question @measure allows us to test the quality of the delivered work.
+
+## Definitions
+
+In line with Verhoeven [-@verhoeven-2018, chap. 5], find here a clarification of
+the terms used in the main question.
+
+- Demands, requirements and limitations --- Sub-question @needs from section
+  \ref{sub-questions} will fully detail what these words actually entail. For
+  the purposes of this section, consider this a combination of Liferay's wants
+  and limits.
+
+- Best --- This word is tricky and subjective. It will not be defined too
+  strictly here, because the subjectiveness of the word is contextually safe.
+  The best solution is one that is realistic, achievable, and solves the problem
+  satisfactorily.
+
+- Solution --- A solution is the project as a whole. It is not an off-the-shelf
+  product that can be implemented, but may involve using and mixing and matching
+  off-the-shelf components into a greater whole.
+
+- Automating --- Partially or completely reduce the necessity for a human to be
+  involved in the process.
+
+- \Gls{inbound} and \gls{outbound} licensing policies --- Both internal
+  documents. [@liferay-inbound;@liferay-outbound]
 
 # Project activities
 
