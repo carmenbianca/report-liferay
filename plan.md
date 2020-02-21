@@ -442,6 +442,26 @@ the terms used in the main question.
 - \Gls{inbound} and \gls{outbound} licensing policies --- Both internal
   documents. [@liferay-inbound;@liferay-outbound]
 
+## Sources
+
+Although it is impossible to know now which sources will end up being useful,
+and which sources will be encountered in the process of research, here are some
+sources that are likely to be useful:
+
+- Software Package Data Exchange Workgroup (Linux Foundation)
+- REUSE (Free Software Foundation Europe)
+- Free Software Foundation
+- Creative Commons
+- FOSSology
+- Scancode
+- SW360 (Eclipse)
+- Fedora
+- Debian
+- ClearlyDefined (Open Source Initiative)
+- OSS Review Toolkit
+
+Some of these sources are also used in this document.
+
 # Project activities
 
 # Project boundaries
@@ -450,27 +470,68 @@ the terms used in the main question.
 
 # Planning
 
-TODO: Mention biweekly sync.
+TODO: This chapter is missing something???
 
-Chronological (MM-DD, year is implicitly 2020):
+This chapter covers the timing and planning of the internship. It is expressly
+kept short in the interest of being to-the-point.
+
+Chronological planning (MM-DD, year is implicitly 2020):
 
 - 02-03 --- Begin internship.
 
 - 02-07 --- First meeting with Matija.
 
-- 02-12 --- Video call: Workshop plan de campagne.
+- 02-11 --- Workshop plan de campagne.
 
 - 02-28 --- First draft plan de campagne.
 
-- 03-09 --- **Deadline plan de campagne.**
+- 03-09 --- **Deadline: Plan de campagne.**
 
-- 03-23 --- **Deadline plan de campagne (retry).**
+- 03-23 --- **Deadline: Plan de campagne (retry).**
 
 - 03-24 --- Workshop analysis and conclusions.
 
+- 03-27 --- **Internal deadline: Research.**
+
+- 03-30 --- Create requirements analysis.
+
+- 04-06 --- On-location meeting with Matija and Martin. TODO: Not final.
+
+- 04-06 --- Begin implementation period.
+
+- 04-15 --- Legal and Licensing Workshop in Barcelona.
+
 - 05-04 --- Workshop reporting.
 
-- 06-19 --- **Deadline report.**
+- 05-25 --- First draft report.
+
+- 06-05 --- **Internal deadline: Hand over proof-of-concept.**
+
+- 06-05 --- Cease implementation period.
+
+- 06-19 --- **Deadline: Report.**
+
+- 07-[6,7,10] --- **Deadline: Presentation in Leeuwarden.**
+
+![Gantt chart of planning](gantt.svg){#gantt}
+
+Figure \ref{gantt} displays a Gantt chart of the planning. It is separated in
+six: Plan de campagne, research, synchronisation, implementation, reporting, and
+presentation. These six segments are colour-coded. Workshops, drafts, and
+deadlines get their own colours: soft blue, white, and soft pink respectively.
+
+## Synchronisation
+
+Twice per month on a Tuesday, Matija and I synchronise the progress of the
+internship in a meeting. The meeting is no longer than it needs to be.
+
+## Legal and Licensing Workshop
+
+The Free Software Foundation Europe annually organises the Legal and Licensing
+Workshop (LLW) in Barcelona. Due to my work on REUSE and my field expertise in
+copyright and licensing, I have been invited to attend. The LLW is not strictly
+related to the internship other than sharing a theme, but it is a wonderful
+opportunity for professional growth, networking, and learning .
 
 \appendix
 
