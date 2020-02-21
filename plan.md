@@ -282,9 +282,12 @@ In order to give some context for the goals in section \ref{goals}, these are
 some qualities of the ideal situation:
 
 - Licensing problems get addressed much earlier during the development cycle.
+
 - The feedback loop between Legal and Engineering is shortened.
+
 - Total time spent working on this by Legal and Engineering is reduced to a
   minimum.
+
 - Quality of licensing compliance improves.
 
 Licensing problems get addressed much earlier during the development cycle.
