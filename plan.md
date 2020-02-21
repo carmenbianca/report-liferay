@@ -450,6 +450,28 @@ the terms used in the main question.
 
 # Planning
 
+TODO: Mention biweekly sync.
+
+Chronological (MM-DD, year is implicitly 2020):
+
+- 02-03 --- Begin internship.
+
+- 02-07 --- First meeting with Matija.
+
+- 02-12 --- Video call: Workshop plan de campagne.
+
+- 02-28 --- First draft plan de campagne.
+
+- 03-09 --- **Deadline plan de campagne.**
+
+- 03-23 --- **Deadline plan de campagne (retry).**
+
+- 03-24 --- Workshop analysis and conclusions.
+
+- 05-04 --- Workshop reporting.
+
+- 06-19 --- **Deadline report.**
+
 \appendix
 
 # Crash course in copyright and licensing
