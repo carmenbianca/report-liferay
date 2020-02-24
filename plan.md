@@ -356,7 +356,7 @@ Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
 
 TODO: Are we doing this?
 
-# Research
+# Research {#research}
 
 The research component of this internship has one very clear purpose: To form
 the foundation of the requirements analysis at the start of the software
@@ -462,6 +462,8 @@ Some of these sources are also used in this document.
 
 ## Method
 
+TODO: This section needs to be prettified.
+
 This section describes the intended methods of research for each sub-question.
 
 - What are the demands, requirements and limitations of Liferay?
@@ -488,6 +490,46 @@ Is it possible to measure the quality of licensing? If so, how?
   + Code review.
 
 # Project activities
+
+This chapter is short by necessity. It contains a list of anticipated activities
+during the internship. For the reader's convenience, the activities are each one
+item in a bullet list. Not all activities can be anticipated, and not all
+anticipated activities may actually end up happening. The activities are
+more-or-less chronological, but become asynchronous as implementation begins.
+
+- Discuss the problems with Matija.
+
+- Create a plan de campagne.
+
+- Synchronise with Matija on a weekly basis.
+
+- Perform research. The exact activities are detailed in chapter \ref{research}
+  and will not be repeated here.
+
+- Create a requirements analysis from the conclusion of the research.
+
+- Acquire the minimum amount of skills necessary to create the product (e.g.
+  catch up on a new programming language or framework).
+
+- Create a rudimentary design for the product. This design need not be
+  thorough---it need only be sufficient to get started with the development
+  feedback loop.
+
+- Create all (anticipated) issues in an issue tracker.
+
+- Implement the product with continuous testing and documenting.
+
+- Obtain feedback during the creation of the product. Open and resolve issues
+  depending on the feedback.
+
+- Write a separate tool that adjusts the headers to be compliant with the
+  outbound policy.
+
+- Hand over the code to Engineering. The chances of seeing the product
+  implemented in Liferay in the last weeks of the internship are slim, but it
+  will be sufficiently documented for the implementer.
+
+- TODO
 
 # Project boundaries
 
