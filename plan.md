@@ -210,11 +210,10 @@ educational context within which the internship takes place.
 
 Section \ref{the-problem} gave the bare minimal problem description. Anything
 more would have muddied the essence of the problem. However, more context is
-needed to understand some things in chapter \ref{ch:project-definition}.
+needed to understand some things in later chapters.
 
-Notice to the reader: Feel free to skip this section or briefly skim over it. It
-exists solely as reference material for chapter \ref{ch:project-definition}.
-TODO: Reword this.
+Notice to the reader: Feel free to skip this section or briefly skim over it.
+Later chapters will refer back to these sections when the context is needed.
 
 ### Liferay Portal Community Edition
 
@@ -271,6 +270,11 @@ Employee contributions always assign their copyright to the employer (Liferay).
 The logical consequence of this policy is that all code inside of Liferay's
 repositories is exclusively copyrighted by Liferay.
 
+### TODO: Mention SPDX/REUSE
+
+This section should mention SPDX/REUSE as the wider community in which this work
+takes place.
+
 # Project definition {#ch:project-definition}
 
 In this chapter, we define the parameters of the project. Specifically, this
@@ -307,7 +311,7 @@ The main goal of the project is:
 
 The sub-goals of the project are informed by the desires of Liferay.
 
-### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files
+### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files {#goal-reuse}
 
 This resolves the problem mentioned in section \ref{license-headers}.
 @liferay-outbound now mandates the use of a different header, but it has not
@@ -344,17 +348,34 @@ as the licensing policy that informs it.
 
 Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
 
-- Automatically check whether inbound code is first-party or third-party
+- Automatically check whether inbound code is first-party or third-party.
 
-- Automatically check the licensing of inbound third-party code
+- Automatically check the licensing of inbound third-party code.
 
-- Verify whether the licensing of inbound third-party code is compatible
+- Verify whether the licensing of inbound third-party code is compatible.
 
-- Flag Legal if a problem is detected
+- Flag Legal if a problem is detected.
 
-### Produce a bill of materials that covers all outbound licensing
+### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
 
-TODO: Are we doing this?
+**Important:** This is an *optional* goal that may not be completed if time is
+tight. If time is not tight, or if another step went much quicker than
+anticipated, this goal is an excellent extension of the internship.
+
+When the goal in section \ref{goal-reuse} is completed, it should be much easier
+to automatically generate a bill of materials of Liferay's products. Such a bill
+of materials currently exists, but lacks granularity and depends on a product's
+globally *declared* licensing instead of its *detected* licensing. Moreover, it
+is provided as a PDF file, which may not be the most convenient for some use
+cases.
+
+As such, a mechanism for the production of a bill of materials can be created
+that incorporates the detected licensing. One strong candidate for the output
+format is \gls{spdx}, an open standard for communicating software bill of
+material information.
+
+The desired granularity of the output is left unspecified and depends on the
+available time.
 
 # Research {#research}
 
@@ -532,6 +553,31 @@ more-or-less chronological, but become asynchronous as implementation begins.
 - TODO
 
 # Project boundaries
+
+This chapter covers the boundaries of the internship, which for this project are
+relatively simple.
+
+The goals of the project are well-defined in section \ref{goals}. Everything
+that furthers those goals is obviously within the boundaries of the project.
+Importantly, section \ref{goal-bom} lists an optional goal that may or may not
+be feasibly completed.
+
+During the first weeks of the implementation phase of the project, *definitions
+of done* will be produced that set the exact scope of the project. For now, the
+definition of done is a simple question: Are the goals in section \ref{goals}
+completed? The reason that the definitions of done will be produced during the
+early implementation phase is because, by then, it will be much clearer what the
+project looks like, what is feasible, and what problems are especially difficult
+to solve. These things are not clear yet.
+
+Documentation and testing of the produced product is within the boundaries of
+the project.
+
+As part of the internship, there will be communication/co-operation with the
+wider software licensing community. Any tasks that stem from that co-operation
+are *outside of the boundaries* of the project, but may be taken on if time
+allows. This co-operation is immeasurably valuable for both Liferay and for my
+professional development. TODO: Reference the section in context.
 
 # Quality assurance
 
