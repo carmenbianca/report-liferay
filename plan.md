@@ -376,7 +376,7 @@ Reorder the words, and this becomes the main question of research:
 
 ## Sub-questions {#sub-questions}
 
-Because main questions need sub-questions, this section details five (TODO:
+Because main questions need sub-questions, this section details four (TODO:
 verify this number) of them.
 
 The first two sub-questions directly elaborate on the main question in ways that
@@ -389,27 +389,22 @@ licensing compliance? What are their qualities?
 
 Question @needs seeks to define some important terms in the main question.
 Question @solutions seeks to acquire information about existing technical
-approaches to adjacent problems, if any.
+approaches to adjacent problems, if any. It will also zoom in on the extent of
+automation. Which scenarios should require manual intervention by Legal or
+Engineering?
 
-The next two questions explore aspects that are directly tangential to the main
-question. They explore aspects which the main question does not specifically
-mention, but which will be important to research regardless.
+The next question explores an aspect that is directly tangential to the main
+question. This aspect is not specifically mentioned, but will be important to
+research regardless.
 
 @methods. What are the possible methods of detecting the \gls{inbound}
 licensing of code? What are their qualities?
-
-@manual. What are the scenarios that should require manual intervention by
-Legal or Engineering?
 
 Question @methods looks similar to question @solutions, but they are in truth
 extremely different. Where question @solutions is focused on the technical
 aspect and available technical solutions, question @methods is purely
 non-technical and should not involve a single line of code. It is concerned with
 extracting information from data.
-
-Question @manual puts a boundary on the automatisation. Lawyers cannot yet be
-totally automated, and it helps to know the scenarios where we can certainly say
-that automation is unwanted.
 
 Which leaves the last question:
 
@@ -464,6 +459,33 @@ sources that are likely to be useful:
 - OSS Review Toolkit
 
 Some of these sources are also used in this document.
+
+## Method
+
+This section describes the intended methods of research for each sub-question.
+
+- What are the demands, requirements and limitations of Liferay?
+
+  + Interviewing stakeholders.
+  + Explore user requirements.
+  + Reading internal policies and materials.
+
+What are the available technical solutions in the field of licensing compliance?
+What are their qualities?
+
+  + Available product analysis (read available reviews of those products).
+
+What are the possible methods of detecting the \gls{inbound} licensing of code?
+What are their qualities?
+
+  + Brainstorm.
+  + Code review.
+  + Available product analysis.
+
+Is it possible to measure the quality of licensing? If so, how?
+
+  + Literature study.
+  + Code review.
 
 # Project activities
 
