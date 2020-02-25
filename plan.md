@@ -248,7 +248,6 @@ shown in listing \ref{lst:java-header}.
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
-
 ```
 
 @liferay-policy-marking-code identifies several problem with the current comment
@@ -529,6 +528,10 @@ Is it possible to measure the quality of licensing? If so, how?
 
   + Literature study.
   + Code review.
+
+## TODO: Requirements analysis
+
+TODO
 
 # Project activities
 
