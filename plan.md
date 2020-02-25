@@ -391,6 +391,10 @@ material information.
 The desired granularity of the output is left unspecified and depends on the
 available time.
 
+## TODO: Deliverables
+
+TODO
+
 # Research {#research}
 
 The research component of this internship has one very clear purpose: To form
@@ -408,6 +412,8 @@ Reorder the words, and this becomes the main question of research:
 > Given Liferay’s demands, requirements and limitations, what is the best
 > solution for automating Liferay's \gls{inbound} and \gls{outbound} licensing
 > policies?
+
+TODO: Remove the word "best".
 
 ## Sub-questions {#sub-questions}
 
@@ -592,6 +598,8 @@ wider software licensing community. Any tasks that stem from that co-operation
 are *outside of the boundaries* of the project, but may be taken on if time
 allows. This co-operation is immeasurably valuable for both Liferay and for my
 professional development. TODO: Reference the section in context.
+
+TODO: mention that integration is out-of-scope
 
 # Quality assurance
 
