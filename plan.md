@@ -258,7 +258,7 @@ worst; use of obsolete 'All rights reserved', which is neither needed nor true,
 as the very next line gives rights through a FOSS license; does not include a
 contact point to the copyright holder."
 
-### Copyright assignment
+### Copyright assignment {#copyright-assignment}
 
 Liferay uses a policy of \gls{copyright} assignment. This means that all
 third-party contributors to Liferay must sign an agreement wherein they transfer
@@ -268,7 +268,9 @@ then the contributions are not accepted. [@liferay-cla]
 Employee contributions always assign their copyright to the employer (Liferay).
 
 The logical consequence of this policy is that all code inside of Liferay's
-repositories is exclusively copyrighted by Liferay.
+repositories is exclusively copyrighted by Liferay. This allows Liferay to offer
+their product under a separate license to paying customers. This frees those
+customers from the obligations of the GNU Lesser General Public License.
 
 ### TODO: Mention SPDX/REUSE
 
@@ -325,12 +327,24 @@ been implemented yet. The new header can be seen in listing
  */
 ```
 
-TODO: This is informed by the REUSE project of the Free Software Foundation
-Europe (TODO: Fix citing).
+The new Liferay policy is informed by the REUSE project [@fsfe-reuse].
 
-TODO: sub-goal, linting this stuff.
+There are going to be some challenges in implementing this policy, but it is
+equally important that the policy be tested against. Therefore, this sub-goal
+has one sub-goal of its own:
 
-Optional goal TODO: Same header for open source and corporate thingamajig.
+- Automatically verify (lint) the codebase against Liferay's outbound licensing
+  policy.
+
+There is one optional sub-goal. As described in \ref{copyright-assignment},
+Liferay offers a separately licensed version of their product to paying
+customers. From that fact stems the following sub-goal:
+
+- Unify the licensing header for both the community and the enterprise version
+  of Liferay Portal.
+
+This sub-goal might be tricky from a legal perspective, though, and remains
+entirely optional.
 
 ### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
 
