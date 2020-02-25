@@ -760,6 +760,8 @@ This document uses \acrshort{foss} (\acrlong{foss}) as a catch-all name for both
 \gls{open-source} and \gls{free-software} to be synonyms for simplicity's sake.
 This is in the understanding that they are incredibly similar. [@schiessle-2012]
 
+![Comparison chart of \gls{foss} and \gls{proprietary} software. Source: @schiessle-2012](softwaremodels.png)
+
 ## Outbound licenses
 
 An \gls{outbound} \gls{license} is effectively the \gls{license} under which a
