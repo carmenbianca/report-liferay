@@ -38,14 +38,41 @@ between 3 February 2020 and 30 June 2020. My job title at Liferay is "Paralegal
 Engineering Intern".
 
 The plan de campagne will detail the context of the internship, the problem that
-I was brought in to solve, the research that will be conducted to TODO, the
-project that will be undertaken, and the planning to bind everything together.
+I was brought in to solve, the research that will be conducted to form the basis
+of a requirements analysis, the project that will be undertaken, and the
+planning to bind everything together.
 
-TODO: The shortest possible summary of the internship here.
+The shortest summary of the internship is:
 
-TODO: Summarise each chapter individually.
+> The work that goes into \gls{copyright} and licensing compliance at Liferay is
+> currently manual. By the end of the internship, many of these processes will
+> be automated.
 
-# Context
+Appendix \ref{crash-course} contains a crash course on \gls{copyright} and
+licensing. It is recommended reading for readers who are unfamiliar with
+\gls{foss} licensing. These concepts will not be explained elsewhere in the
+document, which facilitates reading.
+
+Find below a summary of the chapters:
+
+- Chapter \ref{context}: \nameref{context} --- Provides the context for the
+  internship, as well as a description of the problem.
+
+- Chapter \ref{project-definition}: \nameref{project-definition} --- Defines the
+  goals and deliverables of the project.
+
+- Chapter \ref{research}: \nameref{research} --- TODO
+
+- Chapter \ref{project-activities}: \nameref{project-activities} --- TODO
+
+- Chapter \ref{project-boundaries}: \nameref{project-boundaries} --- Details
+  what is, and---more importantly---what isn't part of the internship.
+
+- Chapter \ref{quality-assurance}: \nameref{quality-assurance} --- TODO
+
+- Chapter \ref{planning}: \nameref{planning} --- TODO
+
+# Context {#context}
 
 This chapter details the context in which the internship takes place. It also
 describes the problem that the internship is supposed to tackle, why this
@@ -177,7 +204,7 @@ Legal, but they are not automated.
 ## The project
 
 The project of this internship is---in the simplest of terms---to make the
-problem as described above go away. Chapter \ref{ch:project-definition}
+problem as described above go away. Chapter \ref{project-definition}
 describes the project in full. This section details the context of the project.
 
 Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
@@ -276,7 +303,7 @@ customers from the obligations of the GNU Lesser General Public License.
 This section should mention SPDX/REUSE as the wider community in which this work
 takes place.
 
-# Project definition {#ch:project-definition}
+# Project definition {#project-definition}
 
 In this chapter, we define the parameters of the project. Specifically, this
 chapter defines the end result of the project.
@@ -533,7 +560,7 @@ Is it possible to measure the quality of licensing? If so, how?
 
 TODO
 
-# Project activities
+# Project activities {#project-activities}
 
 This chapter is short by necessity. It contains a list of anticipated activities
 during the internship. For the reader's convenience, the activities are each one
@@ -575,7 +602,7 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 - TODO
 
-# Project boundaries
+# Project boundaries {#project-boundaries}
 
 This chapter covers the boundaries of the internship, which for this project are
 relatively simple.
@@ -604,9 +631,9 @@ professional development. TODO: Reference the section in context.
 
 TODO: mention that integration is out-of-scope
 
-# Quality assurance
+# Quality assurance {#quality-assurance}
 
-# Planning
+# Planning {#planning}
 
 TODO: This chapter is missing something???
 
@@ -673,7 +700,7 @@ opportunity for professional growth, networking, and learning .
 
 \appendix
 
-# Crash course in copyright and licensing
+# Crash course in copyright and licensing {#crash-course}
 
 This appendix aims to provide a crash course in \gls{copyright} and licensing.
 It is designed to be comprehensive-but-concise.
