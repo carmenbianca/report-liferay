@@ -81,11 +81,11 @@ problem is important, and therefore the motivation for the internship project.
 ## Liferay
 
 Liferay Inc. is an international enterprise that is chiefly responsible for the
-Liferay Digital Experience Platform (DXP), TODO describe DXP here. Liferay's
-mission statement is "By building a vibrant business, making technology useful,
-and investing in communities, we make it possible for people to reach their full
-potential to serve others." Its slogan is "Enterprise. Open Source. For Life."
-[@liferay-about]
+Liferay Digital Experience Platform (DXP), a large suite of web applications.
+Liferay's mission statement is "By building a vibrant business, making
+technology useful, and investing in communities, we make it possible for people
+to reach their full potential to serve others." Its slogan is "Enterprise. Open
+Source. For Life." [@liferay-about]
 
 ## Legal
 
@@ -97,9 +97,9 @@ specifically anything that involves the "©" symbol and software \gls{copyright}
 and licensing. The "™" symbol is managed by Kirstin Huniar, and is not relevant
 to this internship. [@suklje-2019]
 
-Beside \gls{foss} licensing, Legal is also responsible for all other matters of law.
-Like trademarks, these are not relevant to the internship, but mentioned for
-completeness' sake.
+Beside \gls{foss} licensing, Legal is also responsible for all other matters of
+law. Like trademarks, these are not relevant to the internship, but mentioned
+for completeness' sake.
 
 ## Engineering
 
@@ -298,10 +298,13 @@ repositories is exclusively copyrighted by Liferay. This allows Liferay to offer
 their product under a separate license to paying customers. This frees those
 customers from the obligations of the GNU Lesser General Public License.
 
-### TODO: Mention SPDX/REUSE
+### SPDX and REUSE
 
-This section should mention SPDX/REUSE as the wider community in which this work
-takes place.
+This project heavily builds upon the foundations laid by \gls{spdx} by the Linux
+Foundation and REUSE by the Free Software Foundation Europe.
+
+TODO: This section should mention SPDX/REUSE as the wider community in which
+this work takes place.
 
 # Project definition {#project-definition}
 
@@ -353,7 +356,8 @@ been implemented yet. The new header can be seen in listing
  */
 ```
 
-The new Liferay policy is informed by the REUSE project [@fsfe-reuse].
+The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. TODO
+refer to section instead
 
 There are going to be some challenges in implementing this policy, but it is
 equally important that the policy be tested against. Therefore, this sub-goal
