@@ -111,7 +111,7 @@ almost always interact with \gls{foss}---either Liferay's, or a dependency's.
 ## Dublin office
 
 Liferay has offices all over the globe. Its global headquarters are in Los
-Angeles. The international office is Dublin, which is the site of this
+Angeles. The international office is in Dublin, which is the site of this
 internship. The Dublin office hosts approximately twenty employees working on
 Human Resources, Legal, finances, sales, consulting, and other. Remote workers
 are also registered as working for the Dublin office.
@@ -445,7 +445,7 @@ Reorder the words, and this becomes the main question of research:
 
 ## Sub-questions {#sub-questions}
 
-Because main questions need sub-questions, this section details four (TODO:
+Because main questions need sub-questions, this section details five (TODO:
 verify this number) of them.
 
 The first two sub-questions directly elaborate on the main question in ways that
@@ -459,15 +459,21 @@ licensing compliance? What are their qualities?
 Question @needs seeks to define some important terms in the main question.
 Question @solutions seeks to acquire information about existing technical
 approaches to adjacent problems, if any. It will also zoom in on the extent of
-automation. Which scenarios should require manual intervention by Legal or
+automation: Which scenarios should require manual intervention by Legal or
 Engineering?
 
-The next question explores an aspect that is directly tangential to the main
-question. This aspect is not specifically mentioned, but will be important to
+The next questions explore aspects that are directly tangential to the main
+question. These aspect is not specifically mentioned, but will be important to
 research regardless.
+
+@current. What is the current process of licensing compliance?
 
 @methods. What are the possible methods of detecting the \gls{inbound}
 licensing of code? What are their qualities?
+
+Question @current exists to create an understanding of the current situation.
+With that understanding, it becomes much easier to imagine how the process might
+be automated.
 
 Question @methods looks similar to question @solutions, but they are in truth
 extremely different. Where question @solutions is focused on the technical
@@ -481,7 +487,7 @@ Which leaves the last question:
 
 This question is slightly out-of-scope for main question, but completely
 in-scope for the requirements analysis and project goals, which is why it is
-left in. One of the goals of the project is to improve the licensing. The answer
+here. One of the goals of the project is to improve the licensing. The answer
 to question @measure allows us to test the quality of the delivered work.
 
 ## Definitions
