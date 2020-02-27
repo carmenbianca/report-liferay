@@ -53,7 +53,7 @@ licensing. It is recommended reading for readers who are unfamiliar with
 \gls{foss} licensing. These concepts will not be explained elsewhere in the
 document, which facilitates reading.
 
-Find below a summary of the chapters:
+Find below an overview of the contents of the chapters:
 
 - Chapter \ref{context}: \nameref{context} --- Provides the context for the
   internship, as well as a description of the problem.
@@ -226,9 +226,7 @@ opdrachtnemer) of the project. The delivering party:
 - acts as project lead on the project to tackle the problem;
 - creates a product to solve the problem;
 - tests the product;
-- writes a report on the process;
-- performs evaluation at the end of the process to provide recommendations going
-  forward.
+- writes a report on the process.
 
 These items are performed to the best of my abilities considering the
 educational context within which the internship takes place.
@@ -301,10 +299,17 @@ customers from the obligations of the GNU Lesser General Public License.
 ### SPDX and REUSE {#spdx-reuse}
 
 This project heavily builds upon the foundations laid by \gls{spdx} by the Linux
-Foundation and REUSE by the Free Software Foundation Europe.
+Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is an
+open standard for communicating software bill of material infomation. REUSE is a
+project that makes makes licensing easy, comprehensive, and machine-readable.
+REUSE itself incorporates \gls{spdx}.
 
-TODO: This section should mention SPDX/REUSE as the wider community in which
-this work takes place.
+The \gls{outbound} licensing policy of Liferay is a subset of REUSE.
+
+This internship takes place within the wider context of the SPDX and REUSE
+communities. It is likely that there may be expertise exchange within these
+communities. Moreover, a presence within these communities is a great boon for
+one's professional reputation.
 
 # Project definition {#project-definition}
 
@@ -356,8 +361,8 @@ been implemented yet. The new header can be seen in listing
  */
 ```
 
-The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. TODO
-refer to section instead
+The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. See
+section \ref{spdx-reuse}.
 
 There are going to be some challenges in implementing this policy, but it is
 equally important that the policy be tested against. Therefore, this sub-goal
@@ -416,14 +421,30 @@ cases.
 As such, a mechanism for the production of a bill of materials can be created
 that incorporates the detected licensing. One strong candidate for the output
 format is \gls{spdx}, an open standard for communicating software bill of
-material information.
+material information. See section \ref{spdx-reuse}.
 
 The desired granularity of the output is left unspecified and depends on the
 available time.
 
-## TODO: Deliverables
+## Deliverables
 
-TODO
+By the end of the internship, several things will be delivered. It is difficult
+to anticipate the exact details, because the research is intended to discover
+the best solution. Nevertheless, a curt overview of deliverables:
+
+- This plan de campagne.
+
+- A research document.
+
+- The report mandated by NHL Stenden. The research document is contained within
+  this report.
+
+- A product, or a combination of products, that automate copyright and licensing
+  compliance.
+
+- Documentation that assists in the integration of the delivered product(s).
+
+- A pull request that alters the licensing headers in the source code.
 
 # Research {#research}
 
@@ -536,32 +557,41 @@ Some of these sources are also used in this document.
 
 ## Method
 
-TODO: This section needs to be prettified.
-
 This section describes the intended methods of research for each sub-question.
+These methods are sourced from @ictresearchmethods. They are not further
+described for the sake of brevity---the aforementioned source contains full
+descriptions. The rationales are described, however.
 
-- What are the demands, requirements and limitations of Liferay?
+#### What are the demands, requirements and limitations of Liferay? {-}
 
-  + Interviewing stakeholders.
-  + Explore user requirements.
-  + Reading internal policies and materials.
+- Stakeholder analysis --- The stakeholders assuredly possess the knowledge to
+  answer this question.
 
-What are the available technical solutions in the field of licensing compliance?
-What are their qualities?
+#### What are the available technical solutions in the field of licensing compliance? What are their qualities? {-}
 
-  + Available product analysis (read available reviews of those products).
+- Available product analysis --- Requires no rationale.
 
-What are the possible methods of detecting the \gls{inbound} licensing of code?
-What are their qualities?
+#### What is the current process of licensing compliance? {-}
 
-  + Brainstorm.
-  + Code review.
-  + Available product analysis.
+- Expert interview --- An expert can perfectly describe the current process.
+- Observation --- Observing the current process may give insights that do not
+  arise from the interview.
 
-Is it possible to measure the quality of licensing? If so, how?
+#### What are the possible methods of detecting the \gls{inbound} licensing of code? What are their qualities? {-}
 
-  + Literature study.
-  + Code review.
+- Brainstorm --- This is a practical problem that could be solved in multiple
+  ways. Because the likely methods are currently unknown, they could be
+  unearthed through brainstorming.
+- Expert interview --- An interview with an expert can uncover the qualities of
+  the discovered methods.
+
+#### Is it possible to measure the quality of licensing? If so, how? {-}
+
+- Literature study --- This question is highly theoretical. It is possible that
+  someone else has written about this before.
+- Available product analysis --- This method may or may not be relevant. Someone
+  may have written a product that measures licensing quality. Analysing these
+  products may give insight into how the measurements are done.
 
 ## TODO: Requirements analysis
 
@@ -629,10 +659,10 @@ early implementation phase is because, by then, it will be much clearer what the
 project looks like, what is feasible, and what problems are especially difficult
 to solve. These things are not clear yet.
 
-## Out-of-scope
-
 Documentation and testing of the produced product is within the boundaries of
 the project.
+
+## Out-of-scope
 
 As part of the internship, there will be communication/co-operation with the
 wider software licensing community. Any tasks that stem from that co-operation
@@ -644,7 +674,39 @@ Although a product will be delivered during the internship, integration is
 out-of-scope. Someone within Liferay will---or will not---integrate the product
 into Liferay's internal systems.
 
+TODO: Only Liferay Portal.
+
 # Quality assurance {#quality-assurance}
+
+The quality of the product will be assured through three measures.
+
+## Test-driven development
+
+Test-driven development (TDD) is a software development process in which test
+cases are written before the implementation is written. The tests inform the
+design of the implementation. As an added bonus, you get a test suite that tests
+every single feature. The test suite is run regularly to guarantee that no new
+bugs have been introduced.
+
+Test-driven development as a methodology does not mix well with upfront design.
+Writing the tests *is* the design process. For this reason, the up-front design
+will be high-level rather than low-level. This allows a lot of flexibility while
+still providing some structure.
+
+An added benefit of test-driven development is that, ideally, you do not end up
+with more functionality than you strictly need.
+
+## Code review
+
+Though I will not receive a code review for every single feature or pull
+request, I will semi-regularly request code reviews to make sure that the
+written code is up-to-standard.
+
+## Synchronisation with stakeholders
+
+In a scrum-like fashion, I will regularly synchronise with the primary
+stakeholder to make sure that the product delivers the features it should. These
+meetings are biweekly. See section \ref{synchronisation}.
 
 # Planning {#planning}
 
@@ -698,7 +760,7 @@ six: Plan de campagne, research, synchronisation, implementation, reporting, and
 presentation. These six segments are colour-coded. Workshops, drafts, and
 deadlines get their own colours: soft blue, white, and soft pink respectively.
 
-## Synchronisation
+## Synchronisation {#synchronisation}
 
 Twice per month on a Tuesday, Matija and I synchronise the progress of the
 internship in a meeting. The meeting is no longer than it needs to be.
@@ -709,7 +771,8 @@ The Free Software Foundation Europe annually organises the Legal and Licensing
 Workshop (LLW) in Barcelona. Due to my work on REUSE and my field expertise in
 copyright and licensing, I have been invited to attend. The LLW is not strictly
 related to the internship other than sharing a theme, but it is a wonderful
-opportunity for professional growth, networking, and learning .
+opportunity for professional growth, networking, and learning. See section
+\ref{spdx-reuse}.
 
 \appendix
 
