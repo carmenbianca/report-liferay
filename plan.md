@@ -298,7 +298,7 @@ repositories is exclusively copyrighted by Liferay. This allows Liferay to offer
 their product under a separate license to paying customers. This frees those
 customers from the obligations of the GNU Lesser General Public License.
 
-### SPDX and REUSE
+### SPDX and REUSE {#spdx-reuse}
 
 This project heavily builds upon the foundations laid by \gls{spdx} by the Linux
 Foundation and REUSE by the Free Software Foundation Europe.
@@ -439,11 +439,9 @@ to know the licensing of \gls{inbound} code, and wishes to verify its
 \gls{outbound} licensing. They wish to do these things in an automated fashion.
 Reorder the words, and this becomes the main question of research:
 
-> Given Liferay’s demands, requirements and limitations, what is the best
-> solution for automating Liferay's \gls{inbound} and \gls{outbound} licensing
+> Given Liferay’s demands, requirements and limitations, what are suitable
+> solutions for automating Liferay's \gls{inbound} and \gls{outbound} licensing
 > policies?
-
-TODO: Remove the word "best".
 
 ## Sub-questions {#sub-questions}
 
@@ -496,10 +494,9 @@ the terms used in the main question.
   the purposes of this section, consider this a combination of Liferay's wants
   and limits.
 
-- Best --- This word is tricky and subjective. It will not be defined too
-  strictly here, because the subjectiveness of the word is contextually safe.
-  The best solution is one that is realistic, achievable, and solves the problem
-  satisfactorily.
+- Suitable --- This word can be perceived as subjective. Its intent, however, is
+  to see whether a solution is fit for purpose when compared to the
+  requirements, and to what extent.
 
 - Solution --- A solution is the project as a whole. It is not an off-the-shelf
   product that can be implemented, but may involve using and mixing and matching
@@ -611,6 +608,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 This chapter covers the boundaries of the internship, which for this project are
 relatively simple.
 
+## In-scope
+
 The goals of the project are well-defined in section \ref{goals}. Everything
 that furthers those goals is obviously within the boundaries of the project.
 Importantly, section \ref{goal-bom} lists an optional goal that may or may not
@@ -624,6 +623,8 @@ early implementation phase is because, by then, it will be much clearer what the
 project looks like, what is feasible, and what problems are especially difficult
 to solve. These things are not clear yet.
 
+## Out-of-scope
+
 Documentation and testing of the produced product is within the boundaries of
 the project.
 
@@ -631,9 +632,11 @@ As part of the internship, there will be communication/co-operation with the
 wider software licensing community. Any tasks that stem from that co-operation
 are *outside of the boundaries* of the project, but may be taken on if time
 allows. This co-operation is immeasurably valuable for both Liferay and for my
-professional development. TODO: Reference the section in context.
+professional development. See section \ref{spdx-reuse}.
 
-TODO: mention that integration is out-of-scope
+Although a product will be delivered during the internship, integration is
+out-of-scope. Someone within Liferay will---or will not---integrate the product
+into Liferay's internal systems.
 
 # Quality assurance {#quality-assurance}
 
