@@ -61,14 +61,16 @@ Find below an overview of the contents of the chapters:
 - Chapter \ref{project-definition}: \nameref{project-definition} --- Defines the
   goals and deliverables of the project.
 
-- Chapter \ref{research}: \nameref{research} --- TODO
+- Chapter \ref{research}: \nameref{research} --- Defines the research questions
+  and their methods.
 
 - Chapter \ref{project-activities}: \nameref{project-activities} --- TODO
 
 - Chapter \ref{project-boundaries}: \nameref{project-boundaries} --- Details
   what is, and---more importantly---what isn't part of the internship.
 
-- Chapter \ref{quality-assurance}: \nameref{quality-assurance} --- TODO
+- Chapter \ref{quality-assurance}: \nameref{quality-assurance} --- Defines the
+  methods through which the quality of the product is assured.
 
 - Chapter \ref{planning}: \nameref{planning} --- TODO
 
