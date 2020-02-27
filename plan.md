@@ -242,7 +242,7 @@ needed to understand some things in later chapters.
 Notice to the reader: Feel free to skip this section or briefly skim over it.
 Later chapters will refer back to these sections when the context is needed.
 
-### Liferay Portal Community Edition
+### Liferay Portal Community Edition {#liferay-portal}
 
 Liferay Portal Community Edition (henceforth: Liferay Portal) is the main
 product of Liferay. It is the community version of Liferay DXP. It is licensed
@@ -254,6 +254,12 @@ of which ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
 [^liferay-source-files]: `find . type -f | wc -l`
 
 [^liferay-java-files]: `find . type -f -name "*.java" | wc -l`
+
+Liferay DXP is licensed under a private \gls{license} instead of the GNU Lesser
+General Public License. See section \ref{copyright-assignment}.
+
+\clearpage
+<!-- TODO: Verify this -->
 
 ### License headers {#license-headers}
 
@@ -347,7 +353,8 @@ The main goal of the project is:
 
 > Improve and automate \gls{inbound} and \gls{outbound} licensing compliance.
 
-The sub-goals of the project are informed by the desires of Liferay.
+The sub-goals of the project are informed by the desires of Liferay. They are as
+follows:
 
 ### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files {#goal-reuse}
 
@@ -378,7 +385,7 @@ Liferay offers a separately licensed version of their product to paying
 customers. From that fact stems the following sub-goal:
 
 - Unify the licensing header for both the community and the enterprise version
-  of Liferay Portal.
+  of Liferay Portal. See section \ref{liferay-portal}.
 
 This sub-goal might be tricky from a legal perspective, though, and remains
 entirely optional.
@@ -437,6 +444,8 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - This plan de campagne.
 
 - A research document.
+
+- A requirements analysis.
 
 - The report mandated by NHL Stenden. The research document is contained within
   this report.
@@ -595,9 +604,10 @@ descriptions. The rationales are described, however.
   may have written a product that measures licensing quality. Analysing these
   products may give insight into how the measurements are done.
 
-## TODO: Requirements analysis
+## Requirements analysis
 
-TODO
+After the research has been completed, a requirements analysis will be produced
+that will form the basis of the design for the product.
 
 # Project activities {#project-activities}
 
@@ -676,7 +686,10 @@ Although a product will be delivered during the internship, integration is
 out-of-scope. Someone within Liferay will---or will not---integrate the product
 into Liferay's internal systems.
 
-TODO: Only Liferay Portal.
+In order to simplify the internship, every repository other than Liferay Portal
+(section \ref{liferay-portal}) is out-of-scope. The purpose of this project is
+to be applicable to other Liferay repositories as well, but for scope reasons,
+this internship will only focus on Liferay Portal.
 
 # Quality assurance {#quality-assurance}
 
