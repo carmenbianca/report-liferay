@@ -200,7 +200,7 @@ Liferay has an inbound and outbound licensing policy [@liferay-inbound;
 
 Liferay's internal *Source Formatter* tool [@liferay-source-formatter] also
 checks some licensing compliance aspects, but it is not thorough enough. Source
-Formatter is run as a linter in Liferay's Continuous Integration (CI) system.
+Formatter is run as a linter in Liferay's \gls{ci} system.
 
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
@@ -241,8 +241,8 @@ Section \ref{the-problem} gave the bare minimal problem description. Anything
 more would have muddied the essence of the problem. However, more context is
 needed to understand some things in later chapters.
 
-Notice to the reader: Feel free to skip this section or briefly skim over it.
-Later chapters will refer back to these sections when the context is needed.
+**Notice to the reader:** Feel free to skip this section or briefly skim over
+it. Later chapters will refer back to these sections when the context is needed.
 
 ### Liferay Portal Community Edition {#liferay-portal}
 
@@ -636,7 +636,7 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 - Document the research into the report.
 
-## Synchronisation {#synchronisation-activity}
+## Synchronisation {#synchronisation}
 
 - Do biweekly meetings with Matija to stay on-path.
 
@@ -749,7 +749,7 @@ design of the implementation. As an added bonus, you get a test suite that tests
 every single feature. The test suite is run regularly to guarantee that no new
 bugs have been introduced.
 
-Test-driven development as a methodology does not mix well with upfront design.
+Test-driven development as a methodology does not mix well with up-front design.
 Writing the tests *is* the design process. For this reason, the up-front design
 will be high-level rather than low-level. This allows a lot of flexibility while
 still providing some structure.
@@ -820,11 +820,6 @@ Figure \ref{gantt} displays a Gantt chart of the planning. It is separated in
 six: Plan de campagne, research, synchronisation, implementation, reporting, and
 presentation. These six segments are colour-coded. Workshops, drafts, and
 deadlines get their own colours: soft blue, white, and soft pink respectively.
-
-## Synchronisation {#synchronisation}
-
-Twice per month on a Tuesday, Matija and I synchronise the progress of the
-internship in a meeting. The meeting is no longer than it needs to be.
 
 ## Legal and Licensing Workshop
 
