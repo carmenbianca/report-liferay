@@ -64,7 +64,8 @@ Find below an overview of the contents of the chapters:
 - Chapter \ref{research}: \nameref{research} --- Defines the research questions
   and their methods.
 
-- Chapter \ref{project-activities}: \nameref{project-activities} --- TODO
+- Chapter \ref{project-activities}: \nameref{project-activities} --- Details the
+  phases and anticipated activities of the project.
 
 - Chapter \ref{project-boundaries}: \nameref{project-boundaries} --- Details
   what is, and---more importantly---what isn't part of the internship.
@@ -72,7 +73,8 @@ Find below an overview of the contents of the chapters:
 - Chapter \ref{quality-assurance}: \nameref{quality-assurance} --- Defines the
   methods through which the quality of the product is assured.
 
-- Chapter \ref{planning}: \nameref{planning} --- TODO
+- Chapter \ref{planning}: \nameref{planning} --- Lays out intended dates for all
+  activities.
 
 # Context {#context}
 
@@ -477,8 +479,7 @@ Reorder the words, and this becomes the main question of research:
 
 ## Sub-questions {#sub-questions}
 
-Because main questions need sub-questions, this section details five (TODO:
-verify this number) of them.
+Because main questions need sub-questions, this section details five of them.
 
 The first two sub-questions directly elaborate on the main question in ways that
 are hopefully obvious:
@@ -492,11 +493,11 @@ Question @needs seeks to define some important terms in the main question.
 Question @solutions seeks to acquire information about existing technical
 approaches to adjacent problems, if any. It will also zoom in on the extent of
 automation: Which scenarios should require manual intervention by Legal or
-Engineering?
+Engineering? These existing technical solutions may inform the product, or may
+be consumed by the product.
 
 The next questions explore aspects that are directly tangential to the main
-question. These aspect is not specifically mentioned, but will be important to
-research regardless.
+question. These aspects will be important to research.
 
 @current. What is the current process of licensing compliance?
 
@@ -509,9 +510,9 @@ be automated.
 
 Question @methods looks similar to question @solutions, but they are in truth
 extremely different. Where question @solutions is focused on the technical
-aspect and available technical solutions, question @methods is purely
-non-technical and should not involve a single line of code. It is concerned with
-extracting information from data.
+aspect and available technical solutions, question @methods is non-technical and
+should not necessitate a single line of code. It is concerned with extracting
+information from data. Figuring out how to do this is important for the product.
 
 Which leaves the last question:
 
@@ -570,7 +571,7 @@ Some of these sources are also used in this document.
 
 This section describes the intended methods of research for each sub-question.
 These methods are sourced from @ictresearchmethods. They are not further
-described for the sake of brevity---the aforementioned source contains full
+described for the sake of brevity---the aforementioned source contains their
 descriptions. The rationales are described, however.
 
 #### What are the demands, requirements and limitations of Liferay? {-}
@@ -611,36 +612,63 @@ that will form the basis of the design for the product.
 
 # Project activities {#project-activities}
 
-This chapter is short by necessity. It contains a list of anticipated activities
-during the internship. For the reader's convenience, the activities are each one
-item in a bullet list. Not all activities can be anticipated, and not all
+I have organisationally split up the project in six phases. Each phase gets a
+section in this chapter. For the reader's convenience, the activities are each
+one item in a bullet list. Not all activities can be anticipated, and not all
 anticipated activities may actually end up happening. The activities are
 more-or-less chronological, but become asynchronous as implementation begins.
+
+## Plan de campagne
 
 - Discuss the problems with Matija.
 
 - Create a plan de campagne.
 
-- Synchronise with Matija on a weekly basis.
+- Organise the research.
+
+- Provide a first draft.
+
+- Provide a final draft.
+
+## Research
+
+- Perform preliminary research.
 
 - Perform research. The exact activities are detailed in chapter \ref{research}
   and will not be repeated here.
+
+- Document the research into the report.
+
+## Synchronisation {#synchronisation-activity}
+
+- Do biweekly meetings with Matija to stay on-path.
+
+- Perhaps stating the obvious: Regularly communicate with Matija between the
+  biweekly meetings to resolve issues early.
+
+## Implementation
 
 - Create a requirements analysis from the conclusion of the research.
 
 - Acquire the minimum amount of skills necessary to create the product (e.g.
   catch up on a new programming language or framework).
 
-- Create a rudimentary design for the product. This design need not be
-  thorough---it need only be sufficient to get started with the development
-  feedback loop.
+- Create a rudimentary high-level design for the product. This design need not
+  be thorough---it need only be sufficient to get started with the development
+  feedback loop. See rationale in section \ref{tdd}.
 
 - Create all (anticipated) issues in an issue tracker.
 
-- Implement the product with continuous testing and documenting.
+- Implement the product with test-driven development.
+
+- If possible, set up continuous testing.
+
+- Continuously document the product.
 
 - Obtain feedback during the creation of the product. Open and resolve issues
   depending on the feedback.
+
+- Request code reviews during the creation of the product.
 
 - Write a separate tool that adjusts the headers to be compliant with the
   outbound policy.
@@ -649,7 +677,28 @@ more-or-less chronological, but become asynchronous as implementation begins.
   implemented in Liferay in the last weeks of the internship are slim, but it
   will be sufficiently documented for the implementer.
 
-- TODO
+## Reporting
+
+- Maintain a daily log of activities.
+
+- Convert the plan de campagne into the report. This is a real time-saver.
+
+- Continuously document activities into the report. If this is diligently done,
+  the hope is that it saves a lot of time at the end.
+
+- Figure out a way to use visuals in a way that this plan de campagne has not.
+
+- After implementation is done, spend two or three weeks doing finishing touches
+  to the report.
+
+- Provide a first draft.
+
+- Provide the final report.
+
+## Presentation
+
+- Very little can be said about this. After the deadline of the report, spend
+  some time working on the presentation.
 
 # Project boundaries {#project-boundaries}
 
@@ -695,7 +744,7 @@ this internship will only focus on Liferay Portal.
 
 The quality of the product will be assured through three measures.
 
-## Test-driven development
+## Test-driven development {#tdd}
 
 Test-driven development (TDD) is a software development process in which test
 cases are written before the implementation is written. The tests inform the
@@ -725,10 +774,9 @@ meetings are biweekly. See section \ref{synchronisation}.
 
 # Planning {#planning}
 
-TODO: This chapter is missing something???
-
 This chapter covers the timing and planning of the internship. It is expressly
-kept short in the interest of being to-the-point.
+kept short in the interest of being to-the-point. For more details, see chapter
+\ref{project-activities}.
 
 Chronological planning (MM-DD, year is implicitly 2020):
 
@@ -750,7 +798,8 @@ Chronological planning (MM-DD, year is implicitly 2020):
 
 - 03-30 --- Create requirements analysis.
 
-- 04-06 --- On-location meeting with Matija and Martin. TODO: Not final.
+- 04-06 --- On-location meeting with Matija and Martin. This date is *not
+  final*.
 
 - 04-06 --- Begin implementation period.
 
