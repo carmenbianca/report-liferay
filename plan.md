@@ -429,7 +429,7 @@ cases.
 As such, a mechanism for the production of a bill of materials can be created
 that incorporates the detected licensing. One strong candidate for the output
 format is \gls{spdx}, an open standard for communicating software bill of
-material information. See section \ref{spdx-reuse}.
+material information.
 
 The desired granularity of the output is left unspecified and depends on the
 available time.
