@@ -319,7 +319,7 @@ The \gls{outbound} licensing policy of Liferay is a subset of REUSE.
 This internship takes place within the wider context of the SPDX and REUSE
 communities. It is likely that there may be expertise exchange within these
 communities. Moreover, a presence within these communities is a great boon for
-one's professional reputation.
+one's professional development.
 
 # Project definition {#project-definition}
 
