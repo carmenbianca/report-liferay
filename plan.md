@@ -340,10 +340,6 @@ some qualities of the ideal situation:
 
 - Quality of licensing compliance improves.
 
-Licensing problems get addressed much earlier during the development cycle.
-Feedback loop gets shortened. Total time spent working on this by Legal and
-Engineering is reduced to a minimum. Quality of licensing compliance improves
-
 ## Goals {#goals}
 
 In coming up with a goal, it was quickly evident that it would be difficult to
