@@ -402,7 +402,8 @@ checker is much greater, however, because not only must one check for duplicity,
 but also for the licensing of the original code. The decision tree is as complex
 as the licensing policy that informs it.
 
-Therefore, it would be fair to split this sub-goal up into a few more sub-goals:
+To reduce the complexity of the sub-goal into tangible parts, it would be fair
+to split this sub-goal up into a few more sub-goals:
 
 - Automatically check whether inbound code is first-party or third-party.
 
