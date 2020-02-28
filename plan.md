@@ -652,7 +652,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 - Create a rudimentary high-level design for the product. This design need not
   be thorough---it need only be sufficient to get started with the development
-  feedback loop. See rationale in section \ref{tdd}.
+  feedback loop. Most of the design will be informed by test-driven development.
+  See rationale in section \ref{tdd}.
 
 - Create all (anticipated) issues in an issue tracker.
 
