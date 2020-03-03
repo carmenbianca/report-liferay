@@ -76,6 +76,11 @@ Find below an overview of the contents of the chapters:
 - Chapter \ref{planning}: \nameref{planning} --- Lays out intended dates for all
   activities.
 
+There exists a glossary and list of references at the end. In case you are
+reading this on a computer, you can click on some words to be taken to their
+definition in the glossary. You can also click on the years of the references to
+be taken to the correct reference entry.
+
 # Context {#context}
 
 This chapter details the context in which the internship takes place. It also
