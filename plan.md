@@ -1,7 +1,7 @@
 ---
 title: "Plan de campagne: Automated Copyright And Licensing Compliance"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
-date: February 2020
+date: March 2020
 
 pdf-engine: xelatex
 
@@ -32,10 +32,10 @@ This is the *plan de campagne* (plan of action, Dutch: plan van aanpak) for my
 end-of-study internship. I am Carmen Bianca Bakker, and follow a bachelor in
 software engineering (Dutch: informatica) at NHL Stenden University of Applied
 Sciences. My internship is at Liferay International Ltd. in Dublin, a daughter
-company of Liferay Inc. in the United States. The companies will henceforth be
-referred to as simply "Liferay". The internship lasts approximately 5 months
-between 3 February 2020 and 30 June 2020. My job title at Liferay is "Paralegal
-Engineering Intern".
+company of Liferay Inc. in Californa, United States. The companies will
+henceforth be referred to as simply "Liferay". The internship lasts
+approximately 5 months between 3 February 2020 and 30 June 2020. My job title at
+Liferay is "Paralegal Engineering Intern".
 
 The plan de campagne will detail the context of the internship, the problem that
 I was brought in to solve, the research that will be conducted to form the basis
@@ -85,11 +85,12 @@ problem is important, and therefore the motivation for the internship project.
 ## Liferay
 
 Liferay Inc. is an international enterprise that is chiefly responsible for the
-Liferay Digital Experience Platform (DXP), a large suite of web applications.
-Liferay's mission statement is "By building a vibrant business, making
-technology useful, and investing in communities, we make it possible for people
-to reach their full potential to serve others." Its slogan is "Enterprise. Open
-Source. For Life." [@liferay-about]
+Liferay Digital Experience Platform (DXP), a large suite of web applications and
+a platform on which to build applications. Liferay's mission statement is "By
+building a vibrant business, making technology useful, and investing in
+communities, we make it possible for people to reach their full potential to
+serve others." Its slogan is "Enterprise. Open Source. For Life."
+[@liferay-about]
 
 ## Legal
 
@@ -114,11 +115,11 @@ almost always interact with \gls{foss}---either Liferay's, or a dependency's.
 
 ## Dublin office
 
-Liferay has offices all over the globe. Its global headquarters are in Los
-Angeles. The international office is in Dublin, which is the site of this
-internship. The Dublin office hosts approximately twenty employees working on
-Human Resources, Legal, finances, sales, consulting, and other. Remote workers
-are also registered as working for the Dublin office.
+Liferay has offices all over the globe. Its global headquarters are in Diamond
+Bar, Los Angeles County. The international office is in Dublin, which is the
+site of this internship. The Dublin office hosts approximately twenty employees
+working on Human Resources, Legal, finances, sales, consulting, and other.
+Remote workers are also registered as working for the Dublin office.
 
 (For posterity's sake---although the manual says otherwise---the office is
 described *after* the departments because departments span offices.)
@@ -132,10 +133,16 @@ here.
 #### What {-}
 
 Liferay has a lot of software under various \glspl{license}. Liferay gives legal
-assurances to its customers about its \gls{ip}, and therefore needs
-to make sure that all code is correctly licensed. However, the current methods
-of assuring the correctness of its licensing are manual. This does not scale in
-an economically viable way.
+assurances to its customers about its \gls{ip}, and therefore needs to make sure
+that all code is correctly licensed. However, the current methods of assuring
+the correctness of its licensing are manual[^manual]. This does not scale in an
+economically viable way.
+
+[^manual]: The current methods are not entirely manual. State-of-the-art tooling
+is used by legal experts during the compliance process. However, this is
+comparable to the difference between touching up a photo by hand and using a
+professional image manipulation program: A computer makes the process a lot
+easier, but a human still has to do it.
 
 #### Who {-}
 
@@ -195,12 +202,14 @@ as-short-as-possible to capture the essence of the problem.
 ## History
 
 There is some tangent history to the problem, but the exact lines are blurry.
-Liferay has an inbound and outbound licensing policy [@liferay-inbound;
-@liferay-outbound], but they do not scale.
+Liferay has an \gls{inbound} and \gls{outbound} licensing policy
+[@liferay-inbound; @liferay-outbound], but they do not scale without better
+interconnection and automation.
 
 Liferay's internal *Source Formatter* tool [@liferay-source-formatter] also
 checks some licensing compliance aspects, but it is not thorough enough. Source
-Formatter is run as a linter in Liferay's \gls{ci} system.
+Formatter is run as a linter in Liferay's \gls{ci} system, and is used locally
+by engineers during the development process.
 
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
@@ -244,14 +253,19 @@ needed to understand some things in later chapters.
 **Notice to the reader:** Feel free to skip this section or briefly skim over
 it. Later chapters will refer back to these sections when the context is needed.
 
-### Liferay Portal Community Edition {#liferay-portal}
+### Liferay Portal {#liferay-portal}
 
-Liferay Portal Community Edition (henceforth: Liferay Portal) is the main
-product of Liferay. It is the community version of Liferay DXP. It is licensed
-under the terms of the GNU Lesser General Public License as published by the
-Free Software Foundation, either version 2.1 of the \gls{license}, or any later
-version. It consists of approximately 80,000[^liferay-source-files] files, out
-of which ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
+Liferay Digital Experience Platform (DXP) is the main product of Liferay. It is
+the enterprise version of Liferay Portal. The two products are virtually
+identical, but Liferay DXP has some added functionality, better support, and
+additional benefits for subscribers. Liferay Portal is \gls{upstream} to Liferay
+DXP.
+
+Liferay Portal is licensed under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation, either version 2.1 of the
+\gls{license}, or any later version. It consists of approximately
+80,000[^liferay-source-files] files, out of which ±32,000[^liferay-java-files]
+are Java code files. [@liferay-portal]
 
 [^liferay-source-files]: `find . type -f | wc -l`
 
@@ -259,9 +273,6 @@ of which ±32,000[^liferay-java-files] are Java code files. [@liferay-portal]
 
 Liferay DXP is licensed under a private \gls{license} instead of the GNU Lesser
 General Public License. See section \ref{copyright-assignment}.
-
-\clearpage
-<!-- TODO: Verify this -->
 
 ### License headers {#license-headers}
 
@@ -289,32 +300,41 @@ shown in listing \ref{lst:java-header}.
 headers: "[N]o coherent policy applied to all projects; years not updated; the
 use of 'present' in the year span, which is useless at best and misleading at
 worst; use of obsolete 'All rights reserved', which is neither needed nor true,
-as the very next line gives rights through a FOSS license; does not include a
-contact point to the copyright holder."
+as the very next line gives rights through a \gls{foss} \gls{license}; does not
+include a contact point to the \gls{copyright-holder}."
+
+When Liferay DXP---which is licensed under a proprietary EULA---is released,
+these headers are replaced.
 
 ### Copyright assignment {#copyright-assignment}
 
-Liferay uses a policy of \gls{copyright} assignment. This means that all
-third-party contributors to Liferay must sign an agreement wherein they transfer
-("assign") their \gls{copyright} to Liferay. If the agreement is not signed,
-then the contributions are not accepted. [@liferay-cla]
+Liferay Portal uses a policy of \gls{copyright} assignment. This means that all
+third-party contributors to Liferay Portal must sign an agreement wherein they
+transfer ("assign") their \gls{copyright} to Liferay. If the agreement is not
+signed, then the contributions are not accepted. [@liferay-cla]
 
-Employee contributions always assign their copyright to the employer (Liferay).
+Employee contributions always assign their \gls{copyright} to the employer
+(Liferay).
 
-The logical consequence of this policy is that all code inside of Liferay's
-repositories is exclusively copyrighted by Liferay. This allows Liferay to offer
-their product under a separate license to paying customers. This frees those
-customers from the obligations of the GNU Lesser General Public License.
+The logical consequence of this policy is that all code inside of Liferay Portal
+is exclusively copyrighted by Liferay[^not-exclusive]. This allows Liferay to
+offer their product under a separate \gls{license} to paying customers. This
+frees those customers from the obligations of the GNU Lesser General Public
+License.
+
+[^not-exclusive]: This is not entirely true. There exists third-party \gls{foss}
+inside of Liferay Portal. The \glspl{license} of these components permit
+relicensing under a \gls{proprietary} \gls{license}.
 
 ### SPDX and REUSE {#spdx-reuse}
 
-This project heavily builds upon the foundations laid by \gls{spdx} by the Linux
-Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is an
-open standard for communicating software bill of material infomation. REUSE is a
-project that makes makes licensing easy, comprehensive, and machine-readable.
-REUSE itself incorporates \gls{spdx}.
+This internship heavily builds upon the foundations laid by \gls{spdx} by the
+Linux Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is
+an open standard for communicating software bill of material infomation. REUSE
+is a project that makes makes licensing easy, comprehensive, and
+machine-readable. REUSE itself incorporates \gls{spdx}.
 
-The \gls{outbound} licensing policy of Liferay is a subset of REUSE.
+The \gls{outbound} licensing policy of Liferay is a superset of REUSE.
 
 This internship takes place within the wider context of the SPDX and REUSE
 communities. It is likely that there may be expertise exchange within these
@@ -375,12 +395,13 @@ There are going to be some challenges in implementing this policy, but it is
 equally important that the policy be tested against. Therefore, this sub-goal
 has one sub-goal of its own:
 
-- Automatically verify (lint) the codebase against Liferay's outbound licensing
-  policy.
+- Automatically verify (lint) the codebase against Liferay's \gls{outbound}
+  licensing policy.
 
-There is one optional sub-goal. As described in \ref{copyright-assignment},
-Liferay offers a separately licensed version of their product to paying
-customers. From that fact stems the following sub-goal:
+There is one optional sub-goal. As described in section
+\ref{copyright-assignment} and section \ref{license-headers}, Liferay offers a
+separately licensed version of their product to paying customers. From that fact
+stems the following sub-goal:
 
 - Unify the licensing header for both the community and the enterprise version
   of Liferay Portal. See section \ref{liferay-portal}.
@@ -405,11 +426,12 @@ as the licensing policy that informs it.
 To reduce the complexity of the sub-goal into tangible parts, it would be fair
 to split this sub-goal up into a few more sub-goals:
 
-- Automatically check whether inbound code is first-party or third-party.
+- Automatically check whether \gls{inbound} code is first-party or third-party.
 
-- Automatically check the licensing of inbound third-party code.
+- Automatically check the licensing of \gls{inbound} third-party code.
 
-- Verify whether the licensing of inbound third-party code is compatible.
+- Verify whether the licensing of \gls{inbound} third-party code is compatible
+  according to @liferay-inbound.
 
 - Flag Legal if a problem is detected.
 
@@ -424,7 +446,10 @@ to automatically generate a bill of materials of Liferay's products. Such a bill
 of materials currently exists, but lacks granularity and depends on a product's
 globally *declared* licensing instead of its *detected* licensing. Moreover, it
 is provided as a PDF file, which may not be the most convenient for some use
-cases.
+cases.[^bom]
+
+[^bom]: There also exist \gls{spdx} files for Liferay Portal/DXP and some other
+products, but they are not automated and there is a considerable backlog.
 
 As such, a mechanism for the production of a bill of materials can be created
 that incorporates the detected licensing. One strong candidate for the output
@@ -449,8 +474,8 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - The report mandated by NHL Stenden. The research document is contained within
   this report.
 
-- A product, or a combination of products, that automate copyright and licensing
-  compliance.
+- A product, or a combination of products, that automate \gls{copyright} and
+  licensing compliance.
 
 - Documentation that assists in the integration of the delivered product(s).
 
@@ -550,17 +575,18 @@ Although it is impossible to know now which sources will end up being useful,
 and which sources will be encountered in the process of research, here are some
 sources that are likely to be useful:
 
-- Software Package Data Exchange Workgroup (Linux Foundation)
-- REUSE (Free Software Foundation Europe)
-- Free Software Foundation
-- Creative Commons
-- FOSSology
-- Scancode
-- SW360 (Eclipse)
-- Fedora
-- Debian
 - ClearlyDefined (Open Source Initiative)
+- Creative Commons
+- Debian
+- Fedora
+- FOSSID
+- FOSSology (Linux Foundation)
+- Free Software Foundation
 - OSS Review Toolkit
+- REUSE (Free Software Foundation Europe)
+- ScanCode (nexB)
+- Software Package Data Exchange Workgroup (Linux Foundation)
+- SW360 (Eclipse)
 
 Some of these sources are also used in this document.
 
@@ -586,7 +612,7 @@ descriptions. The rationales are described, however.
 - Observation --- Observing the current process may give insights that do not
   arise from the interview.
 
-#### What are the possible methods of detecting the \gls{inbound} licensing of code? What are their qualities? {-}
+#### What are the possible methods of detecting the inbound licensing of code? What are their qualities? {-}
 
 - Brainstorm --- This is a practical problem that could be solved in multiple
   ways. Because the likely methods are currently unknown, they could be
@@ -669,7 +695,7 @@ more-or-less chronological, but become asynchronous as implementation begins.
 - Request code reviews during the creation of the product.
 
 - Write a separate tool that adjusts the headers to be compliant with the
-  outbound policy.
+  \gls{outbound} policy.
 
 - Hand over the code to Engineering. The chances of seeing the product
   implemented in Liferay in the last weeks of the internship are slim, but it
@@ -776,7 +802,9 @@ This chapter covers the timing and planning of the internship. It is expressly
 kept short in the interest of being to-the-point. For more details, see chapter
 \ref{project-activities}.
 
-Chronological planning (MM-DD, year is implicitly 2020):
+## Chronological planning
+
+The format is MM-DD. The year is implicitly 2020.
 
 - 02-03 --- Begin internship.
 
@@ -796,8 +824,7 @@ Chronological planning (MM-DD, year is implicitly 2020):
 
 - 03-30 --- Create requirements analysis.
 
-- 04-06 --- On-location meeting with Matija and Martin. This date is *not
-  final*.
+- 04-06 --- On-location meeting. This date is *not final*.
 
 - 04-06 --- Begin implementation period.
 
@@ -815,7 +842,7 @@ Chronological planning (MM-DD, year is implicitly 2020):
 
 - 07-[6,7,10] --- **Deadline: Presentation in Leeuwarden.**
 
-![Gantt chart of planning](gantt.svg){#gantt}
+![Gantt chart of planning. It is separated into six phases.](gantt.svg){#gantt}
 
 Figure \ref{gantt} displays a Gantt chart of the planning. It is separated in
 six: Plan de campagne, research, synchronisation, implementation, reporting, and
@@ -827,9 +854,15 @@ deadlines get their own colours: soft blue, white, and soft pink respectively.
 The Free Software Foundation Europe annually organises the Legal and Licensing
 Workshop (LLW) in Barcelona. Due to my work on REUSE and my field expertise in
 copyright and licensing, I have been invited to attend. The LLW is not strictly
-related to the internship other than sharing a theme, but it is a wonderful
-opportunity for professional growth, networking, and learning. See section
-\ref{spdx-reuse}.
+related to the internship, but it is a wonderful opportunity for professional
+growth, networking, and learning.
+
+Moreover, there will be plenty field experts present at the event. Although the
+research phase is over by April, there will be the opportunity to pick the
+brains of these experts. Some of these experts may be the \glspl{author} of
+solutions mentioned in research sub-question @solutions.
+
+See also section \ref{spdx-reuse}.
 
 \appendix
 
@@ -915,7 +948,7 @@ A \gls{foss} \gls{license} grants certain rights to the recipient of the
 \Glspl{license} that do not provide the user with these freedoms, then, are
 "\gls{proprietary}" or "\gls{non-free}" \glspl{license}.
 
-@osi-osd has a similar requirement for a license to be identified as a
+@osi-osd has a similar requirement for a \gls{license} to be identified as a
 \gls{foss} \gls{license}. It says that a \gls{license} must abide by the Open
 Source Definition.
 
@@ -945,6 +978,10 @@ This document uses \acrshort{foss} (\acrlong{foss}) as a catch-all name for both
 \gls{open-source} and \gls{free-software} to be synonyms for simplicity's sake.
 This is in the understanding that they are incredibly similar. [@schiessle-2012]
 
+According to @perens-2017, "\gls{open-source} \glspl{license} and
+\gls{free-software} \glspl{license} are effectively the same thing." Perens is
+the creator of the Open Source Definition.
+
 ![Comparison chart of \gls{foss} and \gls{proprietary} software. Source: @schiessle-2012](softwaremodels.png)
 
 ## Outbound licenses
@@ -958,7 +995,7 @@ contrast against \gls{inbound} \glspl{license}.
 According to @liferay-internal-faq, "an \gls{inbound} \gls{license} is one that
 is coming into the project or product, [of which there are generally] two types:
 [1] code you copied from an \gls{upstream} project --- which is the same as that
-upstream project's \gls{outbound} \gls{license}; and [2] code that was
+\gls{upstream} project's \gls{outbound} \gls{license}; and [2] code that was
 contributed to one of our projects/products from an external party --- typically
 by signing Liferay's CLA."
 
