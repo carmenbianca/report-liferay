@@ -102,10 +102,11 @@ serve others." Its slogan is "Enterprise. Open Source. For Life."
 The "\gls{open-source}" aspect of Liferay involves \gls{foss} licensing.
 Licensing involves Legal. This internship takes place within the context of
 Liferay's Legal department. I will be working under Matija Šuklje, Senior
-Counsel at Liferay. Matija is chiefly responsible for Liferay's \gls{ip},
-specifically anything that involves the "©" symbol and software \gls{copyright}
-and licensing. The "™" symbol is managed by Kirstin Huniar, and is not relevant
-to this internship. [@suklje-2019]
+Counsel at Liferay. Matija is chiefly responsible for Liferay's \gls{ip}. This
+includes anything that involves the "©" symbol and software \gls{copyright} and
+licensing, but also patents, database rights, design rights, and all other
+\gls{ip}. The "™" symbol is managed by Kirstin Huniar, and is not relevant to
+this internship. [@suklje-2019]
 
 Beside \gls{foss} licensing, Legal is also responsible for all other matters of
 law. Like trademarks, these are not relevant to the internship, but mentioned
