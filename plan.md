@@ -579,43 +579,72 @@ sources that are likely to be useful:
 
 Some of these sources are also used in this document.
 
-## Method
+## Methods
 
 This section describes the intended methods of research for each sub-question.
-These methods are sourced from @ictresearchmethods. They are not further
-described for the sake of brevity---the aforementioned source contains their
-descriptions. The rationales are described, however.
+These methods are sourced from @ictresearchmethods. The methods are broadly
+defined and a rationale for each method is given.
 
-#### What are the demands, requirements and limitations of Liferay? {-}
+### What is the current process of licensing compliance?
 
-- Stakeholder analysis --- The stakeholders assuredly possess the knowledge to
-  answer this question.
+In order to assess the current processes, an *expert interview* will be
+conducted with Matija Šuklje. The expert interview will focus on a handful of
+things:
 
-#### What are the available technical solutions in the field of licensing compliance? What are their qualities? {-}
+- What are the steps that are taken when a licensing compliance issue pops up?
+- What is the most common licensing compliance issue?
+- Where in the process does Liferay lose the most time?
 
-- Available product analysis --- Requires no rationale.
+There will doubtlessly be more questions when the interview occurs, but these
+three questions should reveal the process and its pain points.
 
-#### What is the current process of licensing compliance? {-}
+The rationale for an expert interview is simple: There is no doubt in my mind
+that an expert knows the process well, and is familiar enough with the process
+to detect its pain points.
 
-- Expert interview --- An expert can perfectly describe the current process.
-- Observation --- Observing the current process may give insights that do not
-  arise from the interview.
+### What are the demands, requirements and limitations of Liferay in the context of automating their licensing policies?
 
-#### What are the possible methods of detecting the inbound licensing of code? What are their qualities? {-}
+One part of this sub-question is extremely easy to address: @liferay-inbound and
+@liferay-outbound already give a lot of information on Liferay's requirements
+from a policy perspective. Researching these documents is *document analysis*.
 
-- Brainstorm --- This is a practical problem that could be solved in multiple
-  ways. Because the likely methods are currently unknown, they could be
-  unearthed through brainstorming.
-- Expert interview --- An interview with an expert can uncover the qualities of
-  the discovered methods.
+But those are only the things that are written down. It is probable that there
+are other wants or restrictions that are not black-on-white. To discover those,
+I will *explore user requirements*. Exploring user requirements will be a number
+of interviews with people who are somehow related to the project. These people
+potentially include (depending on time and availability):
 
-#### Is it possible to measure the quality of licensing? If so, how? {-}
+- Someone from Legal.
+- Someone from QA.
+- Someone from Engineering. This is also probably an end-user.
 
-- Literature study --- This question is highly theoretical. It is possible that
-  someone else has written about this before.
-- Available product analysis --- This method may or may not be relevant. Someone
-  may have written a product that measures licensing quality. Analysing these
-  products may give insight into how the measurements are done.
+### What are the available technical solutions in the field of licensing compliance? Are they suitable for automating Liferay's licensing policies?
+
+There are various existing technical solutions in the field of licensing
+compliance. An *available product analysis* is made of these solutions. In
+co-operation with Matija, a shortlist was created. The shortlist consists of:
+
+- ClearlyDefined
+- FOSSID
+- FOSSology
+- OSS Review Toolkit
+- REUSE
+- ScanCode
+- SW360
+
+The method of evaluating these solutions is a simple linear path:
+
+1. Read about the product in its existing documentation.
+
+2. Install the product (if applicable). This step seems superfluous, but was
+   retroactively introduced into the method, as will become evident in the
+   results of some of the solutions.
+
+3. Use the product, preferably on Liferay Portal. This step is ill-defined
+   because of the variation between the solutions. It is exploratory
+   observation---discovering the unknown.
+
+4. Read other people's reviews or comments about the product.
 
 ## Requirements analysis
 
