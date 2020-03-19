@@ -501,55 +501,38 @@ to know the licensing of \gls{inbound} code, and wishes to verify its
 \gls{outbound} licensing. They wish to do these things in an automated fashion.
 Reorder the words, and this becomes the main question of research:
 
-> Given Liferay’s demands, requirements and limitations, what are suitable
-> solutions for automating Liferay's \gls{inbound} and \gls{outbound} licensing
-> policies?
+> Given Liferay's demands, requirements and limitations, what is the most
+> suitable solution for automating Liferay's \gls{inbound} and \gls{outbound}
+> licensing policies?
 
 ## Sub-questions {#sub-questions}
 
-Because main questions need sub-questions, this section details five of them.
-
-The first two sub-questions directly elaborate on the main question in ways that
-are hopefully obvious:
-
-@needs. What are the demands, requirements and limitations of Liferay?
-
-@solutions. What are the available technical solutions in the field of
-licensing compliance? What are their qualities?
-
-Question @needs seeks to define some important terms in the main question.
-Question @solutions seeks to acquire information about existing technical
-approaches to adjacent problems, if any. It will also zoom in on the extent of
-automation: Which scenarios should require manual intervention by Legal or
-Engineering? These existing technical solutions may inform the product, or may
-be consumed by the product.
-
-The next questions explore aspects that are directly tangential to the main
-question. These aspects will be important to research.
+Because main questions need sub-questions, this section details three of them.
+There had been five in the earlier submission, but due to time constraints, it
+has been trimmed down to three.
 
 @current. What is the current process of licensing compliance?
 
-@methods. What are the possible methods of detecting the \gls{inbound}
-licensing of code? What are their qualities?
+@needs. What are the demands, requirements and limitations of Liferay in the
+context of automating their licensing policies?
+
+@solutions. What are the available technical solutions in the field of
+licensing compliance? Are they suitable for automating Liferay's licensing
+policies?
 
 Question @current exists to create an understanding of the current situation.
 With that understanding, it becomes much easier to imagine how the process might
 be automated.
 
-Question @methods looks similar to question @solutions, but they are in truth
-extremely different. Where question @solutions is focused on the technical
-aspect and available technical solutions, question @methods is non-technical and
-should not necessitate a single line of code. It is concerned with extracting
-information from data. Figuring out how to do this is important for the product.
+Question @needs seeks to define some important terms in the main question.
+Acquiring a deeper understanding of Liferay's wants helps the project to focus
+on those specific wants.
 
-Which leaves the last question:
-
-@measure. Is it possible to measure the quality of licensing? If so, how?
-
-This question is slightly out-of-scope for main question, but completely
-in-scope for the requirements analysis and project goals, which is why it is
-here. One of the goals of the project is to improve the licensing. The answer
-to question @measure allows us to test the quality of the delivered work.
+Question @solutions seeks to acquire information about existing technical
+approaches to adjacent problems, if any. It will also zoom in on the extent of
+automation: Which scenarios should require manual intervention by Legal or
+Engineering? These existing technical solutions may inform the product, or may
+be consumed by the product.
 
 ## Definitions
 
