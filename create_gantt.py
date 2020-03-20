@@ -42,7 +42,8 @@ sync_tasks = [
     gantt.Task("Synchronise with Matija", start=the_date, duration=1) for the_date in (date(2020, 2, 18) + timedelta(i) for i in (x*14 for x in range(9)))
 ]
 sync_tasks += [
-    gantt.Task("On-location meeting with Matija and Martin", start=date(2020, 4, 6), duration=1)
+    gantt.Task("On-location meeting with Matija and Martin", start=date(2020, 4, 6), duration=1),
+    gantt.Task("Product retrospective", start=date(2020, 5, 26), duration=1),
 ]
 
 for task in sync_tasks:

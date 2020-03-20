@@ -711,6 +711,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 - Perhaps stating the obvious: Regularly communicate with Matija between the
   biweekly meetings to resolve issues early.
 
+- Product retrospective. See section \ref{retrospective}.
+
 ## Implementation
 
 - Create a requirements analysis from the conclusion of the research.
@@ -810,7 +812,15 @@ this internship will only focus on Liferay Portal.
 
 # Quality assurance {#quality-assurance}
 
-The quality of the product will be assured through three measures.
+This chapter details how the quality of the following things will be monitored
+and assured:
+
+- The software design/architecture.
+- The product.
+- The code.
+
+The sections below describe the measures. The important common feature of these
+measures is that they are all continuous and make heavy use of feedback loops.
 
 ## Test-driven development {#tdd}
 
@@ -828,17 +838,55 @@ still providing some structure.
 An added benefit of test-driven development is that, ideally, you do not end up
 with more functionality than you strictly need.
 
+### Up-front design
+
+The up-front design will be a component diagram or similar architectural
+overview. It will be submitted to engineers within Liferay to garner feedback.
+It will also be discussed with Matija Şuklje to get a rough understanding of
+whether the proposed solution solves the problems as envisioned. Matija is a
+technologically capable individual, but may not be able to read UML component
+diagrams. For that reason, some yet-to-be-determined alternative method of
+representation may be chosen.
+
+At the end of the feedback loop, the design will be approved, and implementation
+may start.
+
 ## Code review
 
-Though I will not receive a code review for every single feature or pull
-request, I will semi-regularly request code reviews to make sure that the
-written code is up-to-standard.
+I will regularly request code reviews for pull requests into the repository. A
+Liferay engineer will review the code, engage in a feedback loop, and eventually
+approve the pull request.
+
+Depending on the volume of contributions, there may not be enough engineering
+resources to review all pull requests. If that is the case, one of three things
+will happen:
+
+- The pull requests will happen at a delayed rate, and to prevent blockage, work
+  will continue in a separate branch.
+- *Or* only a portion of the pull requests will get code reviews. To make sure
+  that the code that went into the project without approval also gets reviewed,
+  I will schedule a weekly or biweekly meeting with an engineer to interactively
+  comb through the code together. Pair programming, except it's a code review.
+- Or a combination of the two.
+
+With any luck, the code reviews will be publicly visible on a code hosting
+website. This means that the reviews may be retroactively studied and verified.
 
 ## Synchronisation with stakeholders
 
 In a scrum-like fashion, I will regularly synchronise with the primary
 stakeholder to make sure that the product delivers the features it should. These
 meetings are biweekly. See section \ref{synchronisation}.
+
+### Retrospective {#retrospective}
+
+TODO add to planning
+
+Near the end of the implementation phase of the internship, I will
+retrospectively synchronise with Matija to assess whether the almost-finished
+product solves the stated problems. If there are any obvious problems, they may
+or may not be adjusted in final tweaks, depending on available time and
+resources.
 
 # Planning {#planning}
 
@@ -877,6 +925,8 @@ The format is MM-DD. The year is implicitly 2020.
 - 05-04 --- Workshop reporting.
 
 - 05-25 --- First draft report.
+
+- 05-26 --- Product retrospective.
 
 - 06-05 --- **Internal deadline: Hand over proof-of-concept.**
 
