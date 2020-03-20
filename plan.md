@@ -660,6 +660,9 @@ The method of evaluating these solutions is a simple linear path:
 
 4. Read other people's reviews or comments about the product.
 
+Once these steps are through, the findings are assessed to determine their
+applicability to this internship.
+
 ## Requirements analysis
 
 After the research has been completed, a requirements analysis will be produced
