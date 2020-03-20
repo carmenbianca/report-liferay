@@ -400,33 +400,6 @@ are provided instead of one, or that a single technological solution is provided
 with a very clear split down the middle between the \gls{outbound} licensing
 component and the \gls{inbound} licensing component.
 
-### Outbound {#goal-reuse}
-
-Automating \gls{outbound} licensing compliance is closely related to the problem
-in section \ref{license-headers}. There are going to be some challenges in implementing this policy, but it is
-equally important that the policy be tested against. Therefore, this goal
-presents the following sub-goals:
-
-- Write a mechanism that converts the licensing headers in Liferay's codebase to
-  the format found in listing \ref{lst:reuse-header}. This is a single-use
-  mass-conversion program that does not need to be maintained or rigorously
-  designed.
-
-- Write a mechanism that automatically verifies (lints) the codebase against
-  Liferay's \gls{outbound} licensing policy.
-
-There is one optional sub-goal. As described in section
-\ref{copyright-assignment} and section \ref{license-headers}, Liferay offers a
-separately licensed version of their product to paying customers. From that fact
-stems the following sub-goal:
-
-- Unify the licensing header for both the community and the enterprise version
-  of Liferay Portal. See section \ref{liferay-portal}.
-
-This sub-goal might be tricky from a legal perspective, though, and remains
-entirely optional. And it is, as far as this internship is concerned,
-out-of-scope from a software engineering perspective.
-
 ### Inbound {#goal-inbound}
 
 All code that enters the project must have its licensing checked. More often
@@ -453,6 +426,33 @@ split it up into a few sub-goals:
   according to @liferay-inbound.
 
 - Flag Legal if a problem is detected.
+
+### Outbound {#goal-reuse}
+
+Automating \gls{outbound} licensing compliance is closely related to the problem
+in section \ref{license-headers}. There are going to be some challenges in implementing this policy, but it is
+equally important that the policy be tested against. Therefore, this goal
+presents the following sub-goals:
+
+- Write a mechanism that converts the licensing headers in Liferay's codebase to
+  the format found in listing \ref{lst:reuse-header}. This is a single-use
+  mass-conversion program that does not need to be maintained or rigorously
+  designed.
+
+- Write a mechanism that automatically verifies (lints) the codebase against
+  Liferay's \gls{outbound} licensing policy.
+
+There is one optional sub-goal. As described in section
+\ref{copyright-assignment} and section \ref{license-headers}, Liferay offers a
+separately licensed version of their product to paying customers. From that fact
+stems the following sub-goal:
+
+- Unify the licensing header for both the community and the enterprise version
+  of Liferay Portal. See section \ref{liferay-portal}.
+
+This sub-goal might be tricky from a legal perspective, though, and remains
+entirely optional. And it is, as far as this internship is concerned,
+out-of-scope from a software engineering perspective.
 
 ### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
 
