@@ -880,8 +880,6 @@ meetings are biweekly. See section \ref{synchronisation}.
 
 ### Retrospective {#retrospective}
 
-TODO add to planning
-
 Near the end of the implementation phase of the internship, I will
 retrospectively synchronise with Matija to assess whether the almost-finished
 product solves the stated problems. If there are any obvious problems, they may
@@ -893,8 +891,6 @@ resources.
 This chapter covers the timing and planning of the internship. It is expressly
 kept short in the interest of being to-the-point. For more details, see chapter
 \ref{project-activities}.
-
-## Chronological planning
 
 The format is MM-DD. The year is implicitly 2020.
 
@@ -912,13 +908,13 @@ The format is MM-DD. The year is implicitly 2020.
 
 - 03-24 --- Workshop analysis and conclusions.
 
-- 03-27 --- **Internal deadline: Research.**
+- 04-10 --- **Internal deadline: Research.**
 
-- 03-30 --- Create requirements analysis.
+- 04-13 --- Create requirements analysis.
 
 - 04-06 --- On-location meeting. This date is *not final*.
 
-- 04-06 --- Begin implementation period.
+- 04-20 --- Begin implementation period.
 
 - 05-04 --- Workshop reporting.
 

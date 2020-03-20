@@ -23,12 +23,8 @@ research = gantt.Project("Research", color="#FFA52C")
 
 research_tasks = [
     gantt.Task("Preliminary research", start=date(2020, 2, 3), duration=5*5),
-    gantt.Task("Research sub-question 1", start=date(2020, 3, 2), duration=3),
-    gantt.Task("Research sub-question 2", start=date(2020, 3, 5), duration=3),
-    gantt.Task("Research sub-question 3", start=date(2020, 3, 10), duration=3),
-    gantt.Task("Research sub-question 4", start=date(2020, 3, 13), duration=3),
-    gantt.Task("Research sub-question 5", start=date(2020, 3, 18), duration=3),
-    gantt.Task("Put it all together", start=date(2020, 3, 23), duration=5),
+    gantt.Task("Research", start=date(2020, 3, 2), duration=5*4),
+    gantt.Task("Put it all together", start=date(2020, 3, 30), duration=5),
     gantt.Task("Workshop concluding and analysing", start=date(2020, 3, 24), duration=1, color=WORKSHOP),
 ]
 
@@ -51,9 +47,9 @@ for task in sync_tasks:
 implementation = gantt.Project("Implementation", color="#008018")
 
 implementation_tasks = [
-    gantt.Task("Create requirements analysis", start=date(2020, 3, 30), duration=3),
-    gantt.Task("Familiarise with tools", start=date(2020, 3, 30), duration=5),
-    gantt.Task("Implementation", start=date(2020, 4, 6), duration=5*9),
+    gantt.Task("Create requirements analysis", start=date(2020, 4, 13), duration=3),
+    gantt.Task("Familiarise with tools", start=date(2020, 4, 13), duration=5),
+    gantt.Task("Implementation", start=date(2020, 4, 20), duration=5*7),
     gantt.Task("Hand over proof-of-concept", start=date(2020, 6, 5), duration=1),
 ]
 
