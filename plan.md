@@ -920,8 +920,6 @@ The format is MM-DD. The year is implicitly 2020.
 
 - 04-06 --- Begin implementation period.
 
-- 04-15 --- Legal and Licensing Workshop in Barcelona.
-
 - 05-04 --- Workshop reporting.
 
 - 05-25 --- First draft report.
@@ -942,21 +940,6 @@ Figure \ref{gantt} displays a Gantt chart of the planning. It is separated in
 six: Plan de campagne, research, synchronisation, implementation, reporting, and
 presentation. These six segments are colour-coded. Workshops, drafts, and
 deadlines get their own colours: soft blue, white, and soft pink respectively.
-
-## Legal and Licensing Workshop
-
-The Free Software Foundation Europe annually organises the Legal and Licensing
-Workshop (LLW) in Barcelona. Due to my work on REUSE and my field expertise in
-copyright and licensing, I have been invited to attend. The LLW is not strictly
-related to the internship, but it is a wonderful opportunity for professional
-growth, networking, and learning.
-
-Moreover, there will be plenty field experts present at the event. Although the
-research phase is over by April, there will be the opportunity to pick the
-brains of these experts. Some of these experts may be the \glspl{author} of
-solutions mentioned in research sub-question @solutions.
-
-See also section \ref{spdx-reuse}.
 
 \appendix
 

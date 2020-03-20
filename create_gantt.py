@@ -30,7 +30,6 @@ research_tasks = [
     gantt.Task("Research sub-question 5", start=date(2020, 3, 18), duration=3),
     gantt.Task("Put it all together", start=date(2020, 3, 23), duration=5),
     gantt.Task("Workshop concluding and analysing", start=date(2020, 3, 24), duration=1, color=WORKSHOP),
-    gantt.Task("Legal and Licensing Workshop", start=date(2020, 4, 15), duration=3),
 ]
 
 for task in research_tasks:
