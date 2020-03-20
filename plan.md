@@ -286,6 +286,9 @@ By and large, the \gls{copyright} and licensing of a file is defined in its
 comment header. In Liferay Portal, the Java files have a standardised header as
 shown in listing \ref{lst:java-header}.
 
+When Liferay DXP---which is licensed under a proprietary EULA---is released,
+these headers are replaced.
+
 ```{#lst:java-header caption="Comment header that contains Liferay's licensing blurb."}
 /**
  * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
@@ -309,8 +312,19 @@ worst; use of obsolete 'All rights reserved', which is neither needed nor true,
 as the very next line gives rights through a \gls{foss} \gls{license}; does not
 include a contact point to the \gls{copyright-holder}."
 
-When Liferay DXP---which is licensed under a proprietary EULA---is released,
-these headers are replaced.
+@liferay-outbound now mandates the use of a different header, but it has not
+been widely implemented yet. The new header can be seen in listing
+\ref{lst:reuse-header}.
+
+```{#lst:reuse-header caption="New copyright and licensing header template for Liferay."}
+/**
+ * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: {spdx_license_short_identifier}
+ */
+```
+
+The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. See
+section \ref{spdx-reuse}.
 
 ### Copyright assignment {#copyright-assignment}
 
@@ -368,41 +382,38 @@ some qualities of the ideal situation:
 
 ## Goals {#goals}
 
-In coming up with a goal, it was quickly evident that it would be difficult to
-formulate the main goal into a SMART goal. So instead of doing that, a broader
-goal was chosen, with the implicit understanding that the goal would be met if
-all SMART sub-goals are completed.
+The main goal of the project is to *improve and automate \gls{inbound} and
+\gls{outbound} licensing compliance*. However, this goal is not very SMART, so a
+different SMART main goal has been formulated. As follows:
 
-The main goal of the project is:
+> Automatically check licensing of all **\gls{inbound}** third-party code, and
+> follow industry best-practices by providing unified and unambiguous licensing
+> information for all **\gls{outbound}** code.
 
-> Improve and automate \gls{inbound} and \gls{outbound} licensing compliance.
+This main goal is necessarily two-pronged, with an equal focus on \gls{inbound}
+and \gls{outbound} licensing. This is a minor annoyance, but unavoidable.
+Focusing exclusively on one or the other would not solve the stated problems in
+chapter \ref{context}.
 
-The sub-goals of the project are informed by the desires of Liferay. They are as
-follows:
+Therefore it is likely---but not necessary---that two technological solutions
+are provided instead of one, or that a single technological solution is provided
+with a very clear split down the middle between the \gls{outbound} licensing
+component and the \gls{inbound} licensing component.
 
-### Follow industry best-practices by providing unified and unambiguous licensing information in all source code files {#goal-reuse}
+### Outbound {#goal-reuse}
 
-This resolves the problem mentioned in section \ref{license-headers}.
-@liferay-outbound now mandates the use of a different header, but it has not
-been implemented yet. The new header can be seen in listing
-\ref{lst:reuse-header}.
+Automating \gls{outbound} licensing compliance is closely related to the problem
+in section \ref{license-headers}. There are going to be some challenges in implementing this policy, but it is
+equally important that the policy be tested against. Therefore, this goal
+presents the following sub-goals:
 
-```{#lst:reuse-header caption="New copyright and licensing header template for Liferay."}
-/**
- * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
- * SPDX-License-Identifier: {spdx_license_short_identifier}
- */
-```
+- Write a mechanism that converts the licensing headers in Liferay's codebase to
+  the format found in listing \ref{lst:reuse-header}. This is a single-use
+  mass-conversion program that does not need to be maintained or rigorously
+  designed.
 
-The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. See
-section \ref{spdx-reuse}.
-
-There are going to be some challenges in implementing this policy, but it is
-equally important that the policy be tested against. Therefore, this sub-goal
-has one sub-goal of its own:
-
-- Automatically verify (lint) the codebase against Liferay's \gls{outbound}
-  licensing policy.
+- Write a mechanism that automatically verifies (lints) the codebase against
+  Liferay's \gls{outbound} licensing policy.
 
 There is one optional sub-goal. As described in section
 \ref{copyright-assignment} and section \ref{license-headers}, Liferay offers a
@@ -413,24 +424,26 @@ stems the following sub-goal:
   of Liferay Portal. See section \ref{liferay-portal}.
 
 This sub-goal might be tricky from a legal perspective, though, and remains
-entirely optional.
+entirely optional. And it is, as far as this internship is concerned,
+out-of-scope from a software engineering perspective.
 
-### Automatically check licensing of all inbound third-party code, and flag Legal if a problem is detected
+### Inbound {#goal-inbound}
 
 All code that enters the project must have its licensing checked. More often
 than not, it will be a contribution authored by an employee, which means that
 the \gls{inbound} licensing is not a concern. If the employee commits code that
 was authored by somebody else, however, the licensing must be double-checked.
 
-The method of implementation is not yet certain, and will require research.
-Preliminary research suggests that the code could be verified against a
-"plagiarism checker" and a decision tree. The complexity of such a plagiarism
-checker is much greater, however, because not only must one check for duplicity,
-but also for the licensing of the original code. The decision tree is as complex
-as the licensing policy that informs it.
+The method of implementation is not yet certain, and will require research and
+deliberation. Some options are concretely mentioned here to give this goal some
+more tangibility. Preliminary research suggests that incoming libraries could be
+checked against their declared manifest, or against a public database that holds
+the licensing information of many packages. Alternatively, the code could be
+verified against a "plagiarism checker" on a snippet level, but this might be
+too complex and/or resource-intensive.
 
-To reduce the complexity of the sub-goal into tangible parts, it would be fair
-to split this sub-goal up into a few more sub-goals:
+To reduce the complexity of this goal into tangible parts, it would be fair to
+split it up into a few sub-goals:
 
 - Automatically check whether \gls{inbound} code is first-party or third-party.
 
@@ -443,8 +456,8 @@ to split this sub-goal up into a few more sub-goals:
 
 ### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
 
-**Important:** This is an *optional* goal that may not be completed if time is
-tight. If time is not tight, or if another step went much quicker than
+**Important:** This is an *optional* sub-goal that may not be completed if time
+is tight. If time is not tight, or if another step went much quicker than
 anticipated, this goal is an excellent extension of the internship.
 
 When the goal in section \ref{goal-reuse} is completed, it should be much easier
@@ -483,9 +496,10 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - A product, or a combination of products, that automate \gls{copyright} and
   licensing compliance.
 
-- Documentation that assists in the integration of the delivered product(s).
+- A simple program, as described in section \ref{goal-reuse}, that mass-converts
+  Liferay's codebase to use the new licensing headers.
 
-- A pull request that alters the licensing headers in the source code.
+- Documentation that assists in the integration of the delivered product(s).
 
 # Research {#research}
 
@@ -661,6 +675,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 ## Plan de campagne
 
+- Attend the workshop.
+
 - Discuss the problems with Matija.
 
 - Create a plan de campagne.
@@ -677,6 +693,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 - Perform research. The exact activities are detailed in chapter \ref{research}
   and will not be repeated here.
+
+- Attend the workshop.
 
 - Document the research into the report.
 
@@ -727,6 +745,8 @@ more-or-less chronological, but become asynchronous as implementation begins.
 
 - Continuously document activities into the report. If this is diligently done,
   the hope is that it saves a lot of time at the end.
+
+- Attend the workshop.
 
 - Figure out a way to use visuals in a way that this plan de campagne has not.
 
