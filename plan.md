@@ -418,14 +418,16 @@ too complex and/or resource-intensive.
 To reduce the complexity of this goal into tangible parts, it would be fair to
 split it up into a few sub-goals:
 
-- Automatically check whether \gls{inbound} code is first-party or third-party.
+- Write a mechanism that automatically checks whether \gls{inbound} code is
+  first-party or third-party.
 
-- Automatically check the licensing of \gls{inbound} third-party code.
+- Write a mechanism that automatically checks the licensing of \gls{inbound}
+  third-party code.
 
-- Verify whether the licensing of \gls{inbound} third-party code is compatible
-  according to @liferay-inbound.
+- Write a mechanism that verifies whether the licensing of \gls{inbound}
+  third-party code is compatible according to @liferay-inbound.
 
-- Flag Legal if a problem is detected.
+- Write a mechanism that flags Legal if a problem is detected.
 
 ### Outbound {#goal-reuse}
 
@@ -494,7 +496,8 @@ the best solution. Nevertheless, a curt overview of deliverables:
   this report.
 
 - A product, or a combination of products, that automate \gls{copyright} and
-  licensing compliance.
+  licensing compliance. Section \ref{goal-inbound} and \ref{goal-reuse} provide
+  rough sketches of the requirements of these products.
 
 - A simple program, as described in section \ref{goal-reuse}, that mass-converts
   Liferay's codebase to use the new licensing headers.
