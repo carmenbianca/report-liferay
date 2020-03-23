@@ -480,7 +480,7 @@ material information.
 The desired granularity of the output is left unspecified and depends on the
 available time.
 
-## Deliverables
+## Deliverables {#deliverables}
 
 By the end of the internship, several things will be delivered. It is difficult
 to anticipate the exact details, because the research is intended to discover
@@ -502,7 +502,8 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - A simple program, as described in section \ref{goal-reuse}, that mass-converts
   Liferay's codebase to use the new licensing headers.
 
-- Documentation that assists in the integration of the delivered product(s).
+- Documentation that assists in the integration of the delivered product(s). See
+  section \ref{out-of-scope}
 
 # Research {#research}
 
@@ -534,8 +535,8 @@ has been trimmed down to three.
 context of automating their licensing policies?
 
 @solutions. What are the available technical solutions in the field of
-licensing compliance? Are they suitable for automating Liferay's licensing
-policies?
+licensing compliance? Which of these are suitable for automating Liferay's
+licensing policies?
 
 Question @current exists to create an understanding of the current situation.
 With that understanding, it becomes much easier to imagine how the process might
@@ -635,7 +636,7 @@ potentially include (depending on time and availability):
 - Someone from QA.
 - Someone from Engineering. This is also probably an end-user.
 
-### What are the available technical solutions in the field of licensing compliance? Are they suitable for automating Liferay's licensing policies?
+### What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
 There are various existing technical solutions in the field of licensing
 compliance. An *available product analysis* is made of these solutions. In
@@ -777,23 +778,26 @@ relatively simple.
 
 ## In-scope
 
-The goals of the project are well-defined in section \ref{goals}. Everything
-that furthers those goals is obviously within the boundaries of the project.
+A lot of the things that are in-scope are already defined in chapter
+\ref{project-definition}. Specifically section \ref{deliverables} has a good,
+concrete list of deliverables that this internship strives achieve. Section
+\ref{goals} lists the specific things that the software solution should strive
+to implement. These things, then, are all in-scope.
+
 Importantly, section \ref{goal-bom} lists an optional goal that may or may not
 be feasibly completed.
 
-During the first weeks of the implementation phase of the project, *definitions
-of done* will be produced that set the exact scope of the project. For now, the
-definition of done is a simple question: Are the goals in section \ref{goals}
-completed? The reason that the definitions of done will be produced during the
-early implementation phase is because, by then, it will be much clearer what the
-project looks like, what is feasible, and what problems are especially difficult
-to solve. These things are not clear yet.
+Other things that are within the boundaries of the project:
 
-Documentation and testing of the produced product is within the boundaries of
-the project.
+- Research as described in chapter \ref{research}.
+- Software design.
+- Documentation.
+- Testing.
+- Reporting.
 
-## Out-of-scope
+This is mostly just stating the obvious.
+
+## Out-of-scope {#out-of-scope}
 
 As part of the internship, there will be communication/co-operation with the
 wider software licensing community. Any tasks that stem from that co-operation
@@ -803,12 +807,24 @@ professional development. See section \ref{spdx-reuse}.
 
 Although a product will be delivered during the internship, integration is
 out-of-scope. Someone within Liferay will---or will not---integrate the product
-into Liferay's internal systems.
+into Liferay's internal systems. This is Liferay's decision, and not within my
+control.
 
 In order to simplify the internship, every repository other than Liferay Portal
 (section \ref{liferay-portal}) is out-of-scope. The purpose of this project is
 to be applicable to other Liferay repositories as well, but for scope reasons,
-this internship will only focus on Liferay Portal.
+this internship will only focus on Liferay Portal. The rationale for this is
+that Liferay Portal is ultimately the most important project, and other
+repositories are not the most valuable use of time.
+
+It is likely that a second, smaller repository may be used for prototyping
+purposes. This is handy, but otherwise out-of-scope.
+
+This was briefly mentioned in section \ref{goal-inbound}: There is the
+possibility that a solution for \gls{inbound} licensing may work on a snippet
+level. It has been precalculated that this is likely to be extremely difficult
+and result in a lot of false positives. For these reasons, snippet-level
+analysis is out-of-scope unless there is a clear indication to the contrary.
 
 # Quality assurance {#quality-assurance}
 
@@ -819,10 +835,15 @@ and assured:
 - The product.
 - The code.
 
+The chapter also details general development methodology. This could have gone
+into chapter \ref{project-activities} instead, but I find it much more suitable
+in this chapter, because methodologies ultimately exist to deliver better
+products or services.
+
 ## Measures
 
-The sections below describe the measures. TODO The important common feature of
-these measures is that they are all continuous and make heavy use of feedback
+The sections below describe the measures. An important common feature of these
+measures is that most of them are continuous and make heavy use of feedback
 loops.
 
 ### Test-driven development {#tdd}
