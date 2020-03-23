@@ -797,6 +797,10 @@ Other things that are within the boundaries of the project:
 
 This is mostly just stating the obvious.
 
+It is difficult to be more specific in this section. The requirements analysis
+is not yet written, but that document would be a lot clearer in defining exactly
+what needs to be produced, and would therefore be in-scope.
+
 ## Out-of-scope {#out-of-scope}
 
 As part of the internship, there will be communication/co-operation with the
