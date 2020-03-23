@@ -721,9 +721,9 @@ more-or-less chronological, but become asynchronous as implementation begins.
   catch up on a new programming language or framework).
 
 - Create a rudimentary high-level design for the product. This design need not
-  be thorough---it need only be sufficient to get started with the development
-  feedback loop. Most of the design will be informed by test-driven development.
-  See rationale in section \ref{tdd}.
+  be all-encompassing---it need only be sufficient to get started with the
+  development feedback loop. Most of the design will be informed by test-driven
+  development. See rationale in section \ref{tdd}.
 
 - Create all (anticipated) issues in an issue tracker.
 
@@ -739,7 +739,7 @@ more-or-less chronological, but become asynchronous as implementation begins.
 - Request code reviews during the creation of the product.
 
 - Write a separate tool that adjusts the headers to be compliant with the
-  \gls{outbound} policy.
+  \gls{outbound} policy. See section \ref{goal-reuse}.
 
 - Hand over the code to Engineering. The chances of seeing the product
   implemented in Liferay in the last weeks of the internship are slim, but it
@@ -819,16 +819,22 @@ and assured:
 - The product.
 - The code.
 
-The sections below describe the measures. The important common feature of these
-measures is that they are all continuous and make heavy use of feedback loops.
+## Measures
 
-## Test-driven development {#tdd}
+The sections below describe the measures. TODO The important common feature of
+these measures is that they are all continuous and make heavy use of feedback
+loops.
+
+### Test-driven development {#tdd}
 
 Test-driven development (TDD) is a software development process in which test
 cases are written before the implementation is written. The tests inform the
 design of the implementation. As an added bonus, you get a test suite that tests
 every single feature. The test suite is run regularly to guarantee that no new
 bugs have been introduced.
+
+Ideally, continuous testing is set up to run the tests for every commit. Whether
+this is possible is not yet certain.
 
 Test-driven development as a methodology does not mix well with up-front design.
 Writing the tests *is* the design process. For this reason, the up-front design
@@ -838,7 +844,7 @@ still providing some structure.
 An added benefit of test-driven development is that, ideally, you do not end up
 with more functionality than you strictly need.
 
-### Up-front design
+#### Up-front design
 
 The up-front design will be a component diagram or similar architectural
 overview. It will be submitted to engineers within Liferay to garner feedback.
@@ -851,7 +857,7 @@ representation may be chosen.
 At the end of the feedback loop, the design will be approved, and implementation
 may start.
 
-## Code review
+### Code review
 
 I will regularly request code reviews for pull requests into the repository. A
 Liferay engineer will review the code, engage in a feedback loop, and eventually
@@ -872,19 +878,112 @@ will happen:
 With any luck, the code reviews will be publicly visible on a code hosting
 website. This means that the reviews may be retroactively studied and verified.
 
-## Synchronisation with stakeholders
+### Synchronisation with stakeholders
 
 In a scrum-like fashion, I will regularly synchronise with the primary
 stakeholder to make sure that the product delivers the features it should. These
 meetings are biweekly. See section \ref{synchronisation}.
 
-### Retrospective {#retrospective}
+Furthermore, all important documents and steps will be synchronised with Matija.
+They won't be listed here in the interest of not bombarding the reader with
+repetition. The important take-away is that quality is improved by many checks
+along the way.
+
+#### Retrospective {#retrospective}
 
 Near the end of the implementation phase of the internship, I will
 retrospectively synchronise with Matija to assess whether the almost-finished
 product solves the stated problems. If there are any obvious problems, they may
 or may not be adjusted in final tweaks, depending on available time and
 resources.
+
+### Version control
+
+During the implementation, version control will be used. It is likely that Git
+will be used, by far the most common version control system. The advantages of
+using version control are many, but as it pertains to quality assurances, the
+benefits are as follows:
+
+- VCS diffs make code reviews much easier. The diffs show exactly what has
+  changed between revisions.
+- VCS allows one to easily revert changes if a certain set of commits proved to
+  be harmful to quality.
+- If applied well, VCS assures that your changes in every commit have a clear
+  and confined scope. This is conducive to quality.
+
+### Documentation
+
+Documentation will be produced along the way. Four kinds of documentation can
+be easily identified from this plan de campagne:
+
+- The plan de campagne itself.
+- The requirements analysis.
+- The report.
+- The integration document.
+
+The plan de campagne is conducive to quality by outlining important details of
+the project in advance. The requirements analysis improves quality by defining
+exactly what must be done. The intent is that, if those things are done, you
+will have a good product.
+
+The report is less important to quality along the way, but will be valuable for
+retrospective.
+
+The integration document facilitates quality along the way because it forces the
+implementer to be mindful about how the product might be integrated, and to
+concretely write those things down. The hope is that the document will be useful
+to the integrator.
+
+A fifth method of documentation has not been mentioned in the document yet
+because I believe it to be self-evident, but will be mentioned here for
+posterity's sake: There will be in-code documentation. Ideally, all classes,
+methods, and functions have a short description of their behaviour. All tests
+should describe what they are testing without having to read the code. The tests
+also double as documentation of their own, because they define the intended
+behaviour of the code. Ideally this in-code documentation is a single source of
+truth that the integration document can refer to. In my own experience, in-code
+documentation improves the quality in two facets:
+
+- It is much easier for third parties to read and adopt code that is
+  well-documented.
+- The act of documenting classes and functions forces the writer to think very
+  clearly about its behaviour, and whether it abides by the
+  single-responsibility principle. Function and variable names are equally as
+  important in this.
+
+### Issue tracker
+
+In line with things that are obvious but stated for posterity's sake: I will
+make heavy use of an issue tracker. I do not yet know which, but that ultimately
+matters little. An issue tracker is conducive to quality by clearly defining
+what needs to be done. My own experience with working without an issue tracker
+is that the programming becomes very meandering and does not solve precisely
+what needs to be solved. To prevent that, an issue tracker is fantastic.
+
+An issue tracker is also an excellent platform for discussions that can be
+referred back to later. This is valuable even if there is no conversation
+partner.
+
+## Development model
+
+The chosen development model is waterfall, or some variation thereof. This isn't
+an active choice that was made, but a logical result of the demands as put
+forward by school. A lot of up-front work must be done (writing this plan de
+campagne, doing research, making a requirements analysis, coming up with a
+design, etc.), which is simply not "Agile". It is, however, very much in line
+with waterfall.
+
+Waterfall typically comes with five steps (requirements, design, implementation,
+verification, maintenance). The first three steps are already mandated by
+school, in that order. The fourth and fifth step are less applicable to this
+internship. Explaining why maintenance is not applicable is easy: I will not be
+maintaining anything during or after my internship. Verification is less
+applicable because a lot of the verification happens *during* the implementation
+as part of test-driven development. Although, as per section
+\ref{retrospective}, there will be some verification after implementation.
+
+Whether waterfall is the best choice, I can't confidently say. But given the
+requirements, it is the most logical choice.
 
 # Planning {#planning}
 
