@@ -400,7 +400,7 @@ are provided instead of one, or that a single technological solution is provided
 with a very clear split down the middle between the \gls{outbound} licensing
 component and the \gls{inbound} licensing component.
 
-### Inbound {#goal-inbound}
+### Automate verification of inbound licensing {#goal-inbound}
 
 All code that enters the project must have its licensing checked. More often
 than not, it will be a contribution authored by an employee, which means that
@@ -429,7 +429,7 @@ split it up into a few sub-goals:
 
 - Write a mechanism that flags Legal if a problem is detected.
 
-### Outbound {#goal-reuse}
+### Automate verification of outbound licensing {#goal-reuse}
 
 Automating \gls{outbound} licensing compliance is closely related to the problem
 in section \ref{license-headers}. There are going to be some challenges in implementing this policy, but it is
@@ -984,6 +984,9 @@ what needs to be solved. To prevent that, an issue tracker is fantastic.
 An issue tracker is also an excellent platform for discussions that can be
 referred back to later. This is valuable even if there is no conversation
 partner.
+
+The issues, together with the requirements analysis, double as "definitions of
+done", which help focus the work on the needed areas.
 
 ## Development model
 
