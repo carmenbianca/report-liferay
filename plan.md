@@ -1,7 +1,7 @@
 ---
 title: "Plan de campagne: Automated Copyright And Licensing Compliance"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
-date: March 2020
+date: \today
 
 pdf-engine: xelatex
 
