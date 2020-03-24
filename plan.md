@@ -432,9 +432,9 @@ split it up into a few sub-goals:
 ### Automate verification of outbound licensing {#goal-reuse}
 
 Automating \gls{outbound} licensing compliance is closely related to the problem
-in section \ref{license-headers}. There are going to be some challenges in implementing this policy, but it is
-equally important that the policy be tested against. Therefore, this goal
-presents the following sub-goals:
+in section \ref{license-headers}. There are going to be some challenges in
+implementing this policy, but it is equally important that the policy be tested
+against. Therefore, this goal presents the following sub-goals:
 
 - Write a mechanism that converts the licensing headers in Liferay's codebase to
   the format found in listing \ref{lst:reuse-header}. This is a single-use
