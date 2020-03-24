@@ -571,6 +571,9 @@ automation: Which scenarios should require manual intervention by Legal or
 Engineering? These existing technical solutions may inform the product, or may
 be consumed by the product.
 
+The answers to these three questions grant a deep enough understanding to
+confidently answer the main question.
+
 ## Definitions
 
 In line with Verhoeven [-@verhoeven-2018, chap. 5], find here a clarification of
@@ -941,10 +944,14 @@ along the way.
 #### Retrospective {#retrospective}
 
 Near the end of the implementation phase of the internship, I will
-retrospectively synchronise with Matija to assess whether the almost-finished
-product solves the stated problems. If there are any obvious problems, they may
-or may not be adjusted in final tweaks, depending on available time and
-resources.
+retrospectively[^retrospective] synchronise with Matija to assess whether the
+almost-finished product solves the stated problems. If there are any obvious
+problems, they may or may not be adjusted in final tweaks, depending on
+available time and resources.
+
+[^retrospective]: I was informed that "retrospective" is Scrum terminology and
+might be confusing in a non-Agile project. This is a disclaimer that
+retrospective, in this context, is just an English word.
 
 ### Version control
 
