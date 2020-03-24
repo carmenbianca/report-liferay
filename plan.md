@@ -502,6 +502,9 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - A simple program, as described in section \ref{goal-reuse}, that mass-converts
   Liferay's codebase to use the new licensing headers.
 
+- Optional: A program, as described in section \ref{goal-bom}, that produces a
+  bill of materials for Liferay's products.
+
 - Documentation that assists in the integration of the delivered product(s). See
   section \ref{out-of-scope}
 
