@@ -531,16 +531,15 @@ Reorder the words, and this becomes the main question of research:
 > most[^most] suitable software solution for automating Liferay's \gls{inbound}
 > and \gls{outbound} licensing policies?
 
-[^most]: As a pedantic footnote: I know, or at the very least suspect, that the
-reviewer of this document will disapprove of this word. I am using it *anyway*
-because any other sentence structure does not convey the same meaning to me. The
-goal of the research is to identify a single solution going forward---possibly
-out of many. The word "most", in this context, reflects back on the demands,
-requirements, and limitations. Asking the question "how can one build a software
-solution [given the requirements, etc. etc. etc]?" as suggested in the manual
-does *not* produce the same output. As a sanity check, I have verified my main
-question with Lisette Derksen (research coach at NHL Stenden), who approved my
-decision.
+[^most]: The word "most" may not be appreciated by the reviewer. I am using it
+regardless because any other sentence structure does not convey the same meaning
+to me. The goal of the research is to identify a single solution going
+forward---possibly out of many. The word "most", in this context, reflects back
+on the demands, requirements, and limitations. Asking the question "how can one
+build a software solution [given the requirements, etc. etc. etc]?" as suggested
+in the manual does not produce the same output. As a sanity check, I have
+verified my main question with Lisette Derksen (research coach at NHL Stenden),
+who approved my decision.
 
 ## Sub-questions {#sub-questions}
 
