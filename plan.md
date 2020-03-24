@@ -531,11 +531,11 @@ Reorder the words, and this becomes the main question of research:
 > most[^most] suitable software solution for automating Liferay's \gls{inbound}
 > and \gls{outbound} licensing policies?
 
-[^most]: The word "most" may not be appreciated by the reviewer. I am using it
-regardless because any other sentence structure does not convey the same meaning
-to me. The goal of the research is to identify a single solution going
-forward---possibly out of many. The word "most", in this context, reflects back
-on the demands, requirements, and limitations. Asking the question "how can one
+[^most]: The word "most", in this context, reflects back on the demands,
+requirements, and limitations. I have received advice against using this word. I
+am using it regardless because I firmly believe that it conveys something
+essential to the research. The goal of the research is to identify a single
+solution going forward---possibly out of many. Asking the question "how can one
 build a software solution [given the requirements, etc. etc. etc]?" as suggested
 in the manual does not produce the same output. As a sanity check, I have
 verified my main question with Lisette Derksen (research coach at NHL Stenden),
