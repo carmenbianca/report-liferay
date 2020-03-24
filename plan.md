@@ -522,9 +522,20 @@ to know the licensing of \gls{inbound} code, and wishes to verify its
 \gls{outbound} licensing. They wish to do these things in an automated fashion.
 Reorder the words, and this becomes the main question of research:
 
-> Given Liferay's demands, requirements and limitations, what is the most
-> suitable solution for automating Liferay's \gls{inbound} and \gls{outbound}
-> licensing policies?
+> Given Liferay's demands, requirements, and limitations, what is the
+> most[^most] suitable software solution for automating Liferay's \gls{inbound}
+> and \gls{outbound} licensing policies?
+
+[^most]: As a pedantic footnote: I know, or at the very least suspect, that the
+reviewer of this document will disapprove of this word. I am using it *anyway*
+because any other sentence structure does not convey the same meaning to me. The
+goal of the research is to identify a single solution going forward---possibly
+out of many. The word "most", in this context, reflects back on the demands,
+requirements, and limitations. Asking the question "how can one build a software
+solution [given the requirements, etc. etc. etc]?" as suggested in the manual
+does *not* produce the same output. As a sanity check, I have verified my main
+question with Lisette Derksen (research coach at NHL Stenden), who approved my
+decision.
 
 ## Sub-questions {#sub-questions}
 
@@ -534,7 +545,7 @@ has been trimmed down to three.
 
 @current. What is the current process of licensing compliance?
 
-@needs. What are the demands, requirements and limitations of Liferay in the
+@needs. What are the demands, requirements, and limitations of Liferay in the
 context of automating their licensing policies?
 
 @solutions. What are the available technical solutions in the field of
@@ -560,7 +571,7 @@ be consumed by the product.
 In line with Verhoeven [-@verhoeven-2018, chap. 5], find here a clarification of
 the terms used in the main question.
 
-- Demands, requirements and limitations --- Sub-question @needs from section
+- Demands, requirements, and limitations --- Sub-question @needs from section
   \ref{sub-questions} will fully detail what these words actually entail. For
   the purposes of this section, consider this a combination of Liferay's wants
   and limits.
@@ -623,7 +634,7 @@ The rationale for an expert interview is simple: There is no doubt in my mind
 that an expert knows the process well, and is familiar enough with the process
 to detect its pain points.
 
-### What are the demands, requirements and limitations of Liferay in the context of automating their licensing policies?
+### What are the demands, requirements, and limitations of Liferay in the context of automating their licensing policies?
 
 One part of this sub-question is extremely easy to address: @liferay-inbound and
 @liferay-outbound already give a lot of information on Liferay's requirements
@@ -1084,13 +1095,14 @@ creative work is fixed in tangible form. [...] In some jurisdictions, creators
 may be required to register with a national agency in order to enforce
 \gls{copyright} in court."
 
-The Berne Convention [-@berne-1886] is an international agreement between
-nations that forms the basis of much of \gls{copyright} law. It grants foreign
-works the same protections as native works, and sets some minimum standards of
-protection that all signatories must meet. The Berlin Act [-@berlin-1908]
-introduces the concept that \gls{copyright} is enjoyed without being "subject to
-any formality". In effect, this means that \gls{copyright} is granted as soon as
-one's metaphorical pen is put to paper.
+The Berne Convention by Bureaux Internationaux Réunis pour la Protection de la
+Propriété Intellectuelle [BIRPI, -@berne-1886] is an international agreement
+between nations that forms the basis of much of \gls{copyright} law. It grants
+foreign works the same protections as native works, and sets some minimum
+standards of protection that all signatories must meet. The Berlin Act [BIRPI,
+-@berlin-1908] introduces the concept that \gls{copyright} is enjoyed without
+being "subject to any formality". In effect, this means that \gls{copyright} is
+granted as soon as one's metaphorical pen is put to paper.
 
 In order for a work to be eligible for \gls{copyright}, it must be original. In
 this context, "'[o]riginal' means a work created through the 'fruits of
@@ -1111,7 +1123,7 @@ life of the \gls{author} and 70 years after their death, or 70 years after the
 first lawful publication in case the \gls{author} is anonymous/pseudonymous.
 [@copyright-term-directive]
 
-The Berne Convention [-@berne-1886] and many other sources use the word
+The Berne Convention [BIRPI, -@berne-1886] and many other sources use the word
 "\gls{author}" to refer to the person or organisation that holds the rights over
 a certain work. In this document, "\gls{copyright-holder}" is consistently used
 instead. The reason for this is that the \gls{author} is not always the
