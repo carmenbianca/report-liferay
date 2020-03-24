@@ -488,12 +488,17 @@ the best solution. Nevertheless, a curt overview of deliverables:
 
 - This plan de campagne.
 
-- A research document.
+- The report mandated by NHL Stenden. Contained within are:
 
-- A requirements analysis.
+  + The research.
 
-- The report mandated by NHL Stenden. The research document is contained within
-  this report.
+  + A requirements analysis.
+
+  + The software design.
+
+  + The process.
+
+  + And doubtlessly more; see NHL Stenden's requirements.
 
 - A product, or a combination of products, that automate \gls{copyright} and
   licensing compliance. Section \ref{goal-inbound} and \ref{goal-reuse} provide
@@ -650,6 +655,8 @@ potentially include (depending on time and availability):
 - Someone from QA.
 - Someone from Engineering. This is also probably an end-user.
 
+This method is chosen to discover unknown unknowns.
+
 ### What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
 There are various existing technical solutions in the field of licensing
@@ -680,6 +687,9 @@ The method of evaluating these solutions is a simple linear path:
 
 Once these steps are through, the findings are assessed to determine their
 applicability to this internship.
+
+The rationale for choosing this method is hopefully self-explanatory. There are
+available products, and they need to be analysed.
 
 ## Requirements analysis
 
