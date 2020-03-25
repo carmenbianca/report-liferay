@@ -12,6 +12,6 @@ jobs:
           args: make
       - uses: actions/upload-artifact@master
         with:
-          name: plan.pdf
-          path: plan.pdf
+          name: report.pdf
+          path: report.pdf
 

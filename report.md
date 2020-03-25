@@ -1,5 +1,5 @@
 ---
-title: "Plan de campagne: Automated Copyright And Licensing Compliance"
+title: "Report: Automated Copyright And Licensing Compliance"
 author: Carmen Bianca Bakker, NHL Stenden Hogeschool
 date: \today
 
@@ -15,7 +15,7 @@ numbersections: true
 
 filters:
     - pandoc-citeproc
-bibliography: plan.bib
+bibliography: report.bib
 csl: apa.csl
 link-citations: true
 
@@ -26,7 +26,13 @@ header-includes:
     - \lstset{breaklines=true,breakatwhitespace=true,frame=single,numbers=left}
 ---
 
-# Introduction {-}
+# Summary {-}
+
+TODO
+
+# Introduction
+
+TODO: Combine with context
 
 This is the *plan de campagne* (plan of action, Dutch: plan van aanpak) for my
 end-of-study internship. I am Carmen Bianca Bakker, and follow a bachelor in
