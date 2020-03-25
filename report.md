@@ -817,12 +817,9 @@ barebones, but sufficient. The commands *definitions* and *harvest* are the most
 useful. *definitions* gives the data of a given package. *harvest* tells the
 server to analyse a given package.
 
-```{#lst:definitions-output caption="TODO."}
-TODO
-```
-
-Going through the output of *definitions* (listing \ref{lst:definitions-output}), it
-becomes evident that ClearlyDefined uses three tools to analyse packages:
+Going through the output of *definitions* (appendix
+\ref{clearlydefined-api-output}), it becomes evident that ClearlyDefined uses
+three tools to analyse packages:
 
 - ScanCode --- See section \ref{scancode}.
 - licensee --- "A Ruby Gem to detect under what \gls{license} a project is
@@ -1426,6 +1423,138 @@ To paraphrase, all code and works that *enter* a project are covered by an
 party receives is the \gls{outbound} \gls{license} of a third party.
 
 \printnoidxglossary[sort=word]
+
+# ClearlyDefined API output {#clearlydefined-api-output}
+
+TODO
+
+```json
+{
+ "described": {
+  "releaseDate": "2019-10-28",
+  "sourceLocation": {
+   "type": "git",
+   "provider": "github",
+   "namespace": "psf",
+   "name": "black",
+   "revision": "6bedb5c58a7d8c25aa9509f8217bc24e9797e90d",
+   "url": "https://github.com/psf/black/tree/6bedb5c58a7d8c25aa9509f8217bc24e9797e90d"
+  },
+  "urls": {
+   "registry": "https://pypi.org/project/black",
+   "version": "https://pypi.org/project/black/19.10b0",
+   "download": "https://files.pythonhosted.org/packages/b0/dc/ecd83b973fb7b82c34d828aad621a6e5865764d52375b8ac1d7a45e23c8d/black-19.10b0.tar.gz"
+  },
+  "hashes": {
+   "sha1": "90c2b12e408cab149bc06c6e3d13f0d767aaa519",
+   "sha256": "c2edb73a08e9e0e6f65a0e6af18b059b8b1cdd5bef997d7a0b181df93dc81539"
+  },
+  "files": 145,
+  "tools": [
+   "clearlydefined/1.3.1",
+   "licensee/9.13.0",
+   "scancode/3.2.2"
+  ],
+  "toolScore": {
+   "total": 100,
+   "date": 30,
+   "source": 70
+  },
+  "score": {
+   "total": 100,
+   "date": 30,
+   "source": 70
+  }
+ },
+ "licensed": {
+  "declared": "MIT",
+  "toolScore": {
+   "total": 61,
+   "declared": 30,
+   "discovered": 1,
+   "consistency": 0,
+   "spdx": 15,
+   "texts": 15
+  },
+  "facets": {
+   "core": {
+    "attribution": {
+     "unknown": 130,
+     "parties": [
+      "Copyright 2006 Google, Inc.",
+      "Copyright (c) 2018 Lukasz Langa",
+      "Copyright 2004-2005 Elemental Security, Inc.",
+      "copyright 2018, Lukasz Langa and contributors",
+      "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam",
+      "Copyright (c) 1995-2001 Corporation for National Research Initiatives",
+      "Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006 Python Software Foundation.",
+      "Copyright (c) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018 Python Software Foundation"
+     ]
+    },
+    "discovered": {
+     "unknown": 139,
+     "expressions": [
+      "MIT",
+      "Python-2.0"
+     ]
+    },
+    "files": 145
+   }
+  },
+  "score": {
+   "total": 61,
+   "declared": 30,
+   "discovered": 1,
+   "consistency": 0,
+   "spdx": 15,
+   "texts": 15
+  }
+ },
+ "files": [
+  {
+   "path": "black-19.10b0/.appveyor.yml",
+   "hashes": {
+    "sha1": "2e101c27f921a81f7a15752da9c7dee6765c673f",
+    "sha256": "89850cf2ff02f4ef278c07e55920ecbb9ac00d78adcb5d37123b749597fedb90"
+   }
+  },
+  {
+   "path": "black-19.10b0/.coveragerc",
+   "hashes": {
+    "sha1": "fcfb24e5121e9ab6c1562040aa1f14a350583b7d",
+    "sha256": "4b5043d2d9069689ceb4125057424c85b5dcb70d55f1bc5903bead06f9263cd4"
+   }
+  },
+  [...]  # Many more files here. setup.py is displayed here because it contains a license and attributions.
+  {
+   "path": "black-19.10b0/setup.py",
+   "license": "MIT",
+   "attributions": [
+    "Copyright (c) 2018 Lukasz Langa"
+   ],
+   "hashes": {
+    "sha1": "91c9588a5216a5268ca68f094555608930b28c81",
+    "sha256": "3d412bdb028c9be7244abea9f2dc49a0972eb46cef555954385f5f300b944cae"
+   }
+  },
+  [...]  # Many more files again.
+ ],
+ "coordinates": {
+  "type": "pypi",
+  "provider": "pypi",
+  "name": "black",
+  "revision": "19.10b0"
+ },
+ "_meta": {
+  "schemaVersion": "1.6.1",
+  "updated": "2019-10-30T03:39:06.582Z"
+ },
+ "scores": {
+  "effective": 80,
+  "tool": 80
+ }
+}
+```
 
 # References {-}
 
