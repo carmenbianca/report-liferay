@@ -320,9 +320,9 @@ include a contact point to the \gls{copyright-holder}."
 
 @liferay-outbound now mandates the use of a different header, but it has not
 been widely implemented yet. The new header can be seen in listing
-\ref{lst:reuse-header}.
+\ref{lst:liferay-header}.
 
-```{#lst:reuse-header caption="New copyright and licensing header template for Liferay."}
+```{#lst:liferay-header caption="New copyright and licensing header template for Liferay."}
 /**
  * SPDX-FileCopyrightText: © {year_of_creation} Liferay, Inc. <https://liferay.com>
  * SPDX-License-Identifier: {spdx_license_short_identifier}
@@ -443,7 +443,7 @@ implementing this policy, but it is equally important that the policy be tested
 against. Therefore, this goal presents the following sub-goals:
 
 - Write a mechanism that converts the licensing headers in Liferay's codebase to
-  the format found in listing \ref{lst:reuse-header}. This is a single-use
+  the format found in listing \ref{lst:liferay-header}. This is a single-use
   mass-conversion program that does not need to be maintained or rigorously
   designed.
 
@@ -703,6 +703,191 @@ available products, and they need to be analysed.
 
 After the research has been completed, a requirements analysis will be produced
 that will form the basis of the design for the product.
+
+# Execution of research {#execution-of-research}
+
+<!--
+This section describes the intended methods of research for each sub-question.
+These methods are sourced from @ictresearchmethods. They are not further
+described for the sake of brevity---the aforementioned source contains their
+descriptions. The rationales are described, however.
+-->
+
+## What is the current process of licensing compliance?
+
+TODO
+
+
+## What are the demands, requirements, and limitations of Liferay in the context of automating their licensing policies?
+
+TODO
+
+
+
+
+## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
+
+TODO
+
+TODO: The following subsections contain the results of the above method applied.
+
+### ClearlyDefined
+
+#### Documentation
+
+All information in this section is sourced from @clearlydefined-docs.
+
+ClearlyDefined is an "incubator project" under the Open Source Initiative, with
+roots in the Microsoft Open Source Programs Office.
+
+ClearlyDefined is "on a mission to help FOSS projects thrive by being [...]
+clearly defined. Lack of clarity around \glspl{license} and security
+vulnerabilities reduces engagement – that means fewer users, fewer contributors
+and a smaller community. [...] This is a community-wide challenge that needs a
+community-wide approach." The goals of ClearlyDefined are to "[r]aise awareness
+about this challenge within \gls{foss} project teams; [a]utomatically harvest
+data from projects; [m]ake it easy for anyone to contribute missing information;
+[c]rowd-source the curation of these contributions; [and] [f]eed curated
+contributions back to the original projects."
+
+In fewer words: ClearlyDefined is a public database. The database contains
+licensing information of packages from various different sources. These packages
+are automatically harvested and analysed by licensing evaluation tools.
+Curations of these analyses are then crowd-sourced.
+
+"All of the ClearlyDefined data is available for everyone to see and use
+[through a] convenient web ui or [...] the REST API [...]."
+
+ClearlyDefined identifies three domains of clarity. They are as follows:
+
+- ClearlyDescribed --- "[E]ssential factal [sic] information about component
+  itself. [...] For example, [...] location of the source, where the project
+  lives and where issues are managed".
+
+- ClearlyLicensed --- The documentation does not give a clear description of
+  this. Paraphrased, everything that involves \gls{copyright} and licensing goes
+  into this domain.
+
+- ClearlySecured --- "[T]he notion of being ClearlySecured is still being
+  fleshed out."
+
+The rest of the documentation on ClearlyDefined is scarce. The FAQ may provide a
+rationale for this: "The project is very young. We are still setting directions
+and understanding the user scenarios and approaches. There is code and data. The
+system runs but is best thought of as *pre-alpha*. We have just enough to paint
+the picture and show how it might work."
+
+#### Installation
+
+There is no installation necessary. You can run your own instance, but the data
+all exists in the public instance.
+
+#### Usage
+
+The website of ClearlyDefined (<https://clearlydefined.io/>) presents the user
+with a search bar that they can use to find packages (Figure
+\ref{clearlydefined-linux}). The packages are listed and given a "score".
+@clearlydefined-metrics lists the scoring formula, assigning weights to each
+scoring element. The ClearlyLicensed scoring elements are:
+
+- Consistency --- "All the \glspl{license} found anywhere in the core facet are
+  also found in the top-level key files."
+- Declared --- "A project has [...] file(s) [...] such as LICENSE, NOTICE or
+  similar [...] containing structured \gls{license} information [...]".
+- Discovered --- "[A] percentage of files in the core facet of the project that
+  have both: A \gls{license} statement such as a text, notice or an
+  SPDX-License-Identifier; [and] [a] \gls{copyright} statement in standard
+  format that can be detected by tools."
+- SPDX --- "[A]ll \glspl{license} found in the files of the core facet are all
+  SPDX-listed \glspl{license}."
+- License texts --- "[T]here is copy of the full \gls{license} text available
+  [...] for every referenced \gls{license} [...]".
+
+![Front page of ClearlyDefined. The search term here is "linux".](clearlydefined-linux.png){#clearlydefined-linux}
+
+An example of scoring can be found in Figure \ref{clearlydefined-hover}.
+
+One can submit curations via the web interface, but this is out-of-scope for the
+internship.
+
+![Scoring summary. You can see that the curated version on the left scores higher than the automated evaluation on the right.](clearlydefined-hover.png){#clearlydefined-hover width=300px}
+
+The API is available at <https://api.clearlydefined.io/>. It is fairly
+barebones, but sufficient. The commands *definitions* and *harvest* are the most
+useful. *definitions* gives the data of a given package. *harvest* tells the
+server to analyse a given package.
+
+```{#lst:definitions-output caption="TODO."}
+TODO
+```
+
+Going through the output of *definitions* (listing \ref{lst:definitions-output}), it
+becomes evident that ClearlyDefined uses three tools to analyse packages:
+
+- ScanCode --- See section \ref{scancode}.
+- licensee --- "A Ruby Gem to detect under what \gls{license} a project is
+  distributed." [@licensee]
+- clearlydefined --- Presumably a tool that is custom to ClearlyDefined.
+
+At the time of writing, ClearlyDefined does not fully recognise the REUSE
+Specification upon which Liferay's outbound policy is built
+(<https://github.com/fsfe/reuse-tool/issues/169>).
+
+TODO?
+
+#### Reviews
+
+I was unable to find useful third-party assessments of ClearlyDefined.
+
+### FOSSID
+
+### FOSSology
+
+### OSS Review Toolkit
+
+### REUSE
+
+#### Documentation
+
+All information in this section is sourced from @fsfe-reuse.
+
+"REUSE was started by the Free Software Foundation Europe (FSFE) to provide a
+set of recommendations to make licensing your Free Software projects easier."
+Towards that end, it recommends three steps:
+
+1. “Choose and provide \glspl{license}.
+2. Add \gls{copyright} and licensing information to each file.
+3. Confirm REUSE compliance.”
+
+Step 1 mandates that all \glspl{license} be in the *LICENSES* directory. They
+should be the \gls{spdx-license-identifier} followed by a file extension.
+
+The second step, in its most simplified form, is similar to the description of
+section \ref{goal-reuse}. A header such as in figure \ref{lst:reuse-header}
+should be added to every file.
+
+```{#lst:reuse-header caption="Example header from the REUSE Specification."}
+# SPDX-FileCopyrightText: 2016, 2018-2019 Jane Doe <jane@example.com>
+# SPDX-FileCopyrightText: 2019 Example Company
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+```
+
+The third step is the most pertinent to this internship. The Free Software
+Foundation Europe provides a tool with which one can verify whether a project is
+correctly licensed according to the REUSE Specification.
+
+An API is available at <https://api.reuse.software/> that runs the
+aforementioned tool for you on a given repository. The tool is also easily
+included in a CI/CD workflow through a Docker image offered by the FSFE.
+
+### ScanCode {#scancode}
+
+### SW360
+
+## Conclusion
+
+TODO
 
 # Project activities {#project-activities}
 
