@@ -362,7 +362,7 @@ machine-readable. REUSE itself incorporates \gls{spdx}.
 
 The \gls{outbound} licensing policy of Liferay is a superset of REUSE.
 
-This internship takes place within the wider context of the SPDX and REUSE
+This internship takes place within the wider context of the \gls{spdx} and REUSE
 communities. It is likely that there may be expertise exchange within these
 communities. Moreover, a presence within these communities is a great boon for
 one's professional development.
@@ -798,7 +798,7 @@ scoring element. The ClearlyLicensed scoring elements are:
   have both: A \gls{license} statement such as a text, notice or an
   SPDX-License-Identifier; [and] [a] \gls{copyright} statement in standard
   format that can be detected by tools."
-- SPDX --- "[A]ll \glspl{license} found in the files of the core facet are all
+- \gls{spdx} --- "[A]ll \glspl{license} found in the files of the core facet are all
   SPDX-listed \glspl{license}."
 - License texts --- "[T]here is copy of the full \gls{license} text available
   [...] for every referenced \gls{license} [...]".
@@ -872,11 +872,53 @@ should be added to every file.
 
 The third step is the most pertinent to this internship. The Free Software
 Foundation Europe provides a tool with which one can verify whether a project is
-correctly licensed according to the REUSE Specification.
+correctly licensed according to the REUSE Specification. It is written in Python
+and runs on the command line.
 
 An API is available at <https://api.reuse.software/> that runs the
 aforementioned tool for you on a given repository. The tool is also easily
 included in a CI/CD workflow through a Docker image offered by the FSFE.
+
+#### Installation
+
+The installation of the REUSE tool is straightforward and requires no special
+software other than Python and Pip.
+
+#### Usage
+
+The REUSE tool has various modes of operation:
+
+- addheader --- Add a REUSE-compliant header to files.
+- download --- Download a \gls{license} and put it in the LICENSES/ directory.
+- init --- Set up a project with REUSE.
+- lint --- Verify the compliance of a project.
+- spdx --- Generate an \gls{spdx} bill of materials for a project.
+
+Of these modes, *lint* is the most relevant to the project. Listing
+\ref{lst:reuse-output} shows an example of output from the tool.
+
+```{#lst:reuse-output caption="Example of linting output from the REUSE tool. In this example, example.py contains no copyright and licensing information."}
+$ reuse lint
+# MISSING COPYRIGHT AND LICENSING INFORMATION
+
+The following files have no copyright and licensing information:
+* example.py
+
+
+# SUMMARY
+
+* Bad licenses:
+* Deprecated licenses:
+* Licenses without file extension:
+* Missing licenses:
+* Unused licenses:
+* Used licenses: Apache-2.0, CC-BY-SA-4.0, CC0-1.0, GPL-3.0-or-later
+* Read errors: 0
+* Files with copyright information: 69 / 70
+* Files with license information: 69 / 70
+
+Unfortunately, your project is not compliant with version 3.0 of the REUSE Specification :-(
+```
 
 ### ScanCode {#scancode}
 
