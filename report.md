@@ -1426,7 +1426,16 @@ party receives is the \gls{outbound} \gls{license} of a third party.
 
 # ClearlyDefined API output {#clearlydefined-api-output}
 
-TODO
+This is the JSON API output of a ClearlyDefined *definitions* call. The exact
+call was <https://api.clearlydefined.io/definitions/pypi/pypi/-/black/19.10b0>.
+Initially I wanted to show the output of a call on Liferay Portal, but for
+reasons unclear to me, this call did not run ScanCode. Therefore I have chosen
+*black*---a Python formatting utility---to demonstrate the functionality.
+
+The output has been truncated twice for the reader's comfort and to reduce waste
+of paper and/or computer memory. There are comments where the output is
+truncated. Both truncations are under the "files" key, which has a long list of
+files as value.
 
 ```json
 {
