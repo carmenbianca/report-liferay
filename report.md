@@ -920,6 +920,23 @@ The following files have no copyright and licensing information:
 Unfortunately, your project is not compliant with version 3.0 of the REUSE Specification :-(
 ```
 
+In re replacing the headers as per section \ref{goal-reuse}, the *addheader*
+functionality might be interesting. The command '*reuse addheader
+\-\-copyright='SPDX-FileCopyrightText: © 2020 Liferay, Inc.
+\<https://liferay.com\>' \-\-license='LGPL-2.1-or-later' \-\-exclude-year*'
+(approximately) replaces the header from listing \ref{lst:java-header} with the
+header from listing \ref{lst:liferay-header}. There are two slight
+discrepancies:
+
+- The command generates single-line Java comments (*//*) instead of multi-line
+  Java comments (*/\* \*/*).
+- The generated comment retains the original copyright disclaimer (*Copyright
+  \(c\) 2000-present Liferay, Inc. All rights reserved.*)
+
+These things can doubtlessly be tweaked.
+
+Besides, the tool does not present much more functionality.
+
 #### Reviews
 
 TODO
