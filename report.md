@@ -930,8 +930,8 @@ discrepancies:
 
 - The command generates single-line Java comments (*//*) instead of multi-line
   Java comments (*/\* \*/*).
-- The generated comment retains the original copyright disclaimer (*Copyright
-  \(c\) 2000-present Liferay, Inc. All rights reserved.*)
+- The generated comment retains the original \gls{copyright} disclaimer
+  (*Copyright \(c\) 2000-present Liferay, Inc. All rights reserved.*)
 
 These things can doubtlessly be tweaked.
 
@@ -942,6 +942,96 @@ Besides, the tool does not present much more functionality.
 TODO
 
 ### ScanCode {#scancode}
+
+#### Documentation
+
+All information in this section is sourced from @scancode-docs.
+
+"ScanCode was originally created by nexB to support our software audit
+consulting services."
+
+"ScanCode is a tool to scan code and detect \glspl{license}, \glspl{copyright}
+and more."
+
+"ScanCode tries to address [the difficulty of discovering the origin and
+\gls{license} for a software component] by offering:
+
+- A comprehensive code scanner that can detect origin or \gls{license}
+  information inside codebase files
+
+- A simple command line approach that runs on Windows, Linux, and Mac
+
+- Your choice of JSON or other output formats (SPDX, HTML, CSV) for integration
+  with other tools
+
+- ScanCode workbench for Visualization
+
+- Well-tested, easy to hack, and well-documented code
+
+- Release of the code and reference data under attribution \glspl{license}
+  (Apache 2.0 and CC-BY-1.0[^scancode-license-error])
+
+- Plugin System for easily adding new Functionality to Scans.
+
+- Python 3 Unicode Capabilities for better supporting users from 100+ languages.
+
+- Extensive Documentation Support."
+
+[^scancode-license-error]: This appears to be incorrect. The reference data is
+licensed under CC0-1.0, not CC-BY-1.0. See
+<https://github.com/nexB/scancode-toolkit/issues/1984>.
+
+"ScanCode finds the origin history information that is in your codebase with a
+focus on:
+
+- \Gls{copyright} and other origin clues (emails, urls, authors etc)
+
+- \Gls{license} notices and \gls{license} text with reference information about
+  detected \glspl{license}."
+
+#### Installation
+
+Installation of ScanCode is technically easy using:
+
+- Python (and development headers)
+- Pip
+- GCC
+
+However, at the time of writing, there exists a dependency conflict downstream
+at <https://github.com/seomoz/url-py/issues/67>. The issue is that the
+*url-0.4.2* library required by ScanCode does not build against recent versions
+of Python. *url-0.4.2a0* solves this issue. ScanCode's requirements manifest has
+to be manually edited prior to installation to permit a dependency on
+*url-0.4.2a0*.
+
+The above problem is explained by a line in the ScanCode documentation:
+
+> "ScanCode currently doesn’t support versions above Python 3.6.x, though
+> support will be added soon."
+
+#### Usage
+
+Usage of ScanCode is a fairly simple thing. It is a command-line tool that takes
+a directory as input, and outputs a certain format that contains gathered
+information about the directory. The command '*scancode \-\-license
+\-\-copyright \-\-json result.json .*', then, outputs a JSON file containing all
+the \gls{copyright} and licensing information that was found in the current
+directory.
+
+Running ScanCode on Liferay Portal is an extremely expensive operation. It takes
+TODO. It uses upwards of 800 MiB of memory. When run on *black*, a Python
+project consisting of 154 files, it takes 45 seconds. This is possibly
+prohibitively expensive.
+
+The output formats do not appear to be thoroughly documented, but are not
+exceptionally difficult to grok, either.
+
+Unfortunately, the \glspl{license} identified by ScanCode are not declared using
+\gls{spdx}, but using a custom format.
+
+#### Reviews
+
+TODO
 
 ### SW360
 
