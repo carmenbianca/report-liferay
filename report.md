@@ -1019,9 +1019,9 @@ the \gls{copyright} and licensing information that was found in the current
 directory.
 
 Running ScanCode on Liferay Portal is an extremely expensive operation. It takes
-TODO. It uses upwards of 800 MiB of memory. When run on *black*, a Python
-project consisting of 154 files, it takes 45 seconds. This is possibly
-prohibitively expensive.
+approximately 8 hours, and uses upwards of 800 MiB of memory. When run on
+*black*, a Python project consisting of 154 files, it takes 45 seconds. This is
+possibly prohibitively expensive.
 
 The output formats do not appear to be thoroughly documented, but are not
 exceptionally difficult to grok, either.
