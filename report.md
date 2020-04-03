@@ -10,7 +10,7 @@ papersize: a4
 lang: en-GB
 
 toc: true
-toc-depth: 1
+toc-depth: 2
 numbersections: true
 
 filters:
@@ -740,8 +740,8 @@ All information in this section is sourced from @clearlydefined-docs.
 ClearlyDefined is an "incubator project" under the Open Source Initiative, with
 roots in the Microsoft Open Source Programs Office.
 
-ClearlyDefined is "on a mission to help FOSS projects thrive by being [...]
-clearly defined. Lack of clarity around \glspl{license} and security
+ClearlyDefined is "on a mission to help \gls{foss} projects thrive by being
+[...] clearly defined. Lack of clarity around \glspl{license} and security
 vulnerabilities reduces engagement – that means fewer users, fewer contributors
 and a smaller community. [...] This is a community-wide challenge that needs a
 community-wide approach." The goals of ClearlyDefined are to "[r]aise awareness
@@ -839,6 +839,78 @@ I was unable to find useful third-party assessments of ClearlyDefined.
 ### FOSSID
 
 ### FOSSology
+
+#### Documentation {#fossology-documentation}
+
+All information in this section is sourced from @fossology-docs and
+@fossology-get-started.
+
+"FOSSology is a [sic] \gls{open-source} \gls{license} compliance software system
+and toolkit. As a toolkit you can run \gls{license}, \gls{copyright} and export
+control scans from the command line. As a system, a database and web ui are
+provided to give you a compliance workflow. \Gls{license}, \gls{copyright} and
+export scanners are tools available to help with your compliance activities."
+
+The basic workflow of FOSSology is as follows:
+
+- Upload the package to the FOSSology instance. Immediately when the package is
+  uploaded, the instance runs a number of \gls{license} and \gls{copyright}
+  scans. It also scans for terms relevant to Export Control and Customs (ECC),
+  but that is irrelevant here.
+- The user starts a "clearing" workflow. This is going through all files and
+  identifying whether the tools correctly identified the \glspl{license} and
+  \glspl{copyright} contained within the files.
+- “When your are done with the clearing (generally, depends on the definition of
+  the clearing process of your organization), you can consider the following
+  checks:
+
+   1. All licenses are checked?
+   2. All copyrights are checked?
+   3. ECC information is checked ?
+   4. Main license is selected?
+   5. Reviewed files for irrelevant sections?”
+
+FOSSology also comes with a REST API. “This allows for a number of use cases,
+such as:
+
+- Integration of FOSSology into the CI/CD environments
+- Upload packages and trigger their scanning from other applications
+- Get SPDX files just by using tools from the command line (which can issue
+  https requests, such as curl or wget)”
+
+The API works through GET and POST requests with JSON bodies. You can:
+
+1. “List folders
+2. Create one folder
+3. List folder (again)
+4. Upload some package to analyse
+5. Trigger analyses
+6. Trigger SPDX report generation
+7. Download generated SPDX report”
+
+FOSSology is more fully featured than this description, but the documentation is
+not ideal, and is more suited towards reference during actual use.
+
+#### Installation
+
+FOSSology provides a Docker image, and Vangrant (VirtualBox) image. It can also
+be built from source. None of these things have been attempted because Liferay
+has its own FOSSology instance.
+
+#### Usage
+
+This section will be a little short, because a lot of the usage is already
+reflected in section \ref{fossology-documentation}. As a matter of fact, usage
+of FOSSology has been very uneventful. The UI leaves a lot to be desired, but is
+*functional*. See figure \ref{fossology-license}.
+
+![Example of FOSSology's user interface. On the page in this screenshot, the user can determine the concluded license of a file.](fossology-license.png){#fossology-license}
+
+There is little else to add. It does what the documentation says.
+
+#### Reviews
+
+TODO
 
 ### OSS Review Toolkit
 
@@ -1034,6 +1106,32 @@ Unfortunately, the \glspl{license} identified by ScanCode are not declared using
 TODO
 
 ### SW360
+
+#### Documentation
+
+All information in this section is sourced from @sw360-docs.
+
+"Eclipse SW360 is a software catalogue application designed to provide a central
+place for sharing information about software components used by an
+organization."
+
+Very quickly while going through the documentation, I came across this list of
+things that are not in scope:
+
+1. “License scan: not in scope, because SW360 interacts with and delegates to
+   specialzed [sic] tools and exchanges data: SW360 has FOSSology integrated
+   which is a license scanner server software
+
+2. Source code scan: not in scope, because SW360 interacts with and delegates to
+   specialzed [sic] tools and exchanges data: SW360 has code to import project
+   from specialiazed [sic] tools.
+
+3. Code repository: while SW360 uses couchdb to store and efficently manage
+   large amount of software packages and other files and archives, it is not
+   meant to serve as concurrent versioning control system such as a git server.”
+
+From these things, it is obvious to me that SW360 is not applicable to this
+internship, and will therefore not be researched further.
 
 ## Conclusion
 
