@@ -672,12 +672,13 @@ compliance. An *available product analysis* is made of these solutions. In
 co-operation with Matija, a shortlist was created. The shortlist consists of:
 
 - ClearlyDefined
-- FOSSID
 - FOSSology
-- OSS Review Toolkit
 - REUSE
 - ScanCode
 - SW360
+
+FOSSID and OSS Review Toolkit were also on the shortlist, but have been removed
+for want of time.
 
 The method of evaluating these solutions is a simple linear path:
 
@@ -835,8 +836,6 @@ TODO?
 #### Reviews
 
 I was unable to find useful third-party assessments of ClearlyDefined.
-
-### FOSSID
 
 ### FOSSology
 
