@@ -634,14 +634,18 @@ defined and a rationale for each method is given.
 
 In order to assess the current processes, an *expert interview* will be
 conducted with Matija Šuklje. The expert interview will focus on a handful of
-things:
+things TODO:
 
-- What are the steps that are taken when a licensing compliance issue pops up?
+TODO: Detail exact questions.
+
 - What is the most common licensing compliance issue?
+- How and by whom are licensing compliance issues reported to Legal?
+- Does Legal search for licensing compliance issues? If so, how?
+- What are the steps that are taken when a licensing compliance issue pops up?
 - Where in the process does Liferay lose the most time?
 
-There will doubtlessly be more questions when the interview occurs, but these
-three questions should reveal the process and its pain points.
+TODO: There will doubtlessly be more questions when the interview occurs, but
+these three questions should reveal the process and its pain points.
 
 The rationale for an expert interview is simple: There is no doubt in my mind
 that an expert knows the process well, and is familiar enough with the process
@@ -657,13 +661,67 @@ But those are only the things that are written down. It is probable that there
 are other wants or restrictions that are not black-on-white. To discover those,
 I will *explore user requirements*. Exploring user requirements will be a number
 of interviews with people who are somehow related to the project. These people
-potentially include (depending on time and availability):
+potentially include (depending on time and availability). TODO
 
-- Someone from Legal.
-- Someone from QA.
-- Someone from Engineering. This is also probably an end-user.
+TODO Some questions below are out-of-scope in the sense that they do not answer
+the stated sub-question, but try to further clarify the current situation. These
+questions technically belong elsewhere, but they are retained here because they
+were part of the same interview.
 
-This method is chosen to discover unknown unknowns.
+TODO This method is chosen to discover unknown unknowns.
+
+TODO
+
+#### Engineering
+
+- When during the development process do you test/lint?
+- How do you test/lint? Locally or via CI?
+- How do you make the decision to use third-party code/libraries? Does licensing
+  factor into this decision?
+- During which stage of development do you see yourself using a compliance tool?
+- During which stage of development do you NOT see yourself using a compliance
+  tool?
+- How quickly do you need feedback about whether you can use third-party code or
+  not?
+
+#### Legal
+
+TODO: These questions are detailed and nitpicky. A lot of the pre-research has
+already answered the most important questions.
+
+- Does the automated solution need to do snippet-level scanning?
+- Does the automated solution need to verify the licensing of third-party
+  libraries that are introduced?
+  + Only included libraries (i.e., *.jar* copied into the repository), or any
+    dependencies?
+  + When should third-party libraries be verified? Only when introduced? Every
+    time the tool is run?
+  + What to do when the solution identifies a third-party library as being
+    incompatible, but manual review says otherwise? Should there be a manual
+    curation flag?
+  + When issues in licensing are discovered, should those issues be addressed
+    upstream? How?
+- Does the codebase need to be fully REUSE-compliant? i.e., licensing headers in
+  *every single file*.
+  + If partial, which parts?
+- Does the automated tool need to check for compatible licenses?
+  + Should this be a whitelist and a blacklist? A complex decision tree?
+- In Liferay Portal, is any copyright statement other than "Copyright Liferay"
+  permissible? Is it only permissible for non-copyleft licenses?
+
+#### QA
+
+- What CI system does Liferay use?
+- How much CPU time is a licensing solution entitled to? Real time?
+- How often can/should the licensing solution run? When (in the development
+  process) should it run?
+- If problems are detected, is it possible to do automated interaction with the
+  ticket system? Would manual interaction be preferable?
+- Depending on how Legal answers: When a REUSE check fails, should the entire
+  test fail?
+- What language or framework ought to be used for a solution?
+- Can a CI step make calls to a third-party internet API? Does this violate
+  reproducibility?
 
 ### What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
