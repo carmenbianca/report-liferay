@@ -983,10 +983,12 @@ There is little else to add. It does what the documentation says.
 #### Reviews
 
 @wolter-2019 identifies FOSSology as strongly outcompeting much of its
-competition in the realm of open source license crawlers. It concludes that
-FOSSology is "more conservative in it's [sic] evaluation" when it came to false
-positives and negatives. Specifically, the thesis looked at the Nomos crawler of
-FOSSology. ScanCode is also identified as a strong candidate in this thesis.
+competition in the realm of \gls{open-source} \gls{license} crawlers. It
+concludes that FOSSology is "more conservative in it's [sic] evaluation"
+compared to ScanCode when it came to false positives and negatives. FOSSology
+was able to correctly identify 83.24% of \glspl{license}, assuming that all
+mutual positives between FOSSology and ScanCode are true positives.
+Specifically, the thesis looked at the Nomos crawler of FOSSology.
 
 ### OSS Review Toolkit
 
@@ -1185,7 +1187,11 @@ Unfortunately, the \glspl{license} identified by ScanCode are not declared using
 
 #### Reviews
 
-TODO
+@wolter-2019 identifies ScanCode as strongly outcompeting much of its
+competition in the realm of \gls{open-source} \gls{license} crawlers. Compared
+to FOSSology, ScanCode has a much higher rate of false positives, but is
+nonetheless able to correctly identify 83.24% of \glspl{license}, assuming that
+all mutual positives between ScanCode and FOSSology are true positives.
 
 ### SW360
 
