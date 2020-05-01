@@ -356,7 +356,7 @@ relicensing under a \gls{proprietary} \gls{license}.
 
 This internship heavily builds upon the foundations laid by \gls{spdx} by the
 Linux Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is
-an open standard for communicating software bill of material infomation. REUSE
+an open standard for communicating software bill of material information. REUSE
 is a project that makes makes licensing easy, comprehensive, and
 machine-readable. REUSE itself incorporates \gls{spdx}.
 
@@ -965,7 +965,7 @@ not ideal, and is more suited towards reference during actual use.
 
 #### Installation
 
-FOSSology provides a Docker image, and Vangrant (VirtualBox) image. It can also
+FOSSology provides a Docker image, and Vagrant (VirtualBox) image. It can also
 be built from source. None of these things have been attempted because Liferay
 has its own FOSSology instance.
 
@@ -1214,9 +1214,10 @@ things that are not in scope:
    specialzed [sic] tools and exchanges data: SW360 has code to import project
    from specialiazed [sic] tools.
 
-3. Code repository: while SW360 uses couchdb to store and efficently manage
-   large amount of software packages and other files and archives, it is not
-   meant to serve as concurrent versioning control system such as a git server.”
+3. Code repository: while SW360 uses couchdb to store and efficiently [sic]
+   manage large amount of software packages and other files and archives, it is
+   not meant to serve as concurrent versioning control system such as a git
+   server.”
 
 From these things, it is obvious to me that SW360 is not applicable to this
 internship, and will therefore not be researched further.
