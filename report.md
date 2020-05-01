@@ -921,11 +921,26 @@ The basic workflow of FOSSology is as follows:
   the clearing process of your organization), you can consider the following
   checks:
 
-   1. All licenses are checked?
-   2. All copyrights are checked?
-   3. ECC information is checked ?
-   4. Main license is selected?
-   5. Reviewed files for irrelevant sections?”
+  1. All licenses are checked?
+  2. All copyrights are checked?
+  3. ECC information is checked ?
+  4. Main license is selected?
+  5. Reviewed files for irrelevant sections?”
+
+FOSSology has a number of scanners. The two scanners that are listed on the
+*Features* page are Nomos and Monk. Nomos "does \gls{license} identification
+using short phrases (regular expressions) and heuristics, e.g. a phrase must be
+found in (or out of) proximity to another phrase or phrases." Monk "performs
+text based searches and thus requires good \gls{license} texts/patterns to
+search for. It uses the Jaccard index as a text similarity metric added with a
+weighting for ranking different matches by their size. Ranking different matches
+by their size is relevant if \gls{license} texts are very similar and result in
+different Jaccard text similarity numbers (e.g. different versions of the BSD)."
+
+In other words, Nomos is more versatile and looks for key words to identify a
+\gls{license}. Monk instead compares for similarity against very specific texts.
+One example of such a text might be the text of a license, or the text of a
+blurb such as in listing \ref{lst:java-header}.
 
 FOSSology also comes with a REST API. “This allows for a number of use cases,
 such as:
@@ -967,7 +982,11 @@ There is little else to add. It does what the documentation says.
 
 #### Reviews
 
-TODO
+@wolter-2019 identifies FOSSology as strongly outcompeting much of its
+competition in the realm of open source license crawlers. It concludes that
+FOSSology is "more conservative in it's [sic] evaluation" when it came to false
+positives and negatives. Specifically, the thesis looked at the Nomos crawler of
+FOSSology. ScanCode is also identified as a strong candidate in this thesis.
 
 ### OSS Review Toolkit
 
@@ -1068,7 +1087,13 @@ Besides, the tool does not present much more functionality.
 
 #### Reviews
 
-TODO
+@petteno-2020 describes a want to validate the presence of license and copyright
+information in new files, lest the author forget to include this information. He
+finds the tool a little rough around the edges due to missing *addheader*
+features, and a potential issue where 0-sized files are not skipped by the
+linter. In spite of these shortcomings, he successfully used the tool to convert
+all *python-scsi* repositories, and ends with a recommendation of the tool and
+specification.
 
 ### ScanCode {#scancode}
 
