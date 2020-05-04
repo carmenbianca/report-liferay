@@ -784,6 +784,8 @@ that will form the basis of the design for the product.
 
 # Execution of research {#execution-of-research}
 
+TODO
+
 <!--
 This section describes the intended methods of research for each sub-question.
 These methods are sourced from @ictresearchmethods. They are not further
@@ -793,8 +795,57 @@ descriptions. The rationales are described, however.
 
 ## What is the current process of licensing compliance?
 
-TODO
+I interviewed Matija Šuklje with the questions from section
+\ref{interview-process}. The answers are paraphrased here.
 
+#### What is the most common licensing compliance issue [in Liferay]? {-}
+
+Matija identified the most likely candidate to be "not fulfilling all formal
+obligations of certain \glspl{license}." As an example, the Apache \gls{license}
+requires you to keep notice files, a requirement that is not always met.
+
+Additionally, although Liferay provides information about its licensing, not all
+information is ideally presented or curated, especially in the case of
+third-party software. Matija indicated that usually the information from the
+third-party packages' manifests is presented, which isn't necessarily the most
+accurate reflection of reality. Some customers would like this to be handled
+better.
+
+#### How and by whom are licensing compliance issues reported to Legal? {-}
+
+Licensing compliance issues are reported through JIRA tickets, using the "FOSS
+Project" ticket category. There are separate ticket types for \gls{inbound} and
+\gls{outbound} issues. Anyone can make these tickets, but usually it's
+developers themselves, developer leads, or product managers.
+
+#### Does Legal search for licensing compliance issues? If so, how? {-}
+
+The short answer to this is yes. Matija follows several keywords (e.g., "open
+source", "copyright", etc.) in JIRA. Whenever one such keyword is mentioned in
+an issue, Matija gets a notification.
+
+Furthermore, scans using FOSSology and FOSSID are done for releases of Liferay.
+This process finds licensing compliance issues without depending on reports from
+others.
+
+#### What are the steps that are taken when a licensing compliance issue pops up? {-}
+
+Matija answered this question by referencing an existing \gls{foss}
+non-compliance procedure. The document is marked for internal use only, and
+cannot be paraphrased in this report. Suffice it to say, the non-compliant code
+is reworked in such a manner that it is no longer non-compliant.
+
+#### Where in the process does Liferay lose the most time? {-}
+
+Matija identified two time gaps:
+
+- It takes a while for developers to flag issues. Sometimes issues are flagged
+  rather late into the development process.
+
+- The process of manual scanning is time-intensive. Although automated scanning
+  has gone from days to hours, the manual review is tedious. Matija also
+  identified a problem with FOSSID (a compliance tool) where he must first
+  resolve a lot of false positives before he can find the true positives.
 
 ## What are the demands, requirements, and limitations of Liferay in the context of automating their licensing policies?
 
