@@ -661,16 +661,33 @@ But those are only the things that are written down. It is probable that there
 are other wants or restrictions that are not black-on-white. To discover those,
 I will *explore user requirements*. Exploring user requirements will be a number
 of interviews with people who are somehow related to the project. These people
-potentially include (depending on time and availability). TODO
+are:
 
-TODO Some questions below are out-of-scope in the sense that they do not answer
-the stated sub-question, but try to further clarify the current situation. These
-questions technically belong elsewhere, but they are retained here because they
-were part of the same interview.
+- Hugo Huijser --- Author of SourceFormatter (Engineering, Testing/QA)
+- Matija Šuklje --- Senior Counsel (Legal)
+- Peter Yoo --- Senior Software Engineer in Testing (Testing/QA)
+- Dang Minhchau --- Technical Support Lead (Engineering)
 
-TODO This method is chosen to discover unknown unknowns.
+The interviews will take place over VOIP software. I will ask the participants
+for permission to record the interviews. The interviews will not be wholly
+transcribed for time's sake, but the recordings exist as reference material to
+aid in paraphrasing the interviewees' answers. The recordings will be deleted in
+July at the end of the internship.
 
-TODO
+I have prepared questions for three fields---Engineering, Legal, and Testing/QA.
+They are listed here in subsections. In parentheses after interviewee is the
+field I will ask questions about.
+
+Some questions below are out-of-scope in the sense that they do not answer the
+stated sub-question, but try to further clarify the current situation. These
+questions technically belong in preliminary research, but they are retained here
+because they were part of the same interview.
+
+The goal is chiefly to clarify obvious questions, and to discover unknown
+unknowns. Towards that end, many of the questions are open-ended. The method of
+interviewing people from different fields was chosen because this project is
+inherently interdisciplinary, and I will need input from all fields to get a
+broader picture of the requirements.
 
 #### Engineering
 
@@ -686,13 +703,15 @@ TODO
 
 #### Legal
 
-TODO: These questions are detailed and nitpicky. A lot of the pre-research has
-already answered the most important questions.
+In contrast to questions from the other subsections, these questions are highly
+specific. A lot of preliminary research has already answered the most important
+questions. These questions, then, are super-specific to aid in the upcoming
+requirements analysis.
 
 - Does the automated solution need to do snippet-level scanning?
 - Does the automated solution need to verify the licensing of third-party
   libraries that are introduced?
-  + Only included libraries (i.e., *.jar* copied into the repository), or any
+  + Only included libraries (e.g., *.jar* copied into the repository), or any
     dependencies?
   + When should third-party libraries be verified? Only when introduced? Every
     time the tool is run?
@@ -707,9 +726,9 @@ already answered the most important questions.
 - Does the automated tool need to check for compatible licenses?
   + Should this be a whitelist and a blacklist? A complex decision tree?
 - In Liferay Portal, is any copyright statement other than "Copyright Liferay"
-  permissible? Is it only permissible for non-copyleft licenses?
+  permissible? Is it only permissible for non-\gls{copyleft} licenses?
 
-#### QA
+#### Testing/QA
 
 - What CI system does Liferay use?
 - How much CPU time is a licensing solution entitled to? Real time?
