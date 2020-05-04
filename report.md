@@ -936,8 +936,7 @@ The basic workflow of FOSSology is as follows:
 - The user starts a "clearing" workflow. This is going through all files and
   identifying whether the tools correctly identified the \glspl{license} and
   \glspl{copyright} contained within the files.
-- “When your are done with the clearing (generally, depends on the definition of
-  the clearing process of your organization), you can consider the following
+- “When your are done with the clearing [...], you can consider the following
   checks:
 
   1. All licenses are checked?
