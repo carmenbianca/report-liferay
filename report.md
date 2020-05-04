@@ -630,13 +630,11 @@ This section describes the intended methods of research for each sub-question.
 These methods are sourced from @ictresearchmethods. The methods are broadly
 defined and a rationale for each method is given.
 
-### What is the current process of licensing compliance?
+### What is the current process of licensing compliance? {#interview-process}
 
 In order to assess the current processes, an *expert interview* will be
 conducted with Matija Šuklje. The expert interview will focus on a handful of
-things TODO:
-
-TODO: Detail exact questions.
+things:
 
 - What is the most common licensing compliance issue?
 - How and by whom are licensing compliance issues reported to Legal?
@@ -644,8 +642,13 @@ TODO: Detail exact questions.
 - What are the steps that are taken when a licensing compliance issue pops up?
 - Where in the process does Liferay lose the most time?
 
-TODO: There will doubtlessly be more questions when the interview occurs, but
-these three questions should reveal the process and its pain points.
+These questions are intended to reveal the process and its pain points.
+
+The interview will take place over VOIP software. I will ask the participant for
+permission to record the interview. The interview will not be wholly transcribed
+for time's sake, but the recording exists as reference material to aid in
+paraphrasing the interviewee's answers. The recording will be deleted in July at
+the end of the internship.
 
 The rationale for an expert interview is simple: There is no doubt in my mind
 that an expert knows the process well, and is familiar enough with the process
@@ -668,11 +671,8 @@ are:
 - Peter Yoo --- Senior Software Engineer in Testing (Testing/QA)
 - Dang Minhchau --- Technical Support Lead (Engineering)
 
-The interviews will take place over VOIP software. I will ask the participants
-for permission to record the interviews. The interviews will not be wholly
-transcribed for time's sake, but the recordings exist as reference material to
-aid in paraphrasing the interviewees' answers. The recordings will be deleted in
-July at the end of the internship.
+Like in section \ref{interview-process}, the interviewee will be asked for
+permission to record, and the recordings will be deleted in July.
 
 I have prepared questions for three fields---Engineering, Legal, and Testing/QA.
 They are listed here in subsections. In parentheses after interviewee is the
