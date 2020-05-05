@@ -851,7 +851,65 @@ Matija identified two time gaps:
 
 TODO
 
+### Interview with Dang Minhchau
 
+TODO Description of Minhchau
+
+#### When during the development process do you test/lint? {-}
+
+Minhchau occasionally runs small tests during the development process of a
+feature. The big suite of tests is only run near the end, just before a pull
+request is submitted for inclusion in the main development branch.
+
+The rationale for only running the entire suite once near the end is that it
+takes a long time to run all tests.
+
+#### How do you test/lint? Locally or via CI? {-}
+
+Minhchau runs the linter locally, but all other tests are run via the CI. The
+rationale is the same as for the previous question.
+
+#### How do you make the decision to use third-party code/libraries? Does licensing factor into this decision? {-}
+
+Minhchau admitted that he probably was not the correct person to ask this
+question. In his position, he does not bring in new libraries---only upgrade
+existing ones.
+
+He did know the general answer to this, however. New libraries must be
+justified. If there is no clear advantage to using the library, it cannot be
+included.
+
+Minhchau also identified two separate cases for using third-party libraries: Use
+with intent to distribute, and use without intent to distribute. Minhchau
+occasionally uses libraries without intent to distribute. When he does this, he
+is not overly concerned with licensing, only pricing.
+
+Minhchau did not know the process for selection of a new library.
+
+#### During which stage of development do you see yourself using a compliance tool? {-}
+
+Assuming that the header check is integrated into SourceFormatter, Minhchau said
+that he would run that before creating a pull request, like he usually does with
+SourceFormatter.
+
+A check that verifies whether a library is permissible would be run during the
+CI. However, Minhchau said that it would be nice to do this check locally for
+sanity's sake.
+
+Minhchau said that developers occasionally create a pull request against their
+own branch. By creating this pull request, they trigger a CI build. The specific
+CI steps that are run for the pull request can be specified with a "CI command".
+It would be nice if there were a separate CI command for the verification of the
+licensing of libraries.
+
+#### During which stage of development do you NOT see yourself using a compliance tool? {-}
+
+Minhchau said that he might use such a tool at the start or at the end, but not
+in the middle.
+
+#### How quickly do you need feedback about whether you can use third-party code or not? {-}
+
+Minhchau said that he would like feedback ideally within a week.
 
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
