@@ -1889,20 +1889,20 @@ To paraphrase, all code and works that *enter* a project are covered by an
 *\gls{inbound}* \gls{license}. The \gls{inbound} \gls{license} that a first
 party receives is the \gls{outbound} \gls{license} of a third party.
 
-# 2020 Q1 review of Carmen Bianca Bakker (Intern) {#2020q1}
+# 2020 Q1 review of Carmen Bianca Bakker (Intern) {#review-2020q1}
 
 This is a quarterly review written by Matija Šuklje, dated 2020-05-05. It
 follows the same format as the quarterly reviews for all employees.
 
-# Does Carmen have knowledge and experience?
+## Does Carmen have knowledge and experience?
 
-# Score (from -3 to +3 )
+### Score (from -3 to +3 )
 
 +3
 
-## Invited Reviewer’s Comments
+### Invited Reviewer’s Comments
 
-### Matija Šuklje
+#### Matija Šuklje
 
 Carmen, although its young age, is a recognised and respected figure in the FOSS
 compliance sphere. Not only is she knowlegable regarding relevant tools, she is
@@ -1916,30 +1916,30 @@ On the license compliance tooling side, her profile far exceeds the position of
 an intern.
 
 
-# Does Carmen do quality work?
+## Does Carmen do quality work?
 
-# Score (from -3 to +3 )
+### Score (from -3 to +3 )
 
 +1
 
-## Invited Reviewer’s Comments
+### Invited Reviewer’s Comments
 
-### Matija Šuklje
+#### Matija Šuklje
 
 As her internship project is very ambitious, she deserves extra points here. As
 the results of her internship project cannot be assessed yet, since they are due
 in Q2, I cannot award her more extra points than this. 
 
 
-# Is Carmen reliable?
+## Is Carmen reliable?
 
-# Score (from -3 to +3 )
+### Score (from -3 to +3 )
 
 +1
 
-## Invited Reviewer’s Comments
+### Invited Reviewer’s Comments
 
-### Matija Šuklje
+#### Matija Šuklje
 
 There have been some complications and time wasted due to a failed attempt at
 submitting internship plan, as requested by the university. Regardless, Carmen
@@ -1950,15 +1950,15 @@ For example, she is on the top of our fortnightly update calls and is well
 prepared.
 
 
-# Is Carmen a good communicator?
+## Is Carmen a good communicator?
 
-# Score (from -3 to +3 )
+### Score (from -3 to +3 )
 
 +2
 
-## Invited Reviewer’s Comments
+### Invited Reviewer’s Comments
 
-### Matija Šuklje
+#### Matija Šuklje
 
 Carmen can very easily communicate both with the legal and engineering side,
 having working knowledge (yet openly acknowledging her limitations) of
@@ -1971,15 +1971,15 @@ The only improvement I can suggest is to be a bit more brave at reaching out to
 people she does not know yet, when the task requires it.
 
 
-# Does Carmen have positive energy and heart to serve?
+## Does Carmen have positive energy and heart to serve?
 
-# Score (from -3 to +3 )
+### Score (from -3 to +3 )
 
 +1
 
-## Invited Reviewer’s Comments
+### Invited Reviewer’s Comments
 
-### Matija Šuklje
+#### Matija Šuklje
 
 Carmen is a great communicator (see above question) and works well both with the
 Legal and Engineering teams. She is recognised both online and in the Dublin
