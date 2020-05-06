@@ -544,7 +544,7 @@ who approved my decision.
 ## Sub-questions {#sub-questions}
 
 Because main questions need sub-questions, this section details three of them.
-There had been five in the earlier submission, but due to time constraints, it
+There had been five in an earlier submission, but due to time constraints, it
 has been trimmed down to three.
 
 @current. What is the current process of licensing compliance?
