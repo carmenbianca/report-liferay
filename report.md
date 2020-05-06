@@ -32,21 +32,17 @@ TODO
 
 # Introduction
 
-TODO: Combine with context
+This is the final report for my end-of-study internship. I am Carmen Bianca
+Bakker, and follow a bachelor in software engineering (Dutch: informatica) at
+NHL Stenden University of Applied Sciences. My internship is at Liferay
+International Ltd. in Dublin, a daughter company of Liferay Inc. in Californa,
+United States. The companies will henceforth be referred to as simply "Liferay".
+The internship lasts approximately 5 months between 3 February 2020 and 30 June
+2020. My job title at Liferay is "Paralegal Engineering Intern".
 
-This is the *plan de campagne* (plan of action, Dutch: plan van aanpak) for my
-end-of-study internship. I am Carmen Bianca Bakker, and follow a bachelor in
-software engineering (Dutch: informatica) at NHL Stenden University of Applied
-Sciences. My internship is at Liferay International Ltd. in Dublin, a daughter
-company of Liferay Inc. in Californa, United States. The companies will
-henceforth be referred to as simply "Liferay". The internship lasts
-approximately 5 months between 3 February 2020 and 30 June 2020. My job title at
-Liferay is "Paralegal Engineering Intern".
-
-The plan de campagne will detail the context of the internship, the problem that
-I was brought in to solve, the research that will be conducted to form the basis
-of a requirements analysis, the project that will be undertaken, and the
-planning to bind everything together.
+The report will detail the context of the internship, the problem that I was
+brought in to solve, the research that has been conducted to form the basis of a
+requirements analysis, and the project has been undertaken.
 
 The shortest summary of the internship is:
 
@@ -61,11 +57,17 @@ document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
 
+TODO
+
+<!-- 
 - Chapter \ref{context}: \nameref{context} --- Provides the context for the
   internship, as well as a description of the problem.
+  -->
 
+<!--
 - Chapter \ref{project-definition}: \nameref{project-definition} --- Defines the
   goals and deliverables of the project.
+-->
 
 - Chapter \ref{research}: \nameref{research} --- Defines the research questions
   and their methods.
@@ -87,13 +89,13 @@ reading this on a computer, you can click on some words to be taken to their
 definition in the glossary. You can also click on the years of the references to
 be taken to the correct reference entry.
 
-# Context {#context}
+## Context {#context}
 
-This chapter details the context in which the internship takes place. It also
-describes the problem that the internship is supposed to tackle, why this
-problem is important, and therefore the motivation for the internship project.
+This section details the context in which the internship takes place. It also
+describes the problem that the internship tackles, why this problem is
+important, and therefore the motivation for the internship project.
 
-## Liferay
+### Liferay
 
 Liferay Inc. is an international enterprise that is chiefly responsible for the
 Liferay Digital Experience Platform (DXP), a large suite of web applications and
@@ -103,7 +105,7 @@ communities, we make it possible for people to reach their full potential to
 serve others." Its slogan is "Enterprise. Open Source. For Life."
 [@liferay-about]
 
-## Legal
+### Legal
 
 The "\gls{open-source}" aspect of Liferay involves \gls{foss} licensing.
 Licensing involves Legal. This internship takes place within the context of
@@ -118,25 +120,25 @@ Beside \gls{foss} licensing, Legal is also responsible for all other matters of
 law. Like trademarks, these are not relevant to the internship, but mentioned
 for completeness' sake.
 
-## Engineering
+### Engineering
 
 Though this internship does not take place within the context of Liferay's
 Engineering department, it is nevertheless important. Engineering is responsible
 for creating Liferay's products. As part of creating Liferay's products, they
 almost always interact with \gls{foss}---either Liferay's, or a dependency's.
 
-## Dublin office
+### Dublin office
 
 Liferay has offices all over the globe. Its global headquarters are in Diamond
 Bar, Los Angeles County. The international office is in Dublin, which is the
 site of this internship. The Dublin office hosts approximately twenty employees
 working on Human Resources, Legal, finances, sales, consulting, and other.
-Remote workers are also registered as working for the Dublin office.
+Remote workers are also registered as working for the Dublin office.[^order-note]
 
-(For posterity's sake---although the manual says otherwise---the office is
-described *after* the departments because departments span offices.)
+[^order-note]: For posterity's sake---although the manual says otherwise---the
+office is described *after* the departments because departments span offices.
 
-## The problem {#the-problem}
+### The problem {#the-problem}
 
 This section describes the problem curtly using the 6W method. [@verhoeven-2018,
 chap. 3, sec. 3.2] The questions were posed to Matija Šuklje, and paraphrased
@@ -199,7 +201,7 @@ cannot. Alternatively, there would be no need to verify compliance if all
 engineers were completely diligent in introducing copyrighted code. However,
 human error is unavoidable, so verification is mandatory.
 
-## Gap analysis of the problem
+### Gap analysis of the problem
 
 This section aims to simplify the fractured description in section
 \ref{the-problem} with a gap analysis. The gap analysis is explicitly
@@ -211,7 +213,7 @@ as-short-as-possible to capture the essence of the problem.
 > The desired process of licensing compliance is automated. This saves a lot of
 > time, and improves accuracy.
 
-## History
+### History
 
 There is some tangent history to the problem, but the exact lines are blurry.
 Liferay has an \gls{inbound} and \gls{outbound} licensing policy
@@ -226,11 +228,11 @@ by engineers during the development process.
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated.
 
-## The project
+### The project
 
 The project of this internship is---in the simplest of terms---to make the
-problem as described above go away. Chapter \ref{project-definition}
-describes the project in full. This section details the context of the project.
+problem as described above go away. Section \ref{project-definition} describes
+the project in full. This section details the context of the project.
 
 Liferay is the *ordering party* (client, Dutch: opdrachtgever) of the project.
 Matija Šuklje is the ordering party personified. The ordering party:
@@ -256,7 +258,7 @@ opdrachtnemer) of the project. The delivering party:
 These items are performed to the best of my abilities considering the
 educational context within which the internship takes place.
 
-## Detailed problem context
+### Detailed problem context
 
 Section \ref{the-problem} gave the bare minimal problem description. Anything
 more would have muddied the essence of the problem. However, more context is
@@ -265,7 +267,7 @@ needed to understand some things in later chapters.
 **Notice to the reader:** Feel free to skip this section or briefly skim over
 it. Later chapters will refer back to these sections when the context is needed.
 
-### Liferay Portal {#liferay-portal}
+#### Liferay Portal {#liferay-portal}
 
 Liferay Digital Experience Platform (DXP) is the main product of Liferay. It is
 the enterprise version of Liferay Portal. The two products are virtually
@@ -286,7 +288,7 @@ are Java code files. [@liferay-portal]
 Liferay DXP is licensed under a private \gls{license} instead of the GNU Lesser
 General Public License. See section \ref{copyright-assignment}.
 
-### License headers {#license-headers}
+#### License headers {#license-headers}
 
 By and large, the \gls{copyright} and licensing of a file is defined in its
 comment header. In Liferay Portal, the Java files have a standardised header as
@@ -332,7 +334,7 @@ been widely implemented yet. The new header can be seen in listing
 The new Liferay policy is informed by the REUSE project [@fsfe-reuse]. See
 section \ref{spdx-reuse}.
 
-### Copyright assignment {#copyright-assignment}
+#### Copyright assignment {#copyright-assignment}
 
 Liferay Portal uses a policy of \gls{copyright-assignment}. This means that all
 third-party contributors to Liferay Portal must sign an agreement wherein they
@@ -352,7 +354,7 @@ License.
 inside of Liferay Portal. The \glspl{license} of these components permit
 relicensing under a \gls{proprietary} \gls{license}.
 
-### SPDX and REUSE {#spdx-reuse}
+#### SPDX and REUSE {#spdx-reuse}
 
 This internship heavily builds upon the foundations laid by \gls{spdx} by the
 Linux Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is
@@ -367,12 +369,12 @@ communities. It is likely that there may be expertise exchange within these
 communities. Moreover, a presence within these communities is a great boon for
 one's professional development.
 
-# Project definition {#project-definition}
+## Project definition {#project-definition}
 
-In this chapter, we define the parameters of the project. Specifically, this
-chapter defines the end result of the project.
+In this section, we define the parameters of the project. Specifically, this
+section defines the end result of the project.
 
-## Ideal situation
+### Ideal situation
 
 In order to give some context for the goals in section \ref{goals}, these are
 some qualities of the ideal situation:
@@ -386,7 +388,7 @@ some qualities of the ideal situation:
 
 - Quality of licensing compliance improves.
 
-## Goals {#goals}
+### Goals {#goals}
 
 The main goal of the project is to *improve and automate \gls{inbound} and
 \gls{outbound} licensing compliance*. However, this goal is not very SMART, so a
@@ -399,14 +401,14 @@ different SMART main goal has been formulated. As follows:
 This main goal is necessarily two-pronged, with an equal focus on \gls{inbound}
 and \gls{outbound} licensing. This is a minor annoyance, but unavoidable.
 Focusing exclusively on one or the other would not solve the stated problems in
-chapter \ref{context}.
+section \ref{context}.
 
 Therefore it is likely---but not necessary---that two technological solutions
 are provided instead of one, or that a single technological solution is provided
 with a very clear split down the middle between the \gls{outbound} licensing
 component and the \gls{inbound} licensing component.
 
-### Automate verification of inbound licensing {#goal-inbound}
+#### Automate verification of inbound licensing {#goal-inbound}
 
 All code that enters the project must have its licensing checked. More often
 than not, it will be a contribution authored by an employee, which means that
@@ -435,7 +437,7 @@ split it up into a few sub-goals:
 
 - Write a mechanism that flags Legal if a problem is detected.
 
-### Automate verification of outbound licensing {#goal-reuse}
+#### Automate verification of outbound licensing {#goal-reuse}
 
 Automating \gls{outbound} licensing compliance is closely related to the problem
 in section \ref{license-headers}. There are going to be some challenges in
@@ -462,7 +464,9 @@ This sub-goal might be tricky from a legal perspective, though, and remains
 entirely optional. And it is, as far as this internship is concerned,
 out-of-scope from a software engineering perspective.
 
-### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
+#### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
+
+TODO: Maybe scrap this?
 
 **Important:** This is an *optional* sub-goal that may not be completed if time
 is tight. If time is not tight, or if another step went much quicker than
@@ -486,25 +490,15 @@ material information.
 The desired granularity of the output is left unspecified and depends on the
 available time.
 
-## Deliverables {#deliverables}
+### Deliverables {#deliverables}
 
 By the end of the internship, several things will be delivered. It is difficult
 to anticipate the exact details, because the research is intended to discover
 the best solution. Nevertheless, a curt overview of deliverables:
 
-- This plan de campagne.
+- A plan de campagne.
 
-- The report mandated by NHL Stenden. Contained within are:
-
-  + The research.
-
-  + A requirements analysis.
-
-  + The software design.
-
-  + The process.
-
-  + And doubtlessly more; see NHL Stenden's requirements.
+- This report mandated by NHL Stenden.
 
 - A product, or a combination of products, that automate \gls{copyright} and
   licensing compliance. Section \ref{goal-inbound} and \ref{goal-reuse} provide
@@ -666,7 +660,7 @@ I will *explore user requirements*. Exploring user requirements will be a number
 of interviews with people who are somehow related to the project. These people
 are:
 
-- Hugo Huijser --- Author of SourceFormatter (Engineering, Testing/QA)
+- Hugo Huijser --- Author of Source Formatter (Engineering, Testing/QA)
 - Matija Šuklje --- Senior Counsel (Legal)
 - Peter Yoo --- Senior Software Engineer in Testing (Testing/QA)
 - Dang Minhchau --- Technical Support Lead (Engineering)
@@ -886,9 +880,9 @@ Minhchau did not know the process for selection of a new library.
 
 #### During which stage of development do you see yourself using a compliance tool? {-}
 
-Assuming that the header check is integrated into SourceFormatter, Minhchau said
+Assuming that the header check is integrated into Source Formatter, Minhchau said
 that he would run that before creating a pull request, like he usually does with
-SourceFormatter.
+Source Formatter.
 
 A check that verifies whether a library is permissible would be run during the
 CI. However, Minhchau said that it would be nice to do this check locally for
@@ -956,11 +950,11 @@ specific \gls{license}.
 
 #### During which stage of development do you see yourself using a compliance tool? {-}
 
-Hugo uses SourceFormatter before submitting a pull request, reasoning that if a
+Hugo uses Source Formatter before submitting a pull request, reasoning that if a
 pull request is sent to the chief software architect without running
-SourceFormatter, the tests will fail.
+Source Formatter, the tests will fail.
 
-Usually, the last commit of a PR is a SourceFormatter run.
+Usually, the last commit of a PR is a Source Formatter run.
 
 #### During which stage of development do you NOT see yourself using a compliance tool? {-}
 
@@ -1006,7 +1000,7 @@ Implementing this is not a must.
 Peter had a simple answer to this: Yes.
 
 The entire test also fails when there is a single formatting error spotted by
-SourceFormatter, so this is not out of the ordinary.
+Source Formatter, so this is not out of the ordinary.
 
 #### What language or framework ought to be used for a solution? {-}
 
@@ -1083,7 +1077,7 @@ It might make sense to have the format be more free-form. It is currently very
 strict (even a mismatch of a single character is a failure), and not necessarily
 reflective of reality. Matija gave an example of some non-LGPL JavaScript code
 being relicensed to LGPL upon inclusion into the Liferay Portal repository
-because SourceFormatter wouldn't accept anything else, which isn't strictly
+because Source Formatter wouldn't accept anything else, which isn't strictly
 necessary.
 
 Some \glspl{license} other than LGPL might make sense for inclusion---probably a
@@ -1641,7 +1635,7 @@ relatively simple.
 
 ## In-scope
 
-A lot of the things that are in-scope are already defined in chapter
+A lot of the things that are in-scope are already defined in section
 \ref{project-definition}. Specifically section \ref{deliverables} has a good,
 concrete list of deliverables that this internship strives achieve. Section
 \ref{goals} lists the specific things that the software solution should strive
@@ -1806,7 +1800,7 @@ benefits are as follows:
 ### Documentation
 
 Documentation will be produced along the way. Four kinds of documentation can
-be easily identified from this plan de campagne:
+be easily identified from the plan de campagne:
 
 - The plan de campagne itself.
 - The requirements analysis.
@@ -1863,7 +1857,7 @@ done", which help focus the work on the needed areas.
 
 The chosen development model is waterfall, or some variation thereof. This isn't
 an active choice that was made, but a logical result of the demands as put
-forward by school. A lot of up-front work must be done (writing this plan de
+forward by school. A lot of up-front work must be done (writing the plan de
 campagne, doing research, making a requirements analysis, coming up with a
 design, etc.), which is simply not "Agile". It is, however, very much in line
 with waterfall.
