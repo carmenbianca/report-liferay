@@ -660,10 +660,10 @@ I will *explore user requirements*. Exploring user requirements will be a number
 of interviews with people who are somehow related to the project. These people
 are:
 
+- Dang Minhchau --- Technical Support Lead (Engineering)
 - Hugo Huijser --- Author of Source Formatter (Engineering, Testing/QA)
 - Matija Šuklje --- Senior Counsel (Legal)
 - Peter Yoo --- Senior Software Engineer in Testing (Testing/QA)
-- Dang Minhchau --- Technical Support Lead (Engineering)
 
 Like in section \ref{interview-process}, the interviewee will be asked for
 permission to record, and the recordings will be deleted in July.
@@ -776,7 +776,13 @@ that will form the basis of the design for the product.
 
 # Execution of research {#execution-of-research}
 
-TODO
+This chapter details the execution and results of the research described in
+chapter \ref{research}. Section \ref{research-conclusion} concludes the
+sub-questions and endeavours to answer the main question of the research. The
+sub-questions are collectively concluded in that section instead of separately
+within their respective sections for the reader's comfort---it's much easier to
+read the conclusion to the main question when the conclusions to the
+sub-questions aren't scattered in between the results.
 
 <!--
 This section describes the intended methods of research for each sub-question.
@@ -841,7 +847,8 @@ Matija identified two time gaps:
 
 ## What are the demands, requirements, and limitations of Liferay in the context of automating their licensing policies?
 
-TODO
+This section contains paraphrased interviews. The interviews are sorted
+alphabetically by the surname of the interviewee.
 
 ### Interview with Dang Minhchau
 
@@ -903,7 +910,7 @@ in the middle.
 
 Minhchau said that he would like feedback ideally within a week.
 
-### Interview with Hugo
+### Interview with Hugo Huijser
 
 TODO description of Hugo.
 
@@ -965,57 +972,6 @@ Hugo had no specific answer for this other than "any time".
 Hugo said that if it takes a couple of days, that's fine. However, he said that
 his job is not in a customer-facing context, so the answer might be different
 for someone else.
-
-### Interview with Peter Yoo
-
-TODO description of Peter
-
-#### How much CPU time is a licensing solution entitled to? Real time? {-}
-
-Peter Yoo said that there is no specific limit on CPU time, but that Liferay is
-always looking to run as quickly as possible. Especially if a test is run very
-quickly, even a little bit adds up.
-
-Therefore, Peter Yoo suggested an upper bound along the lines of five minutes.
-
-#### How often can/should the licensing solution run? When (in the development process) should it run? {-}
-
-Peter Yoo suggested that Matija might be able to answer this. Ideally it would
-be run as part of every pull request. The rationale for this is that the pull
-request is the soonest intervention moment.
-
-Matija can answer this? Ideally as part of every PR. Soonest intervention moment
-is PR.
-
-#### If problems are detected, is it possible to do automated interaction with the ticket system? Would manual interaction be preferable? {-}
-
-This is not currently done anywhere in Liferay, but it might be possible.
-Typically the extent of the current integration is an e-mail or Slack
-notification.
-
-Implementing this is not a must.
-
-#### When a REUSE check fails, should the entire test fail? {-}
-
-Peter had a simple answer to this: Yes.
-
-The entire test also fails when there is a single formatting error spotted by
-Source Formatter, so this is not out of the ordinary.
-
-#### What language or framework ought to be used for a solution? {-}
-
-According to Peter, the most likely candidate is Bash, Ant, Java, or some
-combination of those. Ant is specifically mentioned because all of the testing
-scaffolding is implemented in Ant instead of Jenkins.
-
-A proof-of-concept in another language would be fine, but not preferable from
-Liferay's point of view.
-
-#### Can a CI step make calls to a third-party internet API? Does this violate reproducibility? {-}
-
-Peter said that this is possible, but Liferay tries to avoid making too many API
-calls. Otherwise certain services might be overwhelmed by the traffic coming
-from Liferay's employees and CI system.
 
 ### Interview with Matija Šuklje
 
@@ -1089,6 +1045,58 @@ another \gls{copyright-holder} who consents to Liferay's dual licensing.
 
 The general answer to this, therefore, is that it might make sense to loosen up
 the current strict requirements.
+
+### Interview with Peter Yoo
+
+TODO description of Peter
+
+#### How much CPU time is a licensing solution entitled to? Real time? {-}
+
+Peter Yoo said that there is no specific limit on CPU time, but that Liferay is
+always looking to run as quickly as possible. Especially if a test is run very
+quickly, even a little bit adds up.
+
+Therefore, Peter Yoo suggested an upper bound along the lines of five minutes.
+
+#### How often can/should the licensing solution run? When (in the development process) should it run? {-}
+
+Peter Yoo suggested that Matija might be able to answer this. Ideally it would
+be run as part of every pull request. The rationale for this is that the pull
+request is the soonest intervention moment.
+
+Matija can answer this? Ideally as part of every PR. Soonest intervention moment
+is PR.
+
+#### If problems are detected, is it possible to do automated interaction with the ticket system? Would manual interaction be preferable? {-}
+
+This is not currently done anywhere in Liferay, but it might be possible.
+Typically the extent of the current integration is an e-mail or Slack
+notification.
+
+Implementing this is not a must.
+
+#### When a REUSE check fails, should the entire test fail? {-}
+
+Peter had a simple answer to this: Yes.
+
+The entire test also fails when there is a single formatting error spotted by
+Source Formatter, so this is not out of the ordinary.
+
+#### What language or framework ought to be used for a solution? {-}
+
+According to Peter, the most likely candidate is Bash, Ant, Java, or some
+combination of those. Ant is specifically mentioned because all of the testing
+scaffolding is implemented in Ant instead of Jenkins.
+
+A proof-of-concept in another language would be fine, but not preferable from
+Liferay's point of view.
+
+#### Can a CI step make calls to a third-party internet API? Does this violate reproducibility? {-}
+
+Peter said that this is possible, but Liferay tries to avoid making too many API
+calls. Otherwise certain services might be overwhelmed by the traffic coming
+from Liferay's employees and CI system.
+
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
@@ -1525,7 +1533,7 @@ things that are not in scope:
 From these things, it is obvious to me that SW360 is not applicable to this
 internship, and will therefore not be researched further.
 
-## Conclusion
+## Conclusion {#research-conclusion}
 
 TODO
 
