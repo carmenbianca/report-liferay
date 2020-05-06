@@ -334,7 +334,7 @@ section \ref{spdx-reuse}.
 
 ### Copyright assignment {#copyright-assignment}
 
-Liferay Portal uses a policy of \gls{copyright} assignment. This means that all
+Liferay Portal uses a policy of \gls{copyright-assignment}. This means that all
 third-party contributors to Liferay Portal must sign an agreement wherein they
 transfer ("assign") their \gls{copyright} to Liferay. If the agreement is not
 signed, then the contributions are not accepted. [@liferay-cla]
@@ -712,7 +712,7 @@ requirements analysis.
 - Does the automated solution need to verify the licensing of third-party
   libraries that are introduced?
   + Only included libraries (e.g., *.jar* copied into the repository), or any
-    dependencies?
+    declared dependencies?
   + When should third-party libraries be verified? Only when introduced? Every
     time the tool is run?
   + What to do when the solution identifies a third-party library as being
@@ -721,10 +721,9 @@ requirements analysis.
   + When issues in licensing are discovered, should those issues be addressed
     upstream? How?
 - Does the codebase need to be fully REUSE-compliant? i.e., licensing headers in
-  *every single file*.
-  + If partial, which parts?
-- Does the automated tool need to check for compatible licenses?
-  + Should this be a whitelist and a blacklist? A complex decision tree?
+  *every single file*. If partial, which parts?
+- Does the automated tool need to check for compatible licenses? Should this be
+  a whitelist and a blacklist? A complex decision tree?
 - In Liferay Portal, is any copyright statement other than "Copyright Liferay"
   permissible? Is it only permissible for non-\gls{copyleft} licenses?
 
@@ -1023,6 +1022,79 @@ Liferay's point of view.
 Peter said that this is possible, but Liferay tries to avoid making too many API
 calls. Otherwise certain services might be overwhelmed by the traffic coming
 from Liferay's employees and CI system.
+
+### Interview with Matija Šuklje
+
+TODO description here
+
+#### Does the automated solution need to do snippet-level scanning? {-}
+
+Matija said that this would be nice to have, but is probably not needed. Or
+rephrased, snippet-level scanning is an ambitious goal that makes sense for a
+future revision.
+
+#### Should only included libraries (e.g., *.jar* copied into the repository) have their licensing verified, or any declared dependencies? {-}
+
+Both would be nice. At a minimum the code that is actually included should be
+verified.
+
+#### When should third-party libraries be verified? Only when introduced? Every time the tool is run? {-}
+
+Matija said that the check obviously needs to run at least once. It makes sense
+to synchronise this with engineering.
+
+Running the check only once when introduced is technically sufficient, but it
+might be nice to do a full re-run every now and again (yearly, or pre- or
+post-release).
+
+#### What to do when the solution identifies a third-party library as being incompatible, but manual review says otherwise? Should there be a manual curation flag? {-}
+
+The solution should be overridden somehow, probably through some kind of
+configuration file. Matija recounted something of the sort also being done in
+the software that generates the list of third-party software.
+
+In the configuration file, it would be nice to have a link to the issue that
+resolved the conflict.
+
+#### When issues in licensing are discovered, should those issues be addressed upstream? How? {-}
+
+Matija said that this is not a hard requirement, but something that Liferay
+would like to do. Specifically, it is hard to have a procedure in place for
+this, because it's a manual human process. Matija illustrated this by implying
+that there is a difference between informing a company of a licensing issue, and
+approaching an amateur programmer who had published some script to the internet.
+
+#### Does the codebase need to be fully REUSE-compliant? i.e., licensing headers in *every single file*. If partial, which parts? {-}
+
+Matija was quick to point out that that is what the policy says. In the same
+sentence, he also emphasised that it was going to be very very difficult to
+actually get that done. Therefore, the answer is more along the lines of:
+Ideally yes, realistically only the source code that Liferay owns.
+
+#### Does the automated tool need to check for compatible licenses? Should this be a whitelist and a blacklist? A complex decision tree? {-}
+
+Matija said that this would be hard to automate, especially in complex cases.
+The simple solution would be to begin implementation with a simple whitelist
+and/or blacklist, and add a decision tree later. This is lazy, but a good start.
+
+#### In Liferay Portal, is any copyright statement other than "Copyright Liferay" permissible? Is it only permissible for non-\gls{copyleft} licenses? {-}
+
+It might make sense to have the format be more free-form. It is currently very
+strict (even a mismatch of a single character is a failure), and not necessarily
+reflective of reality. Matija gave an example of some non-LGPL JavaScript code
+being relicensed to LGPL upon inclusion into the Liferay Portal repository
+because SourceFormatter wouldn't accept anything else, which isn't strictly
+necessary.
+
+Some \glspl{license} other than LGPL might make sense for inclusion---probably a
+whitelist of a limited amount of pre-approved \glspl{license}.
+
+Moreover, although Liferay currently uses a system of
+\gls{copyright-assignment}, it is possible to imagine a scenario where there is
+another \gls{copyright-holder} who consents to Liferay's dual licensing.
+
+The general answer to this, therefore, is that it might make sense to loosen up
+the current strict requirements.
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
