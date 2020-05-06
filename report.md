@@ -1891,6 +1891,103 @@ party receives is the \gls{outbound} \gls{license} of a third party.
 
 \printnoidxglossary[sort=word]
 
+# 2020 Q1 review of Carmen Bianca Bakker (Intern) {#2020q1}
+
+This is a quarterly review written by Matija Šuklje, dated 2020-05-05. It
+follows the same format as the quarterly reviews for all employees.
+
+# Does Carmen have knowledge and experience?
+
+# Score (from -3 to +3 )
+
++3
+
+## Invited Reviewer’s Comments
+
+### Matija Šuklje
+
+Carmen, although its young age, is a recognised and respected figure in the FOSS
+compliance sphere. Not only is she knowlegable regarding relevant tools, she is
+also a maintainer of one of them (REUSE tool) – the tool that implements best
+practices that we follow in Liferay as well.
+
+While I am in no capacity to judge her programming skills, her licensing working
+knowledge is far above average.
+
+On the license compliance tooling side, her profile far exceeds the position of
+an intern.
+
+
+# Does Carmen do quality work?
+
+# Score (from -3 to +3 )
+
++1
+
+## Invited Reviewer’s Comments
+
+### Matija Šuklje
+
+As her internship project is very ambitious, she deserves extra points here. As
+the results of her internship project cannot be assessed yet, since they are due
+in Q2, I cannot award her more extra points than this. 
+
+
+# Is Carmen reliable?
+
+# Score (from -3 to +3 )
+
++1
+
+## Invited Reviewer’s Comments
+
+### Matija Šuklje
+
+There have been some complications and time wasted due to a failed attempt at
+submitting internship plan, as requested by the university. Regardless, Carmen
+exceeds what can reasonably be expected from an intern – even following the high
+standards the Legal team applies to itself.
+
+For example, she is on the top of our fortnightly update calls and is well
+prepared.
+
+
+# Is Carmen a good communicator?
+
+# Score (from -3 to +3 )
+
++2
+
+## Invited Reviewer’s Comments
+
+### Matija Šuklje
+
+Carmen can very easily communicate both with the legal and engineering side,
+having working knowledge (yet openly acknowledging her limitations) of
+licensing, and professional knowledge of IT.
+
+In this quarter she independently communicated both with in-house engineers and
+managers, as well as outside experts in the field.
+
+The only improvement I can suggest is to be a bit more brave at reaching out to
+people she does not know yet, when the task requires it.
+
+
+# Does Carmen have positive energy and heart to serve?
+
+# Score (from -3 to +3 )
+
++1
+
+## Invited Reviewer’s Comments
+
+### Matija Šuklje
+
+Carmen is a great communicator (see above question) and works well both with the
+Legal and Engineering teams. She is recognised both online and in the Dublin
+office as a positive and proactive person.
+
+
 # ClearlyDefined API output {#clearlydefined-api-output}
 
 This is the JSON API output of a ClearlyDefined *definitions* call. The exact
