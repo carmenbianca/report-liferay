@@ -1889,8 +1889,6 @@ To paraphrase, all code and works that *enter* a project are covered by an
 *\gls{inbound}* \gls{license}. The \gls{inbound} \gls{license} that a first
 party receives is the \gls{outbound} \gls{license} of a third party.
 
-\printnoidxglossary[sort=word]
-
 # 2020 Q1 review of Carmen Bianca Bakker (Intern) {#2020q1}
 
 This is a quarterly review written by Matija Šuklje, dated 2020-05-05. It
@@ -2128,6 +2126,8 @@ files as value.
  }
 }
 ```
+
+\printnoidxglossary[sort=word]
 
 # References {-}
 
