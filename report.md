@@ -911,6 +911,69 @@ in the middle.
 
 Minhchau said that he would like feedback ideally within a week.
 
+### Interview with Hugo
+
+TODO description of Hugo.
+
+#### What CI system does Liferay use? {-}
+
+Liferay uses Jenkins.
+
+#### How much CPU time is a licensing solution entitled to? Real time? {-}
+
+Hugo wasn't able to answer this question.
+
+#### What language or framework ought to be used for a solution? {-}
+
+Within Liferay, the most common languages are Java and JavaScript, with a little
+bit of Python. The solution should probably use one of these languages.
+
+#### Can a CI step make calls to a third-party internet API? Does this violate reproducibility? {-}
+
+The CI step can make calls to a third-party API. Some current CI steps also
+require connection with a third-party API, such as downloading information from
+package repositories.
+
+Hugo said that is is likely that this might violate reproducibility, but did not
+view this as especially troublesome.
+
+#### When during the development process do you test/lint? {-}
+
+Hugo runs tests after making changes, before submitting a pull request.
+
+#### How do you test/lint? Locally or via CI? {-}
+
+Hugo runs small tests locally, and big tests via Liferay's CI.
+
+#### How do you make the decision to use third-party code/libraries? Does licensing factor into this decision? {-}
+
+Hugo said that the answer to this depends on what one needs. Often when you need
+a library, you can find that it is already being used in another module. In such
+a case, Hugo said that he (perhaps naively) assumes that the library is fine to
+use in his own module as well.
+
+If the library is not already being used, Hugo goes to the library's website and
+broadly checks whether it is \gls{open-source} or not. He does not check the
+specific \gls{license}.
+
+#### During which stage of development do you see yourself using a compliance tool? {-}
+
+Hugo uses SourceFormatter before submitting a pull request, reasoning that if a
+pull request is sent to the chief software architect without running
+SourceFormatter, the tests will fail.
+
+Usually, the last commit of a PR is a SourceFormatter run.
+
+#### During which stage of development do you NOT see yourself using a compliance tool? {-}
+
+Hugo had no specific answer for this other than "any time".
+
+#### How quickly do you need feedback about whether you can use third-party code or not? {-}
+
+Hugo said that if it takes a couple of days, that's fine. However, he said that
+his job is not in a customer-facing context, so the answer might be different
+for someone else.
+
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
