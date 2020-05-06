@@ -736,8 +736,7 @@ requirements analysis.
   process) should it run?
 - If problems are detected, is it possible to do automated interaction with the
   ticket system? Would manual interaction be preferable?
-- Depending on how Legal answers: When a REUSE check fails, should the entire
-  test fail?
+- When a REUSE check fails, should the entire test fail?
 - What language or framework ought to be used for a solution?
 - Can a CI step make calls to a third-party internet API? Does this violate
   reproducibility?
@@ -974,6 +973,56 @@ Hugo said that if it takes a couple of days, that's fine. However, he said that
 his job is not in a customer-facing context, so the answer might be different
 for someone else.
 
+### Interview with Peter Yoo
+
+TODO description of Peter
+
+#### How much CPU time is a licensing solution entitled to? Real time? {-}
+
+Peter Yoo said that there is no specific limit on CPU time, but that Liferay is
+always looking to run as quickly as possible. Especially if a test is run very
+quickly, even a little bit adds up.
+
+Therefore, Peter Yoo suggested an upper bound along the lines of five minutes.
+
+#### How often can/should the licensing solution run? When (in the development process) should it run? {-}
+
+Peter Yoo suggested that Matija might be able to answer this. Ideally it would
+be run as part of every pull request. The rationale for this is that the pull
+request is the soonest intervention moment.
+
+Matija can answer this? Ideally as part of every PR. Soonest intervention moment
+is PR.
+
+#### If problems are detected, is it possible to do automated interaction with the ticket system? Would manual interaction be preferable? {-}
+
+This is not currently done anywhere in Liferay, but it might be possible.
+Typically the extent of the current integration is an e-mail or Slack
+notification.
+
+Implementing this is not a must.
+
+#### When a REUSE check fails, should the entire test fail? {-}
+
+Peter had a simple answer to this: Yes.
+
+The entire test also fails when there is a single formatting error spotted by
+SourceFormatter, so this is not out of the ordinary.
+
+#### What language or framework ought to be used for a solution? {-}
+
+According to Peter, the most likely candidate is Bash, Ant, Java, or some
+combination of those. Ant is specifically mentioned because all of the testing
+scaffolding is implemented in Ant instead of Jenkins.
+
+A proof-of-concept in another language would be fine, but not preferable from
+Liferay's point of view.
+
+#### Can a CI step make calls to a third-party internet API? Does this violate reproducibility? {-}
+
+Peter said that this is possible, but Liferay tries to avoid making too many API
+calls. Otherwise certain services might be overwhelmed by the traffic coming
+from Liferay's employees and CI system.
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
