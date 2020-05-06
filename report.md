@@ -1117,8 +1117,6 @@ was able to correctly identify 83.24% of \glspl{license}, assuming that all
 mutual positives between FOSSology and ScanCode are true positives.
 Specifically, the thesis looked at the Nomos crawler of FOSSology.
 
-### OSS Review Toolkit
-
 ### REUSE
 
 #### Documentation
