@@ -811,16 +811,20 @@ better.
 
 #### How and by whom are licensing compliance issues reported to Legal? {-}
 
-Licensing compliance issues are reported through JIRA tickets, using the "FOSS
-Project" ticket category. There are separate ticket types for \gls{inbound} and
-\gls{outbound} issues. Anyone can make these tickets, but usually it's
-developers themselves, developer leads, or product managers.
+Licensing compliance issues are reported through JIRA tickets, using the
+"\gls{foss} Project" ticket category. There are separate ticket types for
+\gls{inbound} and \gls{outbound} issues. Anyone can make these tickets, but
+usually it's developers themselves, developer leads, or product managers.
+
+However, a good portion of developers aren't familiar with \gls{open-source}.
+Matija affirmed that some developers could not give a sufficient definition of
+\gls{foss}, instead roughly defining it as "when you can see the source code".
 
 #### Does Legal search for licensing compliance issues? If so, how? {-}
 
-The short answer to this is yes. Matija follows several keywords (e.g., "open
-source", "copyright", etc.) in JIRA. Whenever one such keyword is mentioned in
-an issue, Matija gets a notification.
+The short answer to this is yes. Matija follows several keywords (e.g.,
+"\gls{open-source}", "\gls{copyright}", etc.) in JIRA. Whenever one such keyword
+is mentioned in an issue, Matija gets a notification.
 
 Furthermore, scans using FOSSology and FOSSID are done for releases of Liferay.
 This process finds licensing compliance issues without depending on reports from
@@ -1539,7 +1543,30 @@ TODO
 
 ### Current process
 
-TODO
+It's clear from the current process that it depends on the diligence of
+developers to report licensing issues. However, because the developers aren't
+experts in the realm of \gls{foss}, this introduces a conflict. Although Legal
+does manual scans using FOSSology and FOSSID, the premise of this internship is
+that this process is time-intensive.
+
+The most common licensing issues identified by Matija are not related to the
+problem this internship tries to solve.
+
+To more solidly answer the sub-question: The current process of licensing
+compliance depends on a combination of developers reporting issues and Legal
+manually finding issues. Once those issues are reported, they go through a
+for-internal-use-only process for remediation.
+
+The following issues were identified with this process:
+
+- Developers might not have the know-how in \gls{foss} to diligently report
+  licensing compliance issues.
+- Developers sometimes flag issues rather late into the development process.
+- The process of manual scanning by Legal is time-intensive.
+
+TODO move to reflection: The exact process once an issue has been identified is for internal use
+only, and cannot be paraphrased in this report. That makes it difficult to give
+a solid answer to the sub-question.
 
 ### Demands, requirements, and limitations
 
