@@ -226,7 +226,9 @@ Formatter is run as a linter in Liferay's \gls{ci} system, and is used locally
 by engineers during the development process.
 
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
-Legal, but they are not automated.
+Legal, but they are not automated. These tools are behind a \gls{vpn}, and their
+installations aren't actively maintained (i.e., may be behind on important
+updates).
 
 ### The project
 
@@ -1115,7 +1117,9 @@ TODO: The following subsections contain the results of the above method applied.
 All information in this section is sourced from @clearlydefined-docs.
 
 ClearlyDefined is an "incubator project" under the Open Source Initiative, with
-roots in the Microsoft Open Source Programs Office.
+roots in the Microsoft Open Source Programs Office. Some other partners of
+ClearlyDefined are Amazon, nexB (authors of ScanCode), Software Heritage,
+Eclipse, Qualcomm, and Google.
 
 ClearlyDefined is "on a mission to help \gls{foss} projects thrive by being
 [...] clearly defined. Lack of clarity around \glspl{license} and security
@@ -1568,15 +1572,60 @@ TODO move to reflection: The exact process once an issue has been identified is 
 only, and cannot be paraphrased in this report. That makes it difficult to give
 a solid answer to the sub-question.
 
-### Demands, requirements, and limitations
+### Demands, requirements, and limitations {#demands-requirements-limitations}
 
 TODO
 
 ### Available technical solutions
 
-TODO
+From the results, it is immediately clear that SW360 is not a suitable solution
+for automating Liferay's licensing policies.
+
+ScanCode appears to be a reliable tool for automating \gls{inbound} licensing
+compliance. However, there is one big caveat to its use, which is that its
+performance is suboptimal. Given the time restraints within the CI environment
+from TODO, this makes ScanCode a difficult choice.
+
+FOSSology, although it has a robust scanner, appears to have a very specific
+workflow via its web interface for its users that is not easily automatable. Its
+REST API may be suitable for inclusion in the automation of Liferay's
+\gls{inbound} licensing compliance.
+
+ClearlyDefined is essentially very similar to ScanCode---it uses ScanCode
+internally and publishes the results in a public database. Because the servers
+of ClearlyDefined run the scans, performance is a much lesser concern. The
+results show that ClearlyDefined is a young project that is in its early stages,
+but it has strong backing from several big players. ClearlyDefined's simple API
+and low performance overhead make it an excellently suitable solution.
+
+REUSE is the only candidate for the automation of Liferay's \gls{outbound}
+licensing. Because Liferay's policy is a superset of REUSE's specification, it
+would be a suitable solution. A caveat that doesn't follows from these results,
+but does follow from TODO, is that converting all of Liferay Portal to be
+REUSE-compliant is a herculean effort that is unlikely to be accomplished within
+the internship. This makes the tool less suitable.
 
 ### Conclusion to the main question
+
+TODO
+
+# Requirements
+
+TODO
+
+# Design
+
+TODO
+
+# Implementation and testing
+
+TODO
+
+# Conclusion
+
+TODO
+
+# Reflection
 
 TODO
 
@@ -1736,7 +1785,7 @@ follows the same format as the quarterly reviews for all employees.
 #### Matija Šuklje {-}
 
 Carmen, although its young age, is a recognised and respected figure in the FOSS
-compliance sphere. Not only is she knowlegable regarding relevant tools, she is
+compliance sphere. Not only is she knowledgeable regarding relevant tools, she is
 also a maintainer of one of them (REUSE tool) – the tool that implements best
 practices that we follow in Liferay as well.
 
