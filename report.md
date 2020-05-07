@@ -1537,6 +1537,18 @@ internship, and will therefore not be researched further.
 
 TODO
 
+### Current process
+
+TODO
+
+### Demands, requirements, and limitations
+
+TODO
+
+### Available technical solutions
+
+TODO
+
 \appendix
 
 # Crash course in copyright and licensing {#crash-course}
