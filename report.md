@@ -969,6 +969,9 @@ Source Formatter, the tests will fail.
 
 Usually, the last commit of a PR is a Source Formatter run.
 
+Relevant to this internship, Source Formatter currently verifies that the header
+from \ref{#lst:java-header} is present in source files.
+
 #### During which stage of development do you NOT see yourself using a compliance tool? {-}
 
 Hugo had no specific answer for this other than "any time".
@@ -979,7 +982,7 @@ Hugo said that if it takes a couple of days, that's fine. However, he said that
 his job is not in a customer-facing context, so the answer might be different
 for someone else.
 
-### Interview with Matija Šuklje
+### Interview with Matija Šuklje {#interview-with-matija}
 
 TODO description here
 
@@ -1106,9 +1109,7 @@ from Liferay's employees and CI system.
 
 ## What are the available technical solutions in the field of licensing compliance? Which of these are suitable for automating Liferay's licensing policies?
 
-TODO
-
-TODO: The following subsections contain the results of the above method applied.
+The following sections each contain the results of the applied method.
 
 ### ClearlyDefined
 
@@ -1574,9 +1575,34 @@ a solid answer to the sub-question.
 
 ### Demands, requirements, and limitations {#demands-requirements-limitations}
 
-TODO
+It is difficult to draw a conclusion to this sub-question without repeating the
+statements made by the interviewees. The task of answering this question is to
+pick the relevant bits and discard the less-relevant bits. The bullet list below
+itemises the important individual conclusions drawn from the interviews.
 
-### Available technical solutions
+- It is repeated by multiple interviewees that the *pull request* is the
+  earliest possible moment of intervention for any automatisation.
+
+- Although the current \gls{outbound} policy is quite strict about how headers
+  should be applied to source code, Liferay Portal is likely too big to
+  comply completely at this stage.
+
+- Source Formatter is a tool that is commonly used by developers to identify
+  formatting errors in their code. It already verifies that the header from
+  listing \ref{lst:java-header} is present.
+
+- Any solution cannot be too time- or CPU-intensive. Although there are no hard
+  rules on this, Peter Yoo suggested an upper bound of five minutes.
+
+- The solution needn't do any integration other than identify problems in
+  licensing.
+
+- There needs to be a method of manually overriding results in case legal review
+  differs from the automated solution's conclusions.
+
+- TODO?
+
+### Available technical solutions {#available-technical-solutions}
 
 From the results, it is immediately clear that SW360 is not a suitable solution
 for automating Liferay's licensing policies.
@@ -1601,13 +1627,39 @@ and low performance overhead make it an excellently suitable solution.
 REUSE is the only candidate for the automation of Liferay's \gls{outbound}
 licensing. Because Liferay's policy is a superset of REUSE's specification, it
 would be a suitable solution. A caveat that doesn't follows from these results,
-but does follow from TODO, is that converting all of Liferay Portal to be
-REUSE-compliant is a herculean effort that is unlikely to be accomplished within
-the internship. This makes the tool less suitable.
+but does follow from section \ref{demands-requirements-limitations}, is that
+converting all of Liferay Portal to be REUSE-compliant is a herculean effort
+that is unlikely to be accomplished within the internship. This makes the tool
+less suitable.
 
 ### Conclusion to the main question
 
-TODO
+The main question is repeated here:
+
+> Given Liferay's demands, requirements, and limitations, what is the most
+> suitable software solution for automating Liferay's \gls{inbound} and
+> \gls{outbound} licensing policies?
+
+The answer to this question can only be an informed---hopefully expert---opinion
+resulting from the above findings.
+
+For automating the \gls{inbound} licensing policy, findings about the available
+technical solutions are especially relevant. ScanCode is an excellent software
+for gathering the information that is required, but the performance penalty is
+unfortunately great, and would not fit within the time constraint of five
+minutes. Fortunately, the same scans are also executed by ClearlyDefined, and
+making API calls takes only a fraction of a second. This makes a method whereby
+dependencies are checked against ClearlyDefined's public database an excellent
+solution.
+
+Automating the \gls{outbound} licensing policy could technically be as easy as
+running the tool presented by REUSE, given that Liferay's \gls{outbound} policy
+is a superset of the REUSE Specification. There might need to be additional
+checks or some modified behaviour. However, it is concluded that Liferay Portal
+is too big to completely convert to compliance with the policy within the
+context of this internship. A better alternative, therefore, is to modify Source
+Formatter's behaviour to verify the new header. This solution readily fits into
+existing workflows and does not require an immense amount of work.
 
 # Requirements
 
