@@ -1807,11 +1807,45 @@ match ClearlyDefined's naming scheme, which should be \gls{spdx}.
 ## Outbound
 
 The component of \gls{outbound} compliance is difficult to design for, because
-the requirements leave very little in the way of unique implementation.
+the requirements leave very little in the way of unique implementation. Figure
+\ref{copyrightcheck-classdiagram} details the currently-existing class
+architecture of CopyrightCheck in Source Formatter.
 
-TODO: Class layout of Source Formatter test.
+![Class diagram of CopyrightCheck in Source Formatter. Irrelevant variables and methods have been left out.](copyrightcheck-classdiagram.png){#copyrightcheck-classdiagram}
 
-TODO: Precise target format.
+There are two important details to call attention to:
+
+- _getCopyright() searches the given path for most nearby *copyright.txt* file,
+  with the root of the path being the furthest away. The project root's
+  *copyright.txt*, in its pre-internship state, contains the contents of listing
+  \ref{lst:java-header}.
+
+  There aren't many other *copyright.txt* files in other branches of the
+  directory tree. Those that do exist contain a similar header that references
+  the Affero General Public License (version 3 or later).
+
+- doProcess() performs the check given the file path and contents. It returns a
+  string with suggested fixes to the file's contents, and calls addMessage()
+  whenever it encounters errors in the file's contents.
+
+Given the above context, the following steps must be designed:
+
+- Convert all files' headers to the new format in listing
+  \ref{lst:liferay-header}.
+
+- Change the Source Formatter check to verify against the new format.
+
+The first step---mass-conversion---requires a single-use script. The nature of
+being single-use means that it has no stringent design requirements. However,
+find a simple flowchart in figure \ref{flowchart-conversion}.
+
+![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
+
+TODO move to reflection, mention performance aspects of modification date.
+
+The second step effectively requires modification of a single
+function---doProcess()---and therefore does not necessitate design at all in my
+view.
 
 # Implementation and testing
 
