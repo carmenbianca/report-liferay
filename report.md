@@ -1830,7 +1830,7 @@ There are two important details to call attention to:
 
 Given the above context, the following steps must be designed:
 
-- Convert all files' headers to the new format in listing
+- Convert all first-party code files' headers to the new format in listing
   \ref{lst:liferay-header}.
 
 - Change the Source Formatter check to verify against the new format.
@@ -1848,6 +1848,12 @@ function---doProcess()---and therefore does not necessitate design at all in my
 view.
 
 # Implementation and testing
+
+## Inbound
+
+TODO
+
+## Outbound
 
 TODO
 
