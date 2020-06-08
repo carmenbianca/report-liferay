@@ -839,6 +839,12 @@ non-compliance procedure. The document is marked for internal use only, and
 cannot be paraphrased in this report. Suffice it to say, the non-compliant code
 is reworked in such a manner that it is no longer non-compliant.
 
+@liferay-outbound also references how to make sure whether third-party code is
+permissible. Paraphrased: One must identify all the licenses of the third-party
+code, and verify whether they are on a pre-approved list. FOSSology and
+ClearlyDefined are approved methods of detecting the licenses, with the caveat
+that the score in ClearlyDefined must be 87% or above.
+
 #### Where in the process does Liferay lose the most time? {-}
 
 Matija identified two time gaps:
@@ -1569,6 +1575,10 @@ The following issues were identified with this process:
 - Developers sometimes flag issues rather late into the development process.
 - The process of manual scanning by Legal is time-intensive.
 
+An important finding is that a ClearlyDefined score of 87% or above, paired with
+all licenses being pre-approved, effectively automatically approves third-party
+code.
+
 TODO move to reflection: The exact process once an issue has been identified is for internal use
 only, and cannot be paraphrased in this report. That makes it difficult to give
 a solid answer to the sub-question.
@@ -1650,7 +1660,8 @@ unfortunately great, and would not fit within the time constraint of five
 minutes. Fortunately, the same scans are also executed by ClearlyDefined, and
 making API calls takes only a fraction of a second. This makes a method whereby
 dependencies are checked against ClearlyDefined's public database an excellent
-solution.
+solution, especially because the \gls{outbound} policy already says that a
+minimum score threshold effectively approves the \gls{inbound} code.
 
 Automating the \gls{outbound} licensing policy could technically be as easy as
 running the tool presented by REUSE, given that Liferay's \gls{outbound} policy
@@ -1663,7 +1674,52 @@ existing workflows and does not require an immense amount of work.
 
 # Requirements
 
-TODO
+This chapter covers the requirements of the software solutions. There are two
+sections here---one for each prong of the two-pronged approach. A bullet list is
+chosen for its simplicity.
+
+## Inbound
+
+- When a new dependency is added to Liferay, or when a dependency has its
+  version number changed, it must be detected.
+
+- The new dependency must be uniquely identified by its name and version number.
+
+- The new dependency must be searched in ClearlyDefined's public database.
+
+- The scoring result from ClearlyDefined must exceed 87% or higher.
+
+- The result from ClearlyDefined must only include \glspl{license} from a
+  pre-approved list.
+
+- When a new dependency meets the above criteria, it is approved, and the test
+  succeeds.
+
+- When a new dependency does not meet the above criteria, it is not approved,
+  and must undergo manual review.
+
+- When a dependency is approved in manual review, there must be a method of
+  whitelisting the dependency such that it is ignored in future tests.
+
+- This process must, as a rule of thumb, not exceed five minutes.
+
+## Outbound
+
+- All (Java and JavaScript) code files must have their header converted from listing
+  \ref{lst:java-header} to listing \ref{lst:liferay-header}.
+
+  + Because listing \ref{lst:liferay-header} has a little extra complexity, the
+    year of the latest revision date of the file must be included.
+
+- Source Formatter must be edited to:
+
+  + Detect listing \ref{lst:liferay-header} at the tops of code files, and
+    complain if the header is missing.
+
+  + Elegantly handle the variable year in the header.
+
+- The runtime duration of this solution may not noticeably increase, because
+  developers use Source Formatter a lot.
 
 # Design
 
