@@ -1808,7 +1808,7 @@ the score and the detected \glspl{license}.
 from ideal, that list can simply be hardcoded. The \glspl{license}' names must
 match ClearlyDefined's naming scheme, which should be \gls{spdx}.
 
-### Implementation language
+### Implementation language {#why-python}
 
 The research suggests that the most desirable language for Liferay is Java.
 However, I am electing to use Python for this component. There are a few reasons
@@ -1867,13 +1867,17 @@ Not reflected in the flowchart, but relevant to the implementation, is that the
 contents of the new header depend on the old header that is being replaced. That
 is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
 
+I will write the script in Python, using much of the same rationale as in
+section \ref{why-python}. However, because it's a single-use script, it
+ultimately doesn't carry much gravitas.
+
 ![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
 
 TODO move to reflection, mention performance aspects of modification date.
 
 The second step effectively requires modification of a single
-function---doProcess()---and therefore does not necessitate design at all in my
-view.
+function---doProcess()---and therefore does not necessitate detailed up-front
+design that isn't already clear from the stated goals.
 
 # Implementation and testing
 
