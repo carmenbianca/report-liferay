@@ -1810,7 +1810,22 @@ match ClearlyDefined's naming scheme, which should be \gls{spdx}.
 
 ### Implementation language
 
-TODO why Python and not Java.
+The research suggests that the most desirable language for Liferay is Java.
+However, I am electing to use Python for this component. There are a few reasons
+for this:
+
+- Implementation speed. Python is an excellent language to write rapid
+  prototypes in [@rossum-1998].
+- The same article describes Python as a good "glue" language. Given that three
+  file formats, a call to Gradle, and an API call all need to be glued together,
+  Python is an excellent choice.
+- Parsing data files. Drawing from my own experience, Java is not an easy
+  language with which to handle JSON-like files, owing to its statically typed
+  nature. Python's dynamic typing makes it much easier to parse files when you
+  are not certain what type you will encounter in a data file.
+
+Because I am writing a prototype, the final prototype could be converted to Java
+code by an in-house engineer.
 
 ## Outbound
 
