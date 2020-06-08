@@ -1814,8 +1814,8 @@ The research suggests that the most desirable language for Liferay is Java.
 However, I am electing to use Python for this component. There are a few reasons
 for this:
 
-- Implementation speed. Python is an excellent language to write rapid
-  prototypes in [@rossum-1998].
+- Implementation speed. Python is an excellent language in which to write rapid
+  prototypes [@rossum-1998].
 - The same article describes Python as a good "glue" language. Given that three
   file formats, a call to Gradle, and an API call all need to be glued together,
   Python is an excellent choice.
