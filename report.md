@@ -1672,6 +1672,10 @@ context of this internship. A better alternative, therefore, is to modify Source
 Formatter's behaviour to verify the new header. This solution readily fits into
 existing workflows and does not require an immense amount of work.
 
+## Reflection {#research-reflection}
+
+TODO
+
 # Requirements
 
 This chapter covers the requirements of the software solutions. There are two
@@ -1804,6 +1808,10 @@ the score and the detected \glspl{license}.
 from ideal, that list can simply be hardcoded. The \glspl{license}' names must
 match ClearlyDefined's naming scheme, which should be \gls{spdx}.
 
+### Implementation language
+
+TODO why Python and not Java.
+
 ## Outbound
 
 The component of \gls{outbound} compliance is difficult to design for, because
@@ -1826,7 +1834,8 @@ There are two important details to call attention to:
 
 - doProcess() performs the check given the file path and contents. It returns a
   string with suggested fixes to the file's contents, and calls addMessage()
-  whenever it encounters errors in the file's contents.
+  whenever it encounters errors in the file's contents. addMessage() logs a
+  message to Source Formatter's output.
 
 Given the above context, the following steps must be designed:
 
@@ -1838,6 +1847,10 @@ Given the above context, the following steps must be designed:
 The first step---mass-conversion---requires a single-use script. The nature of
 being single-use means that it has no stringent design requirements. However,
 find a simple flowchart in figure \ref{flowchart-conversion}.
+
+Not reflected in the flowchart, but relevant to the implementation, is that the
+contents of the new header depend on the old header that is being replaced. That
+is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
 
 ![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
 
