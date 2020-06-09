@@ -1879,7 +1879,37 @@ The second step effectively requires modification of a single
 function---doProcess()---and therefore does not necessitate detailed up-front
 design that isn't already clear from the stated goals.
 
+### Testing
+
+The two steps listed above verify one another, which means that no extra tests
+need be written.
+
+If the Source Formatter CopyrightCheck implementation flags a file as good,
+then:
+
+1. the mass-conversion successfully worked and there is a true positive;
+2. or the implementation is incorrect and there is a false positive, which can
+   be detected by deliberately introducing a true negative.
+
+If the Source Formatter CopyrightCheck implementation flags a file as bad, then:
+
+3. the mass-conversion did not correctly convert all files and there is a true
+   negative;
+4. or the implementation is incorrect and there is a false negative, which
+   requires manual introspection and adjustments to the implementation.
+
 # Implementation and testing
+
+This chapter covers the process of implementation and testing of the
+\gls{inbound} and \gls{outbound} components of automated licensing compliance.
+
+As described in the plan de campagne, a waterfall-like process is used. The
+upfront requirements are clear and the design is sufficient enough to inform
+implementation.
+
+This chapter, then, reads a little like a story. It details the steps that were
+taken, the difficulties met along the way, and the decisions that were made that
+resulted in differences from the original intent.
 
 ## Inbound
 
@@ -1887,7 +1917,83 @@ TODO
 
 ## Outbound
 
-TODO
+Because the \gls{outbound} component has two sub-components of its own
+(mass-conversion script and CopyrightCheck in Soure Formatter), I will discuss
+them here separately. They can safely be discussed separately, because there was
+no interplay between them during the process of implementation.
+
+### Mass-conversion script
+
+The flowchart from figure \ref{flowchart-conversion} starts with gathering all
+first-party code files. Implementing this was easy, although defining the
+parameters of "first-party code file" required a lot of manual introspection.
+The parameters are all files, except:
+
+- files underneath a *third-party* directory;
+- files underneath a *.git* directory;
+- files named *copyright.txt* or *copyright.js*.
+- and files that do not (already) contain the \gls{copyright} header defined in
+  listing \ref{lst:java-header}.
+
+#### Gathering the latest modification date
+
+The first hurdle was gathering the latest modification date of a given file.
+Ostensibly this is not difficult at all. The output of the command *git log -n 1
+[file]* can be parsed for the year of the latest commit to the file. However,
+the execution time of that command is 5 seconds owing to the size of the
+repository. Using napkin mathematics, I calculated that it would take 58 hours
+to compute the latest modification date of all files.
+
+Because the mass-conversion script need only be run once, this isn't *too*
+offensive, but still less-than-ideal for quick prototyping.
+
+With some assistance, I found a tool named *git-restore-mtime*, which is a
+Python script that does something adjacent to my requirements. Given all files
+in a Git repository, the tool adjusts the *mtime* of those files to the date of
+the latest commit that modified those files. *mtime*, here, is a property in the
+operating system's file system. The execution time of *git-restore-mtime* was
+two minutes, which is a lot more ideal than 58 hours.
+
+Resultatively, this meant that *git-restore-mtime* should be run in advance of
+the mass-conversion script, and the mass-conversion script could simply probe
+the file system for the latest modification date.
+
+I researched the source code of *git-restore-mtime* to see if I could replicate
+its speed without needing to rely on *mtime*---effectively an unnecessary
+intermediate step----and instead passing the output along directly within my
+code. The tool works by smartly parsing the output of an esoteric mode of a
+single execution of *git log* on the entire directory tree. Unfortunately, I
+deemed that the tool was not written in a modular fashion, so I could not easily
+reuse and modify the code.
+
+#### The rest
+
+The remainder of the implementation was fairly straightforward, and can be
+adequately described by a snippet from the codebase. The snippet can be found in
+listing \ref{replace-snippet}. The function *replace_header()* from the snippet
+is run on all files defined earlier in this section.
+
+```{#replace-snippet .python caption="A snippet from the mass-conversion script. HEADERS is a dictionary that contains the original headers as the keys, and the replacement headers as the values."}
+def replace_header(file_):
+  with open(file_) as fp:
+    contents = fp.read()
+
+  for original, replacement in HEADERS.items():
+    if original in contents:
+      contents = contents.replace(
+        original, replacement.format(
+          year=get_latest_date(file_).year
+        )
+      )
+      break
+  else:
+    raise Exception("No header replaced")
+
+  with open(file_, "w") as fp:
+    fp.write(contents)
+```
+
+
 
 # Conclusion
 
