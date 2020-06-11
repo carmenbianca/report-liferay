@@ -1682,6 +1682,8 @@ This chapter covers the requirements of the software solutions. There are two
 sections here---one for each prong of the two-pronged approach. A bullet list is
 chosen for its simplicity.
 
+TODO: Scavenge rest of report for more words.
+
 ## Inbound
 
 - When a new dependency is added to Liferay, or when a dependency has its
@@ -1788,7 +1790,7 @@ case someone wonders why or how a certain dependency ended up being whitelisted.
 
 ```{#whitelist-yaml caption="A whitelist configuration files for dependencies that have been manually approved by Legal."}
 whitelist:
-  - name: org.springframework.spring-context
+  - name: org.springframework/spring-context
     version: 5.2.2.RELEASE
     issue: <URL to issue>
     comment: <comment>
@@ -1973,6 +1975,8 @@ adequately described by a snippet from the codebase. The snippet can be found in
 listing \ref{replace-snippet}. The function *replace_header()* from the snippet
 is run on all files defined earlier in this section.
 
+All-in-all, the script takes a few minutes to run.
+
 ```{#replace-snippet .python caption="A snippet from the mass-conversion script. HEADERS is a dictionary that contains the original headers as the keys, and the replacement headers as the values."}
 def replace_header(file_):
   with open(file_) as fp:
@@ -1993,9 +1997,11 @@ def replace_header(file_):
     fp.write(contents)
 ```
 
-
-
 # Conclusion
+
+TODO: There are usecases where local scans are needed, because scancode is too
+slow. e.g., source code instead of package. developer run scancode locally,
+wrapped in source formatter or stand-alone. out-of-scope.
 
 TODO
 
