@@ -1766,7 +1766,8 @@ dependencies in this file.
 
 Because of the requirement that whitelisting be easy for non-technical
 personnel, a simple computer-parseable file format should be chosen. YAML is
-such a file format.
+such a file format. It has minimal syntax compared to XML and JSON, which makes
+it unimposing to non-technical people.
 
 With that intent, the whitelist should look approximately like in listing
 \ref{whitelist-yaml}. The issue and comment fields are an aide for review, in
@@ -1875,8 +1876,6 @@ ultimately doesn't carry much gravitas.
 
 ![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
 
-TODO move to reflection, mention performance aspects of modification date.
-
 The second step effectively requires modification of a single
 function---doProcess()---and therefore does not necessitate detailed up-front
 design that isn't already clear from the stated goals.
@@ -1907,11 +1906,16 @@ This chapter covers the process of implementation and testing of the
 
 As described in the plan de campagne, a waterfall-like process is used. The
 upfront requirements are clear and the design is sufficient enough to inform
-implementation.
+implementation. The full rationale is in the plan de campagne, and boils down to
+the requirements by school mapping well onto waterfall: writing the plan de
+campagne, doing research, making a requirements analysis, creating a design, et
+cetera.
 
-This chapter, then, reads a little like a story. It details the steps that were
-taken, the difficulties met along the way, and the decisions that were made that
+This chapter reads a little like a story. It details the steps that were taken,
+the difficulties met along the way, and the decisions that were made that
 resulted in differences from the original intent.
+
+The intent of this chapter is to demonstrate competencies.
 
 ## Inbound
 
@@ -1996,6 +2000,10 @@ def replace_header(file_):
   with open(file_, "w") as fp:
     fp.write(contents)
 ```
+
+### CopyrightCheck
+
+TODO
 
 # Conclusion
 
