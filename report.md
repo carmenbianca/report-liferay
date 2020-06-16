@@ -1972,7 +1972,7 @@ however:
   These paradigms of programming are easier to test, and therefore were chosen
   more frequently. I identified a few places where object-oriented design
   patterns made sense, but these were not the most obvious choices in the
-  proces of writing tests.
+  process of writing tests.
 
 - The main function went untested. The main function which combines all
   components simply did too much to mock out external factors (internet
@@ -2006,10 +2006,10 @@ able to mix them all together in a single function.
 ### User-facing output {#user-facing-output}
 
 The initial implementation of the main function was only able to identify
-whether a dependency passed or not. This obviously wasn't very helpful output
-for the user. In collaboration with the primary stakeholder, Matija, I created
-various prototypes with different outputs in an iterative fashion. Thanks to
-rapid asynchronous communication, the feedback loop on the iterations was
+whether a dependency passed or not. This wasn't very helpful output for the
+user. In collaboration with the primary stakeholder, Matija, I created various
+prototypes with different outputs in an iterative fashion. Thanks to rapid
+asynchronous communication, the feedback loop on the iterations was
 exceptionally quick.
 
 The resulting output is fairly verbose for every single component, which was a
