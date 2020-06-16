@@ -1928,7 +1928,7 @@ section expedient, I want to reserve the in-depth explanation of the
 difficulties for the chapter on reflections. The gist is that the prerequisite
 for this component---gathering a list of third-party dependencies---could be
 done in many ways, but many of those ways took upwards of an hour. It took a
-long time until I discovered a way that took a minute to run.
+long time until I discovered a way that took under a minute to run.
 
 ### Test-driven development
 
@@ -2003,7 +2003,7 @@ Specifically, these things were tested-then-implemented in order:
 Once all of these components were individually implemented and tested, I was
 able to mix them all together in a single function.
 
-### User-facing output
+### User-facing output {#user-facing-output}
 
 The initial implementation of the main function was only able to identify
 whether a dependency passed or not. This obviously wasn't very helpful output
@@ -2062,12 +2062,22 @@ not alter performance.
 
 ### Delta operation
 
-TODO
+During the talks on the optimisation of the user-facing output described in
+section \ref{user-facing-output}, the verbosity of the output was seen as a
+potential problem. For that reason, a less-verbose mode of output was developed.
+The concept behind this is fairly simple: Given a branch that has added one or
+more new dependencies, compare its list of dependencies against the list of
+dependencies on the master branch, and only run checks on the dependencies that
+are newly introduced in the branch.
+
+This unfortunately does not decrease the runtime by a lot, because generating
+the list of dependencies is an expensive operation that must now be executed
+twice.
 
 ## Outbound
 
 Because the \gls{outbound} component has two sub-components of its own
-(mass-conversion script and CopyrightCheck in Soure Formatter), I will discuss
+(mass-conversion script and CopyrightCheck in Source Formatter), I will discuss
 them here separately. They can safely be discussed separately, because there was
 no interplay between them during the process of implementation.
 
