@@ -1982,6 +1982,88 @@ however:
   the behaviour of the main function, while I found it much more valuable to
   continually alter the behaviour of the main function in a prototyping manner.
 
+### Process of implementation
+
+I upfronted this section with test-driven development because it was omnipresent
+throughout the process of implementation. The actual process of implementation
+relied heavily on the overview design from figure \ref{flowchart-inbound}.
+Specifically, these things were tested-then-implemented in order:
+
+- Generating third-party dependencies.
+- Parsing third-party dependencies into a one-dimensional array.
+- Gathering output from ClearlyDefined's API.
+- Parsing the output from ClearlyDefined's API into a struct-like object.
+- Checking whether the aforementioned object contains exclusively valid
+  \glspl{license}.
+- Checking whether the aforementioned object's score is $\geq87\%$.
+- Parsing the whitelist YAML syntax from listing \ref{whitelist-yaml}.
+- Checking whether a given dependency is whitelisted in the YAML whitelist.
+- Combining the checks using a strategy-like design pattern.
+
+Once all of these components were individually implemented and tested, I was
+able to mix them all together in a single function.
+
+### User-facing output
+
+The initial implementation of the main function was only able to identify
+whether a dependency passed or not. This obviously wasn't very helpful output
+for the user. In collaboration with the primary stakeholder, Matija, I created
+various prototypes with different outputs in an iterative fashion. Thanks to
+rapid asynchronous communication, the feedback loop on the iterations was
+exceptionally quick.
+
+The resulting output is fairly verbose for every single component, which was a
+conscious choice made by the shareholder. A partial output can be found in
+listing \ref{inbound-output}.
+
+```{#inbound-output caption="Output of the \gls{inbound} licensing verifier. Some output is removed with ellipses."}
+Generating list of dependencies.
+[...]
+Success!
+Loading whitelist.
+Success!
+
+Evaluating dependencies for their licensing.
+
+org.springframework/spring-context@5.2.2.RELEASE
+This package scored 80 on ClearlyDefined. This is below the threshold of 87. This needn't be a problem, but may be indicative of problems. Please open an Inbound Licensing ticket.
+
+xalan/xalan@2.7.2
+This package scored 72 on ClearlyDefined. This is below the threshold of 87. This needn't be a problem, but may be indicative of problems. Please open an Inbound Licensing ticket.
+'SMLNJ' was detected as a license of the package. This license is not pre-approved, so it needs Legal approval. Please open an Inbound Licensing ticket.
+'Apache-1.1' was detected as a license of the package. This license is not pre-approved, so it needs Legal approval. Please open an Inbound Licensing ticket.
+
+org.json/json@20180813
+This package scored 80 on ClearlyDefined. This is below the threshold of 87. This needn't be a problem, but may be indicative of problems. Please open an Inbound Licensing ticket.
+'JSON' was detected as a license of the package. This license is not pre-approved, so it needs Legal approval. Please open an Inbound Licensing ticket.
+
+[...]
+
+Successful dependencies: 13
+Failed dependencies: 252
+
+Did not succeed. Please review the above advice. If necessary, open an Inbound Licensing ticket in the FOSS project at <https://issues.liferay.com/projects/FOSS/issues/>. For more information see: <internal URL>.
+```
+
+### Performance improvement
+
+During an informal demonstration of the product that doubled as a rubber duck
+debugging session, it was remarked that the performance could probably be
+better. At the time, the program downloaded-then-evaluated each dependency one
+at a time. The biggest bottleneck here was waiting on a response from the
+ClearlyDefined API. The entire process took approximately six minutes, which was
+slightly over mark.
+
+By adding threading to the program---that is, having four separate threads
+downloading-and-evaluating dependencies concurrently---the runtime of the
+program was drastically reduced to one minute. The fifth thread---the program's
+main thread---is responsible for printing the results. Adding more threads did
+not alter performance.
+
+### Delta operation
+
+TODO
+
 ## Outbound
 
 Because the \gls{outbound} component has two sub-components of its own
