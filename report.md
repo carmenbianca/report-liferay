@@ -1249,10 +1249,10 @@ The basic workflow of FOSSology is as follows:
 - “When your are done with the clearing [...], you can consider the following
   checks:
 
-  1. All licenses are checked?
-  2. All copyrights are checked?
+  1. All \glspl{license} are checked?
+  2. All \glspl{copyright} are checked?
   3. ECC information is checked ?
-  4. Main license is selected?
+  4. Main \gls{license} is selected?
   5. Reviewed files for irrelevant sections?”
 
 FOSSology has a number of scanners. The two scanners that are listed on the
@@ -1719,6 +1719,10 @@ TODO: Scavenge rest of report for more words.
   + Because listing \ref{lst:liferay-header} has a little extra complexity, the
     year of the latest revision date of the file must be included.
 
+  + More precisely: The exact requirement is that all code files must have
+    their header converted to match the nearest *copyright.txt* (Java) or
+    *copyright.js* file contents.
+
 - Source Formatter must be edited to:
 
   + Detect listing \ref{lst:liferay-header} at the tops of code files, and
@@ -2003,7 +2007,68 @@ def replace_header(file_):
 
 ### CopyrightCheck
 
-TODO
+In adjusting CopyrightCheck, there was one challenge: Source Formatter does
+not---to my best knowledge---support a method of exclusively operating on the
+first comment in a file. Rather, a Check operates on the entire contents of a
+file. I could have implemented a method of extracting the header comment, but
+decided to hold out on doing that, to see if a "straightforward" implementation
+would work just as well.
+
+The reason that extracting the header comment might be important is because it
+contains a variable (\gls{copyright} year). This variable needs to be accounted
+for.
+
+My initial thought was to simply put a regular expression inside of
+*copyright.txt*. This regular expression would contain a line similar to
+*SPDX-FileCopyrightText: © \\d\{4\} Liferay, Inc. <https://liferay.com>*. Note
+the *\\d\{4\}* syntax in place of a year. I implemented this, but quickly ran
+into an issue: The contents of *copyright.txt* needed to be compiled as a
+regular expression for every single file. This had an unfortunate performance
+penalty. It might have been possible to cache the regular expression between
+files (assuming that *copyright.txt* is identical for both runs), but I steered
+away from this route.
+
+Instead, I was inspired by the JavaScript portion. The JavaScript headers are
+not handled by Source Formatter, but by a plugin of ESLint
+(eslint-plugin-notice). This plugin supports variables within headers, such as
+year and name. The variable for year is *\<%= YEAR %\>*. This meant that the
+contents of *copyright.js* became listing \ref{template-header}.
+
+```{#template-header caption="The contents of \emph{copyright.txt} and \emph{copyright.js}, using a variable for the year from eslint-plugin-notice."}
+/*
+ * SPDX-FileCopyrightText: © <%= YEAR %> Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: LGPL-2.1-or-later
+ */
+```
+
+Partially to keep things consistent between the JavaScript and Java, and
+partially inspired by the ESLint approach, I implemented the same in Source
+Formatter. The approach is as follows:
+
+- Replace the first four consecutive digits (regular expression *\\d\{4\}*,
+  compiled statically only once) in the string of the contents of a file with
+  *\<%= YEAR %\>*. This relies on the assumption that the first four consecutive
+  digits in a file are a year in the comment header, which *should* hold true.
+- Verify whether the string starts with the contents of the file's respective
+  *copyright.txt*. If this is congruent, good. If not, not good.
+- Undo the first step.
+
+This was much more performant than the previous attempt. When run in combination
+with the mass-conversion script, all files passed, which signalled that both
+implementations succeeded.
+
+### Extra manual verification
+
+Just to be sure that both the mass-conversion script and CopyrightCheck both
+performed correctly, I performed an additional manual step of verification. I
+generated a list of converted files using the mass-conversion script, then used
+a small Python command to randomly pick 100 files from the output. I manually
+verified that all 100 files have a correct licensing header. I found no false
+positive in this small sample.
+
+I also deliberately changed the headers of some of these files and ran
+CopyrightCheck. The check correctly identified the files with altered headers as
+being incorrect.
 
 # Conclusion
 
