@@ -78,9 +78,6 @@ TODO
 - Chapter \ref{execution-of-research}: \nameref{execution-of-research} ---
   Details the results and conclusions of the research.
 
-- Chapter \ref{project-activities}: \nameref{project-activities} --- Details the
-  phases and anticipated activities of the project.
-
 - Chapter \ref{requirements}: \nameref{requirements} --- Provides a requirement
   analysis for the to-be-delivered product.
 
