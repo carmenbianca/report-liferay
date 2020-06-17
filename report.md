@@ -30,7 +30,7 @@ header-includes:
 
 TODO
 
-# Introduction
+# Introduction {#introduction}
 
 This is the final report for my end-of-study internship. I am Carmen Bianca
 Bakker, and follow a bachelor in software engineering (Dutch: informatica) at
@@ -69,20 +69,29 @@ TODO
   goals and deliverables of the project.
 -->
 
+- Chapter \ref{introduction}: \nameref{introduction} --- This chapter, details
+  an introduction to the intership and an in-depth context.
+
 - Chapter \ref{research}: \nameref{research} --- Defines the research questions
   and their methods.
+
+- Chapter \ref{execution-of-research}: \nameref{execution-of-research} ---
+  Details the results and conclusions of the research.
 
 - Chapter \ref{project-activities}: \nameref{project-activities} --- Details the
   phases and anticipated activities of the project.
 
-- Chapter \ref{project-boundaries}: \nameref{project-boundaries} --- Details
-  what is, and---more importantly---what isn't part of the internship.
+- Chapter \ref{requirements}: \nameref{requirements} --- Provides a requirement
+  analysis for the to-be-delivered product.
 
-- Chapter \ref{quality-assurance}: \nameref{quality-assurance} --- Defines the
-  methods through which the quality of the product is assured.
+- Chapter \ref{design}: \nameref{design} --- Details the intended implementation
+  of the product.
 
-- Chapter \ref{planning}: \nameref{planning} --- Lays out intended dates for all
-  activities.
+- Chapter \ref{implementation-and-testing}: \nameref{implementation-and-testing}
+  --- Covers the process of implementation and testing.
+
+- Chapter \ref{conclusion}: \nameref{conclusion} --- Draws conclusions from the
+  internship and reflects on it.
 
 There exists a glossary and list of references at the end. In case you are
 reading this on a computer, you can click on some words to be taken to their
@@ -2196,7 +2205,7 @@ I also deliberately changed the headers of some of these files and ran
 CopyrightCheck. The check correctly identified the files with altered headers as
 being incorrect.
 
-# Conclusion
+# Conclusion {#conclusion}
 
 This chapter concludes the project and the internship. Its intents are threefold:
 To present conclusions drawn from the assignment, research, and product, to
@@ -2295,9 +2304,10 @@ chapter of a report, I am taking exception to that rule in this section.
 Including the context for reflection earlier in the report would have needlessly
 bloated the report.
 
-The reflection method used below is STARR (Start, Task, Action, Result,
+The reflection method used below is STARR (Situation, Task, Action, Result,
 Reflection). Because a foolish consistency is the hobgoblin of little minds, I
-stray from that exact order where applicable.
+stray from that exact order where applicable. Specifically, the Task is often
+implicit.
 
 ### Happenstance
 
@@ -2468,7 +2478,27 @@ not been a solo project, these issues would have been resolved sooner.
 
 #### Management
 
-TODO
+Management is a competency that is difficult to put a pin in. It relates not to
+anything specific, but to overall handling to keep a project going. Towards that
+end, I think there are a few things that are worth reflecting on.
+
+First, the initial plan de campagne was turned down. This meant that I had to
+deal with a sudden shift in planning. Fortunately, I had foreseen the
+possibility of that happening, and included some play in the planning for the
+eventuality. I believe that I handled the shift in planning well, and was able
+to swiftly adjust course.
+
+Furthermore, the entire project has effectively been a solo project. Naturally,
+I interacted sufficiently with stakeholders, but the actual labour was a solo
+endeavour. Individually, I saw to it that all tasks came to a completion, with
+some unfortunate delay towards the tail end of the internship. The reader may
+have observed that the internship involved a lot of disparate components, the
+completion of which is---I think---a testament to my ability to manage these
+components separately.
+
+Finally, Matija Şuklje observes in the quarterly report that I come
+well-prepared to fortnightly updates, which is an important aspect of management
+in a project.
 
 #### Professional conduct
 
