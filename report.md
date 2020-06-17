@@ -1268,6 +1268,10 @@ FOSSology provides a Docker image, and Vagrant (VirtualBox) image. It can also
 be built from source. None of these things have been attempted because Liferay
 has its own FOSSology instance.
 
+Regarding Liferay's FOSSology instance: When I was given access to the instance,
+I was informed that it is not of production quality. It is hidden behind a VPN
+and does not receive active maintenance.
+
 #### Usage
 
 This section will be a little short, because a lot of the usage is already
@@ -1596,7 +1600,9 @@ from TODO, this makes ScanCode a difficult choice.
 FOSSology, although it has a robust scanner, appears to have a very specific
 workflow via its web interface for its users that is not easily automatable. Its
 REST API may be suitable for inclusion in the automation of Liferay's
-\gls{inbound} licensing compliance.
+\gls{inbound} licensing compliance. However, because Liferay's FOSSology
+instance is not of production quality, and because that is outside of my
+control, that makes FOSSology a less appealing solution.
 
 ClearlyDefined is essentially very similar to ScanCode---it uses ScanCode
 internally and publishes the results in a public database. Because the servers
@@ -1901,7 +1907,7 @@ for this component---gathering a list of third-party dependencies---could be
 done in many ways, but many of those ways took upwards of an hour. It took a
 long time until I discovered a way that took under a minute to run.
 
-### Test-driven development
+### Test-driven development {#test-driven-development}
 
 For this component---like prescribed in the plan de campagne---I made heavy use
 of test-driven development: Write a test, run it, write an implementation, run
@@ -2280,9 +2286,220 @@ There are numerous improvements that could be built on top of this project.
 
 ## Reflection
 
-TODO: Take exception to not introducing new information.
+This section on reflection covers two separate topics: Reflection on
+happenstance during the internship, and reflection on the competencies that are
+mandated for the internship.
+
+Although normally, one does not introduce new information in the concluding
+chapter of a report, I am taking exception to that rule in this section.
+Including the context for reflection earlier in the report would have needlessly
+bloated the report.
+
+The reflection method used below is STARR (Start, Task, Action, Result,
+Reflection). Because a foolish consistency is the hobgoblin of little minds, I
+stray from that exact order where applicable.
+
+### Happenstance
+
+This section on reflection on happenstance is the personal contrasted by the
+professional in the next section. Various things occurred during the internship
+that merit reflecting on that are not immediately professionally relevant.
+
+#### Coronavirus
+
+The first obvious mention-worthy topic is the pandemic outbreak of the
+coronavirus during my stay in Dublin. From one day to the next, I was in
+self-quarantine and working remotely. Initially, this was not a big
+problem---many of the stakeholders I was in touch with were never in the same
+Dublin office as I was.
+
+However, as I am certain the reader can attest through shared experiences, the
+shift from on-premise work to remote work was not effortless. Days had a
+different rhythm. I no longer had a clear time-and-place barrier between work
+and the personal. I experienced anxiety related to the invisible pandemic, the
+strange state of the world, and being stuck in a single location.
+
+A month before my intended return date, I moved back to the Netherlands to be
+with my family, and worked remotely for the remainder. This, too, added a
+small-but-not-insignificant burden of adjustment.
+
+I have no doubts that the coronavirus negatively affected my performance during
+the internship, but was pleasantly surprised by the attitudes of everyone within
+Liferay. There was an atmosphere of understanding and compassion that made
+dealing with the situation a lot easier.
+
+There is no specific lesson to be drawn from this reflection, but it was thusly
+omnipresent that not mentioning it would have been inappropriate. 
+
+#### Communication and time zones
+
+During my internship, I had to be in touch with various stakeholders. Many of
+these stakeholders worked in different time zones (Pacific Coast and East Asia).
+Timely communication with these stakeholders was difficult owing to its
+asynchronocity. 
+
+My previous experiences with working on projects involved quick, synchronous
+conversations throughout the day. A short, immediately-answered question could
+save upwards of an hour wasted trying to resolve problems on your own. During
+this internship, that often was not possible due to time zones, and led to
+wasted hours that needn't have happened if the schedules were better aligned.
+
+It is hard to draw a lesson that is personally relevant from this reflection,
+but certainly a lesson that is organisationally relevant---wherever possible,
+stakeholders within an organisation should be on similar time schedules to
+facilitate quick communication.
+
+#### Implementation difficulties {#implementation-difficulties}
+
+This was alluded to in chapter \ref{implementation-and-testing}. Getting started
+on implementation was fraught with difficulties. There were two very specific
+instances that cost a lot of time.
+
+The first instance is compiling Liferay Portal during the implementation of the
+\gls{outbound} component in Source Formatter. Liferay Portal is a massive
+project with a massive build process. Source Formatter plugs into this build
+process. Without getting too technical, the normal command for compiling Liferay
+Portal turned out to not be suitable for the work I was doing in Source
+Formatter. This led to an *old version* of Source Formatter running against the
+*current version* of the source code.
+
+It took me an unfortunately long time to draw the above conclusion. Instead, I
+was convinced that the code I had written was not functioning correctly, because
+it produced bad results. I finally discovered the situation when I simply told
+Source Formatter to throw an indiscriminate runtime error, and it did not.
+
+After that discovery, it was a simple matter of asking a more experienced
+engineer for the correct method of compiling Liferay Portal for my purposes. The
+code immediately ran flawlessly, which was a smooth relief.
+
+I had a similar experience when I needed to produce a list of dependencies for
+the \gls{inbound} component of the internship. I quickly discovered that I would
+need to query the build system to produce such a list, but Liferay Portal's
+build system is not trivial compared to smaller Java projects. Therefore, a lot
+of the online resources I found were not applicable to Liferay Portal's build
+system.
+
+I asked a more experienced engineer for a method of generating a list of
+dependencies, and graciously received a correct method that required a minor
+code modification within a day. The problem, unfortunately, was that this method
+took upwards of an hour to run, which was simply not feasible for my purposes.
+
+So I tried to adjust the solution, and asked several more engineers for their
+input, but it was not really working. Finally, I got in touch with a release
+engineer who provided a method that took less than 1 minute. All-in-all, a *lot*
+of time was spent on getting this prerequisite to work. It was a relief that,
+after this hardship, the remainder of the implementation work was smooth
+sailing.
+
+A personal aspect that I haven't yet mentioned is that I was reticent to ask
+senior engineers for assistance in these two matters. After all, it gives a bad
+impression if you are a software engineer who cannot get a program to compile
+correctly. Furthermore, this was very much my problem to solve, and the
+assisting engineers surely had their own projects to work on.
+
+The lesson drawn from this reflection must be twofold: First, an intern who is
+unfamiliar with a large code base is a difficult candidate to be working on
+projects that intersect with a complex build system. Second, I should have been
+more confident in asking for external assistance.
+
+### Competencies
+
+This section is a reflection on the mandated competencies. I will be borrowing
+from appendix \ref{review-2020q1}---a quarterly review---to draw from external
+feedback.
+
+#### Analysis
+
+Starting this internship, I had a portfolio that was incredibly fitting for the
+task. I have a professional history in working on the intersection of software
+engineering and licensing, and had a lot of pre-existing knowledge on the topic.
+This competency, then, covers the things I did not know, which is primarily
+reflected in the preliminary and actual research.
+
+To discover these unknowns, I conducted research that was centred around two
+pillars: Interviewing experts and doing available product analysis.
+
+The available product analysis produced, in my opinion, good results on the
+applicability of products to the internship. The capabilities and intents of the
+products were clearly reflected in their documentation, and their advantages and
+disadvantages became almost intuitively clear through manual interaction. The
+manual interaction was especially helpful for this internship, because it ruled
+out several technical components for reasons that would not have been evident
+without manual interaction.
+
+TODO: Repeat research reflection
+
+#### Advice
 
 TODO
+
+#### Design
+
+TODO
+
+#### Implementation
+
+Section \ref{implementation-difficulties} tangentially touches on this
+competency. On the whole, it is difficult to reflect on this competency without
+getting lost in details. I think there are two specific aspects of reflection
+that were relevant to this internship, however.
+
+First, I faced difficulties described in section
+\ref{implementation-difficulties}. I dealt with these difficulties through a
+combination of perseverance and asking for assistance. The latter, much more
+than the former, helped resolve those difficulties.
+
+Second comes everything that did not pertain to those difficulties. For those
+aspects of implementation, I believe I did exceptionally well. Although I have
+lauded test-driven development in sufficient detail in section
+\ref{test-driven-development}, it really bears repeating here. Using test-driven
+development to drive progress was one of the smoothest experiences I have had
+with development, and is a testament both to the development method itself and
+to my competency in applying it.
+
+By applying test-driven development, development time was easily significantly
+reduced, and the tests provided an immense confidence in the correctness of the
+implementations.
+
+In the future, I intend to use test-driven development again if applicable.
+There is one reflection on the difficulties that I had not touched on earlier,
+however, which is that this was a solo project. I am confident that, had this
+not been a solo project, these issues would have been resolved sooner.
+
+#### Management
+
+TODO
+
+#### Professional conduct
+
+Applying the STARR method to the competency of professional conduct is
+difficult. Professional conduct is weaved through all activities and is
+primarily reflected in communication. Towards that end, I am confident in my
+professional conduct.
+
+During my stay at Liferay, I have worked not only on this project, but also on
+smaller professional endeavours. I have attended international conference calls
+with field experts from the SPDX Workgroup, and I was informed that my input was
+both welcome and on-point. So much so, that I will be listed as contributor in
+the next \gls{spdx} specification, of which I am relatively proud.
+
+I have also participated in the Dublin office's EVP (Employee Volunteer Program)
+and Diversity & Inclusion Program. In the first program, I took on a more
+passive advisory role, whereas in the second program, I co-arranged a book club
+among employees, reviewing a book with transgender themes central to its plot.
+
+I have been told by the office's HR person---Megan Kelly---that I have
+integrated well into the office, and that I have been a pleasure to work with.
+
+Matija Şuklje's quarterly review flags me as an excellent communicator, which is
+something that I take professional pride in.
+
+All-in-all, I feel confident in my professional conduct. If there were one thing
+that stuck out to me, then it is that I do not feel that I had completely
+adjusted to Liferay's corporate character. There were hard-to-put-a-finger-on
+subtleties of corporate conduct that I did not fully grasp, and that is one
+point of improvement that would be relevant if I resumed working in corporate
+environments.
 
 \appendix
 
