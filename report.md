@@ -466,32 +466,6 @@ This sub-goal might be tricky from a legal perspective, though, and remains
 entirely optional. And it is, as far as this internship is concerned,
 out-of-scope from a software engineering perspective.
 
-#### Facilitate the production of a bill of materials that covers all outbound licensing {#goal-bom}
-
-TODO: Maybe scrap this?
-
-**Important:** This is an *optional* sub-goal that may not be completed if time
-is tight. If time is not tight, or if another step went much quicker than
-anticipated, this goal is an excellent extension of the internship.
-
-When the goal in section \ref{goal-reuse} is completed, it should be much easier
-to automatically generate a bill of materials of Liferay's products. Such a bill
-of materials currently exists, but lacks granularity and depends on a product's
-globally *declared* licensing instead of its *detected* licensing. Moreover, it
-is provided as a PDF file, which may not be the most convenient for some use
-cases.[^bom]
-
-[^bom]: There also exist \gls{spdx} files for Liferay Portal/DXP and some other
-products, but they are not automated and there is a considerable backlog.
-
-As such, a mechanism for the production of a bill of materials can be created
-that incorporates the detected licensing. One strong candidate for the output
-format is \gls{spdx}, an open standard for communicating software bill of
-material information.
-
-The desired granularity of the output is left unspecified and depends on the
-available time.
-
 ### Deliverables {#deliverables}
 
 By the end of the internship, several things will be delivered. It is difficult
@@ -508,9 +482,6 @@ the best solution. Nevertheless, a curt overview of deliverables:
 
 - A simple program, as described in section \ref{goal-reuse}, that mass-converts
   Liferay's codebase to use the new licensing headers.
-
-- Optional: A program, as described in section \ref{goal-bom}, that produces a
-  bill of materials for Liferay's products.
 
 - Documentation that assists in the integration of the delivered product(s). See
   section \ref{out-of-scope}
@@ -1823,13 +1794,13 @@ for this:
 
 - Implementation speed. Python is an excellent language in which to write rapid
   prototypes [@rossum-1998].
-- The same article describes Python as a good "glue" language. Given that three
-  file formats, a call to Gradle, and an API call all need to be glued together,
-  Python is an excellent choice.
+- Gluing things together. The same article describes Python as a good "glue"
+  language. Given that three file formats, a call to Gradle, and an API call all
+  need to be glued together, Python is an excellent choice.
 - Parsing data files. Drawing from my own experience, Java is not an easy
-  language with which to handle JSON-like files, owing to its statically typed
-  nature. Python's dynamic typing makes it much easier to parse files when you
-  are not certain what type you will encounter in a data file.
+  language with which to handle text-encoded data files, owing to its statically
+  typed nature. Python's dynamic typing makes it much easier to parse files when
+  you are not certain what type you will encounter in a data file.
 
 Because I am writing a prototype, the final prototype could be converted to Java
 code by an in-house engineer.
@@ -2221,13 +2192,95 @@ being incorrect.
 
 # Conclusion
 
-TODO: There are usecases where local scans are needed, because scancode is too
-slow. e.g., source code instead of package. developer run scancode locally,
-wrapped in source formatter or stand-alone. out-of-scope.
+This chapter concludes the project and the internship. Its intents are threefold:
+To present conclusions drawn from the assignment, research, and product, to
+propose recommendations going forward, and to reflect professionally on the
+internship and required competencies.
 
-TODO
+## Conclusions
 
-# Reflection
+Going into the internship, the vague goal of *improving and automating licensing
+compliance* was expanded into a more tangible main goal:
+
+> Automatically check licensing of all **\gls{inbound}** third-party code, and
+> follow industry best-practices by providing unified and unambiguous licensing
+> information for all **\gls{outbound}** code.
+
+I can confidently say that this two-pronged goal has been met. \Gls{inbound}
+Java dependencies can be automatically assessed for their licensing with a solid
+set of criteria originating from Liferay's \gls{inbound} licensing policy, and
+all \gls{outbound} Java and JavaScript code in Liferay Portal has had its
+licensing presentation adjusted to fit industry best-practices laid out in
+Liferay's \gls{outbound} licensing policy.
+
+Each stage of the project sufficiently informed the next.
+
+- The first stage of gathering information and context laid the foundation of
+  the project and defined the problem that needed to be solved.
+- The research---both preliminary and actual---laid the foundation for
+  requirements and implementation. The answer to its main question uncovered
+  ClearlyDefined as the most fitting choice for \gls{inbound} automation, and
+  Source Formatter as an excellent candidate for \gls{outbound} automation. It
+  also uncovered the use-cases to be mindful of within the organisation.
+- The requirements and design followed effortlessly from the previous steps. The
+  problem was well-defined, and the design was the right combination of
+  high-level architecture and detail to allow for flexibility during test-driven
+  development.
+- The implementation was the trickiest stage, but once all initial hurdles were
+  overcome, the remainder was a breeze, especially when combined with
+  test-driven development. The implementation stage produced:
+  + A script that converts all Java and JavaScript licensing headers in Liferay
+    Portal.
+  + An amended Source Formatter check that recognises the new licensing headers.
+  + A tool that checks the licensing of all of Liferay Portal's third-party
+    dependencies against ClearlyDefined's public database, and provides
+    recommendations to the user if something is not right.
+
+## Recommendations
+
+There are numerous improvements that could be built on top of this project.
+
+- This internship covered only the \gls{inbound} and \gls{outbound} code of
+  Liferay Portal. It might be difficult to generalise the written software
+  products, but it might be possible to draw lessons from this report and
+  extract them into a generalisable solution for all of Liferay's code bases.
+- The licensing headers are currently rather static. A more flexible solution
+  might allow additional \gls{spdx} tags for copyright holders and
+  \glspl{license}. Such a solution might have to be intelligent about what
+  combinations are permissible.
+- Because Liferay uses chiefly Java and JavaScript within Liferay Portal, it
+  might be sage to translate the \gls{inbound} licensing automation tool to
+  one of those languages.
+- Research suggests that the earliest moment of intervention for licensing
+  compliance within Liferay is the pull request. This may or may not be too
+  late. A project that attempts to move this earliest moment of intervention to
+  the left might be valuable. This could be as simple as providing developers
+  the resources to do automated licensing verification themselves.
+- ClearlyDefined is a project that is in its infancy. It currently embeds
+  ScanCode within itself for the results that it produces. Helping the
+  \gls{upstream} project with also embedding FOSSology might improve the results
+  produced by ClearlyDefined.
+- One caveat of using ClearlyDefined that is not explored elsewhere in this
+  document is that it checks the licensing of the *package*, not the source
+  repository of the package. There might be discrepancies between the two (e.g.,
+  the source repository exposes a \gls{license} that the package does not) that
+  would be relevant to Liferay's use of the package. Adding a step to the
+  automated verification of \gls{inbound} code that searches these discrepancies
+  might be a valuable endeavour.
+- The implemented verification of the licensing of \gls{inbound} code is limited
+  to third-party dependencies. Because third-party code is also introduced into
+  the code base through manual copying, it might be helpful to implement a step
+  that automatically checks for snippet-level copying of third-party code. I
+  hypothesise that this step would produce a lot of false negatives, however.
+- The tool that checks the \glspl{license} of \gls{inbound} dependencies
+  currently acts on a whitelist of \glspl{license}. A more advanced
+  implementation might use a decision tree or advanced heuristics. For example,
+  two \glspl{license} might be individually permissible, but not combined. A
+  decision tree could filter such problems.
+
+## Reflection
+
+TODO: Take exception to not introducing new information.
 
 TODO
 
