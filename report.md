@@ -844,8 +844,6 @@ alphabetically by the surname of the interviewee.
 
 ### Interview with Dang Minhchau
 
-TODO Description of Minhchau
-
 #### When during the development process do you test/lint? {-}
 
 Minhchau occasionally runs small tests during the development process of a
@@ -903,8 +901,6 @@ in the middle.
 Minhchau said that he would like feedback ideally within a week.
 
 ### Interview with Hugo Huijser
-
-TODO description of Hugo.
 
 #### What CI system does Liferay use? {-}
 
@@ -969,8 +965,6 @@ his job is not in a customer-facing context, so the answer might be different
 for someone else.
 
 ### Interview with Matija Šuklje {#interview-with-matija}
-
-TODO description here
 
 #### Does the automated solution need to do snippet-level scanning? {-}
 
@@ -1042,8 +1036,6 @@ The general answer to this, therefore, is that it might make sense to loosen up
 the current strict requirements.
 
 ### Interview with Peter Yoo
-
-TODO description of Peter
 
 #### How much CPU time is a licensing solution entitled to? Real time? {-}
 
@@ -1197,8 +1189,6 @@ three tools to analyse packages:
 At the time of writing, ClearlyDefined does not fully recognise the REUSE
 Specification upon which Liferay's outbound policy is built
 (<https://github.com/fsfe/reuse-tool/issues/169>).
-
-TODO?
 
 #### Reviews
 
@@ -1534,7 +1524,7 @@ internship, and will therefore not be researched further.
 
 ## Conclusion {#research-conclusion}
 
-TODO
+This section concludes the three sub-questions in order, then the main question.
 
 ### Current process
 
@@ -1604,7 +1594,7 @@ for automating Liferay's licensing policies.
 ScanCode appears to be a reliable tool for automating \gls{inbound} licensing
 compliance. However, there is one big caveat to its use, which is that its
 performance is suboptimal. Given the time restraints within the CI environment
-from TODO, this makes ScanCode a difficult choice.
+from the interview with Peter Yoo, this makes ScanCode a difficult choice.
 
 FOSSology, although it has a robust scanner, appears to have a very specific
 workflow via its web interface for its users that is not easily automatable. Its
