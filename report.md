@@ -1937,6 +1937,8 @@ There are two important details to call attention to:
   whenever it encounters errors in the file's contents. addMessage() logs a
   message to Source Formatter's output.
 
+### Changes to Source Formatter
+
 Given the above context, the following steps must be designed:
 
 - Convert all first-party code files' headers to the new format in listing
