@@ -2064,6 +2064,8 @@ throughout the implementation phase:
   successfully without any issues, which is not an experience I have had with
   other methods of development.
 
+![An overview of the passed tests of the inbound licensing checker.](test-results.png){#test-results}
+
 I experienced two small issues during the process of test-driven development,
 however:
 
@@ -2080,6 +2082,9 @@ however:
   this in favour of manual testing. Writing integration tests would have fixed
   the behaviour of the main function, while I found it much more valuable to
   continually alter the behaviour of the main function in a prototyping manner.
+
+For posterity's sake, a small overview of the tests are included in figure
+\ref{test-results}.
 
 ### Process of implementation
 
