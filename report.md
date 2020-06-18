@@ -2289,6 +2289,13 @@ This was much more performant than the previous attempt. When run in combination
 with the mass-conversion script, all files passed, which signalled that both
 implementations succeeded.
 
+#### Code review
+
+After the modification was completed, I sent a pull request to Hugo Huijser for
+inclusion in Liferay Portal's main branch. The pull request was accepted with
+minor modifications and zero comments. The pull request was later reverted due
+to issues unrelated to the quality of the code.
+
 ### Extra manual verification
 
 Just to be sure that both the mass-conversion script and CopyrightCheck both
