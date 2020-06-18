@@ -245,7 +245,7 @@ as-short-as-possible to capture the essence of the problem.
 
 ### History
 
-There is some tangent history to the problem, but the exact lines are blurry.
+There is some tangential history to the problem, but the exact lines are blurry.
 Liferay has an \gls{inbound} and \gls{outbound} licensing policy
 [@liferay-inbound; @liferay-outbound], but they do not scale without better
 interconnection and automation.
