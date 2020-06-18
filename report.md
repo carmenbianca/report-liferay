@@ -1066,9 +1066,6 @@ Peter suggested that Matija might be able to answer this. Ideally it would
 be run as part of every pull request. The rationale for this is that the pull
 request is the soonest intervention moment.
 
-Matija can answer this? Ideally as part of every PR. Soonest intervention moment
-is PR.
-
 #### If problems are detected, is it possible to do automated interaction with the ticket system? Would manual interaction be preferable? {-}
 
 This is not currently done anywhere in Liferay, but it might be possible.
