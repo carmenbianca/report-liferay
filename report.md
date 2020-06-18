@@ -1618,7 +1618,7 @@ and low performance overhead make it an excellently suitable solution.
 
 REUSE is the only candidate for the automation of Liferay's \gls{outbound}
 licensing. Because Liferay's policy is a superset of REUSE's specification, it
-would be a suitable solution. A caveat that doesn't follows from these results,
+would be a suitable solution. A caveat that doesn't follow from these results,
 but does follow from section \ref{demands-requirements-limitations}, is that
 converting all of Liferay Portal to be REUSE-compliant is a herculean effort
 that is unlikely to be accomplished within the internship. This makes the tool
