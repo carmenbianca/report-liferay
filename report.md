@@ -2189,6 +2189,15 @@ explains:
 
 The integration document contains a link to this report for additional context.
 
+### Product functionality summary
+
+As a small summary of the functionality of the product: The product generates a
+list of dependencies of Liferay Portal, and gathers licensing information about
+each dependency on ClearlyDefined. Given the gathered information, the product
+compares the information to criteria defined in Liferay's \gls{inbound}
+licensing policy, and provides advice to the user if a dependency did not meet
+the criteria.
+
 ## Outbound
 
 Because the \gls{outbound} component has two sub-components of its own
@@ -2340,6 +2349,18 @@ positive in this small sample.
 I also deliberately changed the headers of some of these files and ran
 CopyrightCheck. The check correctly identified the files with altered headers as
 being incorrect.
+
+### Product functionality summary
+
+As a small summary of the functionality of the combined products:
+
+- The mass-conversion script changes the headers of all source code files in
+  Liferay Portal from  listing \ref{lst:java-header} to listing
+  \ref{lst:liferay-header}.
+
+- The modified Source Formatter CopyrightCheck verifies whether all files in
+  Liferay Portal use the new header from listing \ref{lst:liferay-header}. If
+  not, the files are flagged in the tool's output.
 
 # Conclusion {#conclusion}
 
