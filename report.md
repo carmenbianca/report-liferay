@@ -2011,9 +2011,9 @@ long time until I discovered a way that took under a minute to run.
 ### Test-driven development {#test-driven-development}
 
 For this component---like prescribed in the plan de campagne---I made heavy use
-of test-driven development: Write a test, run it, write an implementation, run
-the test again, and repeat. My experience with this method of development was
-immeasurably positive. I want to list a few of the advantages I experienced
+of test-driven development (TDD): Write a test, run it, write an implementation,
+run the test again, and repeat. My experience with this method of development
+was immeasurably positive. I want to list a few of the advantages I experienced
 throughout the implementation phase:
 
 - No time was wasted implementing unneeded features. Because I had a good
