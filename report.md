@@ -2064,7 +2064,7 @@ however:
 
 I upfronted this section with test-driven development because it was omnipresent
 throughout the process of implementation. The actual process of implementation
-relied heavily on the overview design from figure \ref{flowchart-inbound}.
+relied heavily on the high-level design from figure \ref{flowchart-inbound}.
 Specifically, these things were tested-then-implemented in order:
 
 - Generating third-party dependencies.
@@ -2154,7 +2154,8 @@ twice.
 
 ### Integration document
 
-An integration document is included with the solution that explains:
+An integration document is included with the solution (not in this report) that
+explains:
 
 - What the program does.
 - How the program works.
@@ -2178,7 +2179,7 @@ The parameters are all files, except:
 
 - files underneath a *third-party* directory;
 - files underneath a *.git* directory;
-- files named *copyright.txt* or *copyright.js*.
+- files named *copyright.txt* or *copyright.js*;
 - and files that do not (already) contain the \gls{copyright} header defined in
   listing \ref{lst:java-header}.
 
