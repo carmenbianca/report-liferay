@@ -512,6 +512,9 @@ the foundation of the requirements analysis at the start of the software
 development cycle. For that reason, the research will be focused on discovering
 all factors adjacent to the requirements analysis.
 
+This chapter restricts itself to the questions and methodology. The next
+question covers the executed research.
+
 ## Main question
 
 The main question spawns forth from two requirements of Liferay: Liferay wishes
