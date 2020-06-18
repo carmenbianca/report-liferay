@@ -936,7 +936,7 @@ The CI step can make calls to a third-party API. Some current CI steps also
 require connection with a third-party API, such as downloading information from
 package repositories.
 
-Hugo said that is is likely that this might violate reproducibility, but did not
+Hugo said that it is likely that this might violate reproducibility, but did not
 view this as especially troublesome.
 
 #### When during the development process do you test/lint? {-}
@@ -967,7 +967,7 @@ Source Formatter, the tests will fail.
 Usually, the last commit of a PR is a Source Formatter run.
 
 Relevant to this internship, Source Formatter currently verifies that the header
-from \ref{#lst:java-header} is present in source files.
+from \ref{lst:java-header} is present in source files.
 
 #### During which stage of development do you NOT see yourself using a compliance tool? {-}
 
@@ -1894,8 +1894,8 @@ components. He reviewed the proposal, noted a few flaws in the design, but
 concluded more overall that I had not succeeded in addressing some specific
 implementation details. The primary example given was the ability to generate a
 list of dependencies, which is reflected on in section
-\ref{implementation-details}. Therefore, before starting my second design, I
-addressed these implementation details.
+\ref{implementation-difficulties}. Therefore, before starting my second design,
+I addressed these implementation details.
 
 The first design proposal is not at all congruent with the above design, and is
 not included. I would have liked to verify the above design with Peter Yoo, but
