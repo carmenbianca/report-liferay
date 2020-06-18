@@ -1691,6 +1691,8 @@ This chapter covers the requirements of the software solutions. There are two
 sections here---one for each prong of the two-pronged approach. A bullet list is
 chosen for its simplicity.
 
+TODO: Reflect on ClearlyDefined + Matija
+
 TODO: Scavenge rest of report for more words.
 
 ## Inbound
@@ -1845,6 +1847,23 @@ for this:
 
 Because I am writing a prototype, the final prototype could be converted to Java
 code by an in-house engineer.
+
+### Disapproved design
+
+Prior to electing the above design, there had been a previous design proposal.
+At the request of Peter Yoo, I sent him a pseudocode design proposal.
+Specifically, he asked for specific implementation details on the important
+components. He reviewed the proposal, noted a few flaws in the design, but
+concluded more overall that I had not succeeded in addressing some specific
+implementation details. The primary example given was the ability to generate a
+list of dependencies, which is reflected on in section
+\ref{implementation-details}. Therefore, before starting my second design, I
+addressed these implementation details.
+
+The first design proposal is not at all congruent with the above design, and is
+not included. I would have liked to verify the above design with Peter Yoo, but
+due to a combination of Peter Yoo having a busy schedule and a want for time, I
+was unable to do that.
 
 ## Outbound
 
@@ -2463,15 +2482,48 @@ manual interaction was especially helpful for this internship, because it ruled
 out several technical components for reasons that would not have been evident
 without manual interaction.
 
-TODO: Repeat research reflection
+Analysing the answers to the interview was a lot harder. In essence, I relied on
+my best judgement to extract the relevant information. A systematic approach
+would undoubtedly have been preferable, and if I were to do it again, I would
+attempt to approach it more in that fashion. However, my extraction of relevant
+information from the interviews did adequately demonstrate my competency in
+analysis.
 
 #### Advice
 
-TODO
+In reflecting on this competency, I want to zoom in on instances where I advised
+against the recommendations or requirements given to me.
+
+The first instance is that I was recommended to implement the \gls{inbound}
+licensing tooling in Java. I advised against this in favour of Python. My
+rationale is described earlier in this report, but boils down to Python being a
+more effective method of gluing separate components together. The result was a
+swift implementation compared to an---I anticipate---more tedious process in
+Java. This was, I believe, the correct advice for a prototype and
+proof-of-concept.
+
+Another instance is the advice to use ClearlyDefined. It was Matija Šuklje's
+opinion that FOSSology would produce better results that are more consistent
+with Legal's workflow, but I advised against it, reasoning that FOSSology would
+be difficult to eventually integrate. At this point, it is difficult to reflect
+on whether or not that was correct advice. For a proof-of-concept, however,
+ClearlyDefined was undoubtedly a good choice that integrated well with Liferay's
+existing policies.
 
 #### Design
 
-TODO
+In this reflection on the competency of design, I think that the most valuable
+thing to reflect on is the failed attempts at design. As described in section
+\ref{disapproved-design}, I have completely scrapped a design that was simply
+not sufficient. I went back to the drawing board, and---in quick stages not
+documented in this report---came up with a better design. Redoing the design
+was, I think, valuable. Asking a senior engineer to validate my design was also
+one of the most valuable things, and the provided advice heavily informed new
+designs.
+
+The final design was unfortunately not approved by anybody due to mismatching
+schedules. This makes it harder to do a final reflection, but I am nonetheless
+content with the design, because it resulted in working products.
 
 #### Implementation
 
@@ -2502,6 +2554,15 @@ There is one reflection on the difficulties that I had not touched on earlier,
 however, which is that this was a solo project. I am confident that, had this
 not been a solo project, these issues would have been resolved sooner.
 
+An additional testament to my skill in implementation---which is difficult to
+weave into the fabric of this report---is that the pull request of my
+modification to Source Formatter was accepted by Hugo Huijser without
+substantive changes. I understand from Matija Šuklje that interns do not
+normally have their code admitted into the main branch of Liferay Portal, so I
+feel confident that my code was of high quality. The pull request was later
+reverted due to reasons unrelated to the quality of the code, but to the speed
+of adoption of changes to Liferay Portal's \gls{outbound} licensing policy.
+
 #### Management
 
 Management is a competency that is difficult to put a pin in. It relates not to
@@ -2522,7 +2583,7 @@ have observed that the internship involved a lot of disparate components, the
 completion of which is---I think---a testament to my ability to manage these
 components separately.
 
-Finally, Matija Şuklje observes in the quarterly report that I come
+Finally, Matija Šuklje observes in the quarterly report that I come
 well-prepared to fortnightly updates, which is an important aspect of management
 in a project.
 
@@ -2547,7 +2608,7 @@ among employees, reviewing a book with transgender themes central to its plot.
 I have been told by the office's HR person---Megan Kelly---that I have
 integrated well into the office, and that I have been a pleasure to work with.
 
-Matija Şuklje's quarterly review flags me as an excellent communicator, which is
+Matija Šuklje's quarterly review flags me as an excellent communicator, which is
 something that I take professional pride in.
 
 All-in-all, I feel confident in my professional conduct. If there were one thing
