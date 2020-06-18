@@ -519,8 +519,7 @@ the best solution. Nevertheless, a curt overview of deliverables:
 - A simple program, as described in section \ref{goal-reuse}, that mass-converts
   Liferay's codebase to use the new licensing headers.
 
-- Documentation that assists in the integration of the delivered product(s). See
-  section \ref{out-of-scope}
+- Documentation that assists in the integration of the delivered product(s).
 
 # Research {#research}
 
