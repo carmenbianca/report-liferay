@@ -1724,7 +1724,26 @@ This chapter covers the requirements of the software solutions. There are two
 sections here---one for each prong of the two-pronged approach. A bullet list is
 chosen for its simplicity.
 
-TODO: Reflect on ClearlyDefined + Matija
+The requirements listed below were drawn from three sources:
+
+- The goals and preliminary context from chapter \ref{introduction}.
+- The conclusion of the research.
+- The contents of the research's interviews.
+
+The requirements were drafted in collaboration with Matija Šuklje. It was
+Matija's opinion that FOSSology would probably produce better assessments than
+ClearlyDefined that are more in line with Legal's processes. Though I agreed
+with that opinion, I nonetheless stuck to the outcome of the research for two
+reasons:
+
+- Because Liferay's FOSSology instance is not of production quality, it would be
+  much more difficult to integrate a solution based on FOSSology.
+
+- Liferay's \gls{inbound} licensing policy mentions usage of ClearlyDefined in
+  the criteria for acceptance of third-party software. If one were to choose
+  FOSSology instead, new legal acceptance criteria would have to be designed,
+  which I considered to be too out-of-scope within the context of a software
+  engineering internship.
 
 TODO: Scavenge rest of report for more words.
 
@@ -2796,15 +2815,12 @@ party receives is the \gls{outbound} \gls{license} of a third party.
 This is a quarterly review written by Matija Šuklje, dated 2020-05-05. It
 follows the same format as the quarterly reviews for all employees.
 
-## Does Carmen have knowledge and experience? {-}
+The scoring system works as follows: 0 is on-point. -3 is severely lacking. +3
+is exceeding expectations.
 
-### Score (from -3 to +3) {-}
+#### Does Carmen have knowledge and experience? {-}
 
-+3
-
-### Invited Reviewer’s Comments {-}
-
-#### Matija Šuklje {-}
+Score: +3
 
 Carmen, although its young age, is a recognised and respected figure in the FOSS
 compliance sphere. Not only is she knowledgeable regarding relevant tools, she is
@@ -2817,31 +2833,18 @@ knowledge is far above average.
 On the license compliance tooling side, her profile far exceeds the position of
 an intern.
 
+#### Does Carmen do quality work? {-}
 
-## Does Carmen do quality work? {-}
-
-### Score (from -3 to +3) {-}
-
-+1
-
-### Invited Reviewer’s Comments {-}
-
-#### Matija Šuklje {-}
+Score: +1
 
 As her internship project is very ambitious, she deserves extra points here. As
 the results of her internship project cannot be assessed yet, since they are due
 in Q2, I cannot award her more extra points than this. 
 
 
-## Is Carmen reliable? {-}
+#### Is Carmen reliable? {-}
 
-### Score (from -3 to +3) {-}
-
-+1
-
-### Invited Reviewer’s Comments {-}
-
-#### Matija Šuklje {-}
+Score: +1
 
 There have been some complications and time wasted due to a failed attempt at
 submitting internship plan, as requested by the university. Regardless, Carmen
@@ -2852,15 +2855,9 @@ For example, she is on the top of our fortnightly update calls and is well
 prepared.
 
 
-## Is Carmen a good communicator? {-}
+#### Is Carmen a good communicator? {-}
 
-### Score (from -3 to +3) {-}
-
-+2
-
-### Invited Reviewer’s Comments {-}
-
-#### Matija Šuklje {-}
+Score: +2
 
 Carmen can very easily communicate both with the legal and engineering side,
 having working knowledge (yet openly acknowledging her limitations) of
@@ -2873,15 +2870,9 @@ The only improvement I can suggest is to be a bit more brave at reaching out to
 people she does not know yet, when the task requires it.
 
 
-## Does Carmen have positive energy and heart to serve? {-}
+#### Does Carmen have positive energy and heart to serve? {-}
 
-### Score (from -3 to +3) {-}
-
-+1
-
-### Invited Reviewer’s Comments {-}
-
-#### Matija Šuklje {-}
+Score: +1
 
 Carmen is a great communicator (see above question) and works well both with the
 Legal and Engineering teams. She is recognised both online and in the Dublin
