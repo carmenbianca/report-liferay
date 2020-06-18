@@ -1470,13 +1470,13 @@ and more."
 licensed under CC0-1.0, not CC-BY-1.0. See
 <https://github.com/nexB/scancode-toolkit/issues/1984>.
 
-"ScanCode finds the origin history information that is in your codebase with a
+“ScanCode finds the origin history information that is in your codebase with a
 focus on:
 
 - \Gls{copyright} and other origin clues (emails, urls, authors etc)
 
 - \Gls{license} notices and \gls{license} text with reference information about
-  detected \glspl{license}."
+  detected \glspl{license}.”
 
 #### Installation
 
@@ -1780,7 +1780,10 @@ TODO: Scavenge rest of report for more words.
   \ref{lst:java-header} to listing \ref{lst:liferay-header}.
 
   + Because listing \ref{lst:liferay-header} has a little extra complexity, the
-    year of the latest revision date of the file must be included.
+    year of the latest revision date of the file must be included. The year of
+    the latest revision date instead of the year of the earliest revision date
+    is chosen because finding the earliest revision date is much more
+    technologically challenging.
 
   + More precisely: The exact requirement is that all code files must have
     their header converted to match the nearest *copyright.txt* (Java) or
@@ -1953,6 +1956,8 @@ The first step---mass-conversion---requires a single-use script. The nature of
 being single-use means that it has no stringent design requirements. However,
 find a simple flowchart in figure \ref{flowchart-conversion}.
 
+![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
+
 Not reflected in the flowchart, but relevant to the implementation, is that the
 contents of the new header depend on the old header that is being replaced. That
 is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
@@ -1960,8 +1965,6 @@ is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
 I will write the script in Python, using much of the same rationale as in
 section \ref{why-python}. However, because it's a single-use script, it
 ultimately doesn't carry much gravitas.
-
-![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
 
 The second step effectively requires modification of a single
 function---doProcess()---and therefore does not necessitate detailed up-front
