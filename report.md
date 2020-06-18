@@ -28,7 +28,42 @@ header-includes:
 
 # Summary {-}
 
-TODO
+This report covers my end-of-study internship at Liferay International Ltd. in
+Dublin. I was brought in to solve a specific issue related to the company's
+licensing challenges: The process of licensing compliance is manual, which takes
+a lot of time. My goal was to implement automation into this process---to
+automatically check the licensing of \gls{inbound} third-party code, and follow
+industry best-practices by providing unified and unambigious licensing
+information for \gls{outbound} code. This goal was limited in scope to Liferay
+Portal, the company's primary product.
+
+To provide foundational information to tackle this problem, I performed a
+research that inquired for the most suitable solution for automating Liferay's
+\gls{inbound} and \gls{outbound} licensing policies. The research sought to
+shed light on Liferay's current compliance process, discover Liferay's
+requirements from various interested parties, and perform analysis on several
+available technical solutions in the field of licensing compliance.
+
+The research concludes twofold: For automating Liferay's \gls{inbound} licensing
+compliance, ClearlyDefined---a public database of licensing information of
+packages---was identified as a fitting solution. For Liferay's \gls{outbound}
+licensing policy, adapting Source Formatter---an internal tool for formatting of
+Java code---was identified as the most appropriate solution.
+
+Given that conclusion, two prototype products were produced and delivered:
+
+- An \gls{inbound} licensing verifier that finds all third-party dependencies,
+  checks them against ClearlyDefined's public database, and compares the
+  findings to pre-defined acceptance requirements.
+
+- A modified check in Source Formatter that checks whether a source code file's
+  header matches a newly defined, unambiguous standard for licensing.
+
+  + This check fails if all headers in Liferay Portal are not altered. A
+    separate mass-conversion script was written to alter the headers in all code
+    files.
+
+Integration of these solutions was out-of-scope for the internship.
 
 # Introduction {#introduction}
 
@@ -56,8 +91,6 @@ licensing. It is recommended reading for readers who are unfamiliar with
 document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
-
-TODO
 
 <!-- 
 - Chapter \ref{context}: \nameref{context} --- Provides the context for the
