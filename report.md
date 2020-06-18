@@ -305,9 +305,6 @@ Section \ref{the-problem} gave the bare minimal problem description. Anything
 more would have muddied the essence of the problem. However, more context is
 needed to understand some things in later chapters.
 
-**Notice to the reader:** Feel free to skip this section or briefly skim over
-it. Later chapters will refer back to these sections when the context is needed.
-
 #### Liferay Portal {#liferay-portal}
 
 Liferay Digital Experience Platform (DXP) is the main product of Liferay. It is
