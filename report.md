@@ -1656,10 +1656,9 @@ existing workflows and does not require an immense amount of work.
 
 ## Reflection {#research-reflection}
 
-This section on reflection is intended to reflect on the quality of the
-research. Towards that end, I believe that there is one clear vector of
-uncertainty of the quality of the research: The reliability and
-generalisability of the expert interviews.
+This section is intended to reflect on the quality of the research. Towards that
+end, I believe that there is one clear vector of uncertainty of the quality of
+the research: The reliability and generalisability of the expert interviews.
 
 In doing the exploration of user requirements, I knew that I wanted to gather
 data from actual users. Gathering quantitative data would have been a much more
