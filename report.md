@@ -69,7 +69,7 @@ Integration of these solutions was out-of-scope for the internship.
 
 This is the final report for my end-of-study internship. I am Carmen Bianca
 Bakker, and follow a bachelor in software engineering (Dutch: informatica) at
-NHL Stenden University of Applied Sciences. My internship is at Liferay
+NHL Stenden University of Applied Sciences. My internship was at Liferay
 International Ltd. in Dublin, a daughter company of Liferay Inc. in Californa,
 United States. The companies will henceforth be referred to as simply "Liferay".
 The internship lasts approximately 5 months between 3 February 2020 and 30 June
@@ -82,7 +82,7 @@ requirements analysis, and the project has been undertaken.
 The shortest summary of the internship is:
 
 > The work that goes into \gls{copyright} and licensing compliance at Liferay is
-> currently manual. By the end of the internship, many of these processes will
+> currently manual. By the end of the internship, some of these processes will
 > be automated.
 
 Appendix \ref{crash-course} contains a crash course on \gls{copyright} and
