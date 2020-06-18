@@ -32,10 +32,14 @@ This report covers my end-of-study internship at Liferay International Ltd. in
 Dublin. I was brought in to solve a specific issue related to the company's
 licensing challenges: The process of licensing compliance is manual, which takes
 a lot of time. My goal was to implement automation into this process---to
-automatically check the licensing of \gls{inbound} third-party code, and follow
-industry best-practices by providing unified and unambigious licensing
-information for \gls{outbound} code. This goal was limited in scope to Liferay
-Portal, the company's primary product.
+automatically check the licensing of \gls{inbound}[^inbound-summary] third-party
+code, and to provide unified and unambiguous licensing information conformant
+with industry best-practices for \gls{outbound}[^outbound-summary] code. This
+goal was limited in scope to the source code repository of Liferay Portal, the
+company's primary product.
+
+[^inbound-summary]: Third-party licensed code that enters the project.
+[^outbound-summary]: Licensed code that is distributed with the project.
 
 To provide foundational information to tackle this problem, I performed a
 research that inquired for the most suitable solution for automating Liferay's
@@ -50,7 +54,8 @@ packages---was identified as a fitting solution. For Liferay's \gls{outbound}
 licensing policy, adapting Source Formatter---an internal tool for formatting of
 Java code---was identified as the most appropriate solution.
 
-Given that conclusion, two prototype products were produced and delivered:
+Given that conclusion, two prototype products were successfully produced and
+delivered:
 
 - An \gls{inbound} licensing verifier that finds all third-party dependencies,
   checks them against ClearlyDefined's public database, and compares the
@@ -63,7 +68,9 @@ Given that conclusion, two prototype products were produced and delivered:
     separate mass-conversion script was written to alter the headers in all code
     files.
 
-Integration of these solutions was out-of-scope for the internship.
+The integration of these solutions was out-of-scope for the internship, but I
+provided an integration document for a potential integrator to use in applying
+the solutions to Liferay's code base.
 
 # Introduction {#introduction}
 
@@ -91,16 +98,6 @@ licensing. It is recommended reading for readers who are unfamiliar with
 document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
-
-<!-- 
-- Chapter \ref{context}: \nameref{context} --- Provides the context for the
-  internship, as well as a description of the problem.
-  -->
-
-<!--
-- Chapter \ref{project-definition}: \nameref{project-definition} --- Defines the
-  goals and deliverables of the project.
--->
 
 - Chapter \ref{introduction}: \nameref{introduction} --- This chapter, details
   an introduction to the intership and an in-depth context.
@@ -435,8 +432,8 @@ The main goal of the project is to *improve and automate \gls{inbound} and
 different SMART main goal has been formulated. As follows:
 
 > Automatically check licensing of all **\gls{inbound}** third-party code, and
-> follow industry best-practices by providing unified and unambiguous licensing
-> information for all **\gls{outbound}** code.
+> provide unified and unambiguous licensing information conformant with industry
+> best-practices for all **\gls{outbound}** code.
 
 This main goal is necessarily two-pronged, with an equal focus on \gls{inbound}
 and \gls{outbound} licensing. This is a minor annoyance, but unavoidable.
@@ -2326,8 +2323,8 @@ Going into the internship, the vague goal of *improving and automating licensing
 compliance* was expanded into a more tangible main goal:
 
 > Automatically check licensing of all **\gls{inbound}** third-party code, and
-> follow industry best-practices by providing unified and unambiguous licensing
-> information for all **\gls{outbound}** code.
+> provide unified and unambiguous licensing information conformant with industry
+> best-practices for all **\gls{outbound}** code.
 
 I can confidently say that this two-pronged goal has been met. \Gls{inbound}
 Java dependencies can be automatically assessed for their licensing with a solid
