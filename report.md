@@ -257,8 +257,7 @@ by engineers during the development process.
 
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
 Legal, but they are not automated. These tools are behind a \gls{vpn}, and their
-installations aren't actively maintained (i.e., may be behind on important
-updates).
+installations aren't production-quality.
 
 ### The project
 
@@ -380,8 +379,9 @@ frees those customers from the obligations of the GNU Lesser General Public
 License.
 
 [^not-exclusive]: This is not entirely true. There exists third-party \gls{foss}
-inside of Liferay Portal. The \glspl{license} of these components permit
-relicensing under a \gls{proprietary} \gls{license}.
+inside of Liferay Portal. The \glspl{license} of these components permit either
+relicensing under a \gls{proprietary} \gls{license} or coexistence/interaction
+with code under a \gls{proprietary} \gls{license}.
 
 #### SPDX and REUSE {#spdx-reuse}
 
@@ -816,6 +816,8 @@ usually it's developers themselves, developer leads, or product managers.
 However, a good portion of developers aren't familiar with \gls{open-source}.
 Matija affirmed that some developers could not give a sufficient definition of
 \gls{foss}, instead roughly defining it as "when you can see the source code".
+There exists, however, good internal documentation on \gls{foss} which
+developers with which developers are asked to familiarise themselves.
 
 #### Does Legal search for licensing compliance issues? If so, how? {-}
 
@@ -1007,8 +1009,8 @@ The solution should be overridden somehow, probably through some kind of
 configuration file. Matija recounted something of the sort also being done in
 the software that generates the list of third-party software.
 
-In the configuration file, it would be nice to have a link to the issue that
-resolved the conflict.
+In the configuration file, it would be nice to have a link to the issue in the
+ticket system that resolved the conflict.
 
 #### When issues in licensing are discovered, should those issues be addressed upstream? How? {-}
 
@@ -2339,6 +2341,13 @@ set of criteria originating from Liferay's \gls{inbound} licensing policy, and
 all \gls{outbound} Java and JavaScript code in Liferay Portal has had its
 licensing presentation adjusted to fit industry best-practices laid out in
 Liferay's \gls{outbound} licensing policy.
+
+Of the sub-goals described in section \ref{goal-inbound}, the optional sub-goal
+of unifying the licensing header for the community and enterprise version of
+Liferay Portal has not been met due to internal reasons. The other goals from
+section \ref{goals} have all been met.
+
+### Stages
 
 Each stage of the project sufficiently informed the next.
 
