@@ -212,8 +212,6 @@ The work on licensing compliance is important for several reasons:
   of \gls{copyright} law.
 - Crudely put, breaking \gls{copyright} law is illegal. [@berne-1886]
 
-\clearpage
-
 The manual work is a problem because:
 
 - manual verification of licensing takes up a lot of (expensive) time by legal
