@@ -1054,15 +1054,15 @@ the current strict requirements.
 
 #### How much CPU time is a licensing solution entitled to? Real time? {-}
 
-Peter Yoo said that there is no specific limit on CPU time, but that Liferay is
+Peter said that there is no specific limit on CPU time, but that Liferay is
 always looking to run as quickly as possible. Especially if a test is run very
 quickly, even a little bit adds up.
 
-Therefore, Peter Yoo suggested an upper bound along the lines of five minutes.
+Therefore, Peter suggested an upper bound along the lines of five minutes.
 
 #### How often can/should the licensing solution run? When (in the development process) should it run? {-}
 
-Peter Yoo suggested that Matija might be able to answer this. Ideally it would
+Peter suggested that Matija might be able to answer this. Ideally it would
 be run as part of every pull request. The rationale for this is that the pull
 request is the soonest intervention moment.
 
@@ -1899,8 +1899,8 @@ I addressed these implementation details.
 
 The first design proposal is not at all congruent with the above design, and is
 not included. I would have liked to verify the above design with Peter Yoo, but
-due to a combination of Peter Yoo having a busy schedule and a want for time, I
-was unable to do that.
+due to a combination of him having a busy schedule and a want for time, I was
+unable to do that.
 
 ## Outbound
 
