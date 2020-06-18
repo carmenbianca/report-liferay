@@ -504,9 +504,8 @@ out-of-scope from a software engineering perspective.
 
 ### Deliverables {#deliverables}
 
-By the end of the internship, several things will be delivered. It is difficult
-to anticipate the exact details, because the research is intended to discover
-the best solution. Nevertheless, a curt overview of deliverables:
+By the end of the internship, several things will be delivered. A curt overview
+of deliverables:
 
 - A plan de campagne.
 
