@@ -453,19 +453,14 @@ than not, it will be a contribution authored by an employee, which means that
 the \gls{inbound} licensing is not a concern. If the employee commits code that
 was authored by somebody else, however, the licensing must be double-checked.
 
-The method of implementation is not yet certain, and will require research and
-deliberation. Some options are concretely mentioned here to give this goal some
-more tangibility. Preliminary research suggests that incoming libraries could be
-checked against their declared manifest, or against a public database that holds
-the licensing information of many packages. Alternatively, the code could be
-verified against a "plagiarism checker" on a snippet level, but this might be
-too complex and/or resource-intensive.
+Preliminary research suggests that incoming libraries could be checked against
+their declared manifest, or against a public database that holds the licensing
+information of many packages. Alternatively, the code could be verified against
+a "plagiarism checker" on a snippet level, but this might be too complex and/or
+resource-intensive.
 
 To reduce the complexity of this goal into tangible parts, it would be fair to
 split it up into a few sub-goals:
-
-- Write a mechanism that automatically checks whether \gls{inbound} code is
-  first-party or third-party.
 
 - Write a mechanism that automatically checks the licensing of \gls{inbound}
   third-party code.
@@ -503,7 +498,6 @@ entirely optional. And it is, as far as this internship is concerned,
 out-of-scope from a software engineering perspective.
 
 ### Deliverables {#deliverables}
-
 By the end of the internship, several things will be delivered. A curt overview
 of deliverables:
 
