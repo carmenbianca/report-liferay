@@ -591,9 +591,8 @@ the terms used in the main question.
 
 ## Sources
 
-Although it is impossible to know now which sources will end up being useful,
-and which sources will be encountered in the process of research, here are some
-sources that are likely to be useful:
+Prior to starting research, I gathered a number of organisations relevant to the
+field of software engineering and licensing as a list of potential sources:
 
 - ClearlyDefined (Open Source Initiative)
 - Creative Commons
@@ -608,7 +607,7 @@ sources that are likely to be useful:
 - Software Package Data Exchange Workgroup (Linux Foundation)
 - SW360 (Eclipse)
 
-Some of these sources are also used in this document.
+Some of these sources ended up being used in this document.
 
 ## Methods
 
