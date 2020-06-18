@@ -256,8 +256,10 @@ Formatter is run as a linter in Liferay's \gls{ci} system, and is used locally
 by engineers during the development process.
 
 Liferay also uses FOSSology and FOSSID as tools that reduce the workload of
-Legal, but they are not automated. These tools are behind a \gls{vpn}, and their
-installations aren't production-quality.
+Legal, but they are not automated. These tools are behind a \gls{vpn}, but while
+the IT department maintains the underlying VM, the tools are maintained by
+Legal, with the shared maintainership being a sub-optimal solution.
+
 
 ### The project
 
@@ -1064,9 +1066,15 @@ Therefore, Peter suggested an upper bound along the lines of five minutes.
 
 #### How often can/should the licensing solution run? When (in the development process) should it run? {-}
 
-Peter suggested that Matija might be able to answer this. Ideally it would
-be run as part of every pull request. The rationale for this is that the pull
-request is the soonest intervention moment.
+Peter suggested that Matija might be able to answer this[^matija-answer].
+Ideally it would be run as part of every pull request. The rationale for this is
+that the pull request is the soonest intervention moment.
+
+[^matija-answer]: When the same question was posed to Matija, he answered that
+running it as part of every pull request is good enough, especially if
+developers can trigger a check locally as well. He commented that "ultimately
+pushing it even further to the left cannot be part of automation, but of
+internal policies and culture".
 
 #### If problems are detected, is it possible to do automated interaction with the ticket system? Would manual interaction be preferable? {-}
 
@@ -1282,8 +1290,8 @@ be built from source. None of these things have been attempted because Liferay
 has its own FOSSology instance.
 
 Regarding Liferay's FOSSology instance: When I was given access to the instance,
-I was informed that it is not of production quality. It is hidden behind a VPN
-and does not receive active maintenance.
+I was informed that it is not of production quality. It is hidden behind a
+\gls{vpn} and its current state of maintenance is sub-obtimal.
 
 #### Usage
 
@@ -1310,7 +1318,9 @@ Specifically, the thesis looked at the Nomos crawler of FOSSology.
 
 #### Documentation
 
-All information in this section is sourced from @fsfe-reuse.
+All information in this section is sourced from @fsfe-reuse. As a disclaimer, I
+am a co-author of the REUSE Specification and its tooling, and a current
+maintainer of the project.
 
 "REUSE was started by the Free Software Foundation Europe (FSFE) to provide a
 set of recommendations to make licensing your Free Software projects easier."
@@ -1407,9 +1417,13 @@ Besides, the tool does not present much more functionality.
 information in new files, lest the author forget to include this information. He
 finds the tool a little rough around the edges due to missing *addheader*
 features, and a potential issue where 0-sized files are not skipped by the
-linter. In spite of these shortcomings, he successfully used the tool to convert
+linter.[^fixed-reuse] In spite of these shortcomings, he successfully used the tool to convert
 all *python-scsi* repositories, and ends with a recommendation of the tool and
 specification.
+
+[^fixed-reuse]: Since the time of the authoring of the article, issues have been
+opened for these shortcomings, and I have released an update version of the tool
+with fixes to some of the issues.
 
 ### ScanCode {#scancode}
 
@@ -1596,8 +1610,11 @@ itemises the important individual conclusions drawn from the interviews.
 
 ### Available technical solutions {#available-technical-solutions}
 
-From the results, it is immediately clear that SW360 is not a suitable solution
-for automating Liferay's licensing policies.
+From the results, it is clear that SW360 is not a suitable solution for
+automating Liferay's licensing policies at the stage that is applicable to this
+internship. It might prove useful at a later stage as a management tool for
+handling information passed to it by FOSSology and/or the automation provided by
+this internship, but that is out-of-scope.
 
 ScanCode appears to be a reliable tool for automating \gls{inbound} licensing
 compliance. However, there is one big caveat to its use, which is that its
