@@ -2245,7 +2245,7 @@ My initial thought was to simply put a regular expression inside of
 *copyright.txt*. This regular expression would contain a line similar to
 *SPDX-FileCopyrightText: © \\d\{4\} Liferay, Inc. <https://liferay.com>*. Note
 the *\\d\{4\}* syntax in place of a year. I implemented this, but quickly ran
-into an issue: The contents of *copyright.txt* needed to be compiled as a
+into an issue; the contents of *copyright.txt* needed to be compiled as a
 regular expression for every single file. This had an unfortunate performance
 penalty. It might have been possible to cache the regular expression between
 files (assuming that *copyright.txt* is identical for both runs), but I steered
