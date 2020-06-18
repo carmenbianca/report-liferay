@@ -2024,7 +2024,7 @@ The intent of this chapter is to demonstrate competencies.
 
 The implementation of this component was fraught with difficulties. To keep this
 section expedient, I want to reserve the in-depth explanation of the
-difficulties for the chapter on reflections. The gist is that the prerequisite
+difficulties for the section on reflections. The gist is that the prerequisite
 for this component---gathering a list of third-party dependencies---could be
 done in many ways, but many of those ways took upwards of an hour. It took a
 long time until I discovered a way that took under a minute to run.
@@ -2476,8 +2476,9 @@ implicit.
 ### Happenstance
 
 This section on reflection on happenstance is the personal contrasted by the
-professional in the next section. Various things occurred during the internship
-that merit reflecting on that are not immediately professionally relevant.
+professional in the section on competencies. Various things occurred during the
+internship that merit reflecting on that are not immediately professionally
+relevant.
 
 #### Coronavirus
 
