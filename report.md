@@ -388,8 +388,8 @@ relicensing under a \gls{proprietary} \gls{license}.
 This internship heavily builds upon the foundations laid by \gls{spdx} by the
 Linux Foundation and REUSE by the Free Software Foundation Europe. \gls{spdx} is
 an open standard for communicating software bill of material information. REUSE
-is a project that makes makes licensing easy, comprehensive, and
-machine-readable. REUSE itself incorporates \gls{spdx}.
+is a project that makes licensing easy, comprehensive, and machine-readable.
+REUSE itself incorporates \gls{spdx}.
 
 The \gls{outbound} licensing policy of Liferay is a superset of REUSE.
 
@@ -406,7 +406,7 @@ section defines the end result of the project.
 ### Ideal situation
 
 In order to give some context for the goals in section \ref{goals}, these are
-some qualities of the ideal situation:
+some qualities of the ideal situation, as discussed with Matija Šuklje:
 
 - Licensing problems get addressed much earlier during the development cycle.
 
