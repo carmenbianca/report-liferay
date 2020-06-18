@@ -86,12 +86,6 @@ The report will detail the context of the internship, the problem that I was
 brought in to solve, the research that has been conducted to form the basis of a
 requirements analysis, and the project that has been undertaken.
 
-The shortest summary of the internship is:
-
-> The work that goes into \gls{copyright} and licensing compliance at Liferay is
-> currently manual. By the end of the internship, some of these processes will
-> be automated.
-
 Appendix \ref{crash-course} contains a crash course on \gls{copyright} and
 licensing. It is recommended reading for readers who are unfamiliar with
 \gls{foss} licensing. These concepts will not be explained elsewhere in the
