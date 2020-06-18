@@ -745,8 +745,9 @@ The method of evaluating these solutions is a simple linear path:
 Once these steps are through, the findings are assessed to determine their
 applicability to this internship.
 
-The rationale for choosing this method is hopefully self-explanatory. There are
-available products, and they need to be analysed.
+This method of available product analysis is chosen due to the need to evaluate
+the quality of the available products. Reading third-party reviews is an
+additional step to verify the research's findings.
 
 ## Requirements analysis
 
@@ -762,6 +763,8 @@ sub-questions are collectively concluded in that section instead of separately
 within their respective sections for the reader's comfort---it's much easier to
 read the conclusion to the main question when the conclusions to the
 sub-questions aren't scattered in between the results.
+
+The chapter ends with a reflection on the research.
 
 <!--
 This section describes the intended methods of research for each sub-question.
@@ -1550,10 +1553,6 @@ An important finding is that a ClearlyDefined score of 87% or above, paired with
 all licenses being pre-approved, effectively automatically approves third-party
 code.
 
-TODO move to reflection: The exact process once an issue has been identified is for internal use
-only, and cannot be paraphrased in this report. That makes it difficult to give
-a solid answer to the sub-question.
-
 ### Demands, requirements, and limitations {#demands-requirements-limitations}
 
 It is difficult to draw a conclusion to this sub-question without repeating the
@@ -1580,8 +1579,6 @@ itemises the important individual conclusions drawn from the interviews.
 
 - There needs to be a method of manually overriding results in case legal review
   differs from the automated solution's conclusions.
-
-- TODO?
 
 ### Available technical solutions {#available-technical-solutions}
 
@@ -1647,7 +1644,46 @@ existing workflows and does not require an immense amount of work.
 
 ## Reflection {#research-reflection}
 
-TODO
+This section on reflection is intended to reflect on the quality of the
+research. Towards that end, I believe that there is one clear vector of
+uncertainty of the quality of the research: The reliability and
+generalisability of the expert interviews.
+
+In doing the exploration of user requirements, I knew that I wanted to gather
+data from actual users. Gathering quantitative data would have been a much more
+reliable method, but there was simply no easily parseable quantitative data
+available that could answer questions on the current process of licensing
+compliance and the requirements of users. That made it necessary to rely largely
+on qualitative research instead.
+
+In analysing the results of the interviews, one issue persisted: The interviews
+are not all identical. They were tailored to the target audience to extract the
+relevant answers. Because the interviews are not identical, it is difficult to
+verify the answers between one another. One solution might have been to perform
+more interviews, but this would have cost a lot of time that was simply not
+available. Therefore, to improve the reliability of the interviews, I elected to
+interview senior employees about whose expertise I had no doubts.
+
+In answering the sub-question on the current process of licensing compliance at
+Liferay, there was an additional difficulty. The exact process once an issue has
+been identified is reserved for internal use only, and cannot be adequately
+paraphrased in this report. This makes it difficult---if not impossible---to
+give a satisfying answer to the sub-question. Fortunately, the true answer to
+the question would not have altered the path going forward.
+
+Finally, there was one step in the methodology of available product analysis
+that was not generalisable, which is the manual testing of the products. A more
+thorough research would have more narrowly defined this step. However, because I
+was unfamiliar with some of the products going into the research, and because
+the products do not all attempt to solve the same problem, I did not have the
+foresight to more narrowly define the manual testing. In spite of that, I am
+content with the findings, and do not doubt that this step was valuable for
+qualitative analysis. For instance, the performance drawback of ScanCode was
+thusly significant that it effectively disqualified it.
+
+My confidence in the answer to the main question is high. There exists, of
+course, no rational "best" solution to the problem, but the conclusion suggests
+two approaches whose effectiveness I am confident in.
 
 # Requirements
 
