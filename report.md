@@ -77,7 +77,7 @@ The internship lasts approximately 5 months between 3 February 2020 and 30 June
 
 The report will detail the context of the internship, the problem that I was
 brought in to solve, the research that has been conducted to form the basis of a
-requirements analysis, and the project has been undertaken.
+requirements analysis, and the project that has been undertaken.
 
 The shortest summary of the internship is:
 
@@ -221,6 +221,8 @@ The work on licensing compliance is important for several reasons:
   of \gls{copyright} law.
 - Crudely put, breaking \gls{copyright} law is illegal. [@berne-1886]
 
+\clearpage
+
 The manual work is a problem because:
 
 - manual verification of licensing takes up a lot of (expensive) time by legal
@@ -351,12 +353,12 @@ these headers are replaced.
  */
 ```
 
-@liferay-policy-marking-code identifies several problem with the current comment
-headers: "[N]o coherent policy applied to all projects; years not updated; the
-use of 'present' in the year span, which is useless at best and misleading at
-worst; use of obsolete 'All rights reserved', which is neither needed nor true,
-as the very next line gives rights through a \gls{foss} \gls{license}; does not
-include a contact point to the \gls{copyright-holder}."
+@liferay-policy-marking-code identifies several problems with the current
+comment headers: "[N]o coherent policy applied to all projects; years not
+updated; the use of 'present' in the year span, which is useless at best and
+misleading at worst; use of obsolete 'All rights reserved', which is neither
+needed nor true, as the very next line gives rights through a \gls{foss}
+\gls{license}; does not include a contact point to the \gls{copyright-holder}."
 
 @liferay-outbound now mandates the use of a different header, but it has not
 been widely implemented yet. The new header can be seen in listing
