@@ -663,8 +663,8 @@ Like in section \ref{interview-process}, the interviewee will be asked for
 permission to record, and the recordings will be deleted in July.
 
 I have prepared questions for three fields---Engineering, Legal, and Testing/QA.
-They are listed here in subsections. In parentheses after interviewee is the
-field I will ask questions about.
+They are listed here in subsections. In parentheses, after the interviewee, is
+the field I will ask questions about.
 
 Some questions below are out-of-scope in the sense that they do not answer the
 stated sub-question, but try to further clarify the current situation. These
