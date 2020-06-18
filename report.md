@@ -1708,7 +1708,10 @@ TODO: Scavenge rest of report for more words.
 
 # Design
 
-Like the requirements, the design is split up in two components. TODO
+Like the requirements, the design is split up in two components. The design in
+this chapter is a deliberate high-level overview mixed with specific details.
+The rationale for the high-level overview is to let test-driven development take
+care of the low-level design.
 
 ## Inbound
 
