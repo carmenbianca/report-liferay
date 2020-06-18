@@ -2160,6 +2160,16 @@ This unfortunately does not decrease the runtime by a lot, because generating
 the list of dependencies is an expensive operation that must now be executed
 twice.
 
+### Integration document
+
+An integration document is included with the solution that explains:
+
+- What the program does.
+- How the program works.
+- How to integrate the program into a CI workflow.
+
+The integration document contains a link to this report for additional context.
+
 ## Outbound
 
 Because the \gls{outbound} component has two sub-components of its own
