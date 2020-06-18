@@ -2390,9 +2390,9 @@ There are numerous improvements that could be built on top of this project.
 
 ## Reflection
 
-This section on reflection covers two separate topics: Reflection on
-happenstance during the internship, and reflection on the competencies that are
-mandated for the internship.
+This section covers two separate topics: Reflection on happenstance during the
+internship, and reflection on the competencies that are mandated for the
+internship.
 
 Although normally, one does not introduce new information in the concluding
 chapter of a report, I am taking exception to that rule in this section.
@@ -2810,8 +2810,8 @@ party receives is the \gls{outbound} \gls{license} of a third party.
 
 # 2020 Q1 review of Carmen Bianca Bakker (Intern) {#review-2020q1}
 
-This is a quarterly review written by Matija Šuklje, dated 2020-05-05. It
-follows the same format as the quarterly reviews for all employees.
+This is a quarterly review written by Matija Šuklje, dated 2020-05-05, provided
+as-is. It follows the same format as the quarterly reviews for all employees.
 
 The scoring system works as follows: 0 is on-point. -3 is severely lacking. +3
 is exceeding expectations.
