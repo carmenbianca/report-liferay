@@ -2086,7 +2086,7 @@ however:
   the behaviour of the main function, while I found it much more valuable to
   continually alter the behaviour of the main function in a prototyping manner.
 
-For posterity's sake, a small overview of the tests are included in figure
+For posterity's sake, a small overview of the tests is included in figure
 \ref{test-results}.
 
 ### Process of implementation
