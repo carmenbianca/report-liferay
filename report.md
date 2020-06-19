@@ -996,6 +996,9 @@ future revision.
 Both would be nice. At a minimum the code that is actually included should be
 verified.
 
+In the future, Matija asserted that perhaps the Software Heritage API could be
+used for file-level checks.
+
 #### When should third-party libraries be verified? Only when introduced? Every time the tool is run? {-}
 
 Matija said that the check obviously needs to run at least once. It makes sense
