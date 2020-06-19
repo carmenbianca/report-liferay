@@ -2570,7 +2570,12 @@ A personal aspect that I haven't yet mentioned is that I was reticent to ask
 senior engineers for assistance in these two matters. After all, it gives a bad
 impression if you are a software engineer who cannot get a program to compile
 correctly. Furthermore, this was very much my problem to solve, and the
-assisting engineers surely had their own projects to work on.
+assisting engineers surely had their own projects to work on.[^jacob-comment]
+
+[^jacob-comment]: I verified this sentiment with a software engineer from
+Belgium who has a few years of corporate experience. He observed: "I am in this
+paragraph and I do not like it." As an extra reflection, perhaps it is a
+cultural phenomenon among programmers that the pressure to perform well is high.
 
 The lesson drawn from this reflection must be twofold: First, an intern who is
 unfamiliar with a large code base is a difficult candidate to be working on
