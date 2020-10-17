@@ -1730,11 +1730,13 @@ The requirements listed below were drawn from three sources:
 - The conclusion of the research.
 - The contents of the research's interviews.
 
-The requirements were drafted in collaboration with Matija Šuklje. It was
-Matija's opinion that FOSSology would probably produce better assessments than
-ClearlyDefined that are more in line with Legal's processes. Though I agreed
-with that opinion, I nonetheless stuck to the outcome of the research for two
-reasons:
+The requirements were drafted in collaboration with Matija Šuklje. During the
+drafting of the requirements, two approaches were considered following the
+research conclusion. One approach used FOSSology to produce better assessments
+that would be more in line with the existing processes of Legal. The other
+approach used ClearlyDefined to handle the assessments.
+
+Of the two approaches, ClearlyDefined was chosen for two reasons:
 
 - Because Liferay's FOSSology instance is not of production quality, it would be
   much more difficult to integrate a solution based on FOSSology.
@@ -1742,8 +1744,8 @@ reasons:
 - Liferay's \gls{inbound} licensing policy mentions usage of ClearlyDefined in
   the criteria for acceptance of third-party software. If one were to choose
   FOSSology instead, new legal acceptance criteria would have to be designed,
-  which I considered to be too out-of-scope within the context of a software
-  engineering internship.
+  which might be too out-of-scope within the context of a software engineering
+  internship.
 
 ## Inbound
 
@@ -1754,7 +1756,8 @@ reasons:
 
 - The new dependency must be searched in ClearlyDefined's public database.
 
-- The scoring result from ClearlyDefined must exceed 87% or higher.
+- The scoring result from ClearlyDefined must exceed 87% or
+  higher.[^magic-number-87]
 
 - The result from ClearlyDefined must only include \glspl{license} from a
   pre-approved list.
@@ -1770,7 +1773,8 @@ reasons:
 
   + Whitelisting must be easy to do for non-technical Legal personnel.
 
-- This process must, as a rule of thumb, not exceed five minutes.
+- This process must, as a rule of thumb, not exceed five
+  minutes.[^magic-number-5]
 
 ## Outbound
 
@@ -1792,10 +1796,24 @@ reasons:
   + Detect listing \ref{lst:liferay-header} at the tops of code files, and
     complain if the header is missing.
 
-  + Elegantly handle the variable year in the header.
+  + Handle the variable year in the header. The exact requirement here is that
+    the year in the header must be a four-digit number. The software engineers
+    of 9.999 will have to deal with the consequences of that decision.
 
 - The runtime duration of this solution may not noticeably increase, because
   developers use Source Formatter a lot.
+
+## Acceptance criteria
+
+The acceptance criteria of the product are identical to the above requirements.
+The scale and time frame of the project are too small for the semantic
+difference between requirements and acceptance criteria to matter.
+
+[^magic-number-87]: This *magic number* of 87% comes from the Liferay Inbound
+Licensing Policy.
+
+[^magic-number-5]: The rule of thumb of five minutes comes from the interview
+with Peter Yoo.
 
 # Design
 
