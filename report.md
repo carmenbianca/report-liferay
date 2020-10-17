@@ -1822,6 +1822,22 @@ this chapter is a deliberate high-level overview mixed with specific details.
 The rationale for the high-level overview is to let test-driven development take
 care of the low-level design.
 
+## High-level architecture
+
+Figure \ref{overall-architecture} presents a diagram of the high-level
+architecture that follows from the requirements. In words:
+
+- The header conversion tool mass-converts the headers in Liferay's source code
+  repository once to the new format.
+- Whenever a developer makes changes to the (converted) Liferay code base:
+  + SourceFormatter checks the formatting as usual, and verifies that the
+    headers of the source code files are compliant with the Outbound Licensing
+    Policy;
+  + and the inbound licensing checker verifies that all declared dependencies
+    are compliant with the Inbound Licensing Policy.
+
+![An overall architecture of the components. The cylinders are data, and the elements between curly braces are software components.](architecture.png){#overall-architecture}
+
 ## Inbound
 
 For the \gls{inbound} component, I have chosen to start with a high-level
