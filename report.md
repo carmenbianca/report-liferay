@@ -1966,7 +1966,8 @@ I addressed these implementation details.
 The first design proposal is not at all congruent with the above design, and is
 not included. I would have liked to verify the above design with Peter Yoo, but
 due to a combination of him having a busy schedule and a want for time, I was
-unable to do that.
+unable to do that. Instead, the high-level design was verified with Matija
+Šuklje.
 
 ## Outbound
 
