@@ -1822,7 +1822,11 @@ this chapter is a deliberate high-level overview mixed with specific details.
 The rationale for the high-level overview is to let test-driven development take
 care of the low-level design.
 
-## High-level architecture
+Important to note: The design in this chapter is *up-front*. It is *not* an
+overview of the current state of the product. Rather, this chapter contains the
+intentions and guidelines for the implementation process.
+
+## High-level architecture {#high-level-architecture}
 
 Figure \ref{overall-architecture} presents a diagram of the high-level
 architecture that follows from the requirements. In words:
@@ -1830,7 +1834,7 @@ architecture that follows from the requirements. In words:
 - The header conversion tool mass-converts the headers in Liferay's source code
   repository once to the new format.
 - Whenever a developer makes changes to the (converted) Liferay code base:
-  + SourceFormatter checks the formatting as usual, and verifies that the
+  + Source Formatter checks the formatting as usual, and verifies that the
     headers of the source code files are compliant with the Outbound Licensing
     Policy;
   + and the inbound licensing checker verifies that all declared dependencies
@@ -1971,10 +1975,39 @@ unable to do that. Instead, the high-level design was verified with Matija
 
 ## Outbound
 
-The component of \gls{outbound} compliance is difficult to design for, because
-the requirements leave very little in the way of unique implementation. Figure
+As detailed in section \ref{high-level-architecture}, \gls{outbound} tooling is
+split up in two. Both \gls{outbound} components deal with headers, however, so
+some congruence is expected between the two.
+
+### Header conversion tool
+
+The first step---mass-conversion---requires a single-use script. The nature of
+being single-use means that it has no stringent design requirements. However,
+find a simple flowchart in figure \ref{flowchart-conversion}.
+
+![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
+
+Not reflected in the flowchart, but relevant to the implementation, is that the
+contents of the new header depend on the old header that is being replaced. That
+is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
+
+Using much the same rationale as in section \ref{why-python}, the script will be
+written in Python. However, because it's a single-use script, this ultimately
+does not carry much gravitas.
+
+TODO: What else is there to design?
+
+### Source Formatter
+
+Source Formatter is a large program that already has a lot of structure. Ahead
+of designing a solution for this program, I searched for the existing structures
+to which the solution would have to comply.
+
+For our purposes, Source Formatter sorts its tests into implementations of the
+*BaseFileCheck* abstract class. One very relevant
+implementation---*CopyrightCheck*---already existed. Figure
 \ref{copyrightcheck-classdiagram} details the currently-existing class
-architecture of CopyrightCheck in Source Formatter.
+architecture of CopyrightCheck.
 
 ![Class diagram of CopyrightCheck in Source Formatter. Irrelevant variables and methods have been left out.](copyrightcheck-classdiagram.png){#copyrightcheck-classdiagram}
 
@@ -1994,34 +2027,14 @@ There are two important details to call attention to:
   whenever it encounters errors in the file's contents. addMessage() logs a
   message to Source Formatter's output.
 
-### Changes to Source Formatter
-
-Given the above context, the following steps must be designed:
-
-- Convert all first-party code files' headers to the new format in listing
-  \ref{lst:liferay-header}.
-
-- Change the Source Formatter check to verify against the new format.
-
-The first step---mass-conversion---requires a single-use script. The nature of
-being single-use means that it has no stringent design requirements. However,
-find a simple flowchart in figure \ref{flowchart-conversion}.
-
-![A small flowchart that details the steps required to mass-convert all headers in Liferay Portal to the new format.](flowchart-conversion.png){#flowchart-conversion}
-
-Not reflected in the flowchart, but relevant to the implementation, is that the
-contents of the new header depend on the old header that is being replaced. That
-is: LGPL-2.0-or-later headers and AGPL-3.0-or-later get replaced in kind.
-
-I will write the script in Python, using much of the same rationale as in
-section \ref{why-python}. However, because it's a single-use script, it
-ultimately doesn't carry much gravitas.
-
-The second step effectively requires modification of a single
-function---doProcess()---and therefore does not necessitate detailed up-front
-design that isn't already clear from the stated goals.
+The design, then, is mostly already in place. Broadly speaking, two things need
+to change: The *copyright.txt* files must be modified to the new header format,
+and the code in doProcess() must be modified to handle the new header, as well
+as a variable year.
 
 ### Testing
+
+TODO: Is this the appropriate chapter?
 
 The two steps listed above verify one another, which means that no extra tests
 need be written.
