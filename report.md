@@ -1928,9 +1928,9 @@ the score and the detected \glspl{license}.
 
 ### Interaction with pre-approved licenses
 
-@liferay-outbound defines a list of pre-approved \glspl{license}. Although far
-from ideal, that list can simply be hardcoded. The \glspl{license}' names must
-match ClearlyDefined's naming scheme, which should be \gls{spdx}.
+@liferay-outbound defines a list of pre-approved \glspl{license}. Although never
+exactly ideal, that list can simply be hardcoded. The \glspl{license}' names
+must match ClearlyDefined's naming scheme, which should be \gls{spdx}.
 
 ### Implementation language {#why-python}
 
