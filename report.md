@@ -65,8 +65,8 @@ delivered:
   header matches a newly defined, unambiguous standard for licensing.
 
   + This check fails if all headers in Liferay Portal are not altered. A
-    separate mass-conversion script was written to alter the headers in all code
-    files.
+    separate header converstion tool was written to alter the headers in all
+    code files.
 
 The integration of these solutions was out-of-scope for the internship, but I
 provided an integration document for a potential integrator to use in applying
@@ -2047,27 +2047,6 @@ The designed functionality of doProcess() is described in figure
 
 ![Flowchart of the functionality of doProcess() in CopyrightCheck. "Approved" and "not approved" are simplified here. "<%= YEAR %>" is a tag in *copyright.txt* that substitutes a concrete year value.](doProcess.png){#doProcess}
 
-### Testing
-
-TODO: Is this the appropriate chapter?
-
-The two steps listed above verify one another, which means that no extra tests
-need be written.
-
-If the Source Formatter CopyrightCheck implementation flags a file as good,
-then:
-
-1. the mass-conversion successfully worked and there is a true positive;
-2. or the implementation is incorrect and there is a false positive, which can
-   be detected by deliberately introducing a true negative.
-
-If the Source Formatter CopyrightCheck implementation flags a file as bad, then:
-
-3. the mass-conversion did not correctly convert all files and there is a true
-   negative;
-4. or the implementation is incorrect and there is a false negative, which
-   requires manual introspection and adjustments to the implementation.
-
 # Implementation and testing
 
 This chapter covers the process of implementation and testing of the
@@ -2267,11 +2246,11 @@ the criteria.
 ## Outbound
 
 Because the \gls{outbound} component has two sub-components of its own
-(mass-conversion script and CopyrightCheck in Source Formatter), I will discuss
+(mass-conversion tool and CopyrightCheck in Source Formatter), I will discuss
 them here separately. They can safely be discussed separately, because there was
 no interplay between them during the process of implementation.
 
-### Mass-conversion script
+### Header conversion tool
 
 The flowchart from figure \ref{flowchart-conversion} starts with gathering all
 first-party code files. Implementing this was easy, although defining the
@@ -2293,7 +2272,7 @@ the execution time of that command is 5 seconds owing to the size of the
 repository. Using napkin mathematics, I calculated that it would take 58 hours
 to compute the latest modification date of all files.
 
-Because the mass-conversion script need only be run once, this isn't *too*
+Because the header conversion tool need only be run once, this isn't *too*
 offensive, but still less-than-ideal for quick prototyping.
 
 With some assistance, I found a tool named *git-restore-mtime*, which is a
@@ -2304,8 +2283,8 @@ operating system's file system. The execution time of *git-restore-mtime* was
 two minutes, which is a lot more ideal than 58 hours.
 
 Resultatively, this meant that *git-restore-mtime* should be run in advance of
-the mass-conversion script, and the mass-conversion script could simply probe
-the file system for the latest modification date.
+the header conversion tool, and the tool could simply probe the file system for
+the latest modification date.
 
 I researched the source code of *git-restore-mtime* to see if I could replicate
 its speed without needing to rely on *mtime*---effectively an unnecessary
@@ -2324,7 +2303,7 @@ is run on all files defined earlier in this section.
 
 All-in-all, the script takes a few minutes to run.
 
-```{#replace-snippet .python caption="A snippet from the mass-conversion script. HEADERS is a dictionary that contains the original headers as the keys, and the replacement headers as the values."}
+```{#replace-snippet .python caption="A snippet from the header conversion tool. HEADERS is a dictionary that contains the original headers as the keys, and the replacement headers as the values."}
 def replace_header(file_):
   with open(file_) as fp:
     contents = fp.read()
@@ -2393,7 +2372,7 @@ Formatter. The approach is as follows:
 - Undo the first step.
 
 This was much more performant than the previous attempt. When run in combination
-with the mass-conversion script, all files passed, which signalled that both
+with the header conversion tool, all files passed, which signalled that both
 implementations succeeded.
 
 #### Code review
@@ -2403,11 +2382,35 @@ inclusion in Liferay Portal's main branch. The pull request was accepted with
 minor modifications and zero comments. The pull request was later reverted due
 to issues unrelated to the quality of the code.
 
-### Extra manual verification
+### Testing considerations
 
-Just to be sure that both the mass-conversion script and CopyrightCheck both
+TODO: Refer to section CopyrightCheck
+
+Instead of writing tests for 
+
+The two steps listed above verify one another, which means that no extra tests
+need be written.
+
+If the Source Formatter CopyrightCheck implementation flags a file as good,
+then:
+
+1. the mass-conversion successfully worked and there is a true positive;
+2. or the implementation is incorrect and there is a false positive, which can
+   be detected by deliberately introducing a true negative.
+
+If the Source Formatter CopyrightCheck implementation flags a file as bad, then:
+
+3. the mass-conversion did not correctly convert all files and there is a true
+   negative;
+4. or the implementation is incorrect and there is a false negative, which
+   requires manual introspection and adjustments to the implementation.
+
+
+#### Extra manual verification
+
+Just to be sure that both the header conversion tool and CopyrightCheck both
 performed correctly, I performed an additional manual step of verification. I
-generated a list of converted files using the mass-conversion script, then used
+generated a list of converted files using the header conversion tool, then used
 a small Python command to randomly pick 100 files from the output. I manually
 verified that all 100 files have a correct licensing header. I found no false
 positive in this small sample.
@@ -2420,7 +2423,7 @@ being incorrect.
 
 As a small summary of the functionality of the combined products:
 
-- The mass-conversion script changes the headers of all source code files in
+- The header conversion tool changes the headers of all source code files in
   Liferay Portal from  listing \ref{lst:java-header} to listing
   \ref{lst:liferay-header}.
 
