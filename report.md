@@ -1995,7 +1995,17 @@ Using much the same rationale as in section \ref{why-python}, the script will be
 written in Python. However, because it's a single-use script, this ultimately
 does not carry much gravitas.
 
-TODO: What else is there to design?
+#### Getting the latest modification date
+
+The exact design process of getting the latest modification date was performed
+during implementation, but deserves its own section. The hurdles and eventual
+solution are described in section \ref{gathering-the-latest-modification-date},
+but find here also a curt summary of the solution:
+
+By running a tool named *git-restore-mtime* on the Liferay repository, the
+*mtime* timestamp of each tracked file in the repository is adjusted to its
+latest modification date in Git version control. The header conversion tool then
+only needs to read the *mtime* from the file system.
 
 ### Source Formatter
 
