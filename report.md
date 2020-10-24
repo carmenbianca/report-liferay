@@ -2323,7 +2323,7 @@ def replace_header(file_):
     fp.write(contents)
 ```
 
-### CopyrightCheck
+### CopyrightCheck {#copyrightcheck}
 
 In adjusting CopyrightCheck, there was one challenge: Source Formatter does
 not---to my best knowledge---support a method of exclusively operating on the
@@ -2384,12 +2384,10 @@ to issues unrelated to the quality of the code.
 
 ### Testing considerations
 
-TODO: Refer to section CopyrightCheck
-
-Instead of writing tests for 
-
-The two steps listed above verify one another, which means that no extra tests
-need be written.
+Alluded to in section \ref{copyrightcheck}, CopyrightCheck and the header
+conversion tool verify one another. Therefore, the writing and performing of
+tests can largely be skipped. The mechanism of the two components verifying one
+another is best understood as a kind of confusion matrix.
 
 If the Source Formatter CopyrightCheck implementation flags a file as good,
 then:
@@ -2405,7 +2403,6 @@ If the Source Formatter CopyrightCheck implementation flags a file as bad, then:
 4. or the implementation is incorrect and there is a false negative, which
    requires manual introspection and adjustments to the implementation.
 
-
 #### Extra manual verification
 
 Just to be sure that both the header conversion tool and CopyrightCheck both
@@ -2418,6 +2415,9 @@ positive in this small sample.
 I also deliberately changed the headers of some of these files and ran
 CopyrightCheck. The check correctly identified the files with altered headers as
 being incorrect.
+
+Therefore, we can---with sufficient confidence---deduce and assert that both
+components function correctly.
 
 ### Product functionality summary
 
