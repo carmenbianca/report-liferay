@@ -2042,6 +2042,11 @@ to change: The *copyright.txt* files must be modified to the new header format,
 and the code in doProcess() must be modified to handle the new header, as well
 as a variable year.
 
+The designed functionality of doProcess() is described in figure
+\ref{doProcess}.
+
+![Flowchart of the functionality of doProcess() in CopyrightCheck. "Approved" and "not approved" are simplified here. "<%= YEAR %>" is a tag in *copyright.txt* that substitutes a concrete year value.](doProcess.png){#doProcess}
+
 ### Testing
 
 TODO: Is this the appropriate chapter?
