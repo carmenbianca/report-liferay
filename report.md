@@ -2395,7 +2395,18 @@ As a small summary of the functionality of the combined products:
   Liferay Portal use the new header from listing \ref{lst:liferay-header}. If
   not, the files are flagged in the tool's output.
 
-# TODO product description
+# Product description
+
+*Longum iter est per praecepta, breve et efficax per exempla.* It’s a long way
+by the rules, but short and efficient with examples. This chapter provides a
+technical description of the delivered products using a method of explaining
+with examples.
+
+## Header conversion tool
+
+## Source Formatter
+
+## Inbound licensing checker
 
 # Conclusion {#conclusion}
 
