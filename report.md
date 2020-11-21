@@ -2074,62 +2074,9 @@ for this component---gathering a list of third-party dependencies---could be
 done in many ways, but many of those ways took upwards of an hour. It took a
 long time until I discovered a way that took under a minute to run.
 
-### Test-driven development {#test-driven-development}
+### TODO Something about TDD here
 
-For this component---like prescribed in the plan de campagne---I made heavy use
-of test-driven development (TDD): Write a test, run it, write an implementation,
-run the test again, and repeat. My experience with this method of development
-was immeasurably positive. I want to list a few of the advantages I experienced
-throughout the implementation phase:
-
-- No time was wasted implementing unneeded features. Because I had a good
-  understanding of what needed to be done because of the up-front design, I knew
-  exactly which tests to write. Once I had a test, I would only write enough
-  code to pass the test, *and no more*. This kind of focus effectively reduced
-  development time that was spent on redundant things to null.
-
-- The tests inspired the code design. Because the tests were written before the
-  implementation, the tests moulded the class and function signatures of the
-  implementation. One clear benefit of this is that this enforced dependency
-  injection. The tests were written with a minimal amount of variables passed to
-  the implementations, and the implementations simply needed to deal with that.
-  Another benefit is that individual functions and methods were small and
-  focused on a single task. They needed to be these things, because it's
-  incredibly hard to test a function that does many things.
-
-- The tests provided a confidence that the implementation worked. Because tests
-  for corner cases had to be written before the implementations for the corner
-  cases were written, I felt confident that all corner cases were properly
-  accounted for.
-
-- At the end, combining all components was easy. All components were completely
-  tested, and I was already familiar with the signatures of all components
-  through writing tests for them, so it was child's play to combine the
-  components at the end. The first time running all components together went
-  successfully without any issues, which is not an experience I have had with
-  other methods of development.
-
-![An overview of the passed tests of the inbound licensing checker.](test-results.png){#test-results}
-
-I experienced two small issues during the process of test-driven development,
-however:
-
-- The implementations were heavily biased towards a functional/imperative style.
-  These paradigms of programming are easier to test, and therefore were chosen
-  more frequently. I identified a few places where object-oriented design
-  patterns made sense, but these were not the most obvious choices in the
-  process of writing tests.
-
-- The main function went untested. The main function which combines all
-  components simply did too much to mock out external factors (internet
-  connectivity, filesystem interactions, et cetera) and meaningfully test. I
-  might have written integration tests for the main function, but opted against
-  this in favour of manual testing. Writing integration tests would have fixed
-  the behaviour of the main function, while I found it much more valuable to
-  continually alter the behaviour of the main function in a prototyping manner.
-
-For posterity's sake, a small overview of the tests is included in figure
-\ref{test-results}.
+TODO
 
 ### Process of implementation
 
@@ -2732,18 +2679,59 @@ combination of perseverance and asking for assistance. The latter, much more
 than the former, helped resolve those difficulties.
 
 Second comes everything that did not pertain to those difficulties. For those
-aspects of implementation, I believe I did exceptionally well. Although I have
-lauded test-driven development in sufficient detail in section
-\ref{test-driven-development}, it really bears repeating here. Using test-driven
-development to drive progress was one of the smoothest experiences I have had
-with development, and is a testament both to the development method itself and
-to my competency in applying it.
+aspects of implementation, I believe I did exceptionally well. Test-driven
+development especially drove progress and was one of the smoothest experiences I
+have had with development, which is a testament both to the development method
+itself and to my competency in applying it. I want to list a few of the
+advantages of test-driven development I experienced throughout the
+implementation phase:
 
-By applying test-driven development, development time was easily significantly
-reduced, and the tests provided an immense confidence in the correctness of the
-implementations.
+- No time was wasted implementing unneeded features. Because I had a good
+  understanding of what needed to be done because of the up-front design, I knew
+  exactly which tests to write. Once I had a test, I would only write enough
+  code to pass the test, *and no more*. This kind of focus effectively reduced
+  development time that was spent on redundant things to null.
+
+- The tests inspired the code design. Because the tests were written before the
+  implementation, the tests moulded the class and function signatures of the
+  implementation. One clear benefit of this is that this enforced dependency
+  injection. The tests were written with a minimal amount of variables passed to
+  the implementations, and the implementations simply needed to deal with that.
+  Another benefit is that individual functions and methods were small and
+  focused on a single task. They needed to be these things, because it's
+  incredibly hard to test a function that does many things.
+
+- The tests provided a confidence that the implementation worked. Because tests
+  for corner cases had to be written before the implementations for the corner
+  cases were written, I felt confident that all corner cases were properly
+  accounted for.
+
+- At the end, combining all components was easy. All components were completely
+  tested, and I was already familiar with the signatures of all components
+  through writing tests for them, so it was child's play to combine the
+  components at the end. The first time running all components together went
+  successfully without any issues, which is not an experience I have had with
+  other methods of development.
+
+I experienced two small issues during the process of test-driven development,
+however:
+
+- The implementations were heavily biased towards a functional/imperative style.
+  These paradigms of programming are easier to test, and therefore were chosen
+  more frequently. I identified a few places where object-oriented design
+  patterns made sense, but these were not the most obvious choices in the
+  process of writing tests.
+
+- The main function went untested. The main function which combines all
+  components simply did too much to mock out external factors (internet
+  connectivity, filesystem interactions, et cetera) and meaningfully test. I
+  might have written integration tests for the main function, but opted against
+  this in favour of manual testing. Writing integration tests would have fixed
+  the behaviour of the main function, while I found it much more valuable to
+  continually alter the behaviour of the main function in a prototyping manner.
 
 In the future, I intend to use test-driven development again if applicable.
+
 There is one reflection on the difficulties that I had not touched on earlier,
 however, which is that this was a solo project. I am confident that, had this
 not been a solo project, these issues would have been resolved sooner.
