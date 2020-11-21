@@ -97,6 +97,8 @@ document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
 
+TODO this obviously needs to be fixed.
+
 - Chapter \ref{introduction}: \nameref{introduction} --- This chapter, details
   an introduction to the intership and an in-depth context.
 
@@ -1722,7 +1724,9 @@ My confidence in the answer to the main question is high. There exists, of
 course, no rational "best" solution to the problem, but the conclusion suggests
 two approaches whose effectiveness I am confident in.
 
-# TODO lijdraad
+# Interlude
+
+TODO
 
 # Requirements
 
