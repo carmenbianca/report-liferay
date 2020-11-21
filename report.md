@@ -705,7 +705,7 @@ requirements analysis.
 - Does the automated solution need to do snippet-level scanning?
 - Does the automated solution need to verify the licensing of third-party
   libraries that are introduced?
-  + Only included libraries (e.g., *.jar* copied into the repository), or any
+  + Only included libraries (e.g. `.jar` copied into the repository), or any
     declared dependencies?
   + When should third-party libraries be verified? Only when introduced? Every
     time the tool is run?
@@ -714,7 +714,7 @@ requirements analysis.
     curation flag?
   + When issues in licensing are discovered, should those issues be addressed
     upstream? How?
-- Does the codebase need to be fully REUSE-compliant? i.e., licensing headers in
+- Does the codebase need to be fully REUSE-compliant? i.e. licensing headers in
   *every single file*. If partial, which parts?
 - Does the automated tool need to check for compatible licenses? Should this be
   a whitelist and a blacklist? A complex decision tree?
@@ -827,7 +827,7 @@ developers with which developers are asked to familiarise themselves.
 
 #### Does Legal search for licensing compliance issues? If so, how? {-}
 
-The short answer to this is yes. Matija follows several keywords (e.g.,
+The short answer to this is yes. Matija follows several keywords (e.g.
 "\gls{open-source}", "\gls{copyright}", etc.) in JIRA. Whenever one such keyword
 is mentioned in an issue, Matija gets a notification.
 
@@ -995,7 +995,7 @@ Matija said that this would be nice to have, but is probably not needed. Or
 rephrased, snippet-level scanning is an ambitious goal that makes sense for a
 future revision.
 
-#### Should only included libraries (e.g., *.jar* copied into the repository) have their licensing verified, or any declared dependencies? {-}
+#### Should only included libraries (e.g. *.jar* copied into the repository) have their licensing verified, or any declared dependencies? {-}
 
 Both would be nice. At a minimum the code that is actually included should be
 verified.
@@ -1029,7 +1029,7 @@ this, because it's a manual human process. Matija illustrated this by implying
 that there is a difference between informing a company of a licensing issue, and
 approaching an amateur programmer who had published some script to the internet.
 
-#### Does the codebase need to be fully REUSE-compliant? i.e., licensing headers in *every single file*. If partial, which parts? {-}
+#### Does the codebase need to be fully REUSE-compliant? i.e. licensing headers in *every single file*. If partial, which parts? {-}
 
 Matija was quick to point out that that is what the policy says. In the same
 sentence, he also emphasised that it was going to be very very difficult to
@@ -1202,11 +1202,11 @@ internship.
 ![Scoring summary. You can see that the curated version on the left scores higher than the automated evaluation on the right.](clearlydefined-hover.png){#clearlydefined-hover width=300px}
 
 The API is available at <https://api.clearlydefined.io/>. It is fairly
-barebones, but sufficient. The commands *definitions* and *harvest* are the most
-useful. *definitions* gives the data of a given package. *harvest* tells the
+barebones, but sufficient. The commands `definitions` and `harvest` are the most
+useful. `definitions` gives the data of a given package. `harvest` tells the
 server to analyse a given package.
 
-Going through the output of *definitions* (appendix
+Going through the output of `definitions` (appendix
 \ref{clearlydefined-api-output}), it becomes evident that ClearlyDefined uses
 three tools to analyse packages:
 
@@ -1337,7 +1337,7 @@ Towards that end, it recommends three steps:
 2. Add \gls{copyright} and licensing information to each file.
 3. Confirm REUSE compliance.”
 
-Step 1 mandates that all \glspl{license} be in the *LICENSES* directory. They
+Step 1 mandates that all \glspl{license} be in the `LICENSES` directory. They
 should be the \gls{spdx-license-identifier} followed by a file extension.
 
 The second step, in its most simplified form, is similar to the description of
@@ -1369,13 +1369,13 @@ software other than Python and Pip.
 
 The REUSE tool has various modes of operation:
 
-- addheader --- Add a REUSE-compliant header to files.
-- download --- Download a \gls{license} and put it in the LICENSES/ directory.
-- init --- Set up a project with REUSE.
-- lint --- Verify the compliance of a project.
-- spdx --- Generate an \gls{spdx} bill of materials for a project.
+- `addheader` --- Add a REUSE-compliant header to files.
+- `download` --- Download a \gls{license} and put it in the LICENSES/ directory.
+- `init` --- Set up a project with REUSE.
+- `lint` --- Verify the compliance of a project.
+- `spdx` --- Generate an \gls{spdx} bill of materials for a project.
 
-Of these modes, *lint* is the most relevant to the project. Listing
+Of these modes, `lint` is the most relevant to the project. Listing
 \ref{lst:reuse-output} shows an example of output from the tool.
 
 ```{#lst:reuse-output caption="Example of linting output from the REUSE tool. In this example, example.py contains no copyright and licensing information."}
@@ -1401,18 +1401,18 @@ The following files have no copyright and licensing information:
 Unfortunately, your project is not compliant with version 3.0 of the REUSE Specification :-(
 ```
 
-In re replacing the headers as per section \ref{goal-reuse}, the *addheader*
-functionality might be interesting. The command '*reuse addheader
+In re replacing the headers as per section \ref{goal-reuse}, the `addheader`
+functionality might be interesting. The command `reuse addheader
 \-\-copyright='SPDX-FileCopyrightText: © 2020 Liferay, Inc.
-\<https://liferay.com\>' \-\-license='LGPL-2.1-or-later' \-\-exclude-year*'
+\<https://liferay.com\>' \-\-license='LGPL-2.1-or-later' \-\-exclude-year`
 (approximately) replaces the header from listing \ref{lst:java-header} with the
 header from listing \ref{lst:liferay-header}. There are two slight
 discrepancies:
 
-- The command generates single-line Java comments (*//*) instead of multi-line
-  Java comments (*/\* \*/*).
+- The command generates single-line Java comments (`//`) instead of multi-line
+  Java comments (`/\* \*/`).
 - The generated comment retains the original \gls{copyright} disclaimer
-  (*Copyright \(c\) 2000-present Liferay, Inc. All rights reserved.*)
+  (`Copyright \(c\) 2000-present Liferay, Inc. All rights reserved.`)
 
 These things can doubtlessly be tweaked.
 
@@ -1422,7 +1422,7 @@ Besides, the tool does not present much more functionality.
 
 @petteno-2020 describes a want to validate the presence of license and copyright
 information in new files, lest the author forget to include this information. He
-finds the tool a little rough around the edges due to missing *addheader*
+finds the tool a little rough around the edges due to missing `addheader`
 features, and a potential issue where 0-sized files are not skipped by the
 linter.[^fixed-reuse] In spite of these shortcomings, he successfully used the tool to convert
 all *python-scsi* repositories, and ends with a recommendation of the tool and
@@ -1504,14 +1504,14 @@ The above problem is explained by a line in the ScanCode documentation:
 
 Usage of ScanCode is a fairly simple thing. It is a command-line tool that takes
 a directory as input, and outputs a certain format that contains gathered
-information about the directory. The command '*scancode \-\-license
-\-\-copyright \-\-json result.json .*', then, outputs a JSON file containing all
+information about the directory. The command `scancode \-\-license
+\-\-copyright \-\-json result.json .`, then, outputs a JSON file containing all
 the \gls{copyright} and licensing information that was found in the current
 directory.
 
 Running ScanCode on Liferay Portal is an extremely expensive operation. It takes
 approximately 8 hours, and uses upwards of 800 MiB of memory. When run on
-*black*, a Python project consisting of 154 files, it takes 45 seconds. This is
+Black, a Python project consisting of 154 files, it takes 45 seconds. This is
 possibly prohibitively expensive.
 
 The output formats do not appear to be thoroughly documented, but are not
@@ -1794,8 +1794,8 @@ Of the two approaches, ClearlyDefined was chosen for two reasons:
     technologically challenging.
 
   + More precisely: The exact requirement is that all code files must have
-    their header converted to match the nearest *copyright.txt* (Java) or
-    *copyright.js* file contents.
+    their header converted to match the nearest `copyright.txt` (Java) or
+    `copyright.js` file contents.
 
 - Source Formatter must be edited to:
 
@@ -2010,7 +2010,7 @@ during implementation, but deserves its own section. The hurdles and eventual
 solution are described in section \ref{gathering-the-latest-modification-date},
 but find here also a curt summary of the solution:
 
-By running a tool named *git-restore-mtime* on the Liferay repository, the
+By running a tool named `git-restore-mtime` on the Liferay repository, the
 *mtime* timestamp of each tracked file in the repository is adjusted to its
 latest modification date in Git version control. The header conversion tool then
 only needs to read the *mtime* from the file system.
@@ -2022,8 +2022,8 @@ of designing a solution for this program, I searched for the existing structures
 to which the solution would have to comply.
 
 For our purposes, Source Formatter sorts its tests into implementations of the
-*BaseFileCheck* abstract class. One very relevant
-implementation---*CopyrightCheck*---already existed. Figure
+`BaseFileCheck` abstract class. One very relevant
+implementation---`CopyrightCheck`---already existed. Figure
 \ref{copyrightcheck-classdiagram} details the currently-existing class
 architecture of CopyrightCheck.
 
@@ -2031,12 +2031,12 @@ architecture of CopyrightCheck.
 
 There are two important details to call attention to:
 
-- _getCopyright() searches the given path for most nearby *copyright.txt* file,
+- _getCopyright() searches the given path for most nearby `copyright.txt` file,
   with the root of the path being the furthest away. The project root's
-  *copyright.txt*, in its pre-internship state, contains the contents of listing
+  `copyright.txt`, in its pre-internship state, contains the contents of listing
   \ref{lst:java-header}.
 
-  There aren't many other *copyright.txt* files in other branches of the
+  There aren't many other `copyright.txt` files in other branches of the
   directory tree. Those that do exist contain a similar header that references
   the Affero General Public License (version 3 or later).
 
@@ -2046,14 +2046,14 @@ There are two important details to call attention to:
   message to Source Formatter's output.
 
 The design, then, is mostly already in place. Broadly speaking, two things need
-to change: The *copyright.txt* files must be modified to the new header format,
+to change: The `copyright.txt` files must be modified to the new header format,
 and the code in doProcess() must be modified to handle the new header, as well
 as a variable year.
 
 The designed functionality of doProcess() is described in figure
 \ref{doProcess}.
 
-![Flowchart of the functionality of doProcess() in CopyrightCheck. "Approved" and "not approved" are simplified here. "<%= YEAR %>" is a tag in *copyright.txt* that substitutes a concrete year value.](doProcess.png){#doProcess}
+![Flowchart of the functionality of doProcess() in CopyrightCheck. "Approved" and "not approved" are simplified here. "<%= YEAR %>" is a tag in `copyright.txt` that substitutes a concrete year value.](doProcess.png){#doProcess}
 
 # Implementation and testing
 
@@ -2225,17 +2225,17 @@ first-party code files. Implementing this was easy, although defining the
 parameters of "first-party code file" required a lot of manual introspection.
 The parameters are all files, except:
 
-- files underneath a *third-party* directory;
-- files underneath a *.git* directory;
-- files named *copyright.txt* or *copyright.js*;
+- files underneath a `third-party` directory;
+- files underneath a `.git` directory;
+- files named `copyright.txt` or `copyright.js`;
 - and files that do not (already) contain the \gls{copyright} header defined in
   listing \ref{lst:java-header}.
 
 #### Gathering the latest modification date
 
 The first hurdle was gathering the latest modification date of a given file.
-Ostensibly this is not difficult at all. The output of the command *git log -n 1
-[file]* can be parsed for the year of the latest commit to the file. However,
+Ostensibly this is not difficult at all. The output of the command `git log -n 1
+[file]` can be parsed for the year of the latest commit to the file. However,
 the execution time of that command is 5 seconds owing to the size of the
 repository. Using napkin mathematics, I calculated that it would take 58 hours
 to compute the latest modification date of all files.
@@ -2243,22 +2243,22 @@ to compute the latest modification date of all files.
 Because the header conversion tool need only be run once, this isn't *too*
 offensive, but still less-than-ideal for quick prototyping.
 
-With some assistance, I found a tool named *git-restore-mtime*, which is a
+With some assistance, I found a tool named `git-restore-mtime`, which is a
 Python script that does something adjacent to my requirements. Given all files
 in a Git repository, the tool adjusts the *mtime* of those files to the date of
 the latest commit that modified those files. *mtime*, here, is a property in the
-operating system's file system. The execution time of *git-restore-mtime* was
+operating system's file system. The execution time of `git-restore-mtime` was
 two minutes, which is a lot more ideal than 58 hours.
 
-Resultatively, this meant that *git-restore-mtime* should be run in advance of
+Resultatively, this meant that `git-restore-mtime` should be run in advance of
 the header conversion tool, and the tool could simply probe the file system for
 the latest modification date.
 
-I researched the source code of *git-restore-mtime* to see if I could replicate
+I researched the source code of `git-restore-mtime` to see if I could replicate
 its speed without needing to rely on *mtime*---effectively an unnecessary
 intermediate step----and instead passing the output along directly within my
 code. The tool works by smartly parsing the output of an esoteric mode of a
-single execution of *git log* on the entire directory tree. Unfortunately, I
+single execution of `git log` on the entire directory tree. Unfortunately, I
 deemed that the tool was not written in a modular fashion, so I could not easily
 reuse and modify the code.
 
@@ -2266,7 +2266,7 @@ reuse and modify the code.
 
 The remainder of the implementation was fairly straightforward, and can be
 adequately described by a snippet from the codebase. The snippet can be found in
-listing \ref{replace-snippet}. The function *replace_header()* from the snippet
+listing \ref{replace-snippet}. The function `replace_header()` from the snippet
 is run on all files defined earlier in this section.
 
 All-in-all, the script takes a few minutes to run.
@@ -2305,20 +2305,20 @@ contains a variable (\gls{copyright} year). This variable needs to be accounted
 for.
 
 My initial thought was to simply put a regular expression inside of
-*copyright.txt*. This regular expression would contain a line similar to
-*SPDX-FileCopyrightText: © \\d\{4\} Liferay, Inc. <https://liferay.com>*. Note
-the *\\d\{4\}* syntax in place of a year. I implemented this, but quickly ran
-into an issue; the contents of *copyright.txt* needed to be compiled as a
+`copyright.txt`. This regular expression would contain a line similar to
+`SPDX-FileCopyrightText: © \\d\{4\} Liferay, Inc. <https://liferay.com>`. Note
+the `\\d\{4\}` syntax in place of a year. I implemented this, but quickly ran
+into an issue; the contents of `copyright.txt` needed to be compiled as a
 regular expression for every single file. This had an unfortunate performance
 penalty. It might have been possible to cache the regular expression between
-files (assuming that *copyright.txt* is identical for both runs), but I steered
+files (assuming that `copyright.txt` is identical for both runs), but I steered
 away from this route.
 
 Instead, I was inspired by the JavaScript portion. The JavaScript headers are
 not handled by Source Formatter, but by a plugin of ESLint
 (eslint-plugin-notice). This plugin supports variables within headers, such as
-year and name. The variable for year is *\<%= YEAR %\>*. This meant that the
-contents of *copyright.js* became listing \ref{template-header}.
+year and name. The variable for year is `\<%= YEAR %\>`. This meant that the
+contents of `copyright.js` became listing \ref{template-header}.
 
 ```{#template-header caption="The contents of \emph{copyright.txt} and \emph{copyright.js}, using a variable for the year from eslint-plugin-notice."}
 /*
@@ -2331,12 +2331,12 @@ Partially to keep things consistent between the JavaScript and Java, and
 partially inspired by the ESLint approach, I implemented the same in Source
 Formatter. The approach is as follows:
 
-- Replace the first four consecutive digits (regular expression *\\d\{4\}*,
+- Replace the first four consecutive digits (regular expression `\\d\{4\}`,
   compiled statically only once) in the string of the contents of a file with
-  *\<%= YEAR %\>*. This relies on the assumption that the first four consecutive
+  `\<%= YEAR %\>`. This relies on the assumption that the first four consecutive
   digits in a file are a year in the comment header, which *should* hold true.
 - Verify whether the string starts with the contents of the file's respective
-  *copyright.txt*. If this is congruent, good. If not, not good.
+  `copyright.txt`. If this is congruent, good. If not, not good.
 - Undo the first step.
 
 This was much more performant than the previous attempt. When run in combination
@@ -2404,13 +2404,16 @@ As a small summary of the functionality of the combined products:
 *Longum iter est per praecepta, breve et efficax per exempla.* It’s a long way
 by the rules, but short and efficient with examples. This chapter provides a
 technical description of the delivered products using a method of explaining
-with examples.
+with usage examples.
 
 The examples assume that the file system looks like this:
 
 - `~/liferay-portal` --- Liferay Portal
 - `~/liferay-header-converter` --- Header conversion tool
 - `~/TODO` --- clearlydefined tool TODO
+
+The examples assume a standard Bash environment. Commands are prefixed with `$`.
+Clarifying comments are prefixed with `#`. Output is not prefixed.
 
 ## Header conversion tool
 
@@ -2422,11 +2425,12 @@ $ stat -c %y **/CopyrightCheck.java
 2020-11-21 13:58:54.386718622 +0100
 $ # You can see that the file was recently modified.
 $ # Assume that the above mtime does not reflect
-$ # the latest commit to that file.
+$ # the latest commit to that file (i.e. the commit
+$ # was earlier).
 $
 $ # Adjust the mtime of all files in the repository
-$ # according to the each file's latest modification date
-$ # in Git.
+$ # according to the each file's latest modification
+$ # date in Git.
 $ python ~/liferay-header-converter/generate_dates.py
 81,221 files to be processed in work dir
 warning: inexact rename detection was skipped due to too many files.
@@ -2458,7 +2462,8 @@ $ cat **/CopyrightCheck.java | head -n13
  * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
  * details.
  */
-$ # You can see that the header uses the old header style.
+$ # You can see that the header uses the old header
+$ # style.
 $
 $ # Convert all headers.
 $ python ~/liferay-header-converter/replace.py
@@ -2558,7 +2563,7 @@ There are numerous improvements that could be built on top of this project.
   produced by ClearlyDefined.
 - One caveat of using ClearlyDefined that is not explored elsewhere in this
   document is that it checks the licensing of the *package*, not the source
-  repository of the package. There might be discrepancies between the two (e.g.,
+  repository of the package. There might be discrepancies between the two (e.g.
   the source repository exposes a \gls{license} that the package does not) that
   would be relevant to Liferay's use of the package. Adding a step to the
   automated verification of \gls{inbound} code that searches these discrepancies
@@ -3111,11 +3116,11 @@ office as a positive and proactive person.
 
 # ClearlyDefined API output {#clearlydefined-api-output}
 
-This is the JSON API output of a ClearlyDefined *definitions* call. The exact
+This is the JSON API output of a ClearlyDefined `definitions` call. The exact
 call was <https://api.clearlydefined.io/definitions/pypi/pypi/-/black/19.10b0>.
 Initially I wanted to show the output of a call on Liferay Portal, but for
 reasons unclear to me, this call did not run ScanCode. Therefore I have chosen
-*black*---a Python formatting utility---to demonstrate the functionality.
+Black---a Python formatting utility---to demonstrate the functionality.
 
 The output has been truncated twice for the reader's comfort and to reduce waste
 of paper and/or computer memory. There are comments where the output is
