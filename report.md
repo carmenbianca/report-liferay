@@ -1718,6 +1718,8 @@ My confidence in the answer to the main question is high. There exists, of
 course, no rational "best" solution to the problem, but the conclusion suggests
 two approaches whose effectiveness I am confident in.
 
+# TODO lijdraad
+
 # Requirements
 
 This chapter covers the requirements of the software solutions. There are two
@@ -2377,6 +2379,8 @@ As a small summary of the functionality of the combined products:
 - The modified Source Formatter CopyrightCheck verifies whether all files in
   Liferay Portal use the new header from listing \ref{lst:liferay-header}. If
   not, the files are flagged in the tool's output.
+
+# TODO product description
 
 # Conclusion {#conclusion}
 
