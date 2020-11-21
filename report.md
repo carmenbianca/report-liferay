@@ -1801,6 +1801,8 @@ Of the two approaches, ClearlyDefined was chosen for two reasons:
   + Handle the variable year in the header. The exact requirement here is that
     the year in the header must be a four-digit number. The software engineers
     of 9.999 will have to deal with the consequences of that decision.
+    Validating the year and processing multiple years are out-of-scope for this
+    project.
 
 - The runtime duration of this solution may not noticeably increase, because
   developers use Source Formatter a lot.
