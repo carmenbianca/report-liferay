@@ -1807,9 +1807,9 @@ Of the two approaches, ClearlyDefined was chosen for two reasons:
 
 ## Acceptance criteria
 
-The acceptance criteria of the product are identical to the above requirements.
-The scale and time frame of the project are too small for the semantic
-difference between requirements and acceptance criteria to matter.
+At the end of the internship (and throughout), the above requirements will be
+reviewed with Matija Šuklje. Entries will be ticked off item-by-item depending
+on whether they were successfully implemented.
 
 [^magic-number-87]: This *magic number* of 87% comes from the Liferay Inbound
 Licensing Policy.
