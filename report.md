@@ -2069,6 +2069,24 @@ resulted in differences from the original intent.
 
 The intent of this chapter is to demonstrate competencies.
 
+## A note on test-driven development
+
+This chapter's name is *implementation and testing*. Under normal circumstances,
+testing would come *after* implementation in a waterfall process. However, the
+chosen method of test-driven development both turns this around and inextricably
+links testing to implementation---tests are written and run in advance of and
+after implementation, every time for every added functionality.
+
+This essentially means that it is immensely difficult (if not impossible) to
+meaningfully describe testing as a separate stage. Therefore, this chapter must
+be read on the assumption that quite literally *everything* is
+unit-tested.[^exception] Because without a test, the code would not have been
+written in the first place.
+
+[^exception]: I would be remiss to say that this is entirely true. Section
+\ref{implementation-reflection} reflects on the fact that the main function of
+the \gls{inbound} licensing checker went untested.
+
 ## Inbound
 
 The implementation of this component was fraught with difficulties. To keep this
@@ -2078,16 +2096,11 @@ for this component---gathering a list of third-party dependencies---could be
 done in many ways, but many of those ways took upwards of an hour. It took a
 long time until I discovered a way that took under a minute to run.
 
-### TODO Something about TDD here
-
-TODO
-
 ### Process of implementation
 
-I upfronted this section with test-driven development because it was omnipresent
-throughout the process of implementation. The actual process of implementation
-relied heavily on the high-level design from figure \ref{flowchart-inbound}.
-Specifically, these things were tested-then-implemented in order:
+The process of implementation relied heavily on the high-level design from
+figure \ref{flowchart-inbound}. Specifically, these things were
+tested-then-implemented in order:
 
 - Generating third-party dependencies.
 - Parsing third-party dependencies into a one-dimensional array.
@@ -2672,7 +2685,7 @@ The final design was unfortunately not approved by anybody due to mismatching
 schedules. This makes it harder to do a final reflection, but I am nonetheless
 content with the design, because it resulted in working products.
 
-#### Implementation
+#### Implementation {#implementation-reflection}
 
 Section \ref{implementation-difficulties} tangentially touches on this
 competency. On the whole, it is difficult to reflect on this competency without
