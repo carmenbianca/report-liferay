@@ -23,7 +23,11 @@ header-includes:
     - \usepackage[section=chapter,toc]{glossaries}
     - \makenoidxglossaries
     - \input{glossary}
-    - \lstset{breaklines=true,breakatwhitespace=true,frame=single,numbers=left}
+    - \definecolor{codegreen}{rgb}{0,0.6,0}
+    - \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+    - \definecolor{codepurple}{rgb}{0.58,0,0.82}
+    - \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+    - \lstset{breaklines=true,breakatwhitespace=true,frame=single,numbers=left,basicstyle=\ttfamily,backgroundcolor=\color{backcolour},commentstyle=\color{codegreen},keywordstyle=\color{magenta},numberstyle=\tiny\color{codegray},stringstyle=\color{codepurple}}
 ---
 
 # Summary {-}
@@ -1902,7 +1906,7 @@ With that intent, the whitelist should look approximately like in listing
 \ref{whitelist-yaml}. The issue and comment fields are an aide for review, in
 case someone wonders why or how a certain dependency ended up being whitelisted.
 
-```{#pom-dependencies caption="Partial example of an XML file that contains a list of dependencies."}
+```{#pom-dependencies .xml caption="Partial example of an XML file that contains a list of dependencies."}
 <project>
   [...]
   <dependencyManagement>
@@ -1918,7 +1922,7 @@ case someone wonders why or how a certain dependency ended up being whitelisted.
 </project>
 ```
 
-```{#whitelist-yaml caption="A whitelist configuration files for dependencies that have been manually approved by Legal."}
+```{#whitelist-yaml .yaml caption="A whitelist configuration files for dependencies that have been manually approved by Legal."}
 whitelist:
   - name: org.springframework/spring-context
     version: 5.2.2.RELEASE
@@ -2402,7 +2406,74 @@ by the rules, but short and efficient with examples. This chapter provides a
 technical description of the delivered products using a method of explaining
 with examples.
 
+The examples assume that the file system looks like this:
+
+- `~/liferay-portal` --- Liferay Portal
+- `~/liferay-header-converter` --- Header conversion tool
+- `~/TODO` --- clearlydefined tool TODO
+
 ## Header conversion tool
+
+```bash
+$ # Go to the Liferay Portal repository.
+$ cd ~/liferay-portal
+$ # Get the mtime of an arbitrary file.
+$ stat -c %y **/CopyrightCheck.java
+2020-11-21 13:58:54.386718622 +0100
+$ # You can see that the file was recently modified.
+$ # Assume that the above mtime does not reflect
+$ # the latest commit to that file.
+$
+$ # Adjust the mtime of all files in the repository
+$ # according to the each file's latest modification date
+$ # in Git.
+$ python ~/liferay-header-converter/generate_dates.py
+81,221 files to be processed in work dir
+warning: inexact rename detection was skipped due to too many files.
+warning: you may want to set your diff.renameLimit variable to at least 7184 and retry the command.
+Statistics:
+       290.35 seconds
+    3,586,438 log lines processed
+      401,934 commits evaluated
+       11,774 directories updated
+       81,221 files updated
+$ # Get the mtime again.
+$ stat -c %y **/CopyrightCheck.java
+2020-01-16 18:08:01.000000000 +0100
+$ # You can see that the mtime now reflects the mtime
+$ # of the latest commit.
+$
+$ # Print the header of an arbitrary file.
+$ cat **/CopyrightCheck.java | head -n13
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
+$ # You can see that the header uses the old header style.
+$
+$ # Convert all headers.
+$ python ~/liferay-header-converter/replace.py
+[...]
+$ # This printed a list of all file paths that are
+$ # converted, one path per line.
+$
+$ # Print the header again.
+$ cat **/CopyrightCheck.java | head -n4
+/*
+ * SPDX-FileCopyrightText: © 2019 Liferay, Inc. <https://liferay.com>
+ * SPDX-License-Identifier: LGPL-2.1-or-later
+ */
+$ # The header now uses the new header style.
+```
 
 ## Source Formatter
 
@@ -2550,14 +2621,14 @@ Liferay. There was an atmosphere of understanding and compassion that made
 dealing with the situation a lot easier.
 
 There is no specific lesson to be drawn from this reflection, but it was thusly
-omnipresent that not mentioning it would have been inappropriate. 
+omnipresent that not mentioning it would have been inappropriate.
 
 #### Communication and time zones
 
 During my internship, I had to be in touch with various stakeholders. Many of
 these stakeholders worked in different time zones (Pacific Coast and East Asia).
 Timely communication with these stakeholders was difficult owing to its
-asynchronocity. 
+asynchronocity.
 
 My previous experiences with working on projects involved quick, synchronous
 conversations throughout the day. A short, immediately-answered question could
@@ -2999,7 +3070,7 @@ Score: +1
 
 As her internship project is very ambitious, she deserves extra points here. As
 the results of her internship project cannot be assessed yet, since they are due
-in Q2, I cannot award her more extra points than this. 
+in Q2, I cannot award her more extra points than this.
 
 
 #### Is Carmen reliable? {-}
