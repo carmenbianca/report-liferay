@@ -2414,7 +2414,7 @@ The examples assume that the file system looks like this:
 
 - `~/liferay-portal` --- Liferay Portal
 - `~/liferay-header-converter` --- Header conversion tool
-- `~/TODO` --- clearlydefined tool TODO
+- `~/liferay_inbound_checker` --- Inbound licensing checker
 
 The examples assume a standard Bash environment. Commands are prefixed with `$`.
 Clarifying comments are prefixed with `#`. Output is not prefixed.
@@ -2486,7 +2486,75 @@ $ # The header now uses the new header style.
 
 ## Source Formatter
 
+```bash
+$ cd ~/liferay-portal
+$ # Compile Liferay Portal (including Source Formatter)
+$ ant all
+[...]
+
+BUILD SUCCESSFUL
+Total time: 7 minutes 52 seconds
+$ cd portal-impl
+$ # Invoke Source Formatter
+$ ant format-source-all
+[...]
+format-source-all:
+     [echo]
+     [echo] Please run the following command from ~/liferay-portal/modules to show status updates during the Source Formatter execution:
+     [echo]
+     [echo] ../gradlew -b util.gradle formatSource
+     [echo]
+     [java] Loading file:[...]/portal-impl/classes/system.properties
+     [java] Missing copyright, see [...]/checks/copyright_check.markdown: ./modules/[...]/domains.jsp (SourceCheck:CopyrightCheck)
+[...]
+$ # The last line in the above output warns about a
+$ # non-compliant header. If the headers are compliant,
+$ # there are no such messages, and the run succeeds.
+$
+$ # To verify, we check the header.
+$ cat **/domains.jsp | head -n1
+/* This header is deliberately wrong. */
+$ # Indeed, Source Formatter correctly identified a
+$ # non-compliant header :-)
+```
+
 ## Inbound licensing checker
+
+```bash
+$ cd ~/liferay_inbound_checker
+$ # Install the tool.
+$ python3 setup.py install
+[...]
+$
+$ # Run the checker on Portal. It will request a
+$ # list of dependencies from Portal's build system,
+$ # then petition ClearlyDefined for each
+$ # dependency's score and licenses. The tool then
+$ # evaluates the results and gives recommendations.
+$ liferay_inbound_checker all-dependencies ~/liferay-portal
+[...]
+Evaluating dependencies for their licensing.
+
+org.springframework/spring-context@5.2.2.RELEASE
+This package scored 80 on ClearlyDefined. This is below the threshold of 87. This needn’t be a problem, but may be indicative of problems. Please open an Inbound Licensing ticket.
+
+com.liferay/com.fasterxml.jackson.databind@2.10.3.LIFERAY-PATCHED-1
+This package scored 57 on ClearlyDefined. This is below the threshold of 87. This needn’t be a problem, but may be indicative of problems. Please open an Inbound Licensing ticket.
+'NOASSERTION' was detected as a license of the package. This may be indicative of problems. Please open an Inbound Licensing ticket.
+
+org.apache.velocity/velocity@1.6.4
+Succeeded! If necessary, manually verify this result.
+
+[...]
+
+Successful dependencies: 16
+Failed dependencies: 249
+
+Did not succeed. Please review the above advice. If necessary, open an Inbound Licensing ticket in the FOSS project at <https://issues.liferay.com/projects/FOSS/issues/>. For more information see: [...]
+$ # The above result must be parsed by a human to
+$ # be useful. Failed runs give a non-zero return
+$ # code for use in automation.
+```
 
 # Conclusion {#conclusion}
 
