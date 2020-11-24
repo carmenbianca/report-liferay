@@ -97,8 +97,6 @@ document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
 
-TODO this obviously needs to be fixed.
-
 - Chapter \ref{introduction}: \nameref{introduction} --- This chapter, details
   an introduction to the intership and an in-depth context.
 
@@ -108,6 +106,9 @@ TODO this obviously needs to be fixed.
 - Chapter \ref{execution-of-research}: \nameref{execution-of-research} ---
   Details the results and conclusions of the research.
 
+- Chapter \ref{interlude}: \nameref{interlude} --- Bridges the succeeding
+  chapters.
+
 - Chapter \ref{requirements}: \nameref{requirements} --- Provides a requirement
   analysis for the to-be-delivered product.
 
@@ -116,6 +117,12 @@ TODO this obviously needs to be fixed.
 
 - Chapter \ref{implementation-and-testing}: \nameref{implementation-and-testing}
   --- Covers the process of implementation and testing.
+
+- Chapter \ref{product-description}: \nameref{product-description} --- Describes
+  the final products.
+
+- Chapter \ref{verification}: \nameref{verification} --- Assesses the completion
+  of the requirements.
 
 - Chapter \ref{conclusion}: \nameref{conclusion} --- Draws conclusions from the
   internship and reflects on it.
