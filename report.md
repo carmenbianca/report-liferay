@@ -1727,7 +1727,7 @@ two approaches whose effectiveness I am confident in.
 # Interlude
 
 This brief interlude chapter bridges the chapters \ref{requirements} through
-\ref{product-description}, providing an overview summary and serving as a
+\ref{verification}, providing an overview summary and serving as a
 concise reader's guide.
 
 Although chapter \ref{design} and \ref{implementation-and-testing} further
@@ -1749,6 +1749,9 @@ implementation and testing stages of waterfall.
 
 Chapter \ref{product-description} (\nameref{product-description}) describes the
 delivered products using an example-driven method.
+
+Chapter \ref{verification} (\nameref{verification}) provides an overview of the
+features that were required, and whether they were implemented.
 
 # Requirements {#requirements}
 
@@ -2578,7 +2581,7 @@ $ # be useful. Failed runs give a non-zero return
 $ # code for use in automation.
 ```
 
-# Verification of acceptance criteria
+# Verification of acceptance criteria {#verification}
 
 In this chapter, the requirements are repeated and assessed for completion. The
 assessments were made in collaboration with Matija Šuklje, as outlined in
