@@ -1837,7 +1837,7 @@ Of the two approaches, ClearlyDefined was chosen for two reasons:
 - The runtime duration of this solution may not noticeably increase, because
   developers use Source Formatter a lot.
 
-## Acceptance criteria
+## Acceptance criteria {#acceptance-criteria}
 
 At the end of the internship (and throughout), the above requirements will be
 reviewed with Matija Šuklje. Entries will be ticked off item-by-item depending
@@ -2577,6 +2577,33 @@ $ # The above result must be parsed by a human to
 $ # be useful. Failed runs give a non-zero return
 $ # code for use in automation.
 ```
+
+# Verification of acceptance criteria
+
+In this chapter, the requirements are repeated and assessed for completion. The
+assessments were made in collaboration with Matija Šuklje, as outlined in
+section \ref{acceptance-criteria}.
+
+| Requirement                                                            | Assessment                                                                                     |
+| :-------- | :------ |
+| **Inbound**                                                            |                                                                                                |
+| Detect new dependencies.                                               | Y. This is handled by the `delta-dependencies` command.                                        |
+| Uniquely identify dependency.                                          | Y.                                                                                             |
+| Search dependency in ClearlyDefined.                                   | Y.                                                                                             |
+| Dependency's score must exceed 87%.                                    | Y.                                                                                             |
+| Only \glspl{license} from a whitelist are pre-approved.                | Y. The whitelist is sadly hardcoded in Python at the moment, but is otherwise trivial to edit. |
+| The above three criteria determine the success of the program.         | Y. Advice for developers is included.                                                          |
+| Method of whitelisting is available.                                   | Y.                                                                                             |
+| Whitelisting is easy for Legal personnel.                              | Y. An immensely simple YAML format is used.                                                    |
+| The process does not exceed five minutes.                              | Y.                                                                                             |
+| **Outbound**                                                           |                                                                                                |
+| The headers of all Java(Script) files are converted to the new format. | Y.                                                                                             |
+| The new header includes the year of the latest revision date.          | Y.                                                                                             |
+| Source Formatter complains if the wrong header is found in a file.     | Y.                                                                                             |
+| Source Formatter handles the variable year in the header.              | Y, but does no validation.                                                                     |
+| The runtime remains (almost) identical                                 | Y.                                                                                             |
+
+Table: An assessment of the requirements. 'Y' means yes, and 'N' means no.
 
 # Conclusion {#conclusion}
 
