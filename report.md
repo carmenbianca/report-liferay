@@ -1726,9 +1726,31 @@ two approaches whose effectiveness I am confident in.
 
 # Interlude
 
-TODO
+This brief interlude chapter bridges the chapters \ref{requirements} through
+\ref{product-description}, providing an overview summary and serving as a
+concise reader's guide.
 
-# Requirements
+Although chapter \ref{design} and \ref{implementation-and-testing} further
+elaborate on this, it is important to note in advance that *waterfall* was used
+as a development method in combination with *test-driven development*.
+
+The chapters are in chronological order from the perspective of the waterfall
+method.
+
+Chapter \ref{requirements} (\nameref{requirements}) commences with a list of
+requirements extracted from the research.
+
+Chapter \ref{design} (\nameref{design}) provides the up-front design, including
+a high-level architecture.
+
+Chapter \ref{implementation-and-testing}
+(\nameref{implementation-and-testing}) details the execution of the
+implementation and testing stages of waterfall.
+
+Chapter \ref{product-description} (\nameref{product-description}) describes the
+delivered products using an example-driven method.
+
+# Requirements {#requirements}
 
 This chapter covers the requirements of the software solutions. There are two
 sections here---one for each prong of the two-pronged approach. A bullet list is
@@ -1835,8 +1857,10 @@ The rationale for the high-level overview is to let test-driven development take
 care of the low-level design.
 
 Important to note: The design in this chapter is *up-front*. It is *not* an
-overview of the current state of the product. Rather, this chapter contains the
-intentions and guidelines for the implementation process.
+overview of the current state of the product (although it does not explicitly
+state anything that is directly contradictory to the final product). Rather,
+this chapter contains the intentions and guidelines for the implementation
+process as part of the waterfall method.
 
 ## High-level architecture {#high-level-architecture}
 
@@ -2195,17 +2219,6 @@ This unfortunately does not decrease the runtime by a lot, because generating
 the list of dependencies is an expensive operation that must now be executed
 twice.
 
-### Integration document
-
-An integration document is included with the solution (not in this report) that
-explains:
-
-- What the program does.
-- How the program works.
-- How to integrate the program into a CI workflow.
-
-The integration document contains a link to this report for additional context.
-
 ### Product functionality summary
 
 As a small summary of the functionality of the product: The product generates a
@@ -2403,7 +2416,7 @@ As a small summary of the functionality of the combined products:
   Liferay Portal use the new header from listing \ref{lst:liferay-header}. If
   not, the files are flagged in the tool's output.
 
-# Product description
+# Product description {#product-description}
 
 *Longum iter est per praecepta, breve et efficax per exempla.* It’s a long way
 by the rules, but short and efficient with examples. This chapter provides a
@@ -2418,6 +2431,15 @@ The examples assume that the file system looks like this:
 
 The examples assume a standard Bash environment. Commands are prefixed with `$`.
 Clarifying comments are prefixed with `#`. Output is not prefixed.
+
+The overall architecture went unchanged from the design in chapter \ref{design}.
+The diagram representing the architecture is repeated here in figure
+\ref{overall-architecture-repeated}.
+
+![An overall architecture of the components. The cylinders are data, and the elements between curly braces are software components.](architecture.png){#overall-architecture-repeated}
+
+<!-- TODO: No idea how to fix this. -->
+\clearpage
 
 ## Header conversion tool
 
