@@ -1886,6 +1886,8 @@ architecture that follows from the requirements. In words:
   + and the inbound licensing checker verifies that all declared dependencies
     are compliant with the Inbound Licensing Policy.
 
+The checks ought to be run on a Continuous Integration (CI) system.
+
 ![An overall architecture of the components. The cylinders are data, and the elements between curly braces are software components.](architecture.png){#overall-architecture}
 
 ## Inbound
