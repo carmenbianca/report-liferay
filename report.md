@@ -2446,12 +2446,21 @@ The overall architecture went unchanged from the design in chapter \ref{design}.
 The diagram representing the architecture is repeated here in figure
 \ref{overall-architecture-repeated}.
 
+The examples are prefaced by short *tech specs* outlining the requirements for
+running the programs.
+
 ![An overall architecture of the components. The cylinders are data, and the elements between curly braces are software components.](architecture.png){#overall-architecture-repeated}
 
 <!-- TODO: No idea how to fix this. -->
 \clearpage
 
 ## Header conversion tool
+
+Tech specs:
+
+- Python 3.6+
+- `git-restore-mtime`
+- A filesystem that supports modified timestamps (mtime)
 
 ```bash
 $ # Go to the Liferay Portal repository.
@@ -2518,6 +2527,13 @@ $ # The header now uses the new header style.
 
 ## Source Formatter
 
+Tech specs:
+
+- Java 1.8.0
+- Ant
+- Linux (or Windows Server, but untested)
+- 3 Gigabytes of available RAM
+
 ```bash
 $ cd ~/liferay-portal
 $ # Compile Liferay Portal (including Source Formatter)
@@ -2552,10 +2568,17 @@ $ # non-compliant header :-)
 
 ## Inbound licensing checker
 
+Tech specs:
+
+- Python 3.6+
+- `Click`, `license-expression`, `PyYAML`, `requests` Python packages
+- Internet connectivity
+- Any operating system with a fully functional Python interpreter
+
 ```bash
 $ cd ~/liferay_inbound_checker
 $ # Install the tool.
-$ python3 setup.py install
+$ python setup.py install
 [...]
 $
 $ # Run the checker on Portal. It will request a
