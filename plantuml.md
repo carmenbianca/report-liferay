@@ -7,10 +7,10 @@ interface FileCheck
 abstract class BaseSourceCheck
 interface SourceCheck
 
-CopyrightCheck <|-- BaseFileCheck
-BaseFileCheck <|-- BaseSourceCheck
-BaseFileCheck <|- FileCheck
-BaseSourceCheck <|- SourceCheck
+BaseFileCheck <|-- CopyrightCheck
+BaseSourceCheck <|-- BaseFileCheck
+FileCheck <|- BaseFileCheck
+SourceCheck <|- BaseSourceCheck
 
 CopyrightCheck : private String _getCopyright(String absolutePath)
 

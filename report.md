@@ -2065,7 +2065,7 @@ implementation---`CopyrightCheck`---already existed. Figure
 \ref{copyrightcheck-classdiagram} details the currently-existing class
 architecture of CopyrightCheck.
 
-![Class diagram of CopyrightCheck in Source Formatter. Irrelevant variables and methods have been left out.](copyrightcheck-classdiagram.png){#copyrightcheck-classdiagram}
+![Class diagram of CopyrightCheck in Source Formatter. Irrelevant variables and methods have been left out. Because the interfaces `SourceCheck` and `FileCheck` provide no data or methods that are directly relevant to this problem, they are effectively rendered empty. They are nonetheless shown for posterity's sake.](copyrightcheck-classdiagram.svg){#copyrightcheck-classdiagram}
 
 There are two important details to call attention to:
 
