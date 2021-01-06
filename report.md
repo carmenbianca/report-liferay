@@ -97,8 +97,8 @@ document, which facilitates reading.
 
 Find below an overview of the contents of the chapters:
 
-- Chapter \ref{introduction}: \nameref{introduction} --- This chapter, details
-  an introduction to the intership and an in-depth context.
+- Chapter \ref{introduction}: \nameref{introduction} --- Details an introduction
+  to the internship and an in-depth context.
 
 - Chapter \ref{research}: \nameref{research} --- Defines the research questions
   and their methods.
