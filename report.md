@@ -2860,6 +2860,13 @@ unfamiliar with a large code base is a difficult candidate to be working on
 projects that intersect with a complex build system. Second, I should have been
 more confident in asking for external assistance.
 
+#### Weltschmerz
+
+Mid-2020 onward saw me suffer a great deal from weltschmerz---dissatisfaction
+with the inadequacy of the human condition and the state of the world. This was
+later amplified by two deaths. This has negatively impacted the writing of this
+document.
+
 ### Competencies
 
 This section is a reflection on the mandated competencies. I will be borrowing
