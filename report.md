@@ -2534,7 +2534,7 @@ Tech specs:
 - Java 1.8.0
 - Ant
 - Linux (or Windows Server, but untested)
-- 3 Gigabytes of available RAM
+- 3 gigabytes of available RAM
 
 ```bash
 $ cd ~/liferay-portal
